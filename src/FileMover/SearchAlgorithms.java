@@ -9,6 +9,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.channels.FileChannel;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import static org.apache.commons.codec.digest.DigestUtils.md5Hex;
+import org.apache.commons.io.FileUtils;
 import static org.apache.commons.codec.digest.DigestUtils.md5Hex;
 
 /**
@@ -25,7 +29,9 @@ public class SearchAlgorithms
 
     public static void main(String args[]) throws IOException
     {
-        MoveFiles();
+     //   MoveFiles();
+        
+        deleteFileAndIdenticalNamedParentFolder(new File("C:\\Users\\brenn\\Downloads\\The.Big.Bang.Theory.S09E23.HDTV.XviD-FUM[ettv]\\The.Big.Bang.Theory.S09E23.HDTV.XviD-FUM[ettv].avi"));
     }
     public static void MoveFiles() throws IOException
     {
@@ -178,8 +184,13 @@ public class SearchAlgorithms
                          //   progress.setText(out.getName() + " passed corruption test....");
 
                     //delete input since copy successful 
-                    in.delete();
+                    deleteFileAndIdenticalNamedParentFolder(in);
+                   
+                   
                     System.out.println("MOVE SUCCESSFUL");
+                    
+                    
+                   
                 } else
                 {
                     //if checksums dont match, copy is corrupted, delete and alert user
@@ -193,6 +204,58 @@ public class SearchAlgorithms
             }
         }
 
+    }
+    
+    public static long folderSize(File directory) {
+    long length = 0;
+    for (File file : directory.listFiles()) {
+        if (file.isFile())
+            length += file.length();
+        else
+            length += folderSize(file);
+    }
+    return length;
+}
+    /**
+     * given a file checks if the folder containing has an identical name, if yes and folder is under 600kb, then the folder is just a container 
+     * often used by torrents, ie tv show episodes distributed in folder, this method will then delete the folder cleaning up.
+     * @param file 
+     */
+    public static void deleteFileAndIdenticalNamedParentFolder(File file)
+    {
+        String fileName = file.getName().substring(0, file.getName().lastIndexOf('.'));
+        String folderName = file.getParentFile().getName();
+        
+        File directory = file.getParentFile();
+        int length = 0;
+        System.out.println(fileName);
+        
+        System.out.println(folderName);
+        
+        if(fileName.equals(folderName))
+        {
+            System.out.println("Parent folder Matches file........performing waste file cleanup.....");
+            System.out.println((folderSize(directory)/1024/1024));
+            file.delete();
+            if((folderSize(directory)/1024/1024) <= 600)  //600kb
+            {
+                System.out.println("Parent folder under 600kb.....deleting parent folder");
+                try
+                {
+                    FileUtils.deleteDirectory(directory);
+                } catch (IOException ex)
+                {
+                      System.out.println("FAILED TO DELETE PARENT FOLDER: " + directory);
+                }
+            }
+                   
+        }else
+        {
+            //System.out.println("No Match");
+            file.delete();
+        }
+        
+      //  file.delete();
     }
 
     /**
