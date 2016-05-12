@@ -143,7 +143,9 @@ public class Main
                 {
                     try
                     {
+                        handler = FileManager.returnTag("handler", readFile(launchPath() + "\\settings.xml").getItem(0));
                         MoveFiles();
+                        
                     } catch (IOException ex)
                     {
                         Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);

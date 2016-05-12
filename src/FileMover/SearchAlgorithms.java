@@ -1,6 +1,12 @@
 package FileMover;
 
 import halen.FileManager;
+import static halen.FileManager.executeCommand;
+import static halen.FileManager.isProcessRunning;
+import static halen.FileManager.launchPath;
+import static halen.FileManager.readFile;
+import halen.Main;
+import static halen.Main.handler;
 import java.awt.List;
 import java.io.File;
 import java.io.FileInputStream;
@@ -29,12 +35,43 @@ public class SearchAlgorithms
 
     public static void main(String args[]) throws IOException
     {
-     //   MoveFiles();
-        
-        deleteFileAndIdenticalNamedParentFolder(new File("C:\\Users\\brenn\\Downloads\\The.Big.Bang.Theory.S09E23.HDTV.XviD-FUM[ettv]\\The.Big.Bang.Theory.S09E23.HDTV.XviD-FUM[ettv].avi"));
+        //   MoveFiles();
+        handler = FileManager.returnTag("handler", readFile(launchPath() + "\\settings.xml").getItem(0));
+        System.out.println(new File(Main.handler).getName());
+        if (isProcessRunning(new File(Main.handler).getName()) == true | isProcessRunning(new File(Main.handler).getName().toLowerCase()) == true)
+        {
+            System.out.println("client running, need to terminate before moving files...");
+            Runtime.getRuntime().exec("taskkill /F /IM " + new File(Main.handler).getName());
+            
+            try
+            {
+                Thread.sleep(5000);
+            } catch (InterruptedException ex)
+            {
+                Logger.getLogger(SearchAlgorithms.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
     }
+
+    private static boolean wasTorrentRunning = false;
+    
     public static void MoveFiles() throws IOException
     {
+
+         if (isProcessRunning(new File(Main.handler).getName()) == true | isProcessRunning(new File(Main.handler).getName().toLowerCase()) == true)
+        {
+            System.out.println("client running, need to terminate before moving files...");
+            Runtime.getRuntime().exec("taskkill /F /IM " + new File(Main.handler).getName());
+            wasTorrentRunning = true;
+            try
+            {
+                Thread.sleep(5000);
+            } catch (InterruptedException ex)
+            {
+                Logger.getLogger(SearchAlgorithms.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
 
         rules = getFolderTree(new File(FileManager.launchPath() + "\\rules\\"));
 
@@ -63,7 +100,7 @@ public class SearchAlgorithms
                     {
 
                         System.out.println("\nSEARCHING FOR: " + searchString + " " + data.getItem(k).substring(1, data.getItem(k).indexOf(">")));
-                //get file tree in search folder and then search for matches based on rule
+                        //get file tree in search folder and then search for matches based on rule
                         //this method adds matches to filesToMove list
                         tree = new List();
                         getAllFilesContaining(searchString + " " + data.getItem(k).substring(1, data.getItem(k).indexOf(">")), getFolderTree(new File(searchFolder)));
@@ -101,6 +138,19 @@ public class SearchAlgorithms
                 }
             }
         }
+        
+        
+        if(wasTorrentRunning == true)
+        {
+             try
+             {
+                 //relaunch torrent client after done moving files
+                 executeCommand("\"\"" + Main.handler + "\"");
+             } catch (InterruptedException ex)
+             {
+                 Logger.getLogger(SearchAlgorithms.class.getName()).log(Level.SEVERE, null, ex);
+             }
+        }
     }
 
     public static void fileRelocate(String file, String dest) throws IOException
@@ -120,15 +170,12 @@ public class SearchAlgorithms
         if (dest.endsWith("\\") || dest.endsWith("/"))
         {
             out = new File(dest + in.getName());
+        } else if (dest.contains("\\"))
+        {
+            out = new File(dest + "\\" + in.getName());
         } else
         {
-            if (dest.contains("\\"))
-            {
-                out = new File(dest + "\\" + in.getName());
-            } else
-            {
-                out = new File(dest + "/" + in.getName());
-            }
+            out = new File(dest + "/" + in.getName());
         }
 
         FileChannel inChannel = new FileInputStream(in).getChannel();
@@ -181,16 +228,13 @@ public class SearchAlgorithms
                 //if checksums equal, then copy has no errors or corruption
                 if (md5A.equals(md5B))
                 {
-                         //   progress.setText(out.getName() + " passed corruption test....");
+                    //   progress.setText(out.getName() + " passed corruption test....");
 
                     //delete input since copy successful 
                     deleteFileAndIdenticalNamedParentFolder(in);
-                   
-                   
+
                     System.out.println("MOVE SUCCESSFUL");
-                    
-                    
-                   
+
                 } else
                 {
                     //if checksums dont match, copy is corrupted, delete and alert user
@@ -205,39 +249,48 @@ public class SearchAlgorithms
         }
 
     }
-    
-    public static long folderSize(File directory) {
-    long length = 0;
-    for (File file : directory.listFiles()) {
-        if (file.isFile())
-            length += file.length();
-        else
-            length += folderSize(file);
+
+    public static long folderSize(File directory)
+    {
+        long length = 0;
+        for (File file : directory.listFiles())
+        {
+            if (file.isFile())
+            {
+                length += file.length();
+            } else
+            {
+                length += folderSize(file);
+            }
+        }
+        return length;
     }
-    return length;
-}
+
     /**
-     * given a file checks if the folder containing has an identical name, if yes and folder is under 600kb, then the folder is just a container 
-     * often used by torrents, ie tv show episodes distributed in folder, this method will then delete the folder cleaning up.
-     * @param file 
+     * given a file checks if the folder containing has an identical name, if
+     * yes and folder is under 600kb, then the folder is just a container often
+     * used by torrents, ie tv show episodes distributed in folder, this method
+     * will then delete the folder cleaning up.
+     *
+     * @param file
      */
     public static void deleteFileAndIdenticalNamedParentFolder(File file)
     {
         String fileName = file.getName().substring(0, file.getName().lastIndexOf('.'));
         String folderName = file.getParentFile().getName();
-        
+
         File directory = file.getParentFile();
         int length = 0;
         System.out.println(fileName);
-        
+
         System.out.println(folderName);
-        
-        if(fileName.equals(folderName))
+
+        if (fileName.equals(folderName))
         {
             System.out.println("Parent folder Matches file........performing waste file cleanup.....");
-            System.out.println((folderSize(directory)/1024/1024));
+            System.out.println((folderSize(directory) / 1024 / 1024));
             file.delete();
-            if((folderSize(directory)/1024/1024) <= 600)  //600kb
+            if ((folderSize(directory) / 1024 / 1024) <= 600)  //600kb
             {
                 System.out.println("Parent folder under 600kb.....deleting parent folder");
                 try
@@ -245,17 +298,17 @@ public class SearchAlgorithms
                     FileUtils.deleteDirectory(directory);
                 } catch (IOException ex)
                 {
-                      System.out.println("FAILED TO DELETE PARENT FOLDER: " + directory);
+                    System.out.println("FAILED TO DELETE PARENT FOLDER: " + directory);
                 }
             }
-                   
-        }else
+
+        } else
         {
             //System.out.println("No Match");
             file.delete();
         }
-        
-      //  file.delete();
+
+        //  file.delete();
     }
 
     /**
