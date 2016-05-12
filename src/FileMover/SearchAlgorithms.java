@@ -142,6 +142,7 @@ public class SearchAlgorithms
         
         if(wasTorrentRunning == true)
         {
+           
              try
              {
                  //relaunch torrent client after done moving files
