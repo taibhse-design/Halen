@@ -78,11 +78,12 @@ public class TraktParser
                  
                  String date = "";
                  
-                 if(!episode.select("h4").select("span").text().equals(""))
+                 //get season date
+                 if(!episode.select("ul").select("span").text().equals(""))
                  {
-                     date = episode.select("h4").select("span").text().substring(0, episode.select("h4").select("span").text().indexOf("T"));
-                 //System.out.print("   " + episode.select("h4").select("span").text().substring(0, episode.select("h4").select("span").text().indexOf("T")) + "\n");
-                 }
+                     date = episode.select("ul").select("span").text().substring(0, episode.select("ul").select("span").text().indexOf("T"));
+                // System.out.println(date);
+                         }
                  
                  data.add("<" + retEp + ">false</" + retEp + "><release>" + date + "</release>");
             }
@@ -158,7 +159,7 @@ public class TraktParser
 
         for (Element value : titles)
         {
-           search = value.select("h1").text().replace(value.select("h1").select("span").text(), "") + "ettv";
+           search = value.select("h1").text().replace(value.select("h1").select("span").text(), "").replace(value.select("h1").select("div").text(), "").trim() + " ettv";
             
         }
 

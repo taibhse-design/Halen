@@ -130,7 +130,7 @@ public class Nyaa
                     if (title.toLowerCase().contains(split[i].toLowerCase()) && title.contains(fixEp))
                     {
                         //if contains then set magnet link to this link
-                        magnet = link.attr("href").replace("view", "download");
+                        magnet = "http:" + link.attr("href").replace("view", "download");
                       //  System.out.println("MAGNET: " + magnet);
                         //if test is true on last loop then break link loop as most recent magnet is found
                         if ((i + 1) == split.length)

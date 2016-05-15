@@ -14,7 +14,6 @@ import static halen.GUI.search;
 import static halen.GUI.searchIn;
 import static halen.GUI.settings;
 import static halen.MetroUI.inputs;
-import static halen.MetroUI.sequencePane;
 import static halen.MetroUI.setTheme;
 import java.awt.HeadlessException;
 import java.awt.List;
@@ -23,6 +22,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Iterator;
 import org.apache.commons.io.FileUtils;
+import static halen.MetroUI.episodeListPane;
+import static halen.MetroUI.inputsPane;
 
 /**
  * @author TAIBHSE
@@ -148,9 +149,9 @@ public class UpdateTraktData
                         name.setVisible(true);
                         search.setVisible(true);
                         searchIn.setVisible(true);
-                        sequencePane.setVisible(true);
+                        episodeListPane.setVisible(true);
                         delete.setVisible(true);
-                        inputs.setVisible(true);
+                        inputsPane.setVisible(true);
                         settings.setVisible(true);
                         setTheme.setVisible(true);
                         GUI.trakt.setVisible(true);

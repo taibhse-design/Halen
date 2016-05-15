@@ -16,13 +16,14 @@ import static halen.GUI.searchIn;
 import static halen.GUI.settings;
 import static halen.MetroUI.inputs;
 import static halen.MetroUI.quantity;
-import static halen.MetroUI.sequenceListPanel;
-import static halen.MetroUI.sequencePane;
-import static halen.MetroUI.sequenceScroll;
 import static halen.MetroUI.setTheme;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
+import static halen.MetroUI.episodeListPane;
+import static halen.MetroUI.episodeListScroll;
+import static halen.MetroUI.episodeListEmptyPanel;
+import static halen.MetroUI.inputsPane;
 
 /**
  * @author TAIBHSE
@@ -65,7 +66,7 @@ public class Run
                     name.setText("...");
                     search.setText("...");
                     quantity.setText("...");
-                    sequencePane.setVisible(true);
+                    episodeListPane.setVisible(true);
                     delete.setVisible(true);
                     search.setVisible(true);
                     searchIn.setVisible(true);
@@ -74,12 +75,12 @@ public class Run
                      GUI.trakt.setVisible(true);
                     GUI.updateRulesData.setVisible(true);
                     cb.setVisible(true);
-                    inputs.setVisible(true);
-                    sequenceListPanel.removeAll();
-                    sequenceListPanel.revalidate();
-                    sequenceListPanel.repaint();
-                    sequenceScroll.revalidate();
-                    sequenceScroll.repaint();
+                    inputsPane.setVisible(true);
+                    episodeListEmptyPanel.removeAll();
+                    episodeListEmptyPanel.revalidate();
+                    episodeListEmptyPanel.repaint();
+                    episodeListScroll.revalidate();
+                    episodeListScroll.repaint();
 
                 } catch (Exception ex)
                 {

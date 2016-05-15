@@ -31,8 +31,9 @@ public class FileManager
     public static void main(String args[]) throws InterruptedException, ParseException, IOException
     {
 
-        String processName = "qbittorrent";
-        System.out.println("is " + processName + " Running: " + isProcessRunning(processName));
+       // String processName = "qbittorrent";
+       // System.out.println("is " + processName + " Running: " + isProcessRunning(processName));
+        System.out.println(hasDatePassed("hgjhgjh"));
     }
 
     public static boolean isProcessRunning(String processName) throws IOException
@@ -184,7 +185,8 @@ launchPath()
    public static Boolean hasDatePassed(String date) throws ParseException
    {
        Boolean passed = false;
-       
+       try
+       {
        if(!date.trim().equals(""))
        {
        DateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
@@ -204,6 +206,13 @@ launchPath()
        else
        {
            passed = true;
+       }
+       }catch(ParseException e)
+       {
+           System.out.println("-----------------------------------------------------------------------------------------------"
+                   + "\nERROR WITH DATE FORMAT...........PASSING TO ALLOW CONTINUED RUN...\n"
+           + "-----------------------------------------------------------------------------------------------");
+          passed = true; 
        }
        return passed;
    }

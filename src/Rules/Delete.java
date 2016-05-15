@@ -8,9 +8,9 @@ import static halen.GUI.rulesScroll;
 import static halen.GUI.search;
 import halen.MetroUI;
 import static halen.MetroUI.quantity;
-import static halen.MetroUI.sequenceListPanel;
-import static halen.MetroUI.sequenceScroll;
 import java.io.File;
+import static halen.MetroUI.episodeListScroll;
+import static halen.MetroUI.episodeListEmptyPanel;
 
 /**
  * @author TAIBHSE
@@ -59,11 +59,11 @@ public class Delete
             search.setText("...");
             quantity.setText("...");
 
-            sequenceListPanel.removeAll();
-            sequenceListPanel.revalidate();
-            sequenceListPanel.repaint();
-            sequenceScroll.revalidate();
-            sequenceScroll.repaint();
+            episodeListEmptyPanel.removeAll();
+            episodeListEmptyPanel.revalidate();
+            episodeListEmptyPanel.repaint();
+            episodeListScroll.revalidate();
+            episodeListScroll.repaint();
         }
     }
 

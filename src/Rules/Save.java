@@ -7,7 +7,6 @@ import static halen.GUI.cb;
 import static halen.GUI.rulesListPanel;
 import static halen.GUI.rulesScroll;
 import static halen.MetroUI.createRuleButtons;
-import static halen.MetroUI.sequenceListPanel;
 import java.awt.List;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -18,6 +17,7 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
+import static halen.MetroUI.episodeListEmptyPanel;
 
 /**
  * @author TAIBHSE

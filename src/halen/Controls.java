@@ -40,9 +40,6 @@ import static halen.MetroUI.searchFor;
 import static halen.MetroUI.searchForText;
 import static halen.MetroUI.searchInFolder;
 import static halen.MetroUI.searchInFolderText;
-import static halen.MetroUI.sequenceListPanel;
-import static halen.MetroUI.sequencePane;
-import static halen.MetroUI.sequenceScroll;
 import static halen.MetroUI.setTheme;
 import static halen.MetroUI.textQuantity;
 import java.awt.event.ItemEvent;
@@ -58,6 +55,12 @@ import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import static halen.MetroUI.episodeListPane;
+import static halen.MetroUI.episodeListScroll;
+import static halen.MetroUI.episodeListEmptyPanel;
+import static halen.MetroUI.inputsPane;
+import static halen.MetroUI.replaceThisText;
+import static halen.MetroUI.withThisText;
 
 /**
  *
@@ -268,9 +271,9 @@ public class Controls
                     name.setVisible(false);
                     search.setVisible(false);
                     searchIn.setVisible(false);
-                    sequencePane.setVisible(false);
+                    episodeListPane.setVisible(false);
                     delete.setVisible(false);
-                    inputs.setVisible(false);
+                    inputsPane.setVisible(false);
                     //                      start.setVisible(false);
                     //                    endPoint.setVisible(false);
                     settings.setVisible(false);
@@ -328,7 +331,16 @@ public class Controls
             public void mouseClicked(MouseEvent me)
             {
 
-                Delete.deleteRule();
+                int opcion = JOptionPane.showConfirmDialog(null, "Do you wish to delete this rule?", "Delete Rule", JOptionPane.YES_NO_OPTION);
+
+                if (opcion == 0)
+                { //The ISSUE is here
+                    Delete.deleteRule();
+                } else
+                {
+                    
+                }
+              //  Delete.deleteRule();
 
             }
 
@@ -382,9 +394,9 @@ public class Controls
                 name.setVisible(false);
                 search.setVisible(false);
                 searchIn.setVisible(false);
-                sequencePane.setVisible(false);
+                episodeListPane.setVisible(false);
                 delete.setVisible(false);
-                inputs.setVisible(false);
+                inputsPane.setVisible(false);
                 //                      start.setVisible(false);
                 //                    endPoint.setVisible(false);
                 settings.setVisible(false);
@@ -427,9 +439,9 @@ public class Controls
                             name.setVisible(true);
                             search.setVisible(true);
                             searchIn.setVisible(true);
-                            sequencePane.setVisible(true);
+                            episodeListPane.setVisible(true);
                             delete.setVisible(true);
-                            inputs.setVisible(true);
+                            inputsPane.setVisible(true);
                             settings.setVisible(true);
                             setTheme.setVisible(true);
                             GUI.trakt.setVisible(true);
@@ -487,104 +499,137 @@ public class Controls
 
         name.addMouseListener(
                 new MouseAdapter()
-                {
+        {
 
-                    @Override
-                    public void mouseClicked(MouseEvent e
-                    )
-                    {
-                        //only blank if the text is the default instructions
-                        if (name.getText().equals("..."))
-                        {
-                            name.setText("");
-                        }
-                    }
+            @Override
+            public void mouseClicked(MouseEvent e
+            )
+            {
+                //only blank if the text is the default instructions
+                if (name.getText().equals("..."))
+                {
+                    name.setText("");
                 }
+            }
+        }
         );
 
         search.addMouseListener(
                 new MouseAdapter()
-                {
+        {
 
-                    @Override
-                    public void mouseClicked(MouseEvent e
-                    )
-                    {
-                        //only blank if the text is the default instructions
-                        if (search.getText().equals("..."))
-                        {
-                            search.setText("");
-                        }
-                    }
+            @Override
+            public void mouseClicked(MouseEvent e
+            )
+            {
+                //only blank if the text is the default instructions
+                if (search.getText().equals("..."))
+                {
+                    search.setText("");
                 }
+            }
+        }
         );
 
         quantity.addMouseListener(
                 new MouseAdapter()
-                {
+        {
 
-                    @Override
-                    public void mouseClicked(MouseEvent e
-                    )
-                    {
-                        //only blank if the text is the default instructions
-                        if (quantity.getText().equals("..."))
-                        {
-                            quantity.setText("");
-                        }
-                    }
+            @Override
+            public void mouseClicked(MouseEvent e
+            )
+            {
+                //only blank if the text is the default instructions
+                if (quantity.getText().equals("..."))
+                {
+                    quantity.setText("");
                 }
+            }
+        }
         );
 
         searchInFolderText.addMouseListener(
                 new MouseAdapter()
-                {
+        {
 
-                    @Override
-                    public void mouseClicked(MouseEvent e
-                    )
-                    {
-                        //only blank if the text is the default instructions
-                        if (searchInFolderText.getText().equals("..."))
-                        {
-                            searchInFolderText.setText("");
-                        }
-                    }
+            @Override
+            public void mouseClicked(MouseEvent e
+            )
+            {
+                //only blank if the text is the default instructions
+                if (searchInFolderText.getText().equals("..."))
+                {
+                    searchInFolderText.setText("");
                 }
+            }
+        }
         );
 
         moveToFolderText.addMouseListener(
                 new MouseAdapter()
-                {
+        {
 
-                    @Override
-                    public void mouseClicked(MouseEvent e
-                    )
-                    {
-                        //only blank if the text is the default instructions
-                        if (moveToFolderText.getText().equals("..."))
-                        {
-                            moveToFolderText.setText("");
-                        }
-                    }
+            @Override
+            public void mouseClicked(MouseEvent e
+            )
+            {
+                //only blank if the text is the default instructions
+                if (moveToFolderText.getText().equals("..."))
+                {
+                    moveToFolderText.setText("");
                 }
+            }
+        }
         );
 
         searchForText.addMouseListener(
                 new MouseAdapter()
-                {
+        {
 
-                    @Override
-                    public void mouseClicked(MouseEvent e
-                    )
-                    {
-                        //only blank if the text is the default instructions
-                        if (searchForText.getText().equals("..."))
-                        {
-                            searchForText.setText("");
-                        }
-                    }
+            @Override
+            public void mouseClicked(MouseEvent e
+            )
+            {
+                //only blank if the text is the default instructions
+                if (searchForText.getText().equals("..."))
+                {
+                    searchForText.setText("");
                 }
+            }
+        }
+        );
+
+        replaceThisText.addMouseListener(
+                new MouseAdapter()
+        {
+
+            @Override
+            public void mouseClicked(MouseEvent e
+            )
+            {
+                //only blank if the text is the default instructions
+                if (replaceThisText.getText().equals("..."))
+                {
+                    replaceThisText.setText("");
+                }
+            }
+        }
+        );
+        withThisText.addMouseListener(
+                new MouseAdapter()
+        {
+
+            @Override
+            public void mouseClicked(MouseEvent e
+            )
+            {
+                //only blank if the text is the default instructions
+                if (withThisText.getText().equals("..."))
+                {
+                    withThisText.setText("");
+                }
+            }
+        }
         );
 
 //        start.addMouseListener(new MouseAdapter()
@@ -616,14 +661,14 @@ public class Controls
 //        });
         frame.addMouseListener(
                 new MouseAdapter()
-                {
+        {
 
-                    public void mousePressed(MouseEvent e)
-                    {
-                        posX = e.getX();
-                        posY = e.getY();
-                    }
-                });
+            public void mousePressed(MouseEvent e)
+            {
+                posX = e.getX();
+                posY = e.getY();
+            }
+        });
 
         frame.addMouseMotionListener(new MouseAdapter()
         {
@@ -651,7 +696,7 @@ public class Controls
                     rulesScroll.repaint();
 
                     MetroUI.createRuleButtons(GUI.cb.getSelectedItem().toString().toLowerCase().trim());
-                  //  System.out.println(GUI.cb.getSelectedItem().toString().toLowerCase().trim());
+                    //  System.out.println(GUI.cb.getSelectedItem().toString().toLowerCase().trim());
                     rulesListPanel.revalidate();
                     rulesListPanel.repaint();
                     rulesScroll.revalidate();
@@ -664,11 +709,11 @@ public class Controls
                     searchInFolderText.setText("...");
                     moveToFolderText.setText("...");
                     searchForText.setText("...");
-                    
-                    sequenceListPanel.removeAll();
-                    sequenceListPanel.repaint();
-                    sequenceScroll.revalidate();
-                    sequenceScroll.repaint();
+
+                    episodeListEmptyPanel.removeAll();
+                    episodeListEmptyPanel.repaint();
+                    episodeListScroll.revalidate();
+                    episodeListScroll.repaint();
 
                     if (cb.getSelectedItem().toString().toLowerCase().trim().equals("tv show"))
                     {
@@ -758,9 +803,9 @@ public class Controls
                     name.setVisible(false);
                     search.setVisible(false);
                     searchIn.setVisible(false);
-                    sequencePane.setVisible(false);
+                    episodeListPane.setVisible(false);
                     delete.setVisible(false);
-                    inputs.setVisible(false);
+                    inputsPane.setVisible(false);
                     settings.setVisible(false);
                     setTheme.setVisible(false);
                     GUI.updateRulesData.setVisible(false);
@@ -887,13 +932,13 @@ public class Controls
                 {
                     try
                     {
-                       if(cb.getSelectedItem().toString().toLowerCase().contains("tv show"))
+                        if (cb.getSelectedItem().toString().toLowerCase().contains("tv show"))
                         {
                             FileManager.executeCommand("start http://extratorrent.cc/search/?search=" + GUI.search.getText().replaceAll(" ", "+"));
-                        }else if(cb.getSelectedItem().toString().toLowerCase().contains("comic"))
+                        } else if (cb.getSelectedItem().toString().toLowerCase().contains("comic"))
                         {
                             FileManager.executeCommand("start http://kat.cr/usearch/" + GUI.search.getText().replaceAll(" ", "+"));
-                        }else if(cb.getSelectedItem().toString().toLowerCase().contains("anime"))
+                        } else if (cb.getSelectedItem().toString().toLowerCase().contains("anime"))
                         {
                             FileManager.executeCommand("start http://www.nyaa.se/?term=" + GUI.search.getText().replaceAll(" ", "+"));
                         }

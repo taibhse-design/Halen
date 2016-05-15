@@ -69,10 +69,10 @@ public class MetroUI
 
     public static JButton setTheme, maximise, minimise;
 
-    public static JPanel sequencePane, sequenceListPanel, inputs;
-    public static JScrollPane sequenceScroll;
+    public static JPanel episodeListPane, episodeListEmptyPanel, inputs,inputsPane;
+    public static JScrollPane episodeListScroll;
 
-    public static JTextField textQuantity, quantity, dividerOne, dividerTwo, searchInFolder, searchInFolderText, moveToFolder, moveToFolderText, searchFor, searchForText;//, dividerTwo, searchInFolder;
+    public static JTextField textQuantity, quantity, dividerOne, dividerTwo, dividerThree, searchInFolder, searchInFolderText, moveToFolder, moveToFolderText, searchFor, searchForText, replaceThis, replaceThisText, withThis, withThisText;//, dividerTwo, searchInFolder;
 
     // public static Color tertiary = new Color(100,100,250);
     public static void UI()
@@ -183,10 +183,10 @@ public class MetroUI
         
            inputs = new JPanel();
         inputs.setLayout(null);
-        inputs.setSize(cb.getWidth() + (int) (frame.getWidth() / 3.55), cb.getHeight() * 8);
+        inputs.setPreferredSize(new Dimension(cb.getWidth() + (int) (frame.getWidth() / 3.55), cb.getHeight() * 90));
         inputs.setLocation(cb.getX(), cb.getY() + cb.getHeight() + cb.getHeight() / 2);
         inputs.setBackground(secondary);
-        inputs.setVisible(true);
+        //inputs.setVisible(true);
         
          dividerOne = new JTextField(20);
         dividerOne.setHorizontalAlignment(SwingConstants.CENTER);
@@ -221,7 +221,7 @@ public class MetroUI
         name.setBackground(secondary.brighter());
         name.setBorder(border);
         name.setCaretColor(primary);
-        name.setSize((int) (frame.getWidth() / 3.5), frame.getHeight() / 15);
+        name.setSize((int) (frame.getWidth() / 3.7), frame.getHeight() / 15);
         name.setLocation(ruleName.getLocation().x + ruleName.getWidth(), ruleName.getLocation().y);
         name.setVisible(true);
 
@@ -358,7 +358,67 @@ public class MetroUI
         searchForText.setSize(name.getWidth(), frame.getHeight() / 15);
         searchForText.setLocation(searchFor.getLocation().x + searchFor.getWidth(), searchFor.getLocation().y);
         searchForText.setVisible(true);
+        
+         dividerThree = new JTextField(20);
+        dividerThree.setHorizontalAlignment(SwingConstants.CENTER);
+        dividerThree.setText(" Edit File Name Settings ");
+        dividerThree.setEditable(false);
+        dividerThree.setFont(dividerThree.getFont().deriveFont(Font.BOLD));
+        dividerThree.setForeground(primary);
+        dividerThree.setBackground(secondary);
+        dividerThree.setBorder(null);
+        dividerThree.setSize(ruleName.getWidth() + name.getWidth(), frame.getHeight() / 15);
+        dividerThree.setLocation(textQuantity.getX(), searchForText.getY() + searchForText.getHeight());
+        dividerThree.setVisible(true);
 
+        replaceThis = new JTextField(20);
+        replaceThis.setHorizontalAlignment(SwingConstants.CENTER);
+        replaceThis.setText(" Replace This Text ");
+        replaceThis.setEditable(false);
+        replaceThis.setFont(replaceThis.getFont().deriveFont(Font.BOLD));
+        replaceThis.setForeground(primary);
+        replaceThis.setBackground(secondary);
+        replaceThis.setBorder(null);
+        replaceThis.setSize(ruleName.getWidth(), frame.getHeight() / 15);
+        replaceThis.setLocation(searchFor.getLocation().x, dividerThree.getLocation().y + dividerThree.getHeight());
+        replaceThis.setVisible(true);
+
+        replaceThisText = new JTextField(20);
+        replaceThisText.setText("...");
+        replaceThisText.setEditable(true);
+        replaceThisText.setFont(replaceThisText.getFont().deriveFont(Font.BOLD));
+        replaceThisText.setBorder(border);
+        replaceThisText.setForeground(primary);
+        replaceThisText.setBackground(secondary.brighter());
+        replaceThisText.setCaretColor(primary);
+        replaceThisText.setSize(name.getWidth(), frame.getHeight() / 15);
+        replaceThisText.setLocation(replaceThis.getLocation().x + replaceThis.getWidth(), replaceThis.getLocation().y);
+        replaceThisText.setVisible(true);
+        
+         withThis = new JTextField(20);
+        withThis.setHorizontalAlignment(SwingConstants.CENTER);
+        withThis.setText(" With This Text ");
+        withThis.setEditable(false);
+        withThis.setFont(withThis.getFont().deriveFont(Font.BOLD));
+        withThis.setForeground(primary);
+        withThis.setBackground(secondary);
+        withThis.setBorder(null);
+        withThis.setSize(ruleName.getWidth(), frame.getHeight() / 15);
+        withThis.setLocation(searchFor.getLocation().x, replaceThisText.getLocation().y + replaceThisText.getHeight());
+        withThis.setVisible(true);
+
+        withThisText = new JTextField(20);
+        withThisText.setText("...");
+        withThisText.setEditable(true);
+        withThisText.setFont(withThisText.getFont().deriveFont(Font.BOLD));
+        withThisText.setBorder(border);
+        withThisText.setForeground(primary);
+        withThisText.setBackground(secondary.brighter());
+        withThisText.setCaretColor(primary);
+        withThisText.setSize(name.getWidth(), frame.getHeight() / 15);
+        withThisText.setLocation(withThis.getLocation().x + withThis.getWidth(), withThis.getLocation().y);
+        withThisText.setVisible(true);
+        
         
         rulesPane = new JPanel();
         rulesPane.setLayout(new BorderLayout());
@@ -435,26 +495,29 @@ public class MetroUI
         rulesPane.setVisible(true);
 
         //#################################################################################
-        sequencePane = new JPanel();
-        sequencePane.setLayout(new BorderLayout());
-        sequencePane.setSize(rulesPane.getX() - (search.getX() + search.getWidth() + (search.getHeight() / 6) * 2), (int) (frame.getHeight() / 1.3));
-        sequencePane.setLocation((int) (search.getX() + search.getWidth() + search.getHeight() / 6), cb.getY());
+        episodeListPane = new JPanel();
+        episodeListPane.setLayout(new BorderLayout());
+       // episodeListPane.setSize(rulesPane.getX() - (search.getX() + search.getWidth() + (search.getHeight() / 6) * 2), (int) (frame.getHeight() / 1.3));
+         episodeListPane.setSize((int) (rulesPane.getWidth()/1.77f), (int) (frame.getHeight() / 1.3));
+        //episodeListPane.setLocation((int) (search.getX() + search.getWidth() + search.getHeight() / 6), cb.getY());
+         episodeListPane.setLocation((int) (rulesPane.getX() - episodeListPane.getWidth()*1.02f), cb.getY());
 
+        
         // Set layout for contactListPane
-        sequenceListPanel = new JPanel();
-        BoxLayout layout2 = new BoxLayout(sequenceListPanel, BoxLayout.Y_AXIS);
-        sequenceListPanel.setLayout(layout2);
-        sequenceListPanel.setBackground(secondary);
+        episodeListEmptyPanel = new JPanel();
+        BoxLayout layout2 = new BoxLayout(episodeListEmptyPanel, BoxLayout.Y_AXIS);
+        episodeListEmptyPanel.setLayout(layout2);
+        episodeListEmptyPanel.setBackground(secondary);
         //   contactListPanel.setSize(sequencePane.getWidth(), sequencePane.getHeight()/8);
 
         //   createRuleButtons(GUI.cb.getSelectedItem().toString().toLowerCase().trim());
-        sequenceScroll = new JScrollPane(sequenceListPanel);
-        sequenceScroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        sequenceScroll.getVerticalScrollBar().setUnitIncrement(16);
+        episodeListScroll = new JScrollPane(episodeListEmptyPanel);
+        episodeListScroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        episodeListScroll.getVerticalScrollBar().setUnitIncrement(16);
         //  Border border = new LineBorder(secondary, 2);
-        sequenceScroll.setBorder(border);
-        sequenceScroll.setBackground(secondary);
-        sequenceScroll.getVerticalScrollBar().setUI(new BasicScrollBarUI()
+        episodeListScroll.setBorder(border);
+        episodeListScroll.setBackground(secondary);
+        episodeListScroll.getVerticalScrollBar().setUI(new BasicScrollBarUI()
         {
             @Override
             protected JButton createDecreaseButton(int orientation)
@@ -504,9 +567,9 @@ public class MetroUI
             }
         });
 
-        sequencePane.add(sequenceScroll, null);
+        episodeListPane.add(episodeListScroll, null);
 
-        sequencePane.setVisible(true);
+        episodeListPane.setVisible(true);
 
         setTheme = new JButton();
         setTheme.setFont(setTheme.getFont().deriveFont(Font.BOLD));
@@ -631,6 +694,11 @@ public class MetroUI
         runningRule.setLocation(progressBar.getX(), (int) (progressBar.getY() - (runningRule.getHeight() * 1.2f)));
         runningRule.setVisible(false);
 
+        inputs.add(withThisText);
+        inputs.add(withThis);
+        inputs.add(replaceThis);
+        inputs.add(replaceThisText);
+        inputs.add(dividerThree);
         inputs.add(searchForText);
         inputs.add(searchFor);
         inputs.add(moveToFolderText);
@@ -645,17 +713,90 @@ public class MetroUI
         inputs.add(searchIn);
         inputs.add(name);
         inputs.add(ruleName);
+  
+  //############################################################################################
+  //the following code creates the scroll panel with the ui elements for setting rule parameters
+  
+        //pane that holds everything in place
+        inputsPane = new JPanel();
+        inputsPane.setLayout(new BorderLayout());
+        inputsPane.setSize(cb.getWidth() + (int) (frame.getWidth() / 3.55), cb.getHeight() * 8);
+        inputsPane.setLocation(cb.getX(), cb.getY() + cb.getHeight() + cb.getHeight() / 2);
         
+        //scroll pane to scroll up and down 
+     //   BoxLayout layout3 = new BoxLayout(inputs, BoxLayout.Y_AXIS);
+        
+           JScrollPane     inputsScroll = new JScrollPane(inputs);
+        inputsScroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        inputsScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        inputsScroll.getVerticalScrollBar().setUnitIncrement(16);
+        inputsScroll.setBorder(border);
+        inputsScroll.setBackground(secondary);
+        inputsScroll.getVerticalScrollBar().setUI(new BasicScrollBarUI()
+        {
+            @Override
+            protected JButton createDecreaseButton(int orientation)
+            {
+                return createZeroButton();
+            }
+
+            @Override
+            protected JButton createIncreaseButton(int orientation)
+            {
+                return createZeroButton();
+            }
+
+            private JButton createZeroButton()
+            {
+                JButton jbutton = new JButton();
+                jbutton.setPreferredSize(new Dimension(0, 0));
+                jbutton.setMinimumSize(new Dimension(0, 0));
+                jbutton.setMaximumSize(new Dimension(0, 0));
+                return jbutton;
+            }
+
+            @Override
+            protected void paintTrack(Graphics g, JComponent c, Rectangle trackBounds)
+            {
+                g.setColor(secondary.brighter().brighter());
+                g.fillRect(trackBounds.x, trackBounds.y, trackBounds.width, trackBounds.height);
+                //  paintDecreaseHighlight(g);
+                //  paintIncreaseHighlight(g);
+
+            }
+
+            @Override
+            protected void paintThumb(Graphics g, JComponent c, Rectangle thumbBounds)
+            {
+
+                g.setColor(secondary.darker().darker());
+                g.fillRect(thumbBounds.x, thumbBounds.y, thumbBounds.width, thumbBounds.height);
+
+                if (thumbBounds.isEmpty() || !scrollbar.isEnabled())
+                {
+                    return;
+                }
+
+                g.translate(thumbBounds.x, thumbBounds.y);
+                g.translate(-thumbBounds.x, -thumbBounds.y);
+            }
+        });
+
+        inputsPane.add(inputsScroll, null);
+
+        inputsPane.setVisible(true);
+        
+        frame.add(inputsPane);
         frame.add(runningRule);
         frame.add(progressBar);
-        frame.add(sequencePane);
+        frame.add(episodeListPane);
         frame.add(rulesPane);
         frame.add(setTheme);
         frame.add(GUI.trakt);
         frame.add(save);
         frame.add(delete);
         frame.add(run);
-        frame.add(inputs);
+       // frame.add(inputs);
         frame.add(cb);
         frame.add(GUI.updateRulesData);
         frame.add(settings);
@@ -761,10 +902,10 @@ public class MetroUI
     public static void loadSequenceContent(final String file, final String type)
     {
 
-        sequenceListPanel.removeAll();
-        sequenceListPanel.repaint();
-        sequenceScroll.revalidate();
-        sequenceScroll.repaint();
+        episodeListEmptyPanel.removeAll();
+        episodeListEmptyPanel.repaint();
+        episodeListScroll.revalidate();
+        episodeListScroll.repaint();
 
         final List data = FileManager.readFile(FileManager.launchPath() + "/rules/" + type + "/" + file + ".xml");
         //    System.out.println(data.getItemCount());
@@ -786,9 +927,9 @@ public class MetroUI
                 button.setForeground(primary);
                 button.setBackground(secondary.darker());
 
-                button.setMaximumSize(new Dimension(sequencePane.getWidth() - 10, sequencePane.getHeight() / 7));
-                button.setMinimumSize(new Dimension(sequencePane.getWidth() - 10, sequencePane.getHeight() / 7));
-                button.setPreferredSize(new Dimension(sequencePane.getWidth() - 10, sequencePane.getHeight() / 7));
+                button.setMaximumSize(new Dimension(episodeListPane.getWidth() - 10, episodeListPane.getHeight() / 7));
+                button.setMinimumSize(new Dimension(episodeListPane.getWidth() - 10, episodeListPane.getHeight() / 7));
+                button.setPreferredSize(new Dimension(episodeListPane.getWidth() - 10, episodeListPane.getHeight() / 7));
                 button.setFont(button.getFont().deriveFont(Font.BOLD).deriveFont((float) button.getMaximumSize().height/6));
                 Border border = new LineBorder(secondary, 3);
                 button.setBorder(border);
@@ -864,14 +1005,14 @@ public class MetroUI
                     }
                 });
 
-                sequenceListPanel.add(button);
+                episodeListEmptyPanel.add(button);
 
                 try
                 {
-                    sequenceListPanel.revalidate();
-                    sequenceListPanel.repaint();
-                    sequenceScroll.revalidate();
-                    sequenceScroll.repaint();
+                    episodeListEmptyPanel.revalidate();
+                    episodeListEmptyPanel.repaint();
+                    episodeListScroll.revalidate();
+                    episodeListScroll.repaint();
 
                 } catch (NullPointerException e)
                 {
@@ -883,10 +1024,10 @@ public class MetroUI
 
         try
         {
-            sequenceListPanel.revalidate();
-            sequenceListPanel.repaint();
-            sequenceScroll.revalidate();
-            sequenceScroll.repaint();
+            episodeListEmptyPanel.revalidate();
+            episodeListEmptyPanel.repaint();
+            episodeListScroll.revalidate();
+            episodeListScroll.repaint();
 
         } catch (NullPointerException e)
         {
