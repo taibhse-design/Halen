@@ -116,9 +116,9 @@ public class ThreadedDownload
                                 {
 
                                 }
-                                System.out.print(tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
-                                System.out.print(" : " + magnet);
-                                System.out.println("\n");
+                                System.out.println(tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + " : " + magnet);
+                              //  System.out.print(" : " + magnet);
+                             //   System.out.println("\n");
 
 //if string magnet has magnet url then update ep list to indcare its retrieved
                                 if (magnet.contains("magnet:?xt="))
@@ -238,9 +238,9 @@ public class ThreadedDownload
 
                                 }
 
-                                System.out.print(animeList[i].getName().replace(".xml", "") + "   " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
-                                System.out.print(" :       " + magnet);
-                                System.out.println("\n\n");
+                                System.out.println(animeList[i].getName().replace(".xml", "") + "   " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + " :       " + magnet);
+                             //   System.out.print(" :       " + magnet);
+                             //   System.out.println("\n\n");
 
 //if string magnet has magnet url then update ep list to indcare its retrieved
                                 if (magnet.contains("?page=download") && magnet.contains("nyaa"))
@@ -260,7 +260,7 @@ public class ThreadedDownload
                             
                             }catch(Exception e)
                             {
-                                System.out.println("ERROR WITH " + animeList[i].getName().replace(".xml", "") + " " + i + ":   " + e);
+                                System.out.println("\n\n###############################################################\n\nERROR WITH " + animeList[i].getName().replace(".xml", "") + " " + i + ":   " + e + "\n\n###############################################################\n\n");
                                   eps.replaceItem(eps.getItem(j).replace("true", "false"), j);
                             }
                         }
@@ -347,9 +347,9 @@ public class ThreadedDownload
                                 {
                                    // System.out.println("ERROR WITH MAGNET");
                                 }
-                                System.out.print(comicsList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
-                                System.out.print(" : " + magnet);
-                                System.out.println("\n");
+                                System.out.println(comicsList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + " : " + magnet);
+                             //   System.out.print(" : " + magnet);
+                             //   System.out.println("\n");
 
                                 //if string magnet has magnet url then update ep list to indcare its retrieved
                                 if (magnet.contains("magnet:?xt="))

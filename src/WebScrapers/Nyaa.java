@@ -31,7 +31,7 @@ public class Nyaa
     public static void main(String args[]) throws IOException
     {
         List eps = new List();
-        eps.add("-batch [deadfish] nisekoi_01");
+        eps.add("-batch [deadfish] norn9_01");
         eps.add("-batch [deadfish] nisekoi_02");
         eps.add("-batch [deadfish] nisekoi_03");
 

@@ -38,6 +38,8 @@ public class Main
 
     //  public static List rules = readFile(launchPath() + "\\rules.xml");
     public static int frameW = 6400 /* was 1280 */, frameH = 3175 /* was 635 */;
+    //aspect ratio of program ui
+    public static final float aspectRatio = 2.02f;
 
     public static String jarName = new java.io.File(Main.class.getProtectionDomain()
             .getCodeSource()
@@ -102,6 +104,14 @@ public class Main
         frameW -= accountForTaskBar*2;
         frameH -= accountForTaskBar*2;
         System.out.println("Frame Width: " + frameW + "frame Height: " + frameH);
+        
+        System.out.println("Aspect Ratio: " + ((float) ((float)frameW / (float)frameH)));
+        
+       do
+       {
+           frameH -= 1;
+       }while(((float) ((float)frameW / (float)frameH)) < aspectRatio);
+            
     }
 
     /**

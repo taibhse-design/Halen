@@ -25,15 +25,14 @@ public class Kickass
     //  private static String html = "";
     //  private static Document doc;
     //  private static Elements parse, links;
-    private static final String urlMain = "http://kat.proxy-x.com";
+    private static final String urlMain = "http://kat.cr"; //was http://kat.proxy-x.com  but this domain expired
     private static final String urlStart = urlMain + "/usearch/";
     private static final String urlEnd = "%20category%3Acomics/";
 
-    //   private static 
+    //main class is included here for quick testing of code in this class 
     public static void main(String args[]) throws IOException
     {
         List eps = new List();
-        
         for(int i = 1; i < 100; i++)
         {
             String num = i + "";
@@ -44,7 +43,7 @@ public class Kickass
             {
                 num = "0" + num;
             }
-        eps.add("ixth generation cbr_" + num);
+        eps.add("think tank creative destruction cbr_" + num);
         }
 
         for (int i = 0; i < eps.getItemCount(); i++)

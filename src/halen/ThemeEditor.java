@@ -136,7 +136,7 @@ public class ThemeEditor
         samples.setBackground(secondary);
 
         JLabel preview = new JLabel("  COLOUR PREVIEW");
-        preview.setFont(preview.getFont().deriveFont(Font.BOLD).deriveFont(16.5f));
+        preview.setFont(preview.getFont().deriveFont(Font.BOLD));
         preview.setOpaque(true);
         preview.setForeground(primary);
         preview.setBackground(secondary);
@@ -147,7 +147,7 @@ public class ThemeEditor
         Border border = new LineBorder(secondary, 3);
 
         final JLabel primaryPreview = new JLabel();
-        primaryPreview.setFont(primaryPreview.getFont().deriveFont(Font.BOLD).deriveFont(16.5f));
+        primaryPreview.setFont(primaryPreview.getFont().deriveFont(Font.BOLD));
         primaryPreview.setOpaque(true);
         primaryPreview.setBorder(border);
         primaryPreview.setBackground(primary);
@@ -156,7 +156,7 @@ public class ThemeEditor
         primaryPreview.setVisible(true);
 
         final JLabel secondaryPreview = new JLabel();
-        secondaryPreview.setFont(secondaryPreview.getFont().deriveFont(Font.BOLD).deriveFont(16.5f));
+        secondaryPreview.setFont(secondaryPreview.getFont().deriveFont(Font.BOLD));
         secondaryPreview.setOpaque(true);
         secondaryPreview.setBorder(border);
         secondaryPreview.setBackground(secondary);
@@ -165,7 +165,7 @@ public class ThemeEditor
         secondaryPreview.setVisible(true);
 
         final JLabel tertiaryPreview = new JLabel();
-        tertiaryPreview.setFont(tertiaryPreview.getFont().deriveFont(Font.BOLD).deriveFont(16.5f));
+        tertiaryPreview.setFont(tertiaryPreview.getFont().deriveFont(Font.BOLD));
         tertiaryPreview.setOpaque(true);
         tertiaryPreview.setBorder(border);
         tertiaryPreview.setBackground(tertiary);
@@ -204,7 +204,7 @@ public class ThemeEditor
         tertiaryCheck.setVisible(true);
 
         JLabel primaryText = new JLabel("  Primary Colour");
-        primaryText.setFont(primaryText.getFont().deriveFont(Font.BOLD).deriveFont(15f));
+        primaryText.setFont(primaryText.getFont().deriveFont(Font.BOLD));
         primaryText.setOpaque(true);
         primaryText.setForeground(primary);
         primaryText.setBackground(secondary);
@@ -213,7 +213,7 @@ public class ThemeEditor
         primaryText.setVisible(true);
 
         JLabel secondaryText = new JLabel("  Secondary Colour");
-        secondaryText.setFont(secondaryText.getFont().deriveFont(Font.BOLD).deriveFont(15f));
+        secondaryText.setFont(secondaryText.getFont().deriveFont(Font.BOLD));
         secondaryText.setOpaque(true);
         secondaryText.setForeground(primary);
         secondaryText.setBackground(secondary);
@@ -222,7 +222,7 @@ public class ThemeEditor
         secondaryText.setVisible(true);
 
         JLabel tertiaryText = new JLabel("  Tertiary Colour");
-        tertiaryText.setFont(tertiaryText.getFont().deriveFont(Font.BOLD).deriveFont(15f));
+        tertiaryText.setFont(tertiaryText.getFont().deriveFont(Font.BOLD));
         tertiaryText.setOpaque(true);
         tertiaryText.setForeground(primary);
         tertiaryText.setBackground(secondary);
@@ -231,7 +231,7 @@ public class ThemeEditor
         tertiaryText.setVisible(true);
 
         JLabel red = new JLabel("  RED");
-        red.setFont(red.getFont().deriveFont(Font.BOLD).deriveFont(15f));
+        red.setFont(red.getFont().deriveFont(Font.BOLD));
         red.setOpaque(true);
         red.setForeground(primary);
         red.setBackground(secondary);
@@ -240,7 +240,7 @@ public class ThemeEditor
         red.setVisible(true);
 
         JLabel green = new JLabel("  GREEN");
-        green.setFont(green.getFont().deriveFont(Font.BOLD).deriveFont(15f));
+        green.setFont(green.getFont().deriveFont(Font.BOLD));
         green.setOpaque(true);
         green.setForeground(primary);
         green.setBackground(secondary);
@@ -249,7 +249,7 @@ public class ThemeEditor
         green.setVisible(true);
 
         JLabel blue = new JLabel("  BLUE");
-        blue.setFont(blue.getFont().deriveFont(Font.BOLD).deriveFont(15f));
+        blue.setFont(blue.getFont().deriveFont(Font.BOLD));
         blue.setOpaque(true);
         blue.setForeground(primary);
         blue.setBackground(secondary);
@@ -258,7 +258,7 @@ public class ThemeEditor
         blue.setVisible(true);
 
         final JTextField redIn = new JTextField(".....");
-        redIn.setFont(redIn.getFont().deriveFont(Font.BOLD).deriveFont(14f));
+        redIn.setFont(redIn.getFont().deriveFont(Font.BOLD));
         redIn.setOpaque(true);
         redIn.setForeground(primary);
         redIn.setBackground(tertiary);
@@ -269,7 +269,7 @@ public class ThemeEditor
         redIn.setVisible(true);
 
         final JTextField greenIn = new JTextField(".....");
-        greenIn.setFont(greenIn.getFont().deriveFont(Font.BOLD).deriveFont(14f));
+        greenIn.setFont(greenIn.getFont().deriveFont(Font.BOLD));
         greenIn.setOpaque(true);
         greenIn.setForeground(primary);
         greenIn.setBackground(tertiary);
@@ -280,7 +280,7 @@ public class ThemeEditor
         greenIn.setVisible(true);
 
         final JTextField blueIn = new JTextField(".....");
-        blueIn.setFont(blueIn.getFont().deriveFont(Font.BOLD).deriveFont(14f));
+        blueIn.setFont(blueIn.getFont().deriveFont(Font.BOLD));
         blueIn.setOpaque(true);
         blueIn.setForeground(primary);
         blueIn.setBackground(tertiary);
@@ -659,6 +659,7 @@ public class ThemeEditor
 
         colsetup.addMouseListener(new MouseAdapter()
         {
+            @Override
             public void mousePressed(MouseEvent e)
             {
                 posX = e.getX();

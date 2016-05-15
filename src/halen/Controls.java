@@ -883,13 +883,19 @@ public class Controls
             @Override
             public void mouseClicked(MouseEvent me)
             {
-                if (me.getClickCount() == 2)
+                if (me.getClickCount() == 4)
                 {
                     try
                     {
-                        //  if(cb.getSelectedItem().toString().toLowerCase().equals("tv show"))
+                       if(cb.getSelectedItem().toString().toLowerCase().contains("tv show"))
                         {
                             FileManager.executeCommand("start http://extratorrent.cc/search/?search=" + GUI.search.getText().replaceAll(" ", "+"));
+                        }else if(cb.getSelectedItem().toString().toLowerCase().contains("comic"))
+                        {
+                            FileManager.executeCommand("start http://kat.cr/usearch/" + GUI.search.getText().replaceAll(" ", "+"));
+                        }else if(cb.getSelectedItem().toString().toLowerCase().contains("anime"))
+                        {
+                            FileManager.executeCommand("start http://www.nyaa.se/?term=" + GUI.search.getText().replaceAll(" ", "+"));
                         }
 
                     } catch (InterruptedException ex)
