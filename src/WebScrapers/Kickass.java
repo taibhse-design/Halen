@@ -25,7 +25,7 @@ public class Kickass
     //  private static String html = "";
     //  private static Document doc;
     //  private static Elements parse, links;
-    private static final String urlMain = "http://kat.cr"; //was http://kat.proxy-x.com  but this domain expired
+    private static final String urlMain = "https://kickass.immunicity.host";//"http://kat.cr"; //was http://kat.proxy-x.com  but this domain expired
     private static final String urlStart = urlMain + "/usearch/";
     private static final String urlEnd = "%20category%3Acomics/";
 

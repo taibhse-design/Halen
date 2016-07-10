@@ -29,12 +29,13 @@ public class TraktParser
         }
     }
 
+    
     public static List getData(String url) throws IOException
     {
         List data = new List();
 
         
-        data.add("<search>" + getSearchParams(url) + "</search><url>" + url + "</url>");
+        
         WebClient webClient = new WebClient(BrowserVersion.CHROME);
 
         webClient.getOptions()
@@ -49,8 +50,11 @@ public class TraktParser
         HtmlPage page;
         String html;
         Document doc;
-
-        for (int i = 1; i <= getSeasonCount(url); i++)
+        
+        int seasonCount = getSeasonCount(url);
+        data.add("<search>" + getSearchParams(url) + "</search><url>" + url + "</url><image>" + FanartDownloader.FanartDownloader.imagePath + "</image>");
+        //for (int i = 1; i <= getSeasonCount(url); i++)
+        for (int i = 1; i <= seasonCount; i++)
         {
 
             //System.out.println("Trying Season " + i);
@@ -120,8 +124,21 @@ public class TraktParser
         Document doc = Jsoup.parse(html);
         Elements seasons = doc.select("a");
 
-        for (Element value : seasons)
+        loop: for (Element value : seasons)
         {
+            //thrown in here for convenience 
+            //this grabs the fanart link and attampts to download all fanart
+            if(value.attr("href").contains("fanart"))
+            {
+                System.out.println(value.attr("href"));
+                
+                FanartDownloader.FanartDownloader.download(value.attr("href"));
+                break loop;
+            }
+            
+        }
+        for (Element value : seasons)
+        {    
             if (value.attr("href").equals("#seasons"))
             {
 

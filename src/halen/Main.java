@@ -19,9 +19,12 @@ import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URISyntaxException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
@@ -49,7 +52,9 @@ public class Main
 
     //  private static List settings = readFile(launchPath() + "\\settings.xml");
     public static String n = "", ser = "", start = "", end = "", handler = "";
-    public static Color primary = new Color(0, 0, 0, 230), secondary = new Color(51, 51, 51), tertiary = new Color(255, 255, 255);
+    
+    //          old default theme           0, 0, 0, 230                          51, 51, 51                        255, 255, 255
+    public static Color primary = new Color(4, 4, 4, 230), secondary = new Color(225, 225, 225), tertiary = new Color(5, 114, 164);
 
     /**
      * tests the screens resolution before running noa to see if noas default
@@ -111,14 +116,27 @@ public class Main
        {
            frameH -= 1;
        }while(((float) ((float)frameW / (float)frameH)) < aspectRatio);
+       
             
     }
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws FileNotFoundException, InterruptedException
+    public static void main(String[] args) throws FileNotFoundException, InterruptedException, IOException
     {
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH-mm-ss");
+        
+        File d = new File(FileManager.launchPath() + "\\logs");
+        d.mkdirs();
+        
+        File f = new File(FileManager.launchPath() + "\\logs\\log-" + FileManager.getCurrentDate() + "_" + sdf.format(cal.getTime()) + ".txt");
+        f.createNewFile();
+        FileOutputStream file = new FileOutputStream(f);
+        
+        Log tee = new Log(file, System.out);
+        System.setOut(tee);
 
         //code prevents multiple instances of halen running
         String appId = "Taibhse.Halen";

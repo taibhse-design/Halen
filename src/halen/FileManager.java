@@ -31,8 +31,8 @@ public class FileManager
     public static void main(String args[]) throws InterruptedException, ParseException, IOException
     {
 
-       // String processName = "qbittorrent";
-       // System.out.println("is " + processName + " Running: " + isProcessRunning(processName));
+        // String processName = "qbittorrent";
+        // System.out.println("is " + processName + " Running: " + isProcessRunning(processName));
         System.out.println(hasDatePassed("hgjhgjh"));
     }
 
@@ -55,14 +55,14 @@ public class FileManager
         if (pidInfo.contains(processName))
         {
             return true;
-        }else
+        } else
         {
             return false;
         }
 
-    
-}
-public static String updateTag(String tag, String source, String newValue)
+    }
+
+    public static String updateTag(String tag, String source, String newValue)
     {
         String link = source;
         String mod = "";
@@ -70,16 +70,15 @@ public static String updateTag(String tag, String source, String newValue)
         {
             link = link.substring(link.indexOf("<" + tag + ">"), link.indexOf("</" + tag + ">"));
             link = link.replace("<" + tag + ">", "");
-            
-            
-            mod = source.replace("<" + tag + ">" + link, "<" + tag + ">" + newValue); 
+
+            mod = source.replace("<" + tag + ">" + link, "<" + tag + ">" + newValue);
         } catch (StringIndexOutOfBoundsException e)
         {
             mod = source;
         }
         return mod;
     }
-  
+
     public static String returnTag(String tag, String source)
     {
         String link = source;
@@ -110,9 +109,9 @@ public static String updateTag(String tag, String source, String newValue)
             List list = new List();
             while (s.hasNextLine())
             {
-               
+
                 list.add(s.nextLine());
-                
+
             }
             s.close();
 
@@ -130,15 +129,13 @@ public static String updateTag(String tag, String source, String newValue)
      *
      * @return
      */
-    public static String 
-
-launchPath()
+    public static String launchPath()
     {
 
         try
         {
             CodeSource codeSource = FileManager.class
-.getProtectionDomain().getCodeSource();
+                    .getProtectionDomain().getCodeSource();
             File jarFile = new File(codeSource.getLocation().toURI().getPath());
             String jarDir = jarFile.getParentFile().getPath();
 
@@ -172,83 +169,82 @@ launchPath()
         }
 
     }
-    
-    
+
     /**
-    * tests if a provided date is passed the current date, 
-    * true if passed, false if not, note date provided must be 
-    * in the format dd-MM-yyyy to avoid errors
-    * @param date
-    * @return
-    * @throws ParseException 
-    */
-   public static Boolean hasDatePassed(String date) throws ParseException
-   {
-       Boolean passed = false;
-       try
-       {
-       if(!date.trim().equals(""))
-       {
-       DateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
-       Date testDate = format.parse(date);
-       Date currentDate = format.parse(getCurrentDate());
-       
-       if(testDate.before(currentDate))
-       {
-           passed = true;
-       }else if(testDate.equals(currentDate))
-       {
-           passed = true;
-       }
-       
-       
-       }//if provided date variable is blank, set true 
-       else
-       {
-           passed = true;
-       }
-       }catch(ParseException e)
-       {
-           System.out.println("-----------------------------------------------------------------------------------------------"
-                   + "\nERROR WITH DATE FORMAT...........PASSING TO ALLOW CONTINUED RUN...\n"
-           + "-----------------------------------------------------------------------------------------------");
-          passed = true; 
-       }
-       return passed;
-   }
-   
-    /**
-     * returns a string containing the 
-     * current date in the format DD-MM-YYYY
-     * @return 
+     * tests if a provided date is passed the current date, true if passed,
+     * false if not, note date provided must be in the format dd-MM-yyyy to
+     * avoid errors
+     *
+     * @param date
+     * @return
+     * @throws ParseException
      */
-   public static String getCurrentDate()
-   {
-       String date;
-       Calendar cal = Calendar.getInstance();
-       
-       String day, month, year;
-       
-       year = cal.get(Calendar.YEAR)+"";
-       
-       if(cal.get(Calendar.DAY_OF_MONTH) <= 9)
-       {
-       day =  "0" + cal.get(Calendar.DAY_OF_MONTH);
-       }else
-       {
-         day =  ""+cal.get(Calendar.DAY_OF_MONTH);  
-       }
-       
-        if( (cal.get(Calendar.MONTH)+1) <= 9)
-       {
-       month =  "0" +  (cal.get(Calendar.MONTH)+1);
-       }else
-       {
-         month =  ""+ (cal.get(Calendar.MONTH)+1);  
-       }
-        
-     //  date = cal.get(Calendar.DAY_OF_MONTH) + "-" + (cal.get(Calendar.MONTH)+1) + "-" + cal.get(Calendar.YEAR);
+    public static Boolean hasDatePassed(String date) throws ParseException
+    {
+        Boolean passed = false;
+        try
+        {
+            if (!date.trim().equals(""))
+            {
+                DateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+                Date testDate = format.parse(date);
+                Date currentDate = format.parse(getCurrentDate());
+
+                if (testDate.before(currentDate))
+                {
+                    passed = true;
+                } else if (testDate.equals(currentDate))
+                {
+                    passed = true;
+                }
+
+            }//if provided date variable is blank, set true 
+            else
+            {
+                passed = true;
+            }
+        } catch (ParseException e)
+        {
+            System.out.println("-----------------------------------------------------------------------------------------------"
+                    + "\nERROR WITH DATE FORMAT...........PASSING TO ALLOW CONTINUED RUN...\n"
+                    + "-----------------------------------------------------------------------------------------------");
+            passed = true;
+        }
+        return passed;
+    }
+
+    /**
+     * returns a string containing the current date in the format DD-MM-YYYY
+     *
+     * @return
+     */
+    public static String getCurrentDate()
+    {
+        String date;
+        Calendar cal = Calendar.getInstance();
+
+        String day, month, year;
+
+        year = cal.get(Calendar.YEAR) + "";
+
+        if (cal.get(Calendar.DAY_OF_MONTH) <= 9)
+        {
+            day = "0" + cal.get(Calendar.DAY_OF_MONTH);
+        } else
+        {
+            day = "" + cal.get(Calendar.DAY_OF_MONTH);
+        }
+
+        if ((cal.get(Calendar.MONTH) + 1) <= 9)
+        {
+            month = "0" + (cal.get(Calendar.MONTH) + 1);
+        } else
+        {
+            month = "" + (cal.get(Calendar.MONTH) + 1);
+        }
+
+        //  date = cal.get(Calendar.DAY_OF_MONTH) + "-" + (cal.get(Calendar.MONTH)+1) + "-" + cal.get(Calendar.YEAR);
         date = year + "-" + month + "-" + day;
-       return date;
-   }
+        return date;
+    }
 }

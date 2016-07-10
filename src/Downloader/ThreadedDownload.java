@@ -1,6 +1,7 @@
 package Downloader;
 
 import MagnetHandler.Handler;
+import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import halen.FileManager;
 import static halen.GUI.anim;
 import static halen.GUI.color;
@@ -19,8 +20,6 @@ import java.util.concurrent.Executors;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
-import org.apache.commons.lang3.time.DateUtils;
 
 /**
  * @author TAIBHSE
@@ -105,8 +104,15 @@ public class ThreadedDownload
                             if (eps.getItem(j).contains("false") && FileManager.hasDatePassed(FileManager.returnTag("release",eps.getItem(j))))
                             {
                                 //get magnet link into string
-                                String magnet = WebScrapers.ExtraTorrent.getMagnet(FileManager.returnTag("search", eps.getItem(0)), eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
-
+                                String magnet = "";
+                                
+                                try
+                                {
+                                magnet= WebScrapers.ExtraTorrent.getMagnet(FileManager.returnTag("search", eps.getItem(0)), eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
+                                }catch(FailingHttpStatusCodeException e)
+                                {
+                                   System.out.print(" ERROR 504 GATEWAY TIME-OUT FOR http://extratorrent.cc/...error caught and ignored.....\n"); 
+                                }
                                 //print results
                                 try
                                 {

@@ -11,6 +11,9 @@ import static halen.MetroUI.quantity;
 import java.io.File;
 import static halen.MetroUI.episodeListScroll;
 import static halen.MetroUI.episodeListEmptyPanel;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * @author TAIBHSE
@@ -48,7 +51,13 @@ public class Delete
             rulesScroll.revalidate();
             rulesScroll.repaint();
 
-            MetroUI.createRuleButtons(GUI.cb.getSelectedItem().toString().toLowerCase().trim());
+            try
+            {
+                MetroUI.createRuleButtons(GUI.cb.getSelectedItem().toString().toLowerCase().trim());
+            } catch (IOException ex)
+            {
+                Logger.getLogger(Delete.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
             rulesListPanel.revalidate();
             rulesListPanel.repaint();

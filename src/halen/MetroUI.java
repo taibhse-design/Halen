@@ -31,15 +31,20 @@ import java.awt.ComponentOrientation;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.List;
 import java.awt.Rectangle;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.File;
+import java.io.FileFilter;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -431,8 +436,13 @@ public class MetroUI
         rulesListPanel.setLayout(layout);
         rulesListPanel.setBackground(secondary);
         //   contactListPanel.setSize(rulesPane.getWidth(), rulesPane.getHeight()/8);
-
-        createRuleButtons(GUI.cb.getSelectedItem().toString().toLowerCase().trim());
+        try
+        {
+            createRuleButtons(GUI.cb.getSelectedItem().toString().toLowerCase().trim());
+        } catch (IOException ex)
+        {
+            Logger.getLogger(MetroUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         rulesScroll = new JScrollPane(rulesListPanel);
         rulesScroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -809,21 +819,39 @@ public class MetroUI
 
     }
 
-    public static void createRuleButtons(String type)
+    public static void createRuleButtons(String type) throws IOException
     {
         File[] rulesList = null;
         if (type.equals("tv show"))
         {
             File folder = new File(halen.FileManager.launchPath() + "/rules/tv show");
-            rulesList = folder.listFiles();
+            rulesList = folder.listFiles(new FileFilter() {
+                @Override
+                public boolean accept(File name)
+                {
+                    return name.getName().toLowerCase().endsWith(".xml"); //To change body of generated methods, choose Tools | Templates.
+                }
+            });
         } else if (type.equals("anime"))
         {
             File folder = new File(halen.FileManager.launchPath() + "/rules/anime");
-            rulesList = folder.listFiles();
+            rulesList = folder.listFiles(new FileFilter() {
+                @Override
+                public boolean accept(File name)
+                {
+                    return name.getName().toLowerCase().endsWith(".xml"); //To change body of generated methods, choose Tools | Templates.
+                }
+            });
         } else if (type.equals("comics"))
         {
             File folder = new File(halen.FileManager.launchPath() + "/rules/comics");
-            rulesList = folder.listFiles();
+            rulesList = folder.listFiles(new FileFilter() {
+                @Override
+                public boolean accept(File name)
+                {
+                    return name.getName().toLowerCase().endsWith(".xml"); //To change body of generated methods, choose Tools | Templates.
+                }
+            });
         }
 
         for (int i = 0; i < rulesList.length; i++)
@@ -832,14 +860,33 @@ public class MetroUI
             {
                 final JButton button = new JButton();
 
-                button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); //contactList.get(i).getSurname() + ", " + contactList.get(i).getGivenName());
-
+               // button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); //contactList.get(i).getSurname() + ", " + contactList.get(i).getGivenName());
+                button.setName("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); //contactList.get(i).getSurname() + ", " + contactList.get(i).getGivenName());
                 button.setForeground(primary);
                 button.setBackground(secondary.darker());
-
-                button.setMaximumSize(new Dimension(rulesPane.getWidth() - 10, rulesPane.getHeight() / 4));
+                
+                 button.setMaximumSize(new Dimension(rulesPane.getWidth() - 10, rulesPane.getHeight() / 4));
                 button.setMinimumSize(new Dimension(rulesPane.getWidth() - 10, rulesPane.getHeight() / 4));
                 button.setPreferredSize(new Dimension(rulesPane.getWidth() - 10, rulesPane.getHeight() / 4));
+                
+                System.out.println(new File(FileManager.returnTag("image",new Scanner(rulesList[i]).nextLine())).exists());
+                //if(new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png")).exists())
+                if(new File(FileManager.returnTag("image",new Scanner(rulesList[i]).nextLine())).exists())
+                {
+              //  File sourceimage = new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png"));
+               
+                  File sourceimage = new File(FileManager.returnTag("image",new Scanner(rulesList[i]).nextLine()));
+               
+                Image image = ImageIO.read(sourceimage);
+                button.setIcon(new ImageIcon(image.getScaledInstance(-1, rulesPane.getHeight() / 4,
+            java.awt.Image.SCALE_SMOOTH)));
+                }else
+                {
+                    button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); //contactList.get(i).getSurname() + ", " + contactList.get(i).getGivenName());
+                
+                }
+                
+               
                 button.setFont(button.getFont().deriveFont(Font.BOLD).deriveFont((float) button.getMaximumSize().height / 10));
                 Border border = new LineBorder(secondary, 3);
                 button.setBorder(border);
@@ -854,8 +901,8 @@ public class MetroUI
                     public void mouseClicked(MouseEvent me)
                     {
 
-                        Show.showRule(button.getText().replace(button.getText().subSequence(button.getText().indexOf("R"), button.getText().indexOf(":") + 1), "").trim());
-                        loadSequenceContent(button.getText().replace(button.getText().subSequence(button.getText().indexOf("R"), button.getText().indexOf(":") + 1), "").trim(), cb.getSelectedItem().toString().toLowerCase().trim());
+                        Show.showRule(button.getName().replace(button.getName().subSequence(button.getName().indexOf("R"), button.getName().indexOf(":") + 1), "").trim());
+                        loadSequenceContent(button.getName().replace(button.getName().subSequence(button.getName().indexOf("R"), button.getName().indexOf(":") + 1), "").trim(), cb.getSelectedItem().toString().toLowerCase().trim());
                     }
 
                     @Override

@@ -540,7 +540,13 @@ public class Save
                 rulesListPanel.repaint();
                 rulesScroll.revalidate();
                 rulesScroll.repaint();
-                createRuleButtons(GUI.cb.getSelectedItem().toString().toLowerCase().trim());
+                try
+                {
+                    createRuleButtons(GUI.cb.getSelectedItem().toString().toLowerCase().trim());
+                } catch (IOException ex)
+                {
+                    Logger.getLogger(Save.class.getName()).log(Level.SEVERE, null, ex);
+                }
 
             } else
             {
@@ -554,7 +560,13 @@ public class Save
                     rulesListPanel.repaint();
                     rulesScroll.revalidate();
                     rulesScroll.repaint();
-                    createRuleButtons(GUI.cb.getSelectedItem().toString().toLowerCase().trim());
+                    try
+                    {
+                        createRuleButtons(GUI.cb.getSelectedItem().toString().toLowerCase().trim());
+                    } catch (IOException ex)
+                    {
+                        Logger.getLogger(Save.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
 
             }

@@ -37,6 +37,7 @@ set /p changes="List changes/updates made from previous version: "
 echo.
 REM ROBOCOPY "C:\Users\brenn\Documents\NetBeansProjects\Halen\dist\" "C:\Users\brenn\OneDrive\Halen Releases" *.* /PURGE /S /NP /ZB /R:5 /TS /FP
 Del "C:\Users\brenn\Documents\NetBeansProjects\Halen\dist\README.TXT"
+
 git add C:\Users\brenn\Documents\NetBeansProjects\Halen\dist\*
 git commit -m "%changes%"
 git push origin master

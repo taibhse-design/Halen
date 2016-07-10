@@ -6,14 +6,12 @@ import static halen.GUI.anim;
 import static halen.GUI.cb;
 import static halen.GUI.delete;
 import static halen.GUI.name;
-import static halen.GUI.progressBar;
 import static halen.GUI.ruleName;
 import static halen.GUI.rulesPane;
 import static halen.GUI.save;
 import static halen.GUI.search;
 import static halen.GUI.searchIn;
 import static halen.GUI.settings;
-import static halen.MetroUI.inputs;
 import static halen.MetroUI.setTheme;
 import java.awt.HeadlessException;
 import java.awt.List;
@@ -24,6 +22,10 @@ import java.util.Iterator;
 import org.apache.commons.io.FileUtils;
 import static halen.MetroUI.episodeListPane;
 import static halen.MetroUI.inputsPane;
+import org.apache.commons.io.IOCase;
+import org.apache.commons.io.filefilter.DirectoryFileFilter;
+import org.apache.commons.io.filefilter.IOFileFilter;
+import org.apache.commons.io.filefilter.SuffixFileFilter;
 
 /**
  * @author TAIBHSE
@@ -49,7 +51,13 @@ public class UpdateTraktData
                 try
                 {
 
-                    Iterator it = FileUtils.iterateFiles(new File(FileManager.launchPath() + "/rules/tv show"), null, false);
+                    String[] extensions = new String[]
+                    {
+                        "xml"
+                    };
+                    IOFileFilter filter = new SuffixFileFilter(extensions, IOCase.INSENSITIVE);
+
+                    Iterator it = FileUtils.iterateFiles(new File(FileManager.launchPath() + "/rules/tv show"), filter, DirectoryFileFilter.DIRECTORY);
 
                     while (it.hasNext())
                     {
@@ -73,9 +81,23 @@ public class UpdateTraktData
 
                             List output = new List();
                             //add first item that is search term
-                            output.add(original.getItem(0));
+                            //output.add(original.getItem(0));
+                            
+                            if(!original.getItem(0).contains("<image>"))
+                            {
+                            output.add(original.getItem(0).replace(original.getItem(0).substring(original.getItem(0).indexOf("<search>"), original.getItem(0).indexOf("</url>")+6), updated.getItem(0)));
+                            }else
+                            {
+                                 output.add(original.getItem(0).replace(original.getItem(0).substring(original.getItem(0).indexOf("<search>"), original.getItem(0).indexOf("</image>")+8), updated.getItem(0)));
+                           
+                            }
                             // ArrayList list = new ArrayList();
 
+                            System.out.println(original.getItem(0));
+                            System.out.println(updated.getItem(0));
+                            
+                            
+                            
                             //Collections.sort(list);
                             //new episodes or season added
                             if (original.getItemCount() < updated.getItemCount())
@@ -163,7 +185,25 @@ public class UpdateTraktData
 
                 } catch (IOException | HeadlessException | NumberFormatException ex)
                 {
-                    System.out.println("THIS IS WHERE ITS GOING WRONG" + ex);
+                    System.out.println("CRITICAL ERROR: " + ex);
+                    
+                          //restore gui
+                        anim.setVisible(false);
+                        rulesPane.setVisible(true);
+                        save.setVisible(true);
+                        cb.setVisible(true);
+                        GUI.run.setVisible(true);
+                        ruleName.setVisible(true);
+                        name.setVisible(true);
+                        search.setVisible(true);
+                        searchIn.setVisible(true);
+                        episodeListPane.setVisible(true);
+                        delete.setVisible(true);
+                        inputsPane.setVisible(true);
+                        settings.setVisible(true);
+                        setTheme.setVisible(true);
+                        GUI.trakt.setVisible(true);
+                        GUI.updateRulesData.setVisible(true);
                 }
 
             }

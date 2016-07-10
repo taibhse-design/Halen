@@ -695,7 +695,13 @@ public class Controls
                     rulesScroll.revalidate();
                     rulesScroll.repaint();
 
-                    MetroUI.createRuleButtons(GUI.cb.getSelectedItem().toString().toLowerCase().trim());
+                    try
+                    {
+                        MetroUI.createRuleButtons(GUI.cb.getSelectedItem().toString().toLowerCase().trim());
+                    } catch (IOException ex)
+                    {
+                        Logger.getLogger(Controls.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                     //  System.out.println(GUI.cb.getSelectedItem().toString().toLowerCase().trim());
                     rulesListPanel.revalidate();
                     rulesListPanel.repaint();
