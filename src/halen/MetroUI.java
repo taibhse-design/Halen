@@ -878,8 +878,13 @@ public class MetroUI
                   File sourceimage = new File(FileManager.returnTag("image",new Scanner(rulesList[i]).nextLine()));
                
                 Image image = ImageIO.read(sourceimage);
-                button.setIcon(new ImageIcon(image.getScaledInstance(-1, rulesPane.getHeight() / 4,
-            java.awt.Image.SCALE_SMOOTH)));
+                
+                try{button.setIcon(new ImageIcon(image.getScaledInstance(-1, rulesPane.getHeight() / 4,
+            java.awt.Image.SCALE_SMOOTH)));}catch(NullPointerException e)
+            {
+                button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); //contactList.get(i).getSurname() + ", " + contactList.get(i).getGivenName());
+                 
+            }
                 }else
                 {
                     button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); //contactList.get(i).getSurname() + ", " + contactList.get(i).getGivenName());

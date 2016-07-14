@@ -1,5 +1,6 @@
 package Downloader;
 
+import Emailer.SendEmail;
 import MagnetHandler.Handler;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import halen.FileManager;
@@ -129,6 +130,8 @@ public class ThreadedDownload
 //if string magnet has magnet url then update ep list to indcare its retrieved
                                 if (magnet.contains("magnet:?xt="))
                                 {
+                                    
+                                    SendEmail.retrievedEpisodes.add(tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
                                     Handler.addLinkTOMAgnetList(magnet);
                                     count++;
                                     eps.replaceItem(eps.getItem(j).replace("false", "true"), j);
@@ -251,6 +254,7 @@ public class ThreadedDownload
 //if string magnet has magnet url then update ep list to indcare its retrieved
                                 if (magnet.contains("?page=download") && magnet.contains("nyaa"))
                                 {
+                                    SendEmail.retrievedAnime.add(animeList[i].getName().replace(".xml", "") + "   " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
                                     Handler.addLinkTOMAgnetList(magnet);
                                     eps.replaceItem(eps.getItem(j).replace("false", "true"), j);
                                 }
@@ -360,6 +364,7 @@ public class ThreadedDownload
                                 //if string magnet has magnet url then update ep list to indcare its retrieved
                                 if (magnet.contains("magnet:?xt="))
                                 {
+                                    SendEmail.retrievedcomics.add(comicsList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
                                     Handler.addLinkTOMAgnetList(magnet);
                                     //update to state ep/comic gotten
                                     eps.replaceItem(eps.getItem(j).replace("false", "true"), j);
@@ -417,6 +422,7 @@ public class ThreadedDownload
 
 //send all links to torrent client
         Handler.sendToClient();
+        SendEmail.sendEmailNotice();
        // JOptionPane.showMessageDialog(null, "Finished running rules, \nany found magnet links have \nbeen sent to torrent client.", "FINISHED", 1);
     }
 

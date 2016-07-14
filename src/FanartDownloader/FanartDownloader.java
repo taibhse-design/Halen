@@ -11,6 +11,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import halen.FileManager;
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -37,6 +38,8 @@ public class FanartDownloader
     
     public static void download(String fanarturl) throws IOException
     {
+        
+        new File(FileManager.launchPath() + "\\graphics\\tv-show-logos\\").mkdirs();
         imagePath = "";
 
         WebClient webClient = new WebClient(BrowserVersion.CHROME);
@@ -78,10 +81,10 @@ public class FanartDownloader
                 in.close();
                 byte[] response = out.toByteArray();
 
-                FileOutputStream fos = new FileOutputStream(FileManager.launchPath() + "\\rules\\tv show\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png");
+                FileOutputStream fos = new FileOutputStream(FileManager.launchPath() + "\\graphics\\tv-show-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png");
                 fos.write(response);
                 fos.close();
-                imagePath = FileManager.launchPath() + "\\rules\\tv show\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
+                imagePath = FileManager.launchPath() + "\\graphics\\tv-show-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
                 break;
             }
         }
