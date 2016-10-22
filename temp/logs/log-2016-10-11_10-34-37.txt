@@ -1,0 +1,13 @@
+#################################################################################################################
+
+UPDATING RULE:  luke cage.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\luke cage.xml   |   https://trakt.tv/shows/marvel-s-luke-cage
+https://fanart.tv/series/304219
+https://fanart.tv/fanart/tv/304219/hdtvlogo/marvels-luke-cage-57931ed78bc64.png
+<search>Marvel's Luke Cage ettv</search><url>https://trakt.tv/shows/marvel-s-luke-cage</url><posterURL>/assets/placeholders/thumb/poster-2d5709c1b640929ca1ab60137044b152.png</posterURL><genres>Science Fiction, Fantasy, Drama, </genres><plot>After a sabotaged experiment leaves him with super strength and unbreakable skin, Luke Cage becomes a fugitive trying to rebuild his life in modern day Harlem, New York City. But he is soon pulled out of the shadows and must fight a battle for the heart of his city – forcing him to confront a past he had tried to bury.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\marvels luke cage.png</image><searchInFolder>C:\Users\brenn\Downloads</searchInFolder><moveToFolder>C:\Users\brenn\media\luke cage</moveToFolder><searchFor>luke cage</searchFor>
+<search>Marvel's Luke Cage ettv</search><url>https://trakt.tv/shows/marvel-s-luke-cage</url><posterURL>/assets/placeholders/thumb/poster-2d5709c1b640929ca1ab60137044b152.png</posterURL><genres>Science Fiction, Fantasy, Drama, </genres><plot>After a sabotaged experiment leaves him with super strength and unbreakable skin, Luke Cage becomes a fugitive trying to rebuild his life in modern day Harlem, New York City. But he is soon pulled out of the shadows and must fight a battle for the heart of his city – forcing him to confront a past he had tried to bury.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\marvels luke cage.png</image>
+
+FINISHED UPDATING RULE luke cage.xml
+
+#################################################################################################################

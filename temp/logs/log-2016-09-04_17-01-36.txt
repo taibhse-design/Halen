@@ -1,0 +1,404 @@
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Spider-Girl__2011_.xml
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Spider-Gwen__II_.xml
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Spider-Gwen__II_.xml
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Spider-Gwen__II_.xml: The process cannot access the file because it is being used by another process.
+
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Spider-Gwen__II_.xml

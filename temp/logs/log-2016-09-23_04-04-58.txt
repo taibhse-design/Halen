@@ -1,0 +1,86 @@
+#################################################################################################################
+
+UPDATING RULE:  adam ruins everything.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\adam ruins everything.xml   |   http://www.trakt.tv/shows/adam-ruins-everything
+https://fanart.tv/series/300774
+https://fanart.tv/fanart/tv/300774/hdtvlogo/adam-ruins-everything-564a04fc72525.png
+<search>Adam Ruins Everything ettv</search><url>http://www.trakt.tv/shows/adam-ruins-everything</url><posterURL>https://walter.trakt.us/images/shows/000/102/169/posters/thumb/5e8588f892.jpg</posterURL><genres>Documentary, Comedy, </genres><plot>In Adam Ruins Everything, host Adam Conover employs a combination of comedy, history and science to dispel widespread misconceptions about everything we take for granted. A blend of entertainment and enlightenment, Adam Ruins Everything is like that friend who knows a little bit too much about everything and is going to tell you about it... whether you like it or not.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\adam ruins everything.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\Adam Ruins Everything</moveToFolder><searchFor>adam ruins everything</searchFor>
+<search>Adam Ruins Everything ettv</search><url>http://www.trakt.tv/shows/adam-ruins-everything</url><posterURL>https://walter.trakt.us/images/shows/000/102/169/posters/thumb/5e8588f892.jpg</posterURL><genres>Documentary, Comedy, </genres><plot>In Adam Ruins Everything, host Adam Conover employs a combination of comedy, history and science to dispel widespread misconceptions about everything we take for granted. A blend of entertainment and enlightenment, Adam Ruins Everything is like that friend who knows a little bit too much about everything and is going to tell you about it... whether you like it or not.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\adam ruins everything.png</image>
+
+FINISHED UPDATING RULE adam ruins everything.xml
+
+#################################################################################################################
+PROFILE: C:\Users\brenn\Desktop\portables\Portable tools\GoogleChromePortable\Data\profile
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - mechanism.xml
+#########################################################################################################
+
+
+Title: Mechanism
+http://readcomiconline.to/Uploads/Etc/7-28-2016/102099153426.jpg
+Image URL:  C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\comic-book-covers\Mechanism.png
+Imgur URL:  https://i.imgur.com/Pm7dm1h.png
+Genres:  Action Adventure Robots Superhero
+Publisher:  Top Cow
+Writer:  Raff Ienco
+Artist:  Raff Ienco
+Publication date: 2016
+Status:  Ongoing
+Summary:  In the aftermath of an alien invasion, a prototype military robot is rushed into the field before it is combat-ready. Now attached to a group of survivors, it studies them to learn what it means to be human. Will it come to understand man as a noble creature worth preserving or that the human race isn’t worth saving at all?
+
+Mechanism Issue #3:   http://readcomiconline.to/Comic/Mechanism/Issue-3?id=89430&readType=1
+Mechanism Issue #1:   http://readcomiconline.to/Comic/Mechanism/Issue-1?id=78432&readType=1
+
+Skipping rule, no new updated issues, main stats updated instead.........
+
+#########################################################################################################
+
+PROFILE: C:\Users\brenn\Desktop\portables\Portable tools\GoogleChromePortable\Data\profile
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - 91 days.xml
+#########################################################################################################
+
+
+TITLE: 91 Days
+GENRE: Drama
+PLOT: Anime Synopsis: During Prohibition, the law held no power and the mafia ruled the town. The story takes place in Lawless, a town thriving on black market sales of illicitly brewed liquor. Avilio returns to Lawless after some time away, following the murder of his family in a mafia dispute there. One day, Avilio receives a letter from a mysterious sender, prompting him to return to Lawless for revenge. He then infiltrates the Vanetti family, the ones responsible for his family's murder, and sets about befriending the don's son, Nero, to set his vengeance in motion. Killing brings more killing, and revenge spawns more revenge. How will the 91-day story of these men guided by a tragic fate end?
+IMAGE URL: http://deadfishencod.es/files/anime/series/cover/91_days.jpg
+Director: Kaburaki Hiro
+Publisher(s): Shochiku
+Rated: R - 17+ (violence & profanity)
+Duration: 24 Mins Per Episode
+Status: Ongoing
+
+
+
+
+<title>91 Days</title><genre>Drama</genre><plot>Anime Synopsis: During Prohibition, the law held no power and the mafia ruled the town. The story takes place in Lawless, a town thriving on black market sales of illicitly brewed liquor. Avilio returns to Lawless after some time away, following the murder of his family in a mafia dispute there. One day, Avilio receives a letter from a mysterious sender, prompting him to return to Lawless for revenge. He then infiltrates the Vanetti family, the ones responsible for his family's murder, and sets about befriending the don's son, Nero, to set his vengeance in motion. Killing brings more killing, and revenge spawns more revenge. How will the 91-day story of these men guided by a tragic fate end?</plot><imageURL>http://deadfishencod.es/files/anime/series/cover/91_days.jpg</imageURL><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\anime-posters\91 Days.jpg</image><director>Director: Kaburaki Hiro</director><publisher>Publisher(s): Shochiku</publisher><rated>Rated: R - 17+ (violence & profanity)</rated><duration>Duration: 24 Mins Per Episode</duration><status>Status: Ongoing</status><seriesURL>http://deadfishencod.es/91_Days/</seriesURL><moveToFolder>jackpot</moveToFolder>
+
+<name>[DeadFish] 91 Days - 01 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=833389</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] 91 Days - 02 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=833390</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] 91 Days - 03 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=833391</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] 91 Days - 04 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=835538</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] 91 Days - 05 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=838226</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] 91 Days - 06 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=839757</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] 91 Days - 07 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=842473</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] 91 Days: Recap - 07.5 - Special [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=844250</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] 91 Days - 08 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=846360</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] 91 Days - 09 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=848469</magnet><downloaded>false</downloaded>
+
+<name>raw [DeadFish] 91 Days - 10 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=850624</magnet><downloaded>false</downloaded>
+
+
+
+
+
+#######################################################################################

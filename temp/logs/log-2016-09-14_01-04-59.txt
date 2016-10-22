@@ -1,0 +1,35 @@
+Planetarian Chiisana Hoshi no Yume.xml
+SAVING OVER EXISTING RULE FILE.....
+91 days.xml
+SAVING OVER EXISTING RULE FILE.....
+tabboo tattoo.xml
+SAVING NEW RULE FILE.....
+PROFILE: C:\Users\brenn\Desktop\portables\Portable tools\GoogleChromePortable\Data\profile
+
+
+TITLE: Taboo Tattoo
+GENRE: Action
+PLOT: Anime Synopsis: Seigi, a martial arts trained middle schooler, often feels driven to protect the weaker people around him. One day, he defends a homeless man against some punks, and the man gives him a strange tattoo on his palm in return. The tattoo is a secret weapon that gives Seigi supernatural powers such as warping space-time. Produced in the arms race between America and the Serinistan Kingdom. Seigi finds himself in over his head when a powerful girl, using the same secret weapon, violently pursues him in order to retrieve it. The female American agent named Easy, whose duty is to recover the tattoos. Seigi decides to help her and gets wrapped up in a cross-national conspiracy. His skill at martial arts may not be enough to keep him alive, but will he be able to learn how to trigger the power of his tattoo in time?
+IMAGE URL: http://deadfishencod.es/files/anime/series/cover/taboo_tattoo.jpg
+Director: Takashi Watanabe
+Publisher(s): Magic Capsule, DIVE II Entertainment
+Rated: R - 17+ (violence & profanity)
+Duration: 24 Mins Per Episode
+Status: Ongoing
+
+
+
+
+<title>Taboo Tattoo</title><genre>Action</genre><plot>Anime Synopsis: Seigi, a martial arts trained middle schooler, often feels driven to protect the weaker people around him. One day, he defends a homeless man against some punks, and the man gives him a strange tattoo on his palm in return. The tattoo is a secret weapon that gives Seigi supernatural powers such as warping space-time. Produced in the arms race between America and the Serinistan Kingdom. Seigi finds himself in over his head when a powerful girl, using the same secret weapon, violently pursues him in order to retrieve it. The female American agent named Easy, whose duty is to recover the tattoos. Seigi decides to help her and gets wrapped up in a cross-national conspiracy. His skill at martial arts may not be enough to keep him alive, but will he be able to learn how to trigger the power of his tattoo in time?</plot><imageURL>http://deadfishencod.es/files/anime/series/cover/taboo_tattoo.jpg</imageURL><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\anime-posters\Taboo Tattoo.jpg</image><director>Director: Takashi Watanabe</director><publisher>Publisher(s): Magic Capsule, DIVE II Entertainment</publisher><rated>Rated: R - 17+ (violence & profanity)</rated><duration>Duration: 24 Mins Per Episode</duration><status>Status: Ongoing</status><seriesURL>http://deadfishencod.es/Taboo_Tattoo/</seriesURL><moveToFolder>test</moveToFolder>
+
+<name>[DeadFish] Taboo Tattoo - 01 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=829922</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] Taboo Tattoo - 02 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=831616</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] Taboo Tattoo - 03 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=835730</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] Taboo Tattoo - 04 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=838274</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] Taboo Tattoo - 05 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=840452</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] Taboo Tattoo - 06 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=843571</magnet><downloaded>false</downloaded>

@@ -1,0 +1,8 @@
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/IXth Generation.xml
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/IXth_Generation.xml
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\IXth_Generation.xml: The process cannot access the file because it is being used by another process.
+
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/IXth_Generation.xml
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\IXth_Generation.xml: The process cannot access the file because it is being used by another process.
+
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/IXth_Generation.xml

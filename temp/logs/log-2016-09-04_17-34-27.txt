@@ -1,0 +1,3 @@
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Iron_Man__Bad_Blood.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Lazarus__2013_.xml: The process cannot access the file because it is being used by another process.

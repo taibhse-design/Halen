@@ -1,0 +1,41 @@
+d grey man.xml
+SAVING NEW RULE FILE.....
+PROFILE: C:\Users\brenn\Desktop\portables\Portable tools\GoogleChromePortable\Data\profile
+
+
+TITLE: D.Gray-man Hallow
+GENRE: Action
+PLOT: Anime Synopsis: Toward the end of the 19th century, Allen Walker officially joins the organization of Exorcists that destroy the beings known as Akuma; mechanic weapons made by the Millennium Earl with the suffering souls of the dead. Allen has both a cursed eye and an anti-Akuma weapon as an arm, bearing the power of "Innocence," a gift given to him as an apostle of God. Allen, along with his fellow Exorcists must put a stop to the Millennium Earl's ultimate plot that could lead to the destruction of the world and all who live on it.
+IMAGE URL: http://deadfishencod.es/files/anime/series/cover/d.gray-man_hallow.jpg
+Director: Ashino Yoshiharu
+Publisher(s): TV Tokyo, Aniplex, Dentsu, Shueisha
+Rated: PG-13 - Teens 13 or older
+Duration: 24 Mins Per Episode
+Status: Ongoing
+
+
+
+
+<title>D.Gray-man Hallow</title><genre>Action</genre><plot>Anime Synopsis: Toward the end of the 19th century, Allen Walker officially joins the organization of Exorcists that destroy the beings known as Akuma; mechanic weapons made by the Millennium Earl with the suffering souls of the dead. Allen has both a cursed eye and an anti-Akuma weapon as an arm, bearing the power of "Innocence," a gift given to him as an apostle of God. Allen, along with his fellow Exorcists must put a stop to the Millennium Earl's ultimate plot that could lead to the destruction of the world and all who live on it.</plot><imageURL>http://deadfishencod.es/files/anime/series/cover/d.gray-man_hallow.jpg</imageURL><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\anime-posters\D.Gray-man Hallow.jpg</image><director>Director: Ashino Yoshiharu</director><publisher>Publisher(s): TV Tokyo, Aniplex, Dentsu, Shueisha</publisher><rated>Rated: PG-13 - Teens 13 or older</rated><duration>Duration: 24 Mins Per Episode</duration><status>Status: Ongoing</status><seriesURL>http://deadfishencod.es/D.Gray-man_Hallow/</seriesURL><moveToFolder>test</moveToFolder>
+
+<name>[DeadFish] D.Gray-man Hallow - 01 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=827532</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] D.Gray-man Hallow - 02 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=829515</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] D.Gray-man Hallow - 03 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=831762</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] D.Gray-man Hallow - 04 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=834192</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] D.Gray-man Hallow - 05 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=838202</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] D.Gray-man Hallow - 06 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=838659</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] D.Gray-man Hallow - 07 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=840941</magnet><downloaded>false</downloaded>
+
+<name>raw [DeadFish] D.Gray-man Hallow - 08 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=843111</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] D.Gray-man Hallow - 09 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=845412</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] D.Gray-man Hallow - 10v2 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=847945</magnet><downloaded>false</downloaded>
+
+<name>[DeadFish] D.Gray-man Hallow - 11v2 [720p][AAC].mp4</name><magnet>http://www.nyaa.se/?page=download&tid=849812</magnet><downloaded>false</downloaded>

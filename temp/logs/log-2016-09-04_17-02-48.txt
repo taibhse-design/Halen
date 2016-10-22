@@ -1,0 +1,201 @@
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Spider-Gwen__I_.xml
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Think_Tank__Creative_Destruction.xml
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Think_Tank__Creative_Destruction.xml: The process cannot access the file because it is being used by another process.

@@ -1,0 +1,11 @@
+batman beyond.xml
+SAVING NEW RULE FILE.....
+#########################################################################################################
+   CREATING NEW COMIC RULE - http://readcomiconline.to/Comic/Batman-Beyond-2015
+#########################################################################################################
+
+PROFILE: C:\Users\brenn\Desktop\portables\Portable tools\GoogleChromePortable\Data\profile
+
+Title: Batman Beyond (2015)
+Image URL:  C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\comic-book-covers\Batman Beyond 2015.png
+javax.imageio.IIOException: Can't read input file!

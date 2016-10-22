@@ -1,0 +1,11 @@
+mechanism.xml
+SAVING NEW RULE FILE.....
+#########################################################################################################
+   CREATING NEW COMIC RULE - http://readcomiconline.to/Comic/Mechanism
+#########################################################################################################
+
+PROFILE: C:\Users\brenn\Desktop\portables\Portable tools\GoogleChromePortable\Data\profile
+
+Title: Mechanism
+Image URL:  C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\comic-book-covers\Mechanism.png
+javax.imageio.IIOException: Can't read input file!

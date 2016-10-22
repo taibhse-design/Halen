@@ -1,0 +1,8 @@
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Lazarus 2013.xml
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Lazarus__2013_.xml
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Spider-Girl 2011.xml
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Spider-Girl 2011.xml
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Invincible Iron Man 2015.xml
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Invincible Iron Man 2015.xml
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Invincible Iron Man 2015.xml
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/IXth Generation.xml

@@ -1,0 +1,618 @@
+#################################################################################################################
+
+UPDATING RULE:  adam ruins everything.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\adam ruins everything.xml   |   http://www.trakt.tv/shows/adam-ruins-everything
+https://fanart.tv/series/300774
+https://fanart.tv/fanart/tv/300774/hdtvlogo/adam-ruins-everything-564a04fc72525.png
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - Invincible_Iron_Man__2015_.xml
+#########################################################################################################
+
+<search>Adam Ruins Everything ettv</search><url>http://www.trakt.tv/shows/adam-ruins-everything</url><posterURL>https://walter.trakt.us/images/shows/000/102/169/posters/thumb/7a15f8694c.jpg</posterURL><genres>Documentary, Comedy, </genres><plot>In Adam Ruins Everything, host Adam Conover employs a combination of comedy, history and science to dispel widespread misconceptions about everything we take for granted. A blend of entertainment and enlightenment, Adam Ruins Everything is like that friend who knows a little bit too much about everything and is going to tell you about it... whether you like it or not.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\adam ruins everything.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\Adam Ruins Everything</moveToFolder><searchFor>adam ruins everything</searchFor>
+<search>Adam Ruins Everything ettv</search><url>http://www.trakt.tv/shows/adam-ruins-everything</url><posterURL>https://walter.trakt.us/images/shows/000/102/169/posters/thumb/7a15f8694c.jpg</posterURL><genres>Documentary, Comedy, </genres><plot>In Adam Ruins Everything, host Adam Conover employs a combination of comedy, history and science to dispel widespread misconceptions about everything we take for granted. A blend of entertainment and enlightenment, Adam Ruins Everything is like that friend who knows a little bit too much about everything and is going to tell you about it... whether you like it or not.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\adam ruins everything.png</image>
+
+FINISHED UPDATING RULE adam ruins everything.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  agents of shield.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\agents of shield.xml   |   https://trakt.tv/shows/marvel-s-agents-of-s-h-i-e-l-d
+https://fanart.tv/series/263365
+https://fanart.tv/fanart/tv/263365/hdtvlogo/marvels-agents-of-shield-52521ded92142.png
+
+Title: Invincible Iron Man (2015)
+<search>Marvel's Agents of S.H.I.E.L.D. ettv</search><url>https://trakt.tv/shows/marvel-s-agents-of-s-h-i-e-l-d</url><posterURL>https://walter.trakt.us/images/shows/000/001/394/posters/thumb/c4a4211e12.jpg</posterURL><genres>Science Fiction, Fantasy, Drama, Adventure, Action, </genres><plot>Phil Coulson (Clark Gregg, reprising his role from "The Avengers" and "Iron Man" ) heads an elite team of fellow agents with the worldwide law-enforcement organization known as SHIELD (Strategic Homeland Intervention Enforcement and Logistics Division), as they investigate strange occurrences around the globe. Its members -- each of whom brings a specialty to the group -- work with Coulson to protect those who cannot protect themselves from extraordinary and inconceivable threats, including a formidable group known as Hydra.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\marvels agents of shield.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\agents of S.H.I.E.L.D</moveToFolder><searchFor>agents of s.h.i.e.l.d</searchFor>
+<search>Marvel's Agents of S.H.I.E.L.D. ettv</search><url>https://trakt.tv/shows/marvel-s-agents-of-s-h-i-e-l-d</url><posterURL>https://walter.trakt.us/images/shows/000/001/394/posters/thumb/c4a4211e12.jpg</posterURL><genres>Science Fiction, Fantasy, Drama, Adventure, Action, </genres><plot>Phil Coulson (Clark Gregg, reprising his role from "The Avengers" and "Iron Man" ) heads an elite team of fellow agents with the worldwide law-enforcement organization known as SHIELD (Strategic Homeland Intervention Enforcement and Logistics Division), as they investigate strange occurrences around the globe. Its members -- each of whom brings a specialty to the group -- work with Coulson to protect those who cannot protect themselves from extraordinary and inconceivable threats, including a formidable group known as Hydra.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\marvels agents of shield.png</image>
+
+FINISHED UPDATING RULE agents of shield.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  banshee.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\banshee.xml   |   https://trakt.tv/shows/banshee
+Image URL:  C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\comic-book-covers\Invincible Iron Man 2015.png
+https://fanart.tv/series/259765
+https://fanart.tv/fanart/tv/259765/hdtvlogo/banshee-50f6fd4dbbbc5.png
+Imgur URL:  https://i.imgur.com/1k3gJSR.png
+Genres:  Action Adventure Superhero
+Publisher:  Marvel
+Writer:  Brian Michael Bendis
+Artist:  David Marquez
+Publication date: December 2015
+Status:  Ongoing
+Summary:  Exploding out of the pages of SECRET WARS, one of the most popular super heroes in the world gets a gigantic new series. From the creators that brought you ULTIMATE SPIDER-MAN comes new armor, new supporting cast, new villains and a new purpose that is going to tear itself across the entire Marvel Universe and beyond. With a shocker of a last page that will have everyone talking and the return of one of Tony's biggest nemeses, you will not want to miss this!! Also, who are Tony's biological parents? The quest begins here!
+
+Invincible Iron Man (2015) Issue #12:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-12?id=79499&readType=1
+Invincible Iron Man (2015) Issue #11:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-11?id=71922&readType=1
+Invincible Iron Man (2015) Issue #10:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-10?id=58650&readType=1
+Invincible Iron Man (2015) Issue #9:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-9?id=48961&readType=1
+Invincible Iron Man (2015) Issue #8:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-8?id=37943&readType=1
+Invincible Iron Man (2015) Issue #7:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-7?id=23677&readType=1
+Invincible Iron Man (2015) Issue #6:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-6?id=18249&readType=1
+Invincible Iron Man (2015) Issue #5:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-5?id=12047&readType=1
+Invincible Iron Man (2015) Issue #4:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-4?id=10107&readType=1
+Invincible Iron Man (2015) Issue #3:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-3?id=10106&readType=1
+Invincible Iron Man (2015) Issue #2:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-2?id=10105&readType=1
+Invincible Iron Man (2015) Issue #1:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-1?id=10104&readType=1
+
+Skipping rule, no new updated issues, main stats updated instead.........
+
+#########################################################################################################
+
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - Iron_Man__Bad_Blood.xml
+#########################################################################################################
+
+
+Skipping rule update, comic series is already completed.........
+
+#########################################################################################################
+
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - IXth_Generation.xml
+#########################################################################################################
+
+<search>Banshee ettv</search><url>https://trakt.tv/shows/banshee</url><posterURL>https://walter.trakt.us/images/shows/000/041/522/posters/thumb/cb5f4fad13.jpg</posterURL><genres>Crime, Adventure, Action, Drama, </genres><plot>An unnamed ex-convict assumes the identity of Lucas Hood the sheriff of Banshee, Pennsylvania, where he, behind a badge, continues his criminal activities, even as he’s hunted by the shadowy gangsters he betrayed years earlier.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\banshee.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\banshee</moveToFolder><searchFor>banshee</searchFor>
+<search>Banshee ettv</search><url>https://trakt.tv/shows/banshee</url><posterURL>https://walter.trakt.us/images/shows/000/041/522/posters/thumb/cb5f4fad13.jpg</posterURL><genres>Crime, Adventure, Action, Drama, </genres><plot>An unnamed ex-convict assumes the identity of Lucas Hood the sheriff of Banshee, Pennsylvania, where he, behind a badge, continues his criminal activities, even as he’s hunted by the shadowy gangsters he betrayed years earlier.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\banshee.png</image>
+
+FINISHED UPDATING RULE banshee.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  blindspot.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\blindspot.xml   |   http://www.trakt.tv/shows/blindspot
+
+Title: IXth Generation
+https://fanart.tv/series/295647
+Image URL:  C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\comic-book-covers\IXth Generation.png
+https://fanart.tv/fanart/tv/295647/hdtvlogo/blindspot-555086eb6c22a.png
+Imgur URL:  https://i.imgur.com/br1YvEC.png
+Genres:  Action Adventure Sci-Fi
+Publisher:  Image Comics
+Writer:  Matt Hawkins
+Artist:  Stjepan Sejic
+Publication date: January 2015
+Status:  Ongoing
+Summary:  In the future there is no more natural death, no needs unfilled and everything you could ever want is yours… as long as you’re one of the ones chosen to live in this new Utopia and you’re willing to subjugate yourself to these new self-proclaimed gods with “IX”s emblazoned on them. Do the ends truly justify the means? Is a utopia built on genocide worth the price? Aphrodite, Velocity, Hades, and the other Nines establish fiefdoms in this new world and attempt to rule. Their internal clashes have escalated, but they are forced to put that aside as they face off against the relentless hordes of the Darkness. The sins of the past have come to claim those who would pretend to be Gods. The cybernetic future established in APHRODITE IX and CYBER FORCE finally comes face-to-face with the supernatural ARTIFACTS side of the Top Cow universe!
+
+IXth Generation Issue #8:   http://readcomiconline.to/Comic/IXth-Generation/Issue-8?id=50215&readType=1
+IXth Generation Issue #7:   http://readcomiconline.to/Comic/IXth-Generation/Issue-7?id=50208&readType=1
+IXth Generation Issue #6:   http://readcomiconline.to/Comic/IXth-Generation/Issue-6?id=50203&readType=1
+IXth Generation Issue #5:   http://readcomiconline.to/Comic/IXth-Generation/Issue-5?id=50196&readType=1
+IXth Generation Issue #4:   http://readcomiconline.to/Comic/IXth-Generation/Issue-4?id=50189&readType=1
+IXth Generation Issue #3:   http://readcomiconline.to/Comic/IXth-Generation/Issue-3?id=50184&readType=1
+IXth Generation Issue #2:   http://readcomiconline.to/Comic/IXth-Generation/Issue-2?id=50181&readType=1
+IXth Generation Issue #1:   http://readcomiconline.to/Comic/IXth-Generation/Issue-1?id=50177&readType=1
+
+Skipping rule, no new updated issues, main stats updated instead.........
+
+#########################################################################################################
+
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - Lazarus__2013_.xml
+#########################################################################################################
+
+<search>Blindspot ettv</search><url>http://www.trakt.tv/shows/blindspot</url><posterURL>https://walter.trakt.us/images/shows/000/098/980/posters/thumb/ecbf971405.jpg</posterURL><genres>Thriller, Mystery, Crime, Action, Drama, </genres><plot>A vast international plot explodes when a beautiful Jane Doe is discovered naked in Times Square, completely covered in mysterious, intricate tattoos with no memory of who she is or how she got there. But there's one tattoo that is impossible to miss: the name of FBI agent Kurt Weller, emblazoned across her back. "Jane," Agent Weller and the rest of the FBI quickly realize that each mark on her body is a crime to solve, leading them closer to the truth about her identity and the mysteries to be revealed.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\blindspot.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\blindspot</moveToFolder><searchFor>blindspot</searchFor>
+<search>Blindspot ettv</search><url>http://www.trakt.tv/shows/blindspot</url><posterURL>https://walter.trakt.us/images/shows/000/098/980/posters/thumb/ecbf971405.jpg</posterURL><genres>Crime, Action, Drama, </genres><plot>A vast international plot explodes when a beautiful Jane Doe is discovered naked in Times Square, completely covered in mysterious, intricate tattoos with no memory of who she is or how she got there. But there's one tattoo that is impossible to miss: the name of FBI agent Kurt Weller, emblazoned across her back. "Jane," Agent Weller and the rest of the FBI quickly realize that each mark on her body is a crime to solve, leading them closer to the truth about her identity and the mysteries to be revealed.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\blindspot.png</image>
+
+FINISHED UPDATING RULE blindspot.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  brooklyn nine nine.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\brooklyn nine nine.xml   |   http://www.trakt.tv/shows/brooklyn-nine-nine
+https://fanart.tv/series/269586
+
+Title: Lazarus (2013)
+Image URL:  C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\comic-book-covers\Lazarus 2013.png
+https://fanart.tv/fanart/tv/269586/hdtvlogo/brooklyn-nine-nine-550d9313ec730.png
+Imgur URL:  https://i.imgur.com/EdDYTVE.png
+Genres:  Action Adventure Comedy Drama Sci-Fi
+Publisher:  Image Comics
+Writer:  Greg Rucka
+Artist:  Michael Lark
+Publication date: March 2013
+Status:  Ongoing
+Summary:  In a dystopian near-future, government is a quaint concept, resources are coveted, and possession is 100% of the law. A handful of Families rule, jealously guarding what they have and exploiting the Waste who struggle to survive in their domains. Forever Carlyle defends her family's holdings through deception and force as their protector, their Lazarus. Shot dead defending the family home, Forever's day goes downhill from there.
+
+Lazarus (2013) Issue #23:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-23?id=76593&readType=1
+Lazarus (2013) Issue #22:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-22?id=63602&readType=1
+Lazarus (2013) Issue #21:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-21?id=11494&readType=1
+Lazarus (2013) Issue #20:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-20?id=2893&readType=1
+Lazarus (2013) Issue #19:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-19?id=2892&readType=1
+Lazarus (2013) Issue #18:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-18?id=2891&readType=1
+Lazarus (2013) Issue #17:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-17?id=2890&readType=1
+Lazarus (2013) Issue #16:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-16?id=2889&readType=1
+Lazarus (2013) Issue #15:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-15?id=2888&readType=1
+Lazarus (2013) Issue #14:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-14?id=2887&readType=1
+Lazarus (2013) Issue #13:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-13?id=2886&readType=1
+Lazarus (2013) Issue #12:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-12?id=2885&readType=1
+Lazarus (2013) Issue #11:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-11?id=2884&readType=1
+Lazarus (2013) Issue #10:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-10?id=2883&readType=1
+Lazarus (2013) Issue #9:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-9?id=2882&readType=1
+Lazarus (2013) Issue #8:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-8?id=2881&readType=1
+Lazarus (2013) Issue #7:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-7?id=2880&readType=1
+Lazarus (2013) Issue #6:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-6?id=2879&readType=1
+Lazarus (2013) Issue #5:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-5?id=2878&readType=1
+Lazarus (2013) Issue #4:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-4?id=2877&readType=1
+Lazarus (2013) Issue #3:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-3?id=2876&readType=1
+Lazarus (2013) Issue #2:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-2?id=2875&readType=1
+Lazarus (2013) Issue #1:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-1?id=2874&readType=1
+Lazarus (2013) _TPB 3 - Conclave:   http://readcomiconline.to/Comic/Lazarus-2013/TPB-3-Conclave?id=2897&readType=1
+Lazarus (2013) _TPB 2 - Lift:   http://readcomiconline.to/Comic/Lazarus-2013/TPB-2-Lift?id=2896&readType=1
+Lazarus (2013) _TPB 1 - Family:   http://readcomiconline.to/Comic/Lazarus-2013/TPB-1-Family?id=2895&readType=1
+Lazarus (2013) _HC 1 - The First Collection:   http://readcomiconline.to/Comic/Lazarus-2013/HC-1-The-First-Collection?id=2894&readType=1
+
+Skipping rule, no new updated issues, main stats updated instead.........
+
+#########################################################################################################
+
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - Platina_End.xml
+#########################################################################################################
+
+<search>Brooklyn Nine-Nine ettv</search><url>http://www.trakt.tv/shows/brooklyn-nine-nine</url><posterURL>https://walter.trakt.us/images/shows/000/048/587/posters/thumb/e84eb7186f.jpg</posterURL><genres>Comedy, </genres><plot>A single-camera ensemble comedy following the lives of an eclectic group of detectives in a New York precinct, including one slacker who is forced to shape up when he gets a new boss.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\brooklyn nine nine.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\brooklyn nine nine</moveToFolder><searchFor>brooklyn nine nine</searchFor>
+<search>Brooklyn Nine-Nine ettv</search><url>http://www.trakt.tv/shows/brooklyn-nine-nine</url><posterURL>https://walter.trakt.us/images/shows/000/048/587/posters/thumb/e84eb7186f.jpg</posterURL><genres>Comedy, </genres><plot>A single-camera ensemble comedy following the lives of an eclectic group of detectives in a New York precinct, including one slacker who is forced to shape up when he gets a new boss.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\brooklyn nine nine.png</image>
+
+FINISHED UPDATING RULE brooklyn nine nine.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  colony.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\colony.xml   |   https://trakt.tv/shows/colony
+https://fanart.tv/series/284210
+https://fanart.tv/fanart/tv/284210/hdtvlogo/colony-56839b7630007.png
+
+Title: Platina End
+Image URL:  C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\comic-book-covers\Platina End.png
+<search>Colony ettv</search><url>https://trakt.tv/shows/colony</url><posterURL>https://walter.trakt.us/images/shows/000/095/966/posters/thumb/ab1ebe8a59.jpg</posterURL><genres>Science Fiction, Drama, </genres><plot>Set in the near future, Los Angeles has been walled-off and isolated by a mysterious occupying force. “Colony” centers on a family torn by opposing forces, struggling to balance difficult decisions to stay together while trying to survive in the new world order. While some people choose to collaborate with the authorities and benefit from the occupation, others rebel and suffer the consequences. Former FBI agent Will Bowman has a more complicated role: he's being forced to collaborate with the proxy government in order to protect his family and recover his son, who was separated during the initial invasion.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\colony.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\colony</moveToFolder><searchFor>colony</searchFor>
+<search>Colony ettv</search><url>https://trakt.tv/shows/colony</url><posterURL>https://walter.trakt.us/images/shows/000/095/966/posters/thumb/ab1ebe8a59.jpg</posterURL><genres>Science Fiction, Drama, </genres><plot>Set in the near future, Los Angeles has been walled-off and isolated by a mysterious occupying force. “Colony” centers on a family torn by opposing forces, struggling to balance difficult decisions to stay together while trying to survive in the new world order. While some people choose to collaborate with the authorities and benefit from the occupation, others rebel and suffer the consequences. Former FBI agent Will Bowman has a more complicated role: he's being forced to collaborate with the proxy government in order to protect his family and recover his son, who was separated during the initial invasion.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\colony.png</image>
+
+FINISHED UPDATING RULE colony.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  containment.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\containment.xml   |   https://trakt.tv/shows/containment
+https://fanart.tv/series/295767
+Imgur URL:  https://i.imgur.com/N2KxQp9.png
+Genres:  Shounen Supernatural
+Author:  Ohba Tsugumi OBATA Takeshi
+Status:  Ongoing
+Summary:  A story of a human and an angel.
+
+Platina End Vol.002 Ch.009: A Tower of Nightmares:   http://kissmanga.com/Manga/Platina-End/Vol-002-Ch-009--A-Tower-of-Nightmares?id=302078&readType=1
+Platina End Vol.002 Ch.005: The Proposal:   http://kissmanga.com/Manga/Platina-End/Vol-002-Ch-005--The-Proposal?id=302052&readType=1
+Platina End Vol.001 Ch.002v002: Man's Instinct:   http://kissmanga.com/Manga/Platina-End/Vol-001-Ch-002v002--Man-s-Instinct?id=302049&readType=1
+Platina End Ch.008: Two Difficult Options:   http://kissmanga.com/Manga/Platina-End/Ch-008--Two-Difficult-Options?id=302071&readType=1
+Platina End Ch.007: Death Sentence:   http://kissmanga.com/Manga/Platina-End/Ch-007--Death-Sentence?id=302062&readType=1
+Platina End Ch.006: A Talk in Private:   http://kissmanga.com/Manga/Platina-End/Ch-006--A-Talk-in-Private?id=302056&readType=1
+Platina End Ch.004: The Person I Admire:   http://kissmanga.com/Manga/Platina-End/Ch-004--The-Person-I-Admire?id=302051&readType=1
+Platina End Ch.003: Hero of Justice:   http://kissmanga.com/Manga/Platina-End/Ch-003--Hero-of-Justice?id=302050&readType=1
+Platina End Ch.002: The Nature of Men:   http://kissmanga.com/Manga/Platina-End/Ch-002--The-Nature-of-Men?id=302048&readType=1
+Platina End Ch.001v004: The Angel's Gift:   http://kissmanga.com/Manga/Platina-End/Ch-001v004--The-Angel-s-Gift?id=302047&readType=1
+Platina End Ch.001: The Angel's Gift:   http://kissmanga.com/Manga/Platina-End/Ch-001--The-Angel-s-Gift?id=302046&readType=1
+Platina End Ch.000: Special preview:   http://kissmanga.com/Manga/Platina-End/Ch-000--Special-preview?id=302045&readType=1
+
+Skipping rule, no new updated issues, main stats updated instead.........
+
+#########################################################################################################
+
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - Spider-Girl__2011_.xml
+#########################################################################################################
+
+
+Skipping rule update, comic series is already completed.........
+
+#########################################################################################################
+
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - Spider-Gwen__II_.xml
+#########################################################################################################
+
+https://fanart.tv/fanart/tv/295767/hdtvlogo/containment-571e4d89bac1e.png
+<search>Containment ettv</search><url>https://trakt.tv/shows/containment</url><posterURL>https://walter.trakt.us/images/shows/000/099/068/posters/thumb/84a843a671.jpg</posterURL><genres>Drama, </genres><plot>The series follows an epidemic that breaks out in Atlanta, leaving the large city quarantined and those stuck on the inside fighting for their lives. The drama tells the story of loved ones torn apart, and how the society that grows inside the cordon reveals both the devolution of humanity and the birth of unlikely heroes.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\containment.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\containment</moveToFolder><searchFor>containment</searchFor>
+<search>Containment ettv</search><url>https://trakt.tv/shows/containment</url><posterURL>https://walter.trakt.us/images/shows/000/099/068/posters/thumb/84a843a671.jpg</posterURL><genres>Drama, </genres><plot>The series follows an epidemic that breaks out in Atlanta, leaving the large city quarantined and those stuck on the inside fighting for their lives. The drama tells the story of loved ones torn apart, and how the society that grows inside the cordon reveals both the devolution of humanity and the birth of unlikely heroes.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\containment.png</image>
+
+FINISHED UPDATING RULE containment.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  da vinci demons.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\da vinci demons.xml   |   https://trakt.tv/shows/da-vinci-s-demons
+
+Title: Spider-Gwen [II]
+https://fanart.tv/series/259669
+Image URL:  C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\comic-book-covers\Spider-Gwen II.png
+https://fanart.tv/fanart/tv/259669/hdtvlogo/da-vincis-demons-547534accb720.png
+<search>Da Vinci's Demons ettv</search><url>https://trakt.tv/shows/da-vinci-s-demons</url><posterURL>https://walter.trakt.us/images/shows/000/040/108/posters/thumb/83ec5c3602.jpg</posterURL><genres>Adventure, Fantasy, Drama, </genres><plot>The series follows the "untold" story of Leonardo Da Vinci: the genius during his early years in Renaissance Florence. As a 25-year old artist, inventor, swordsman, lover, dreamer and idealist, he struggles to live within the confines of his own reality and time as he begins to not only see the future, but invent it.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\da vincis demons.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\da vinci demons</moveToFolder><searchFor>da vinci demons</searchFor>
+<search>Da Vinci's Demons ettv</search><url>https://trakt.tv/shows/da-vinci-s-demons</url><posterURL>https://walter.trakt.us/images/shows/000/040/108/posters/thumb/83ec5c3602.jpg</posterURL><genres>Adventure, Fantasy, Drama, </genres><plot>The series follows the "untold" story of Leonardo Da Vinci: the genius during his early years in Renaissance Florence. As a 25-year old artist, inventor, swordsman, lover, dreamer and idealist, he struggles to live within the confines of his own reality and time as he begins to not only see the future, but invent it.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\da vincis demons.png</image>
+
+FINISHED UPDATING RULE da vinci demons.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  dark matter.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\dark matter.xml   |   http://www.trakt.tv/shows/dark-matter
+Imgur URL:  https://i.imgur.com/9XYTgyt.png
+Genres:  Action Adventure Superhero
+Publisher:  Marvel
+Writer:  Jason LaTour
+Artist:  Robbi Rodriguez
+Publication date: December 2015
+Status:  Ongoing
+Summary:  Gwen Stacy is back in the webs and has an all-new, all-different mystery to solve: the reappearance of The Lizard! was convinced that the Lizard died in her arms along with Peter Parker. But when a similar monster goes on a reptilian rampage, she's left with doubts not only about Peter's life, but his death as well. And witness the debut of the Osborns of Earth-65! Fan-favorite creators Jason Latour, Robbi Rodriguez & Rico Renzi are back for more with a story that every Spider-Fan will be talking about!
+
+Spider-Gwen [II] Issue #10:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-10?id=78152&readType=1
+Spider-Gwen [II] Issue #9:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-9?id=63619&readType=1
+Spider-Gwen [II] Issue #8:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-8?id=49084&readType=1
+Spider-Gwen [II] Issue #7:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-7?id=42189&readType=1
+Spider-Gwen [II] Issue #6:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-6?id=26360&readType=1
+Spider-Gwen [II] Issue #5:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-5?id=18357&readType=1
+Spider-Gwen [II] Issue #4:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-4?id=13848&readType=1
+Spider-Gwen [II] Issue #3:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-3?id=13846&readType=1
+Spider-Gwen [II] Issue #2:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-2?id=13845&readType=1
+Spider-Gwen [II] Issue #1:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-1?id=13844&readType=1
+Spider-Gwen [II] _Annual 1:   http://readcomiconline.to/Comic/Spider-Gwen-II/Annual-1?id=69209&readType=1
+
+Skipping rule, no new updated issues, main stats updated instead.........
+
+#########################################################################################################
+
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - Spider-Gwen__I_.xml
+#########################################################################################################
+
+
+Skipping rule update, comic series is already completed.........
+
+#########################################################################################################
+
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - Think_Tank__Creative_Destruction.xml
+#########################################################################################################
+
+https://fanart.tv/series/292174
+https://fanart.tv/fanart/tv/292174/hdtvlogo/dark-matter-552971725c1a4.png
+
+Title: Think Tank: Creative Destruction
+Image URL:  C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\comic-book-covers\Think Tank Creative Destruction.png
+<search>Dark Matter ettv</search><url>http://www.trakt.tv/shows/dark-matter</url><posterURL>https://walter.trakt.us/images/shows/000/096/220/posters/thumb/dc4e3d4c13.jpg</posterURL><genres>Mystery, Thriller, Drama, Science Fiction, </genres><plot>The six-person crew of a derelict spaceship awakens from stasis in the farthest reaches of space. Their memories wiped clean, they have no recollection of who they are or how they got on board. The only clue to their identities is a cargo bay full of weaponry and a destination: a remote mining colony that is about to become a war zone. With no idea whose side they are on, they face a deadly decision. Will these amnesiacs turn their backs on history, or will their pasts catch up with them?</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\dark matter.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\dark matter</moveToFolder><searchFor>dark matter</searchFor>
+<search>Dark Matter ettv</search><url>http://www.trakt.tv/shows/dark-matter</url><posterURL>https://walter.trakt.us/images/shows/000/096/220/posters/thumb/dc4e3d4c13.jpg</posterURL><genres>Mystery, Thriller, Drama, Science Fiction, </genres><plot>The six-person crew of a derelict spaceship awakens from stasis in the farthest reaches of space. Their memories wiped clean, they have no recollection of who they are or how they got on board. The only clue to their identities is a cargo bay full of weaponry and a destination: a remote mining colony that is about to become a war zone. With no idea whose side they are on, they face a deadly decision. Will these amnesiacs turn their backs on history, or will their pasts catch up with them?</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\dark matter.png</image>
+
+FINISHED UPDATING RULE dark matter.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  dragons den ireland.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\dragons den ireland.xml   |   https://trakt.tv/shows/dragons-den-ireland/
+https://fanart.tv/series/250191
+Imgur URL:  https://i.imgur.com/SzSgsY8.png
+Genres:  Action Adventure
+Publisher:  Image Comics
+Writer:  Matt Hawkins
+Artist:  Rahsan Ekedal
+Publication date: April 2016
+Status:  Ongoing
+Summary:  An unknown enemy destroys the technological infrastructure of the United States. Panic and conspiracy theories spread as David Loren and his misfit science team continue work on the TALOS project, trying to make "Iron Man" suits a reality in California.
+
+Think Tank: Creative Destruction Issue #4:   http://readcomiconline.to/Comic/Think-Tank-Creative-Destruction/Issue-4?id=76586&readType=1
+Think Tank: Creative Destruction Issue #3:   http://readcomiconline.to/Comic/Think-Tank-Creative-Destruction/Issue-3?id=61413&readType=1
+Think Tank: Creative Destruction Issue #2:   http://readcomiconline.to/Comic/Think-Tank-Creative-Destruction/Issue-2?id=52088&readType=1
+Think Tank: Creative Destruction Issue #1:   http://readcomiconline.to/Comic/Think-Tank-Creative-Destruction/Issue-1?id=52087&readType=1
+
+Skipping rule, no new updated issues, main stats updated instead.........
+
+#########################################################################################################
+
+<search>Dragons' Den (IE) ettv</search><url>https://trakt.tv/shows/dragons-den-ireland/</url><posterURL>https://walter.trakt.us/images/shows/000/064/900/posters/thumb/20e28065cb.jpg</posterURL><genres>Reality, </genres><plot>Entrepreneurs pitch their business ideas to a panel of top businesspeople who will invest their own money into the ideas they like, and send those they don't home with nothing. The contestants must get all the money they ask for in order to secure a deal.</plot><image></image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\dragons den ireland</moveToFolder><searchFor>dragons den ireland</searchFor>
+<search>Dragons' Den (IE) ettv</search><url>https://trakt.tv/shows/dragons-den-ireland/</url><posterURL>https://walter.trakt.us/images/shows/000/064/900/posters/thumb/20e28065cb.jpg</posterURL><genres>Reality, </genres><plot>Entrepreneurs pitch their business ideas to a panel of top businesspeople who will invest their own money into the ideas they like, and send those they don't home with nothing. The contestants must get all the money they ask for in order to secure a deal.</plot><image></image>
+
+FINISHED UPDATING RULE dragons den ireland.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  fear the walking dead.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\fear the walking dead.xml   |   https://trakt.tv/shows/fear-the-walking-dead
+https://fanart.tv/series/290853
+https://fanart.tv/fanart/tv/290853/hdtvlogo/fear-the-walking-dead-556a481a9c229.png
+<search>Fear the Walking Dead ettv</search><url>https://trakt.tv/shows/fear-the-walking-dead</url><posterURL>https://walter.trakt.us/images/shows/000/094/961/posters/thumb/378f268623.jpg</posterURL><genres>Horror, Drama, </genres><plot>A horrifying zombiocalypse spin-off series from The Walking Dead, set in the same universe but starting at a far earlier time in Los Angeles. The show follows normal people learning to deal with the rapidly growing collapse of civilization, at the very beginning of a zombie outbreak. In Los Angeles, a city where people come to escape, shield secrets, and bury their pasts, we follow this mysterious outbreak as it threatens to disrupt what little stability high school guidance counselor Madison Clark and English teacher Travis Manawa have managed to assemble. The pressure of blending two families while dealing with resentful, escapist, and strung out children takes a back seat when society begins to break down. A forced evolution, and survival of the fittest takes hold, as our dysfunctional family finds they must either reinvent themselves or embrace their darker histories.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\fear the walking dead.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\fear the walking dead</moveToFolder><searchFor>fear the walking dead</searchFor>
+<search>Fear the Walking Dead ettv</search><url>https://trakt.tv/shows/fear-the-walking-dead</url><posterURL>https://walter.trakt.us/images/shows/000/094/961/posters/thumb/378f268623.jpg</posterURL><genres>Horror, Drama, </genres><plot>A horrifying zombiocalypse spin-off series from The Walking Dead, set in the same universe but starting at a far earlier time in Los Angeles. The show follows normal people learning to deal with the rapidly growing collapse of civilization, at the very beginning of a zombie outbreak. In Los Angeles, a city where people come to escape, shield secrets, and bury their pasts, we follow this mysterious outbreak as it threatens to disrupt what little stability high school guidance counselor Madison Clark and English teacher Travis Manawa have managed to assemble. The pressure of blending two families while dealing with resentful, escapist, and strung out children takes a back seat when society begins to break down. A forced evolution, and survival of the fittest takes hold, as our dysfunctional family finds they must either reinvent themselves or embrace their darker histories.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\fear the walking dead.png</image>
+
+FINISHED UPDATING RULE fear the walking dead.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  game of thrones.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\game of thrones.xml   |   http://www.trakt.tv/shows/game-of-thrones
+https://fanart.tv/series/121361
+https://fanart.tv/fanart/tv/121361/hdtvlogo/game-of-thrones-504c49ed16f70.png
+<search>Game of Thrones ettv</search><url>http://www.trakt.tv/shows/game-of-thrones</url><posterURL>https://walter.trakt.us/images/shows/000/001/390/posters/thumb/93df9cd612.jpg</posterURL><genres>Adventure, Action, Science Fiction, Fantasy, Drama, </genres><plot>Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and the icy horrors beyond.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\game of thrones.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\game of thrones</moveToFolder><searchFor>game of thrones</searchFor>
+<search>Game of Thrones ettv</search><url>http://www.trakt.tv/shows/game-of-thrones</url><posterURL>https://walter.trakt.us/images/shows/000/001/390/posters/thumb/93df9cd612.jpg</posterURL><genres>Adventure, Action, Science Fiction, Fantasy, Drama, </genres><plot>Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and the icy horrors beyond.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\game of thrones.png</image>
+
+FINISHED UPDATING RULE game of thrones.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  halt and catch fire.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\halt and catch fire.xml   |   http://www.trakt.tv/shows/halt-and-catch-fire
+https://fanart.tv/series/271910
+https://fanart.tv/fanart/tv/271910/hdtvlogo/halt--catch-fire-54a955deb1dd4.png
+<search>Halt and Catch Fire ettv</search><url>http://www.trakt.tv/shows/halt-and-catch-fire</url><posterURL>https://walter.trakt.us/images/shows/000/059/262/posters/thumb/f952875de9.jpg</posterURL><genres>Drama, </genres><plot>In the early 1980s a visionary, an engineer and a prodigy combine to confront the corporate behemoths of the time. Their personal and professional lives will be challenged by greed and ego while charting the changing culture in Texas' Silicon Prairie.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\halt  catch fire.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\halt and catch fire</moveToFolder><searchFor>halt and catch fire</searchFor>
+<search>Halt and Catch Fire ettv</search><url>http://www.trakt.tv/shows/halt-and-catch-fire</url><posterURL>https://walter.trakt.us/images/shows/000/059/262/posters/thumb/f952875de9.jpg</posterURL><genres>Drama, </genres><plot>In the early 1980s a visionary, an engineer and a prodigy combine to confront the corporate behemoths of the time. Their personal and professional lives will be challenged by greed and ego while charting the changing culture in Texas' Silicon Prairie.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\halt  catch fire.png</image>
+
+FINISHED UPDATING RULE halt and catch fire.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  home fires.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\home fires.xml   |   https://trakt.tv/shows/home-fires-2015
+https://fanart.tv/series/294973
+<search>Home Fires ettv</search><url>https://trakt.tv/shows/home-fires-2015</url><posterURL>https://walter.trakt.us/images/shows/000/098/499/posters/thumb/739e4c52bc.jpg</posterURL><genres>Action, Drama, </genres><plot>Home Fires is a new six-part drama following a group of inspirational women in a rural Cheshire community with the shadow of World War II casting a dark cloud over their lives. The isolated village couldn’t feel further away from the impending bloodshed and battlefields and yet it is not immune from the effects of war. As the conflict takes hold, and separates the women from their husbands, fathers, sons and brothers, the characters find themselves under increasing and extraordinary pressures in a rapidly fragmenting world. By banding together as the Great Paxford Women’s Institute, they help maintain the nation’s fabric in its darkest hour, and discover inner resources that will change their lives forever.</plot><image></image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\home fires</moveToFolder><searchFor>home fires</searchFor>
+<search>Home Fires ettv</search><url>https://trakt.tv/shows/home-fires-2015</url><posterURL>https://walter.trakt.us/images/shows/000/098/499/posters/thumb/739e4c52bc.jpg</posterURL><genres>Drama, </genres><plot>Home Fires is a new six-part drama following a group of inspirational women in a rural Cheshire community with the shadow of World War II casting a dark cloud over their lives. The isolated village couldn’t feel further away from the impending bloodshed and battlefields and yet it is not immune from the effects of war. As the conflict takes hold, and separates the women from their husbands, fathers, sons and brothers, the characters find themselves under increasing and extraordinary pressures in a rapidly fragmenting world. By banding together as the Great Paxford Women’s Institute, they help maintain the nation’s fabric in its darkest hour, and discover inner resources that will change their lives forever.</plot><image></image>
+
+FINISHED UPDATING RULE home fires.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  how to get away with murder.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\how to get away with murder.xml   |   http://www.trakt.tv/shows/how-to-get-away-with-murder
+https://fanart.tv/series/281620
+https://fanart.tv/fanart/tv/281620/hdtvlogo/how-to-get-away-with-murder-53ebabd25ec25.png
+<search>How to Get Away with Murder ettv</search><url>http://www.trakt.tv/shows/how-to-get-away-with-murder</url><posterURL>https://walter.trakt.us/images/shows/000/060/576/posters/thumb/8904113b1a.jpg</posterURL><genres>Mystery, Drama, </genres><plot>Annalise Keating is a brilliant, charismatic and seductive professor of defense law, who teaches a class called 'How to Get Away with Murder'. Unexpectedly, she and her students end up having to apply practical knowledge from the course when they become entangled in a murder plot that not only shakes the entire university to the core but also changes the course of each of their lives.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\how to get away with murder.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\how to get away with murder</moveToFolder><searchFor>how to get away with murder</searchFor>
+<search>How to Get Away with Murder ettv</search><url>http://www.trakt.tv/shows/how-to-get-away-with-murder</url><posterURL>https://walter.trakt.us/images/shows/000/060/576/posters/thumb/8904113b1a.jpg</posterURL><genres>Mystery, Drama, </genres><plot>Annalise Keating is a brilliant, charismatic and seductive professor of defense law, who teaches a class called 'How to Get Away with Murder'. Unexpectedly, she and her students end up having to apply practical knowledge from the course when they become entangled in a murder plot that not only shakes the entire university to the core but also changes the course of each of their lives.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\how to get away with murder.png</image>
+
+FINISHED UPDATING RULE how to get away with murder.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  humans.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\humans.xml   |   https://trakt.tv/shows/humans
+https://fanart.tv/series/292124
+https://fanart.tv/fanart/tv/292124/hdtvlogo/humans-5568c69a10227.png
+<search>Humans ettv</search><url>https://trakt.tv/shows/humans</url><posterURL>https://walter.trakt.us/images/shows/000/096/180/posters/thumb/bb5aabe2f3.jpg</posterURL><genres>Thriller, Mystery, Science Fiction, Drama, </genres><plot>In a parallel present day, where the latest must-have gadget for any busy family is a 'Synth' (a highly realistic humanoid servant that's transforming the way we live). In hopes of reducing their workload, a suburban family purchases a new Synth only to discover that sharing life with a Synth has quite far-reaching consequences.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\humans.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\humans</moveToFolder><searchFor>humans</searchFor>
+<search>Humans ettv</search><url>https://trakt.tv/shows/humans</url><posterURL>https://walter.trakt.us/images/shows/000/096/180/posters/thumb/bb5aabe2f3.jpg</posterURL><genres>Thriller, Mystery, Science Fiction, Drama, </genres><plot>In a parallel present day, where the latest must-have gadget for any busy family is a 'Synth' (a highly realistic humanoid servant that's transforming the way we live). In hopes of reducing their workload, a suburban family purchases a new Synth only to discover that sharing life with a Synth has quite far-reaching consequences.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\humans.png</image>
+
+FINISHED UPDATING RULE humans.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  legends.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\legends.xml   |   https://trakt.tv/shows/legends-2014
+https://fanart.tv/series/265074
+https://fanart.tv/fanart/tv/265074/hdtvlogo/legends-2013-53e967b220e90.png
+<search>Legends ettv</search><url>https://trakt.tv/shows/legends-2014</url><posterURL>https://walter.trakt.us/images/shows/000/060/412/posters/thumb/3b46ac9bc5.jpg</posterURL><genres>Adventure, Action, Drama, </genres><plot>Follows a deep-cover operative named Martin Odum, who has an uncanny ability to transform himself into a different person for each job. But his own identity comes into question when a mysterious stranger suggests that Martin isn't who he thinks he is.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\legends 2013.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\User\taibhse\media\tv\legends</moveToFolder><searchFor>legends</searchFor>
+<search>Legends ettv</search><url>https://trakt.tv/shows/legends-2014</url><posterURL>https://walter.trakt.us/images/shows/000/060/412/posters/thumb/3b46ac9bc5.jpg</posterURL><genres>Adventure, Action, Drama, </genres><plot>Follows a deep-cover operative named Martin Odum, who has an uncanny ability to transform himself into a different person for each job. But his own identity comes into question when a mysterious stranger suggests that Martin isn't who he thinks he is.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\legends 2013.png</image>
+
+FINISHED UPDATING RULE legends.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  mr robot.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\mr robot.xml   |   https://trakt.tv/shows/mr-robot
+https://fanart.tv/series/289590
+https://fanart.tv/fanart/tv/289590/hdtvlogo/mr-robot-55682befa2036.png
+<search>Mr. Robot ettv</search><url>https://trakt.tv/shows/mr-robot</url><posterURL>https://walter.trakt.us/images/shows/000/093/720/posters/thumb/e90844dd99.jpg</posterURL><genres>Thriller, Crime, Drama, </genres><plot>The show follows Elliot, who is a cyber-security tech by day and vigilante hacker by night. He has used his hacking skills for justice and to protect those he cares about, but has problems connecting to people in the real world due to social anxiety. He strongly believes that the world is being ruled by the 1% of the 1% and, that using money and debt, they have enslaved mankind and he wishes desperately to change this. He is recruited by the head of a highly secret hacking group to take down the corporation he is being paid to protect with the hope of erasing 70% of all the debt in the world. He has had delusions in the past and sees a therapist who tries to help him and takes medication for it, but in the end he is unsure what is real and what is not, and so are we as we experience everything from his perspective.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\mr robot.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\mr robot</moveToFolder><searchFor>mr robot</searchFor>
+<search>Mr. Robot ettv</search><url>https://trakt.tv/shows/mr-robot</url><posterURL>https://walter.trakt.us/images/shows/000/093/720/posters/thumb/e90844dd99.jpg</posterURL><genres>Crime, Drama, </genres><plot>The show follows Elliot, who is a cyber-security tech by day and vigilante hacker by night. He has used his hacking skills for justice and to protect those he cares about, but has problems connecting to people in the real world due to social anxiety. He strongly believes that the world is being ruled by the 1% of the 1% and, that using money and debt, they have enslaved mankind and he wishes desperately to change this. He is recruited by the head of a highly secret hacking group to take down the corporation he is being paid to protect with the hope of erasing 70% of all the debt in the world. He has had delusions in the past and sees a therapist who tries to help him and takes medication for it, but in the end he is unsure what is real and what is not, and so are we as we experience everything from his perspective.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\mr robot.png</image>
+
+FINISHED UPDATING RULE mr robot.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  ncis la.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\ncis la.xml   |   https://trakt.tv/shows/ncis-los-angeles
+https://fanart.tv/series/95441
+https://fanart.tv/fanart/tv/95441/hdtvlogo/ncis-los-angeles-5068607a84ece.png
+<search>NCIS: Los Angeles ettv</search><url>https://trakt.tv/shows/ncis-los-angeles</url><posterURL>https://walter.trakt.us/images/shows/000/017/532/posters/thumb/cb6366c3ce.jpg</posterURL><genres>Crime, Mystery, Adventure, Action, Drama, </genres><plot>NCIS: Los Angeles is a drama about the high stakes world of undercover surveillance at the Office of Special Projects (OSP), a division of NCIS that is charged with apprehending dangerous and elusive criminals that pose a threat to the nation's security, specifically Naval and Marine assets and personnel.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\ncis los angeles.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\ncis los angeles</moveToFolder><searchFor>ncis los angeles</searchFor>
+<search>NCIS: Los Angeles ettv</search><url>https://trakt.tv/shows/ncis-los-angeles</url><posterURL>https://walter.trakt.us/images/shows/000/017/532/posters/thumb/cb6366c3ce.jpg</posterURL><genres>Crime, Mystery, Adventure, Action, Drama, </genres><plot>NCIS: Los Angeles is a drama about the high stakes world of undercover surveillance at the Office of Special Projects (OSP), a division of NCIS that is charged with apprehending dangerous and elusive criminals that pose a threat to the nation's security, specifically Naval and Marine assets and personnel.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\ncis los angeles.png</image>
+
+FINISHED UPDATING RULE ncis la.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  orphan black.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\orphan black.xml   |   https://trakt.tv/shows/orphan-black
+https://fanart.tv/series/260315
+https://fanart.tv/fanart/tv/260315/hdtvlogo/orphan-black-50e57f9f72a23.png
+<search>Orphan Black ettv</search><url>https://trakt.tv/shows/orphan-black</url><posterURL>https://walter.trakt.us/images/shows/000/055/943/posters/thumb/5abe39a051.jpg</posterURL><genres>Science Fiction, Fantasy, Drama, Thriller, </genres><plot>“Orphan Black” follows outsider, orphan and street-wise chameleon Sarah. After witnessing a woman’s suicide, Sarah assumes the stranger’s identity, who happens to look just like her. Expecting to solve all her problems by cleaning out the dead woman’s savings, Sarah is instead thrust headlong into a kaleidoscopic mystery as she realizes the dizzying truth: she and the dead woman are clones. As Sarah searches for answers, she discovers the chilling fact that there are more people like her out there - genetically identical individuals who were planted in unsuspecting birth parents and nurtured in completely different circumstances. With no idea who created the clones, she’ll need to discover the reason in a hurry as an assassin is killing them one by one.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\orphan black.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\orphan black</moveToFolder><searchFor>orphan black</searchFor>
+<search>Orphan Black ettv</search><url>https://trakt.tv/shows/orphan-black</url><posterURL>https://walter.trakt.us/images/shows/000/055/943/posters/thumb/5abe39a051.jpg</posterURL><genres>Science Fiction, Fantasy, Drama, Thriller, </genres><plot>“Orphan Black” follows outsider, orphan and street-wise chameleon Sarah. After witnessing a woman’s suicide, Sarah assumes the stranger’s identity, who happens to look just like her. Expecting to solve all her problems by cleaning out the dead woman’s savings, Sarah is instead thrust headlong into a kaleidoscopic mystery as she realizes the dizzying truth: she and the dead woman are clones. As Sarah searches for answers, she discovers the chilling fact that there are more people like her out there - genetically identical individuals who were planted in unsuspecting birth parents and nurtured in completely different circumstances. With no idea who created the clones, she’ll need to discover the reason in a hurry as an assassin is killing them one by one.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\orphan black.png</image>
+
+FINISHED UPDATING RULE orphan black.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  scorpion.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\scorpion.xml   |   https://trakt.tv/shows/scorpion
+https://fanart.tv/series/281630
+https://fanart.tv/fanart/tv/281630/hdtvlogo/scorpion-5417f1612294b.png
+<search>Scorpion ettv</search><url>https://trakt.tv/shows/scorpion</url><posterURL>https://walter.trakt.us/images/shows/000/060/356/posters/thumb/c727fa44a1.jpg</posterURL><genres>Action, Drama, </genres><plot>Eccentric genius, Walter O'Brien and his team of brilliant misfits comprise the last line of defense against complex, high-tech threats of the modern age. As Homeland Security's new think tank, O'Brien's 'Scorpion' team includes Toby Curtis, an expert behaviorist who can read anyone; Happy Quinn, a mechanical prodigy; and Sylvester Dodd, a statistics guru. Pooling their extensive technological knowledge to solve mind-boggling predicaments amazes federal agent Cabe Gallo, who shares a harrowing history with O'Brien. However, while this socially awkward group is comfortable with each other's humor and quirks, life outside their circle confounds them, so they rely on Paige Dineen, who has a young, gifted son, to translate the world for them, while also helping each other learn how to fit in.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\scorpion.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\scorpion</moveToFolder><searchFor>scorpion</searchFor>
+<search>Scorpion ettv</search><url>https://trakt.tv/shows/scorpion</url><posterURL>https://walter.trakt.us/images/shows/000/060/356/posters/thumb/c727fa44a1.jpg</posterURL><genres>Crime, Action, Drama, </genres><plot>Eccentric genius, Walter O'Brien and his team of brilliant misfits comprise the last line of defense against complex, high-tech threats of the modern age. As Homeland Security's new think tank, O'Brien's 'Scorpion' team includes Toby Curtis, an expert behaviorist who can read anyone; Happy Quinn, a mechanical prodigy; and Sylvester Dodd, a statistics guru. Pooling their extensive technological knowledge to solve mind-boggling predicaments amazes federal agent Cabe Gallo, who shares a harrowing history with O'Brien. However, while this socially awkward group is comfortable with each other's humor and quirks, life outside their circle confounds them, so they rely on Paige Dineen, who has a young, gifted son, to translate the world for them, while also helping each other learn how to fit in.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\scorpion.png</image>
+
+FINISHED UPDATING RULE scorpion.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  sherlock.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\sherlock.xml   |   https://trakt.tv/shows/sherlock
+https://fanart.tv/series/176941
+https://fanart.tv/fanart/tv/176941/hdtvlogo/sherlock-5055f87ea68a9.png
+<search>Sherlock ettv</search><url>https://trakt.tv/shows/sherlock</url><posterURL>https://walter.trakt.us/images/shows/000/019/792/posters/thumb/6311e0343c.jpg</posterURL><genres>Mystery, Crime, Drama, </genres><plot>Sherlock is a British television crime drama that presents a contemporary adaptation of Sir Arthur Conan Doyle's Sherlock Holmes detective stories. Created by Steven Moffat and Mark Gatiss, it stars Benedict Cumberbatch as Sherlock Holmes and Martin Freeman as Doctor John Watson.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\sherlock.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\sherlock</moveToFolder><searchFor>sherlock</searchFor>
+<search>Sherlock ettv</search><url>https://trakt.tv/shows/sherlock</url><posterURL>https://walter.trakt.us/images/shows/000/019/792/posters/thumb/6311e0343c.jpg</posterURL><genres>Thriller, Adventure, Mystery, Crime, Drama, </genres><plot>Sherlock is a British television crime drama that presents a contemporary adaptation of Sir Arthur Conan Doyle's Sherlock Holmes detective stories. Created by Steven Moffat and Mark Gatiss, it stars Benedict Cumberbatch as Sherlock Holmes and Martin Freeman as Doctor John Watson.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\sherlock.png</image>
+
+FINISHED UPDATING RULE sherlock.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  silicon valley.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\silicon valley.xml   |   https://trakt.tv/shows/silicon-valley
+https://fanart.tv/series/277165
+https://fanart.tv/fanart/tv/277165/hdtvlogo/silicon-valley-534724dd97592.png
+<search>Silicon Valley ettv</search><url>https://trakt.tv/shows/silicon-valley</url><posterURL>https://walter.trakt.us/images/shows/000/060/157/posters/thumb/85e44f91a7.jpg</posterURL><genres>Comedy, </genres><plot>In the high-tech gold rush of modern Silicon Valley, the people most qualified to succeed are the least capable of handling success. A comedy partially inspired by Mike Judge's own experiences as a Silicon Valley engineer in the late 1980s.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\silicon valley.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\silicon valley</moveToFolder><searchFor>silicon valley</searchFor>
+<search>Silicon Valley ettv</search><url>https://trakt.tv/shows/silicon-valley</url><posterURL>https://walter.trakt.us/images/shows/000/060/157/posters/thumb/85e44f91a7.jpg</posterURL><genres>Comedy, </genres><plot>In the high-tech gold rush of modern Silicon Valley, the people most qualified to succeed are the least capable of handling success. A comedy partially inspired by Mike Judge's own experiences as a Silicon Valley engineer in the late 1980s.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\silicon valley.png</image>
+
+FINISHED UPDATING RULE silicon valley.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  stalker.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\stalker.xml   |   https://trakt.tv/shows/stalker
+https://fanart.tv/series/281697
+https://fanart.tv/fanart/tv/281697/hdtvlogo/stalker-542ea3da7f6d6.png
+<search>Stalker ettv</search><url>https://trakt.tv/shows/stalker</url><posterURL>https://walter.trakt.us/images/shows/000/060/355/posters/thumb/13fde411ce.jpg</posterURL><genres>Action, Crime, Thriller, Drama, </genres><plot>Det. Jack Larsen is a recent transfer to the Unit from New York City's homicide division, whose confidence, strong personality and questionable behavior has landed him in trouble before - but whose past behavior may also prove valuable in his new job. His boss, Lt. Beth Davis, is strong, focused and an expert in the field, driven by her traumatic personal experience as a victim. With the rest of their team, young but eager Det. Ben Caldwell and deceptively smart Det. Janice Lawrence, Larsen and Davis assess the threat level of cases and respond before the stalking and intimidation spirals out of control, all while trying to keep their personal obsessions at bay.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\stalker.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\stalker</moveToFolder><searchFor>stalker</searchFor>
+<search>Stalker ettv</search><url>https://trakt.tv/shows/stalker</url><posterURL>https://walter.trakt.us/images/shows/000/060/355/posters/thumb/13fde411ce.jpg</posterURL><genres>Action, Crime, Thriller, Drama, </genres><plot>Det. Jack Larsen is a recent transfer to the Unit from New York City's homicide division, whose confidence, strong personality and questionable behavior has landed him in trouble before - but whose past behavior may also prove valuable in his new job. His boss, Lt. Beth Davis, is strong, focused and an expert in the field, driven by her traumatic personal experience as a victim. With the rest of their team, young but eager Det. Ben Caldwell and deceptively smart Det. Janice Lawrence, Larsen and Davis assess the threat level of cases and respond before the stalking and intimidation spirals out of control, all while trying to keep their personal obsessions at bay.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\stalker.png</image>
+
+FINISHED UPDATING RULE stalker.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  suits.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\suits.xml   |   https://trakt.tv/shows/suits
+https://fanart.tv/series/247808
+https://fanart.tv/fanart/tv/247808/hdtvlogo/suits-5068e1e413de1.png
+<search>Suits ettv</search><url>https://trakt.tv/shows/suits</url><posterURL>https://walter.trakt.us/images/shows/000/037/522/posters/thumb/0e6117705c.jpg</posterURL><genres>Drama, </genres><plot>Suits follows college drop-out Mike Ross, who accidentally lands a job with one of New York's best legal closers, Harvey Specter. They soon become a winning team with Mike's raw talent and photographic memory, and Mike soon reminds Harvey of why he went into the field of law in the first place.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\suits.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\suits</moveToFolder><searchFor>suits</searchFor>
+<search>Suits ettv</search><url>https://trakt.tv/shows/suits</url><posterURL>https://walter.trakt.us/images/shows/000/037/522/posters/thumb/0e6117705c.jpg</posterURL><genres>Drama, </genres><plot>Suits follows college drop-out Mike Ross, who accidentally lands a job with one of New York's best legal closers, Harvey Specter. They soon become a winning team with Mike's raw talent and photographic memory, and Mike soon reminds Harvey of why he went into the field of law in the first place.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\suits.png</image>
+
+FINISHED UPDATING RULE suits.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  the 100.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\the 100.xml   |   https://trakt.tv/shows/the-100
+https://fanart.tv/series/268592
+https://fanart.tv/fanart/tv/268592/hdtvlogo/the-100-530e5975ce086.png
+<search>The 100 ettv</search><url>https://trakt.tv/shows/the-100</url><posterURL>https://walter.trakt.us/images/shows/000/048/562/posters/thumb/ea1a058ada.jpg</posterURL><genres>Thriller, Suspense, Science Fiction, Fantasy, Drama, </genres><plot>Based on the books by Kass Morgan, this show takes place 100 years in the future, when the Earth has been abandoned due to radioactivity. The last surviving humans live on an ark orbiting the planet — but the ark won't last forever. So the repressive regime picks 100 expendable juvenile delinquents to send down to Earth to see if the planet is still habitable.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\the 100.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\the 100</moveToFolder><searchFor>the 100</searchFor>
+<search>The 100 ettv</search><url>https://trakt.tv/shows/the-100</url><posterURL>https://walter.trakt.us/images/shows/000/048/562/posters/thumb/ea1a058ada.jpg</posterURL><genres>Science Fiction, Fantasy, Drama, </genres><plot>Based on the books by Kass Morgan, this show takes place 100 years in the future, when the Earth has been abandoned due to radioactivity. The last surviving humans live on an ark orbiting the planet — but the ark won't last forever. So the repressive regime picks 100 expendable juvenile delinquents to send down to Earth to see if the planet is still habitable.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\the 100.png</image>
+
+FINISHED UPDATING RULE the 100.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  the big bang theory.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\the big bang theory.xml   |   https://trakt.tv/shows/the-big-bang-theory
+https://fanart.tv/series/80379
+https://fanart.tv/fanart/tv/80379/hdtvlogo/the-big-bang-theory-50477a642f672.png
+<search>The Big Bang Theory ettv</search><url>https://trakt.tv/shows/the-big-bang-theory</url><posterURL>https://walter.trakt.us/images/shows/000/001/409/posters/thumb/8adfe77938.jpg</posterURL><genres>Comedy, </genres><plot>What happens when hyperintelligent roommates Sheldon and Leonard meet Penny, a free-spirited beauty moving in next door, and realize they know next to nothing about life outside of the lab. Rounding out the crew are the smarmy Wolowitz, who thinks he's as sexy as he is brainy, and Koothrappali, who suffers from an inability to speak in the presence of a woman.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\the big bang theory.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\the big bang theory</moveToFolder><searchFor>the big bang theory</searchFor>
+<search>The Big Bang Theory ettv</search><url>https://trakt.tv/shows/the-big-bang-theory</url><posterURL>https://walter.trakt.us/images/shows/000/001/409/posters/thumb/8adfe77938.jpg</posterURL><genres>Comedy, </genres><plot>What happens when hyperintelligent roommates Sheldon and Leonard meet Penny, a free-spirited beauty moving in next door, and realize they know next to nothing about life outside of the lab. Rounding out the crew are the smarmy Wolowitz, who thinks he's as sexy as he is brainy, and Koothrappali, who suffers from an inability to speak in the presence of a woman.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\the big bang theory.png</image>
+
+FINISHED UPDATING RULE the big bang theory.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  the expanse.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\the expanse.xml   |   https://trakt.tv/shows/the-expanse
+https://fanart.tv/series/280619
+https://fanart.tv/fanart/tv/280619/hdtvlogo/the-expanse-5656dbc03e423.png
+<search>The Expanse ettv</search><url>https://trakt.tv/shows/the-expanse</url><posterURL>https://walter.trakt.us/images/shows/000/077/199/posters/thumb/61b684ab46.jpg</posterURL><genres>Science Fiction, Fantasy, </genres><plot>Two hundred years in the future, in a fully colonized solar system, police detective Josephus Miller is given the assignment to find a missing young woman, Julie Mao. Joining his task is James Holden, former first officer of an ice freighter who is involved in an incident caused by the tense relationship between Earth, Mars and the Belt. Far from their struggles in space, United Nations executive Chrisjen Avasarala works to prevent war between Earth and Mars. Soon the three find out that the missing woman is connected to a vast conspiracy that threatens all humanity.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\the expanse.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\the expanse</moveToFolder><searchFor>the expanse</searchFor>
+<search>The Expanse ettv</search><url>https://trakt.tv/shows/the-expanse</url><posterURL>https://walter.trakt.us/images/shows/000/077/199/posters/thumb/61b684ab46.jpg</posterURL><genres>Science Fiction, Fantasy, </genres><plot>Two hundred years in the future, in a fully colonized solar system, police detective Josephus Miller is given the assignment to find a missing young woman, Julie Mao. Joining his task is James Holden, former first officer of an ice freighter who is involved in an incident caused by the tense relationship between Earth, Mars and the Belt. Far from their struggles in space, United Nations executive Chrisjen Avasarala works to prevent war between Earth and Mars. Soon the three find out that the missing woman is connected to a vast conspiracy that threatens all humanity.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\the expanse.png</image>
+
+FINISHED UPDATING RULE the expanse.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  The Last Ship.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\The Last Ship.xml   |   https://trakt.tv/shows/the-last-ship
+https://fanart.tv/series/269533
+https://fanart.tv/fanart/tv/269533/hdtvlogo/the-last-ship-51c8dc5b236ad.png
+<search>The Last Ship ettv</search><url>https://trakt.tv/shows/the-last-ship</url><posterURL>https://walter.trakt.us/images/shows/000/060/360/posters/thumb/522aa0d783.jpg</posterURL><genres>Science Fiction, Drama, Action, </genres><plot>Their mission is simple: Find a cure. Stop the virus. Save the world. When a global pandemic wipes out eighty percent of the planet's population, the crew of a lone naval destroyer must find a way to pull humanity from the brink of extinction. Executive Producer Michael Bay presents The Last Ship, starring Eric Dane, Rhona Mitra and Adam Baldwin.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\the last ship.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\the last ship</moveToFolder><searchFor>the last ship</searchFor>
+<search>The Last Ship ettv</search><url>https://trakt.tv/shows/the-last-ship</url><posterURL>https://walter.trakt.us/images/shows/000/060/360/posters/thumb/522aa0d783.jpg</posterURL><genres>Adventure, Science Fiction, Drama, Action, </genres><plot>Their mission is simple: Find a cure. Stop the virus. Save the world. When a global pandemic wipes out eighty percent of the planet's population, the crew of a lone naval destroyer must find a way to pull humanity from the brink of extinction. Executive Producer Michael Bay presents The Last Ship, starring Eric Dane, Rhona Mitra and Adam Baldwin.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\the last ship.png</image>
+
+FINISHED UPDATING RULE The Last Ship.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  the man in the high castle.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\the man in the high castle.xml   |   https://trakt.tv/shows/the-man-in-the-high-castle
+https://fanart.tv/series/295829
+https://fanart.tv/fanart/tv/295829/hdtvlogo/the-man-in-the-high-castle-5677cb00f0a44.png
+<search>The Man in the High Castle ettv</search><url>https://trakt.tv/shows/the-man-in-the-high-castle</url><posterURL>https://walter.trakt.us/images/shows/000/068/319/posters/thumb/6b5d07b771.jpg</posterURL><genres>Thriller, Science Fiction, Drama, </genres><plot>A glimpse into an alternate history of North America: what life after WWII may have been like if the Nazis had won the war. The Man in the High Castle explores daily life in 1962, fourteen years after the end of a longer Second World War (1939–1948 in this history). The victorious Axis Powers - Imperial Japan, Fascist Italy, and Nazi Germany - are conducting intrigues against each other in North America, specifically in the former U.S., which surrendered to them once they had conquered Eurasia and destroyed the populaces of Africa.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\the man in the high castle.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\the man in the high castle</moveToFolder><searchFor>the man in the high castle</searchFor>
+<search>The Man in the High Castle ettv</search><url>https://trakt.tv/shows/the-man-in-the-high-castle</url><posterURL>https://walter.trakt.us/images/shows/000/068/319/posters/thumb/6b5d07b771.jpg</posterURL><genres>Thriller, Science Fiction, Drama, </genres><plot>A glimpse into an alternate history of North America: what life after WWII may have been like if the Nazis had won the war. The Man in the High Castle explores daily life in 1962, fourteen years after the end of a longer Second World War (1939–1948 in this history). The victorious Axis Powers - Imperial Japan, Fascist Italy, and Nazi Germany - are conducting intrigues against each other in North America, specifically in the former U.S., which surrendered to them once they had conquered Eurasia and destroyed the populaces of Africa.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\the man in the high castle.png</image>
+
+FINISHED UPDATING RULE the man in the high castle.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  the player.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\the player.xml   |   https://trakt.tv/shows/the-player-2015
+https://fanart.tv/series/295642

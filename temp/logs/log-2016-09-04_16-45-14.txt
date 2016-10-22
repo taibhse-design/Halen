@@ -1,0 +1,5 @@
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Invincible_Iron_Man__2015_.xml
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Iron_Man__Bad_Blood.xml
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Iron_Man__Bad_Blood.xml: The process cannot access the file because it is being used by another process.
+
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Iron_Man__Bad_Blood.xml

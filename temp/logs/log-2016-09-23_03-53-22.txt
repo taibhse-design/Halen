@@ -1,0 +1,15 @@
+Double click Halen.jar to launch GUI interface, to run this program from
+the command line, the following are supported.(NOTE: HALEN DOES NOT SUPPORT
+MULTIPLE COMMANDS AT ONCE (IE, NO JAVA -JAR HALEN.JAR -COMMAND1 -COMMAND2)
+
+The following are all supported commands and what each does:
+
+-help         | you should know this one, its the only way you could be reading
+                this text, bravo for figuring it out.
+
+-relocate     | searches through all rules and trys to find matches on drive and
+                organise them into folders per each rules settings. (ignores comics since they can download directly to required locations)
+
+-search       | this command makes halen search for the latest episodes without needing the GUI running.
+
+-update_rules | this command updates rules (tv) by downloading latest season information from trakt.

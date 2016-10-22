@@ -1,0 +1,4 @@
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Platina_End.xml
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Spider-Gwen I.xml
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Spider-Girl 2011.xml
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Spider-Girl 2011.xml

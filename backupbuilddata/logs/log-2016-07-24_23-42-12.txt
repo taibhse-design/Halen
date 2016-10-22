@@ -1,0 +1,461 @@
+Scaling UI to fit default screen.....
+Screen Width: 2736 Screen Height: 1824
+Screen width too small for default size (6400), rescaling GUI width to fit.....
+Screen height too small for default size (3175), rescaling GUI height to fit.....
+Frame Width: 2472frame Height: 1560
+Aspect Ratio: 1.5846153
+---------------------------------------------------------
+                Launching Torrent Client
+---------------------------------------------------------
+
+
+------------------------------------------------------------
+setting ui: com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+
+------------------------------------------------------------
+
+true
+true
+true
+true
+true
+true
+true
+true
+true
+false
+true
+true
+true
+false
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+false
+true
+true
+true
+
+
+------------------------------------------------------------
+setting ui: com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+
+------------------------------------------------------------
+
+RUNNING RULES
+java.io.FileNotFoundException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\Thumbs.db (Access is denied)
+ixth generation 008 : 
+letter 44 026 : 
+invincible iron man 012 : 
+dark matter S02E03 : magnet:?xt=urn:btih:b7eede96bdbad6ed0a8bacdd2970aa79a0bd01d2&dn=Dark.Matter.S02E03.WEB-DL.XviD-FUM%5Bettv%5D&&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce
+think tank creative destruction 004 : 
+lazarus 023 : 
+international iron man 005 : 
+morning glories 051 : 
+tales of honor bred to kill 005 : 
+think tank 002 : 
+mr robot S02E03 : magnet:?xt=urn:btih:5080cf0c7ae343bcdb5ec9b173db230ca186c006&dn=Mr.Robot.S02E03.HDTV.XviD-FUM%5Bettv%5D&&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce
+suits S06E02 : magnet:?xt=urn:btih:0bdd7dd86b05bc6703ebf35ce2e838efa0aae42e&dn=Suits.S06E02.HDTV.XviD-FUM%5Bettv%5D&&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce
+containment S01E13 : magnet:?xt=urn:btih:389fad75d45b6f508a72a1d07e58743a370db92d&dn=Containment.S01E13.HDTV.XviD-FUM%5Bettv%5D&&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce
+dragons den ireland S01E01 : 
+brooklyn nine nine S03E12 : 
+adam ruins everything S01E01 : 
+home fires S01E01 : 
+scorpion S03E04 : 
+the strain S03E02 : 
+The Last Ship S03E06 : magnet:?xt=urn:btih:842f698e39301141032d8d0e92b148b44b79f937&dn=The.Last.Ship.S03E06.HDTV.XviD-FUM%5Bettv%5D&&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce
+agents of shield S02E22 : 
+game of thrones S07E01 : 
+tales of honor bred to kill 006 : 
+humans S02E01 : 
+international iron man 006 : 
+lazarus 024 : 
+think tank creative destruction 005 : 
+letter 44 027 : 
+ixth generation 009 : 
+invincible iron man 013 : 
+morning glories 052 : 
+fear the walking dead S02E09 : 
+iron fortress   13 :       
+ajin   14 :       
+ncis la S07E13 : 
+tales of honor bred to kill 007 : 
+letter 44 028 : 
+invincible iron man 014 : 
+da vinci demons S03E08 : 
+morning glories 053 : 
+international iron man 007 : 
+lazarus 025 : 
+think tank 004 : 
+Norn9   13 :       
+gate   13 :       
+zoo S02E02 : 
+ixth generation 010 : 
+Phantasy Star Online 2 The Animation   13 :       
+think tank creative destruction 006 : 
+sherlock S04E01 : 
+the man in the high castle S01E01 : 
+letter 44 029 : 
+ixth generation 011 : 
+invincible iron man 015 : 
+morning glories 054 : 
+international iron man 008 : 
+think tank creative destruction 007 : 
+tales of honor bred to kill 008 : 
+iron fortress   14 :       
+dragons den ireland S01E02 : 
+The Last Ship S03E07 : 
+humans S02E02 : 
+the strain S03E03 : 
+agents of shield S03E01 : 
+ixth generation 012 : 
+letter 44 030 : 
+invincible iron man 016 : 
+dark matter S02E04 : magnet:?xt=urn:btih:97923807884dcb7fd73e3b38773fca35008b0700&dn=Dark.Matter.S02E04.HDTV.XviD-FUM%5Bettv%5D&&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce
+adam ruins everything S01E02 : 
+tales of honor bred to kill 009 : 
+think tank creative destruction 008 : 
+morning glories 055 : 
+international iron man 009 : 
+Norn9   14 :       
+invincible iron man 017 : 
+ixth generation 013 : 
+letter 44 031 : 
+Phantasy Star Online 2 The Animation   14 :       
+gate   14 :       
+home fires S01E02 : 
+zoo S02E05 : magnet:?xt=urn:btih:bbb23473b167d486db9f9e878c860d5a1e26fa13&dn=Zoo.S02E05.HDTV.XviD-FUM%5Bettv%5D&&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce
+fear the walking dead S02E10 : 
+ncis la S07E14 : 
+think tank creative destruction 009 : 
+morning glories 056 : 
+international iron man 010 : 
+tales of honor bred to kill 010 : 
+letter 44 032 : 
+scorpion S03E05 : 
+ixth generation 014 : 
+da vinci demons S03E09 : 
+ajin   15 :       
+invincible iron man 018 : 
+morning glories 057 : 
+tales of honor bred to kill 011 : 
+iron fortress   15 :       
+international iron man 011 : 
+letter 44 033 : 
+think tank creative destruction 010 : 
+ixth generation 015 : 
+gate   15 :       
+the strain S03E04 : 
+sherlock S04E02 : 
+the man in the high castle S01E02 : 
+ixth generation 016 : 
+think tank creative destruction 011 : 
+invincible iron man 019 : 
+international iron man 012 : 
+tales of honor bred to kill 012 : 
+morning glories 058 : 
+Phantasy Star Online 2 The Animation   15 :       
+letter 44 034 : 
+Norn9   15 :       
+ixth generation 017 : 
+invincible iron man 020 : 
+think tank creative destruction 012 : 
+humans S02E03 : 
+dragons den ireland S01E03 : 
+The Last Ship S03E13 : 
+tales of honor bred to kill 013 : 
+international iron man 013 : 
+morning glories 059 : 
+agents of shield S03E02 : 
+home fires S01E03 : 
+fear the walking dead S02E11 : 
+dark matter S02E11 : 
+letter 44 035 : 
+ixth generation 018 : 
+adam ruins everything S01E03 : 
+iron fortress   16 :       
+tales of honor bred to kill 014 : 
+international iron man 014 : 
+morning glories 060 : 
+letter 44 036 : 
+ixth generation 019 : 
+Norn9   16 :       
+tales of honor bred to kill 015 : 
+international iron man 015 : 
+morning glories 061 : 
+Phantasy Star Online 2 The Animation   16 :       
+da vinci demons S03E10 : 
+letter 44 037 : 
+ncis la S07E15 : 
+ixth generation 020 : 
+letter 44 038 : 
+international iron man 016 : 
+tales of honor bred to kill 016 : 
+morning glories 062 : 
+iron fortress   17 :       
+ixth generation 021 : 
+the strain S03E05 : 
+letter 44 039 : 
+international iron man 017 : 
+tales of honor bred to kill 017 : 
+morning glories 063 : 
+ixth generation 022 : 
+Phantasy Star Online 2 The Animation   17 :       
+Norn9   17 :       
+letter 44 040 : 
+international iron man 018 : 
+sherlock S04E03 : 
+the man in the high castle S01E03 : 
+humans S02E04 : 
+dragons den ireland S01E04 : 
+tales of honor bred to kill 018 : 
+morning glories 064 : 
+dark matter S02E12 : 
+ixth generation 023 : 
+fear the walking dead S02E12 : 
+international iron man 019 : 
+iron fortress   18 :       
+morning glories 065 : 
+tales of honor bred to kill 019 : 
+ixth generation 024 : 
+home fires S01E04 : 
+international iron man 020 : 
+tales of honor bred to kill 020 : 
+morning glories 066 : 
+ixth generation 025 : 
+agents of shield S03E03 : 
+Phantasy Star Online 2 The Animation   18 :       
+morning glories 067 : 
+morning glories 068 : 
+Norn9   18 :       
+iron fortress   19 :       
+ncis la S07E16 : 
+morning glories 069 : 
+adam ruins everything S01E11 : 
+Phantasy Star Online 2 The Animation   19 :       
+morning glories 070 : 
+Norn9   19 :       
+the strain S03E06 : 
+morning glories 071 : 
+iron fortress   20 :       
+dark matter S02E13 : 
+the man in the high castle S01E04 : 
+humans S02E05 : 
+home fires S01E05 : 
+dragons den ireland S01E05 : 
+fear the walking dead S02E13 : 
+morning glories 072 : 
+Phantasy Star Online 2 The Animation   20 :       
+morning glories 073 : 
+agents of shield S03E04 : 
+Norn9   20 :       
+morning glories 074 : 
+iron fortress   21 :       
+ncis la S07E17 : 
+Phantasy Star Online 2 The Animation   21 :       
+morning glories 075 : 
+morning glories 076 : 
+Norn9   21 :       
+iron fortress   22 :       
+morning glories 077 : 
+adam ruins everything S01E12 : 
+Phantasy Star Online 2 The Animation   22 :       
+home fires S01E06 : 
+humans S02E06 : 
+morning glories 078 : 
+fear the walking dead S02E14 : 
+the strain S03E07 : 
+the man in the high castle S01E05 : 
+morning glories 079 : 
+Norn9   22 :       
+ncis la S07E18 : 
+agents of shield S03E05 : 
+dragons den ireland S01E06 : 
+morning glories 080 : 
+Phantasy Star Online 2 The Animation   23 :       
+morning glories 081 : 
+Norn9   23 :       
+morning glories 082 : 
+Phantasy Star Online 2 The Animation   24 :       
+humans S02E07 : 
+morning glories 083 : 
+fear the walking dead S02E15 : 
+the strain S03E08 : 
+the man in the high castle S01E06 : 
+ncis la S07E19 : 
+morning glories 084 : 
+dragons den ireland S01E07 : 
+Norn9   24 :       
+morning glories 085 : 
+agents of shield S03E06 : 
+Phantasy Star Online 2 The Animation   25 :       
+morning glories 086 : 
+morning glories 087 : 
+the strain S03E09 : 
+humans S02E08 : 
+Norn9   25 :       
+morning glories 088 : 
+the man in the high castle S01E07 : 
+ncis la S07E20 : 
+morning glories 089 : 
+dragons den ireland S01E08 : 
+agents of shield S03E07 : 
+morning glories 090 : 
+morning glories 091 : 
+the strain S03E10 : 
+morning glories 092 : 
+the man in the high castle S01E08 : 
+ncis la S07E21 : 
+dragons den ireland S02E01 : 
+agents of shield S03E08 : 
+the strain S03E11 : 
+the man in the high castle S01E09 : 
+morning glories 093 : 
+ncis la S07E22 : 
+dragons den ireland S02E02 : 
+morning glories 094 : 
+agents of shield S03E09 : 
+the man in the high castle S01E10 : 
+morning glories 095 : 
+ncis la S07E23 : 
+morning glories 096 : 
+dragons den ireland S02E03 : 
+morning glories 097 : 
+morning glories 098 : 
+morning glories 099 : 
+dragons den ireland S02E04 : 
+morning glories 100 : 
+ncis la S07E24 : 
+dragons den ireland S02E05 : 
+dragons den ireland S02E06 : 
+agents of shield S03E10 : 
+dragons den ireland S02E07 : 
+agents of shield S03E11 : 
+dragons den ireland S02E08 : 
+agents of shield S03E12 : 
+dragons den ireland S03E01 : 
+agents of shield S03E13 : 
+dragons den ireland S03E02 : 
+agents of shield S03E14 : 
+dragons den ireland S03E03 : 
+agents of shield S03E15 : 
+dragons den ireland S03E04 : 
+agents of shield S03E16 : 
+dragons den ireland S03E05 : 
+agents of shield S03E17 : 
+dragons den ireland S03E06 : 
+dragons den ireland S03E07 : 
+agents of shield S03E18 : 
+dragons den ireland S03E08 : 
+agents of shield S03E19 : 
+dragons den ireland S04E01 : 
+agents of shield S03E20 : 
+dragons den ireland S04E02 : 
+agents of shield S03E21 : 
+dragons den ireland S04E03 : 
+agents of shield S03E22 : 
+dragons den ireland S04E04 : 
+agents of shield S04E01 : 
+dragons den ireland S04E05 : 
+agents of shield S03E24 : 
+dragons den ireland S04E06 : 
+dragons den ireland S04E07 : 
+dragons den ireland S04E08 : 
+dragons den ireland S04E09 : 
+dragons den ireland S05E01 : 
+dragons den ireland S05E02 : 
+dragons den ireland S05E03 : 
+dragons den ireland S06E01 : 
+dragons den ireland S06E02 : 
+dragons den ireland S06E03 : 
+dragons den ireland S06E04 : 
+dragons den ireland S06E05 : 
+dragons den ireland S06E06 : 
+dragons den ireland S06E07 : 
+dragons den ireland S06E08 : 
+dragons den ireland S06E09 : 
+dragons den ireland S06E10 : 
+dragons den ireland S07E05 : 
+dragons den ireland S07E06 : 
+dragons den ireland S07E07 : 
+dragons den ireland S07E08 : 
+
+ 1st ===> setup Mail Server Properties..
+Mail Server Properties have been setup successfully..
+
+
+ 2nd ===> get Mail Session..
+Mail Session has been created successfully..
+
+
+ 3rd ===> Get Session and Send mail
+
+ 1st ===> setup Mail Server Properties..
+Mail Server Properties have been setup successfully..
+
+
+ 2nd ===> get Mail Session..
+Mail Session has been created successfully..
+
+
+ 3rd ===> Get Session and Send mail
+false
+false
+false
+false
+false
+false
+false
+false
+false
+true
+true
+true
+true
+true
+true
+true
+true
+true
+false
+true
+true
+true
+false
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+false
+true
+true
+true

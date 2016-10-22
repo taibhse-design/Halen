@@ -1,0 +1,18 @@
+INVALID SETTINGS DETECTED - HALEN WILL NOT RUN UNTIL SETTINGS ARE PROPERLY SET!!!!!
+INVALID SETTINGS DETECTED - HALEN WILL NOT RUN UNTIL SETTINGS ARE PROPERLY SET!!!!!
+INVALID SETTINGS DETECTED - HALEN WILL NOT RUN UNTIL SETTINGS ARE PROPERLY SET!!!!!
+INVALID SETTINGS DETECTED - HALEN WILL NOT RUN UNTIL SETTINGS ARE PROPERLY SET!!!!!
+INVALID SETTINGS DETECTED - HALEN WILL NOT RUN UNTIL SETTINGS ARE PROPERLY SET!!!!!
+
+
+------------------------------------------------------------
+setting ui: com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+
+------------------------------------------------------------
+
+
+
+------------------------------------------------------------
+setting ui: com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+
+------------------------------------------------------------

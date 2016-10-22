@@ -1,0 +1,22 @@
+test.xml
+SAVING NEW RULE FILE.....
+PROFILE: C:\Users\brenn\Desktop\portables\Portable tools\GoogleChromePortable\Data\profile
+
+
+TITLE: Fate/kaleid liner Prisma☆Illya 3rei!!
+GENRE: Action
+PLOT: Anime Synopsis: Illya and the gang have finished their battle against the heroic spirit residing in the eighth class card. They're back in vacation mode again, looking to make the most of what they have left of summer break. But their hopes get crushed in the blink of an eye. An all-too-unrealistic silhouette appears before them when they go to investigate the strange event at Mount Enzō. After a short skirmish, the entire space ends up being warped. Illya wakes up in a wintry Fuyuki City... in a parallel world. This is the world where Miyu was born and raised.
+IMAGE URL: http://deadfishencod.es/files/anime/series/cover/fate_kaleid_liner_prisma_illya_3rei.jpg
+EPISODE LIST LINK: http://deadfishencod.es/?p=11350
+Director: Oonuma Shin
+Publisher(s): Lantis, DAX Production
+Rated: PG-13 - Teens 13 or older
+Duration: 24 Mins Per Episode
+Status: Ongoing
+
+
+
+
+<title>Fate/kaleid liner Prisma☆Illya 3rei!!</title><genre>Action</genre><plot>Anime Synopsis: Illya and the gang have finished their battle against the heroic spirit residing in the eighth class card. They're back in vacation mode again, looking to make the most of what they have left of summer break. But their hopes get crushed in the blink of an eye. An all-too-unrealistic silhouette appears before them when they go to investigate the strange event at Mount Enzō. After a short skirmish, the entire space ends up being warped. Illya wakes up in a wintry Fuyuki City... in a parallel world. This is the world where Miyu was born and raised.</plot><imageURL>http://deadfishencod.es/files/anime/series/cover/fate_kaleid_liner_prisma_illya_3rei.jpg</imageURL><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\anime-posters\Fate kaleid liner Prisma Illya 3rei.jpg</image><director>Director: Oonuma Shin</director><publisher>Publisher(s): Lantis, DAX Production</publisher><rated>Rated: PG-13 - Teens 13 or older</rated><duration>Duration: 24 Mins Per Episode</duration><status>Status: Ongoing</status><seriesURL>http://deadfishencod.es/Fate_kaleid_liner_Prisma_Illya_3rei/</seriesURL><moveToFolder>jackpot</moveToFolder>
+
+URL TO FIND EPISODE LIST: http://deadfishencod.es/anime-downloads/Fate-kaleid-liner-Prisma-Illya-3rei

@@ -1,0 +1,7 @@
+mechanism.xml
+SAVING NEW RULE FILE.....
+#########################################################################################################
+   CREATING NEW COMIC RULE - http://readcomiconline.to/Comic/Mechanism
+#########################################################################################################
+
+PROFILE: C:\Users\brenn\Desktop\portables\Portable tools\GoogleChromePortable\Data\profile

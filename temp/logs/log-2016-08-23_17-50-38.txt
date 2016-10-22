@@ -1,0 +1,247 @@
+#################################################################################################################
+
+UPDATING RULE:  adam ruins everything.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\adam ruins everything.xml   |   http://www.trakt.tv/shows/adam-ruins-everything
+https://fanart.tv/series/300774
+https://fanart.tv/fanart/tv/300774/hdtvlogo/adam-ruins-everything-564a04fc72525.png
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - Invincible_Iron_Man__2015_.xml
+#########################################################################################################
+
+<search>Adam Ruins Everything ettv</search><url>http://www.trakt.tv/shows/adam-ruins-everything</url><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\adam ruins everything.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\Adam Ruins Everything</moveToFolder><searchFor>adam ruins everything</searchFor>
+<search>Adam Ruins Everything ettv</search><url>http://www.trakt.tv/shows/adam-ruins-everything</url><posterURL>https://walter.trakt.us/images/shows/000/102/169/posters/thumb/7a15f8694c.jpg</posterURL><genres>Documentary, Comedy, </genres><plot>In Adam Ruins Everything, host Adam Conover employs a combination of comedy, history and science to dispel widespread misconceptions about everything we take for granted. A blend of entertainment and enlightenment, Adam Ruins Everything is like that friend who knows a little bit too much about everything and is going to tell you about it... whether you like it or not.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\adam ruins everything.png</image>
+
+FINISHED UPDATING RULE adam ruins everything.xml
+
+#################################################################################################################
+#################################################################################################################
+
+UPDATING RULE:  agents of shield.xml
+
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\tv show\agents of shield.xml   |   https://trakt.tv/shows/marvel-s-agents-of-s-h-i-e-l-d
+https://fanart.tv/series/263365
+https://fanart.tv/fanart/tv/263365/hdtvlogo/marvels-agents-of-shield-52521ded92142.png
+
+Title: Invincible Iron Man (2015)
+<search>Marvel's Agents of S.H.I.E.L.D. ettv</search><url>https://trakt.tv/shows/marvel-s-agents-of-s-h-i-e-l-d</url><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\marvels agents of shield.png</image><searchInFolder>C:/Users/taibhse/Downloads</searchInFolder><moveToFolder>C:\Users\taibhse\media\tv\agents of S.H.I.E.L.D</moveToFolder><searchFor>agents of s.h.i.e.l.d</searchFor>
+<search>Marvel's Agents of S.H.I.E.L.D. ettv</search><url>https://trakt.tv/shows/marvel-s-agents-of-s-h-i-e-l-d</url><posterURL>https://walter.trakt.us/images/shows/000/001/394/posters/thumb/c4a4211e12.jpg</posterURL><genres>Science Fiction, Fantasy, Drama, Adventure, Action, </genres><plot>Phil Coulson (Clark Gregg, reprising his role from "The Avengers" and "Iron Man" ) heads an elite team of fellow agents with the worldwide law-enforcement organization known as SHIELD (Strategic Homeland Intervention Enforcement and Logistics Division), as they investigate strange occurrences around the globe. Its members -- each of whom brings a specialty to the group -- work with Coulson to protect those who cannot protect themselves from extraordinary and inconceivable threats, including a formidable group known as Hydra.</plot><image>C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\tv-show-logos\marvels agents of shield.png</image>
+CRITICAL ERROR: java.lang.NumberFormatException: For input string: ".H.I."
+Image URL:  C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\comic-book-covers\Invincible Iron Man 2015.png
+Imgur URL:  https://i.imgur.com/UkQ4fFK.png
+Genres:  Action Adventure Superhero
+Publisher:  Marvel
+Writer:  Brian Michael Bendis
+Artist:  David Marquez
+Publication date: December 2015
+Status:  Ongoing
+Summary:  Exploding out of the pages of SECRET WARS, one of the most popular super heroes in the world gets a gigantic new series. From the creators that brought you ULTIMATE SPIDER-MAN comes new armor, new supporting cast, new villains and a new purpose that is going to tear itself across the entire Marvel Universe and beyond. With a shocker of a last page that will have everyone talking and the return of one of Tony's biggest nemeses, you will not want to miss this!! Also, who are Tony's biological parents? The quest begins here!
+
+Invincible Iron Man (2015) Issue #12:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-12?id=79499&readType=1
+Invincible Iron Man (2015) Issue #11:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-11?id=71922&readType=1
+Invincible Iron Man (2015) Issue #10:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-10?id=58650&readType=1
+Invincible Iron Man (2015) Issue #9:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-9?id=48961&readType=1
+Invincible Iron Man (2015) Issue #8:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-8?id=37943&readType=1
+Invincible Iron Man (2015) Issue #7:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-7?id=23677&readType=1
+Invincible Iron Man (2015) Issue #6:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-6?id=18249&readType=1
+Invincible Iron Man (2015) Issue #5:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-5?id=12047&readType=1
+Invincible Iron Man (2015) Issue #4:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-4?id=10107&readType=1
+Invincible Iron Man (2015) Issue #3:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-3?id=10106&readType=1
+Invincible Iron Man (2015) Issue #2:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-2?id=10105&readType=1
+Invincible Iron Man (2015) Issue #1:   http://readcomiconline.to/Comic/Invincible-Iron-Man-2015/Issue-1?id=10104&readType=1
+
+Skipping rule, no new updates.........
+
+#########################################################################################################
+
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - Iron_Man__Bad_Blood.xml
+#########################################################################################################
+
+
+Skipping rule update, comic series is already completed.........
+
+#########################################################################################################
+
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - IXth_Generation.xml
+#########################################################################################################
+
+
+Title: IXth Generation
+Image URL:  C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\comic-book-covers\IXth Generation.png
+Imgur URL:  https://i.imgur.com/8iCaKlh.png
+Genres:  Action Adventure Sci-Fi
+Publisher:  Image Comics
+Writer:  Matt Hawkins
+Artist:  Stjepan Sejic
+Publication date: January 2015
+Status:  Ongoing
+Summary:  In the future there is no more natural death, no needs unfilled and everything you could ever want is yours… as long as you’re one of the ones chosen to live in this new Utopia and you’re willing to subjugate yourself to these new self-proclaimed gods with “IX”s emblazoned on them. Do the ends truly justify the means? Is a utopia built on genocide worth the price? Aphrodite, Velocity, Hades, and the other Nines establish fiefdoms in this new world and attempt to rule. Their internal clashes have escalated, but they are forced to put that aside as they face off against the relentless hordes of the Darkness. The sins of the past have come to claim those who would pretend to be Gods. The cybernetic future established in APHRODITE IX and CYBER FORCE finally comes face-to-face with the supernatural ARTIFACTS side of the Top Cow universe!
+
+IXth Generation Issue #8:   http://readcomiconline.to/Comic/IXth-Generation/Issue-8?id=50215&readType=1
+IXth Generation Issue #7:   http://readcomiconline.to/Comic/IXth-Generation/Issue-7?id=50208&readType=1
+IXth Generation Issue #6:   http://readcomiconline.to/Comic/IXth-Generation/Issue-6?id=50203&readType=1
+IXth Generation Issue #5:   http://readcomiconline.to/Comic/IXth-Generation/Issue-5?id=50196&readType=1
+IXth Generation Issue #4:   http://readcomiconline.to/Comic/IXth-Generation/Issue-4?id=50189&readType=1
+IXth Generation Issue #3:   http://readcomiconline.to/Comic/IXth-Generation/Issue-3?id=50184&readType=1
+IXth Generation Issue #2:   http://readcomiconline.to/Comic/IXth-Generation/Issue-2?id=50181&readType=1
+IXth Generation Issue #1:   http://readcomiconline.to/Comic/IXth-Generation/Issue-1?id=50177&readType=1
+
+Skipping rule, no new updates.........
+
+#########################################################################################################
+
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - Lazarus__2013_.xml
+#########################################################################################################
+
+
+Title: Lazarus (2013)
+Image URL:  C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\comic-book-covers\Lazarus 2013.png
+Imgur URL:  https://i.imgur.com/63Xrp8U.png
+Genres:  Action Adventure Comedy Drama Sci-Fi
+Publisher:  Image Comics
+Writer:  Greg Rucka
+Artist:  Michael Lark
+Publication date: March 2013
+Status:  Ongoing
+Summary:  In a dystopian near-future, government is a quaint concept, resources are coveted, and possession is 100% of the law. A handful of Families rule, jealously guarding what they have and exploiting the Waste who struggle to survive in their domains. Forever Carlyle defends her family's holdings through deception and force as their protector, their Lazarus. Shot dead defending the family home, Forever's day goes downhill from there.
+
+Lazarus (2013) Issue #23:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-23?id=76593&readType=1
+Lazarus (2013) Issue #22:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-22?id=63602&readType=1
+Lazarus (2013) Issue #21:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-21?id=11494&readType=1
+Lazarus (2013) Issue #20:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-20?id=2893&readType=1
+Lazarus (2013) Issue #19:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-19?id=2892&readType=1
+Lazarus (2013) Issue #18:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-18?id=2891&readType=1
+Lazarus (2013) Issue #17:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-17?id=2890&readType=1
+Lazarus (2013) Issue #16:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-16?id=2889&readType=1
+Lazarus (2013) Issue #15:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-15?id=2888&readType=1
+Lazarus (2013) Issue #14:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-14?id=2887&readType=1
+Lazarus (2013) Issue #13:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-13?id=2886&readType=1
+Lazarus (2013) Issue #12:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-12?id=2885&readType=1
+Lazarus (2013) Issue #11:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-11?id=2884&readType=1
+Lazarus (2013) Issue #10:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-10?id=2883&readType=1
+Lazarus (2013) Issue #9:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-9?id=2882&readType=1
+Lazarus (2013) Issue #8:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-8?id=2881&readType=1
+Lazarus (2013) Issue #7:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-7?id=2880&readType=1
+Lazarus (2013) Issue #6:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-6?id=2879&readType=1
+Lazarus (2013) Issue #5:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-5?id=2878&readType=1
+Lazarus (2013) Issue #4:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-4?id=2877&readType=1
+Lazarus (2013) Issue #3:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-3?id=2876&readType=1
+Lazarus (2013) Issue #2:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-2?id=2875&readType=1
+Lazarus (2013) Issue #1:   http://readcomiconline.to/Comic/Lazarus-2013/Issue-1?id=2874&readType=1
+Lazarus (2013) _TPB 3 - Conclave:   http://readcomiconline.to/Comic/Lazarus-2013/TPB-3-Conclave?id=2897&readType=1
+Lazarus (2013) _TPB 2 - Lift:   http://readcomiconline.to/Comic/Lazarus-2013/TPB-2-Lift?id=2896&readType=1
+Lazarus (2013) _TPB 1 - Family:   http://readcomiconline.to/Comic/Lazarus-2013/TPB-1-Family?id=2895&readType=1
+Lazarus (2013) _HC 1 - The First Collection:   http://readcomiconline.to/Comic/Lazarus-2013/HC-1-The-First-Collection?id=2894&readType=1
+
+Skipping rule, no new updates.........
+
+#########################################################################################################
+
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - Platina_End.xml
+#########################################################################################################
+
+
+Title: Platina End
+Image URL:  C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\comic-book-covers\Platina End.png
+Imgur URL:  https://i.imgur.com/l57Bocp.png
+Genres:  Shounen Supernatural
+Author:  Ohba Tsugumi OBATA Takeshi
+Status:  Ongoing
+Summary:  A story of a human and an angel.
+
+Platina End Vol.002 Ch.009: A Tower of Nightmares:   http://kissmanga.com/Manga/Platina-End/Vol-002-Ch-009--A-Tower-of-Nightmares?id=302078&readType=1
+Platina End Vol.002 Ch.005: The Proposal:   http://kissmanga.com/Manga/Platina-End/Vol-002-Ch-005--The-Proposal?id=302052&readType=1
+Platina End Vol.001 Ch.002v002: Man's Instinct:   http://kissmanga.com/Manga/Platina-End/Vol-001-Ch-002v002--Man-s-Instinct?id=302049&readType=1
+Platina End Ch.008: Two Difficult Options:   http://kissmanga.com/Manga/Platina-End/Ch-008--Two-Difficult-Options?id=302071&readType=1
+Platina End Ch.007: Death Sentence:   http://kissmanga.com/Manga/Platina-End/Ch-007--Death-Sentence?id=302062&readType=1
+Platina End Ch.006: A Talk in Private:   http://kissmanga.com/Manga/Platina-End/Ch-006--A-Talk-in-Private?id=302056&readType=1
+Platina End Ch.004: The Person I Admire:   http://kissmanga.com/Manga/Platina-End/Ch-004--The-Person-I-Admire?id=302051&readType=1
+Platina End Ch.003: Hero of Justice:   http://kissmanga.com/Manga/Platina-End/Ch-003--Hero-of-Justice?id=302050&readType=1
+Platina End Ch.002: The Nature of Men:   http://kissmanga.com/Manga/Platina-End/Ch-002--The-Nature-of-Men?id=302048&readType=1
+Platina End Ch.001v004: The Angel's Gift:   http://kissmanga.com/Manga/Platina-End/Ch-001v004--The-Angel-s-Gift?id=302047&readType=1
+Platina End Ch.001: The Angel's Gift:   http://kissmanga.com/Manga/Platina-End/Ch-001--The-Angel-s-Gift?id=302046&readType=1
+Platina End Ch.000: Special preview:   http://kissmanga.com/Manga/Platina-End/Ch-000--Special-preview?id=302045&readType=1
+
+Skipping rule, no new updates.........
+
+#########################################################################################################
+
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - Spider-Girl__2011_.xml
+#########################################################################################################
+
+
+Skipping rule update, comic series is already completed.........
+
+#########################################################################################################
+
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - Spider-Gwen__II_.xml
+#########################################################################################################
+
+
+Title: Spider-Gwen [II]
+Image URL:  C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\comic-book-covers\Spider-Gwen II.png
+Imgur URL:  https://i.imgur.com/aJfNN42.png
+Genres:  Action Adventure Superhero
+Publisher:  Marvel
+Writer:  Jason LaTour
+Artist:  Robbi Rodriguez
+Publication date: December 2015
+Status:  Ongoing
+Summary:  Gwen Stacy is back in the webs and has an all-new, all-different mystery to solve: the reappearance of The Lizard! was convinced that the Lizard died in her arms along with Peter Parker. But when a similar monster goes on a reptilian rampage, she's left with doubts not only about Peter's life, but his death as well. And witness the debut of the Osborns of Earth-65! Fan-favorite creators Jason Latour, Robbi Rodriguez & Rico Renzi are back for more with a story that every Spider-Fan will be talking about!
+
+Spider-Gwen [II] Issue #10:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-10?id=78152&readType=1
+Spider-Gwen [II] Issue #9:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-9?id=63619&readType=1
+Spider-Gwen [II] Issue #8:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-8?id=49084&readType=1
+Spider-Gwen [II] Issue #7:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-7?id=42189&readType=1
+Spider-Gwen [II] Issue #6:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-6?id=26360&readType=1
+Spider-Gwen [II] Issue #5:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-5?id=18357&readType=1
+Spider-Gwen [II] Issue #4:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-4?id=13848&readType=1
+Spider-Gwen [II] Issue #3:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-3?id=13846&readType=1
+Spider-Gwen [II] Issue #2:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-2?id=13845&readType=1
+Spider-Gwen [II] Issue #1:   http://readcomiconline.to/Comic/Spider-Gwen-II/Issue-1?id=13844&readType=1
+Spider-Gwen [II] _Annual 1:   http://readcomiconline.to/Comic/Spider-Gwen-II/Annual-1?id=69209&readType=1
+
+Skipping rule, no new updates.........
+
+#########################################################################################################
+
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - Spider-Gwen__I_.xml
+#########################################################################################################
+
+
+Skipping rule update, comic series is already completed.........
+
+#########################################################################################################
+
+#########################################################################################################
+   SEARCHING FOR COMIC UPDATES - Think_Tank__Creative_Destruction.xml
+#########################################################################################################
+
+
+Title: Think Tank: Creative Destruction
+Image URL:  C:\Users\brenn\Documents\NetBeansProjects\Halen\build\graphics\comic-book-covers\Think Tank Creative Destruction.png
+Imgur URL:  https://i.imgur.com/qHsX6W2.png
+Genres:  Action Adventure
+Publisher:  Image Comics
+Writer:  Matt Hawkins
+Artist:  Rahsan Ekedal
+Publication date: April 2016
+Status:  Ongoing
+Summary:  An unknown enemy destroys the technological infrastructure of the United States. Panic and conspiracy theories spread as David Loren and his misfit science team continue work on the TALOS project, trying to make "Iron Man" suits a reality in California.
+
+Think Tank: Creative Destruction Issue #4:   http://readcomiconline.to/Comic/Think-Tank-Creative-Destruction/Issue-4?id=76586&readType=1
+Think Tank: Creative Destruction Issue #3:   http://readcomiconline.to/Comic/Think-Tank-Creative-Destruction/Issue-3?id=61413&readType=1
+Think Tank: Creative Destruction Issue #2:   http://readcomiconline.to/Comic/Think-Tank-Creative-Destruction/Issue-2?id=52088&readType=1
+Think Tank: Creative Destruction Issue #1:   http://readcomiconline.to/Comic/Think-Tank-Creative-Destruction/Issue-1?id=52087&readType=1
+
+Skipping rule, no new updates.........
+
+#########################################################################################################
+

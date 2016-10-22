@@ -1,0 +1,3 @@
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Platina End.xml
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Platina_End.xml
+C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Spider-Gwen I.xml

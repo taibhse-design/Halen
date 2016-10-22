@@ -1,0 +1,3 @@
+.xml
+SAVING NEW RULE FILE.....
+DATA INVALID - please provide a valid deadfishencod.es series url!

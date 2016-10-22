@@ -1,0 +1,44 @@
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Lazarus__2013_.xml
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Platina_End.xml
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Platina_End.xml
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+java.nio.file.FileSystemException: C:\Users\brenn\Documents\NetBeansProjects\Halen\build\rules\comics\Platina_End.xml: The process cannot access the file because it is being used by another process.
+
+true   C:\Users\brenn\Documents\NetBeansProjects\Halen\build/rules/comics/Platina_End.xml

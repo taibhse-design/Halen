@@ -1,0 +1,7 @@
+batman beyond.xml
+SAVING NEW RULE FILE.....
+#########################################################################################################
+   CREATING NEW COMIC RULE - http://readcomiconline.to/Comic/Batman-Beyond-2015
+#########################################################################################################
+
+PROFILE: C:\Users\brenn\Desktop\portables\Portable tools\GoogleChromePortable\Data\profile
