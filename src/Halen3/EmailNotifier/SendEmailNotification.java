@@ -6,6 +6,7 @@
 package Halen3.EmailNotifier;
 
 import Halen3.IO.FileManager;
+import Halen3.IO.GlobalSharedVariables;
 import static Halen3.IO.GlobalSharedVariables.emails;
 import com.google.common.io.Resources;
 import java.awt.List;
@@ -94,7 +95,9 @@ return text;
 //        out.println(createUpdateListMessage());
 //        out.close();
 ////  System.out.println(createUpdateListMessage());
-//
+//     
+        GlobalSharedVariables.email = "brennan92F@gmail.com";
+        
         sendEmailNotice(createUpdateListMessage());
     }
 //    public static void test() throws AddressException, MessagingException, IOException
@@ -188,10 +191,15 @@ return text;
 //        }
       //  String path = "C:\\Users\\brenn\\Documents\\NetBeansProjects\\Halen\\html\\";
         //File file = new File(readHTLM("01_title.html"));
+        if (retrievedTVShows.getItemCount() > 0  || retrievedComics.getItemCount() > 0  || retrievedAnime.getItemCount() > 0)
+        {
         String title = readHTLM("01_title.html").replaceAll("-!DATE!-", new SimpleDateFormat("dd-MM-yyyy  HH:mm:ss").format(Calendar.getInstance().getTime()));
         // message = message + new String(Files.readAllBytes(file.toPath()), StandardCharsets.UTF_8);
         message = "<div style=\"white-space:wrap;background:#000;\">" + title;
 
+       
+            
+           
         if (retrievedTVShows.getItemCount() > 0)
         {
           //  file = new File(readHTLM("02_tv_icon.html"));
@@ -367,13 +375,25 @@ return text;
                 return name.toLowerCase().endsWith(".xml");
             }
         });
+try
+{
+    
+     message = message + "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>" + readHTLM("08_media_icon.html") + "<br>";
 
+     message = message + "<center><div style=\"display: inline-block;\">";
         for (int i = 0; i < tvList.length; i++)
         {
-            images.add(FileManager.returnTag("posterURL", FileManager.readFile(tvList[i].getPath()).getItem(0)));
+           // images.add(FileManager.returnTag("posterURL", FileManager.readFile(tvList[i].getPath()).getItem(0)));
 
+            String imageURL = FileManager.returnTag("posterURL", FileManager.readFile(tvList[i].getPath()).getItem(0));
+            String seriesURL = FileManager.returnTag("url", FileManager.readFile(tvList[i].getPath()).getItem(0));
+              message = message + "<div style=\"width: 20%; display:inline-block;\n"
+                    + "  padding-bottom: 1%;\n"
+                    + "  margin: 1%;\"> <a href=\""+ seriesURL + "\" target=\"blank\"><img src=\"" + imageURL + "\" width=\"100%\" /></a> </div>";
         }
 
+        message = message + "<br>";
+        
         File animeFolder = new File(Halen3.IO.FileManager.launchPath() + "/rules/anime/");
         File[] animeList = animeFolder.listFiles(new FilenameFilter()
         {
@@ -386,8 +406,16 @@ return text;
 
         for (int i = 0; i < animeList.length; i++)
         {
-            images.add(FileManager.returnTag("imageURL", FileManager.readFile(animeList[i].getPath()).getItem(0)));
+           // images.add(FileManager.returnTag("imageURL", FileManager.readFile(animeList[i].getPath()).getItem(0)));
 
+             String imageURL = FileManager.returnTag("imgurURL", FileManager.readFile(animeList[i].getPath()).getItem(0));
+            String seriesURL = FileManager.returnTag("seriesURL", FileManager.readFile(animeList[i].getPath()).getItem(0));
+              message = message + "<div style=\"width: 20%; display:inline-block;\n"
+                    + "  padding-bottom: 1%;\n"
+                    + "  margin: 1%;\"> <a href=\""+ seriesURL + "\" target=\"blank\"><img src=\"" + imageURL + "\" width=\"100%\" /></a> </div>";
+       
+     
+              
         }
 
         File comicsFolder = new File(Halen3.IO.FileManager.launchPath() + "/rules/comics/");
@@ -400,29 +428,45 @@ return text;
             }
         });
 
+        message = message + "<br>";
+        
         for (int i = 0; i < comicsList.length; i++)
         {
-            images.add(FileManager.returnTag("imgurURL", FileManager.readFile(comicsList[i].getPath()).getItem(0)));
+           // images.add(FileManager.returnTag("imgurURL", FileManager.readFile(comicsList[i].getPath()).getItem(0)));
 
+                 String imageURL = FileManager.returnTag("imgurURL", FileManager.readFile(comicsList[i].getPath()).getItem(0));
+            String seriesURL = FileManager.returnTag("url", FileManager.readFile(comicsList[i].getPath()).getItem(0));
+              message = message + "<div style=\"width: 20%; display:inline-block;\n"
+                    + "  padding-bottom: 1%;\n"
+                    + "  margin: 1%;\"> <a href=\""+ seriesURL + "\" target=\"blank\"><img src=\"" + imageURL + "\" width=\"100%\" /></a> </div>";
+       
         }
 
       //  file = new File(readHTLM("08_media_icon.html"));
-        message = message + "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>" + readHTLM("08_media_icon.html") + "<br>";
-
-        //load posters to end of email to show all shows being downloaded
-        message = message + "<center><div style=\"display: inline-block;\">";
-        for (int i = 0; i < images.getItemCount(); i++)
-        {
-            //System.out.println(images.getItem(i));
-
-            message = message + "<div style=\"width: 20%; display:inline-block;\n"
-                    + "  padding-bottom: 1%;\n"
-                    + "  margin: 1%;\"> <img src=\"" + images.getItem(i) + "\" width=\"100%\" /> </div>";
-
-        }
+//        message = message + "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>" + readHTLM("08_media_icon.html") + "<br>";
+//
+//        //load posters to end of email to show all shows being downloaded
+//        message = message + "<center><div style=\"display: inline-block;\">";
+//        for (int i = 0; i < images.getItemCount(); i++)
+//        {
+//            //System.out.println(images.getItem(i));
+//
+//            message = message + "<div style=\"width: 20%; display:inline-block;\n"
+//                    + "  padding-bottom: 1%;\n"
+//                    + "  margin: 1%;\"> <img src=\"" + images.getItem(i) + "\" width=\"100%\" /> </div>";
+//
+//        }
+        
         message = message + "</div></center><br><br>";
+        
+}catch(NullPointerException e)
+{
+    
+}
+        
         message = message + "<img src=\"https://i.imgur.com/tnoxBhK.png\" width=\"100%\" height=\"100%\" alt=\"\" /></div>";
 
+        }
         return message;
     }
 
