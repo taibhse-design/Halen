@@ -145,7 +145,7 @@ public class SaveSettings
 
                    // handler = fileChooser.getSelectedFile().toString();
                     PrintWriter out = new PrintWriter(FileManager.launchPath() + "/settings.xml");
-                    out.println( FileManager.makeTag("handler", GlobalSharedVariables.magnetHandler) + FileManager.makeTag("email", GlobalSharedVariables.email) + FileManager.makeTag("chromedriverexe", GlobalSharedVariables.pathToChromeDriver) + FileManager.makeTag("portablechromeexe", GlobalSharedVariables.pathToChromePortable));
+                    out.println( FileManager.makeTag("handler", GlobalSharedVariables.magnetHandler) + FileManager.makeTag("email", GlobalSharedVariables.email) + FileManager.makeTag("chromedriverexe", GlobalSharedVariables.pathToChromeDriver) + FileManager.makeTag("portablechromeexe", GlobalSharedVariables.pathToChromePortable) + FileManager.makeTag("testing", GlobalSharedVariables.testing));
                     out.close();
                 } catch (NullPointerException ex)
                 {

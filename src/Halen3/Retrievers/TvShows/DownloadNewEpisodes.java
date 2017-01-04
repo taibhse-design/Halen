@@ -9,6 +9,7 @@ import Halen3.Retrievers.MagnetHandler;
 import Halen3.EmailNotifier.SendEmailNotification;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import Halen3.IO.FileManager;
+import Halen3.IO.GlobalSharedVariables;
 import java.awt.List;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -29,7 +30,7 @@ import javax.mail.MessagingException;
 public class DownloadNewEpisodes
 {
 
-    public static boolean saveResults = true; //variable used for testing, set to false to prevent saving retrieved magnets to file
+    // public static boolean saveResults = true; //variable used for testing, set to false to prevent saving retrieved magnets to file
     static final File tvFolder = new File(Halen3.IO.FileManager.launchPath() + "/rules/tv show/");
     public static volatile boolean searchingForTvEpisodes = false;
 
@@ -46,9 +47,9 @@ public class DownloadNewEpisodes
 
     public static void main(String args[]) throws InterruptedException, IOException, MessagingException
     {
-        saveResults = false;
+        // saveResults = false;
         downloadNewEpisodes();
-       // downloadNewIssues();
+        // downloadNewIssues();
         //  SendEmailNotification.test();
     }
 
@@ -93,30 +94,79 @@ public class DownloadNewEpisodes
                                 //get magnet link into string
                                 String magnet = "";
 
+                               // try
+                                //{
                                 try
                                 {
+                                    
                                     magnet = Halen3.Retrievers.TvShows.ExtraTorrentMagnetLinksScraper.getMagnet(FileManager.returnTag("search", eps.getItem(0)), eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
                                     System.out.println(tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + " : " + magnet + "\n");
 
-                                    if (magnet.contains("magnet:?xt="))
-                                    {
-                                        SendEmailNotification.retrievedTVShows.replaceItem(FileManager.updateTag("retEps",
-                                                SendEmailNotification.retrievedTVShows.getItem(i),
-                                                FileManager.returnTag("retEps", SendEmailNotification.retrievedTVShows.getItem(i)) + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">"))),
-                                                i); //item to replace
-                                        if (saveResults == true)
-                                        {
-                                            // SendEmailNotification.retrievedTVShows.add(tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
-                                            MagnetHandler.addLinkTOMAgnetList(magnet);
-                                            //   count++;
-                                            eps.replaceItem(eps.getItem(j).replace("false", "true"), j);
-                                        }
-                                    }
-
                                 } catch (FailingHttpStatusCodeException e)
                                 {
+
+                                    if(e.getStatusCode() == 504)
+                                    {
                                     System.out.print(tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + ": ERROR 504 GATEWAY TIME-OUT FOR http://extratorrent.cc/...error caught and ignored.....\n\n");
+                                    } else if(e.getStatusCode() == 503)
+                                    {
+                                    System.out.print(tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + ": ERROR 503 SERVICE UNAVAILABLE / NOT FOUND...error caught and ignored.....\n\n");
+                                    }else
+                                    {
+                                        System.out.print(tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + ": ERROR " + e.getStatusCode() + "...error caught and ignored\n\n");
+                                     
+                                    }
+                                    
+                                  //  System.out.println(magnet);
+                                    
+                                    }
+                                
+                              
+                                if (magnet.contains("magnet:?xt=")) //handle magnet if found
+                                {
+                                    SendEmailNotification.retrievedTVShows.replaceItem(FileManager.updateTag("retEps",
+                                            SendEmailNotification.retrievedTVShows.getItem(i),
+                                            FileManager.returnTag("retEps", SendEmailNotification.retrievedTVShows.getItem(i)) + "  " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">"))),
+                                            i); //item to replace
+                                    if (GlobalSharedVariables.testing.equals("false")) //save output if not in testing mode
+                                    {
+                                        // SendEmailNotification.retrievedTVShows.add(tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
+                                        MagnetHandler.addLinkTOMAgnetList(magnet);
+                                        //   count++;
+                                        eps.replaceItem(eps.getItem(j).replace("false", "true"), j);
+                                    }
+                                } else  //check if episode should be passed by now and handle possible issues
+                                {
+
+                                    if (FileManager.hasDatePassed(FileManager.returnTag("release", eps.getItem(j)))) //if episode is past release date but no magnet, there may be an issue the user should know about
+                                    {
+
+                                            //check how many days since episodes release, if more than 3 days and not retrieved,
+                                        // there are issues with the rule setup, eg, group may no longer provide show
+                                        //send user email of errors
+                                        if (FileManager.howManyDaysSince(FileManager.returnTag("release", eps.getItem(j))) > 3)
+                                        {
+                                            
+                                            
+                                            System.out.println(tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + " : " + "ERROR EPISODE PAST RELEASE DATE - STILL NOT RETRIEVED - USER NOTIFIED...please revise rules to correct for issue...\n\n");
+
+                                            SendEmailNotification.retrievedTVShows.replaceItem(FileManager.updateTag("retEps",
+                                                    SendEmailNotification.retrievedTVShows.getItem(i),
+                                                    
+                                                    FileManager.returnTag("retEps", SendEmailNotification.retrievedTVShows.getItem(i)) + " <br> " + "\n<font style=\"color: red;\">ERRORS WITH "+ eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">"))  + " CHECK RULES</font>"),
+                                                    i); //item to replace
+
+                                        }
+
+                                    }
+
                                 }
+
+                                System.out.println();
+                                //} //catch (FailingHttpStatusCodeException e)
+//                                {
+//                                    System.out.print(tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + ": ERROR 504 GATEWAY TIME-OUT FOR http://extratorrent.cc/...error caught and ignored.....\n\n");
+//                                }
                                 //print results
 //                                try
 //                                {
@@ -128,7 +178,6 @@ public class DownloadNewEpisodes
 //                                }
                                 //  System.out.print(" : " + magnet);
                                 //   System.out.println("\n");
-
 //if string magnet has magnet url then update ep list to indcare its retrieved
                             }
 
@@ -186,7 +235,7 @@ public class DownloadNewEpisodes
         searchingForTvEpisodes = false;
         //  System.out.println(count + "   " + Handler.getMagnetCount());
 //send all links to torrent client
-        if (saveResults == true)
+        if (GlobalSharedVariables.testing.equals("false")) //only send to client if not in testing mode
         {
             MagnetHandler.sendToClient();
         }

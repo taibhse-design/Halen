@@ -39,10 +39,10 @@ public class Main
     //####################################################################
     
     
-       // args = new String[1];
+        args = new String[1];
         //args[0] = "-update_rules";
        // args[0] = "-help";
-      //  args[0] = "-search";
+        args[0] = "-search";
      //   DownloadNewEpisodes.saveResults = false;
  //    Halen3.Retrievers.TvShows.DownloadNewEpisodes.saveResults = false;
   //   Halen3.Retrievers.Anime.DownloadNewAnimeEpisodes.saveResults = false;

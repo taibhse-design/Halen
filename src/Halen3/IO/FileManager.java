@@ -16,6 +16,9 @@ import java.security.CodeSource;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.Temporal;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -41,7 +44,7 @@ public class FileManager
     public static void main(String args[]) throws InterruptedException, ParseException, IOException
     {
 
-        System.out.println(isValidEmailId("brennan92F@gmail.com, marie@g.com"));
+       System.out.println(howManyDaysSince(""));
         // String processName = "qbittorrent";
         // System.out.println("is " + processName + " Running: " + isProcessRunning(processName));
    //     System.out.println(hasDatePassed("hgjhgjh"));
@@ -281,6 +284,29 @@ public class FileManager
         return passed;
     }
 
+    public static int howManyDaysSince(String date)
+    {
+        
+      // Date in String format.
+       // String dateString = "2015-03-01";
+
+        try{
+        // Converting date to Java8 Local date
+        LocalDate startDate = LocalDate.parse(date);
+        LocalDate endtDate = LocalDate.now();
+        // Range = End date - Start date
+        return (int) ChronoUnit.DAYS.between(startDate, endtDate);
+        }catch(Exception e)
+        {
+            System.out.println("ERROR WITH HOWMANYDAYSSINCE METHOD - LINES 293-302; EXCEPTION CAUGHT RETURNING VALUE 0");
+            return 0;
+        }
+      //  System.out.println("Number of days between the start date : " + dateString + " and end date : " + endtDate + " is  ==> " + range);
+
+//        range = ChronoUnit.DAYS.between(endtDate, startDate);
+//        System.out.println("Number of days between the start date : " + endtDate + " and end date : " + dateString
+//                + " is  ==> " + range);
+    }
     /**
      * returns a string containing the current date in the format DD-MM-YYYY
      *

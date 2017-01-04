@@ -301,7 +301,7 @@ public class TVGUIControls
             {
                 
                
-                DownloadNewEpisodes.saveResults = false;
+              //  DownloadNewEpisodes.saveResults = false;
                   LoggingPanel.showTVLogging();
                 SwingWorker myWorker = new SwingWorker<String, Void>()
                 {

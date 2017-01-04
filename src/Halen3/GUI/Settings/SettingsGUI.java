@@ -12,6 +12,7 @@ import static Halen3.GUI.GUIBase.secondary;
 import static Halen3.GUI.GUIBase.tertiary;
 import static Halen3.GUI.Settings.SettingsGUIControls.initSettingsControls;
 import Halen3.IO.FileManager;
+import Halen3.IO.GlobalSharedVariables;
 import java.awt.Font;
 import java.io.File;
 import java.io.IOException;
@@ -34,8 +35,8 @@ public class SettingsGUI
 {
 
     public static JPanel settingsPanel;
-    public static JButton selectMagnetHandler, selectPortableChromeExe, selectChromeDriverExe, save;
-    public static JTextField notifyEmailText, notifyEmail, magnetHandler, magnetHandlerText, portableChromeExe, portableChromeExeText, chromeDriverExe, chromeDriverExeText;
+    public static JButton testingButton, selectMagnetHandler, selectPortableChromeExe, selectChromeDriverExe, save;
+    public static JTextField testingExplanationText, notifyEmailText, notifyEmail, magnetHandler, magnetHandlerText, portableChromeExe, portableChromeExeText, chromeDriverExe, chromeDriverExeText;
 
     public static void addSettingsPanel(int width, int height, int x, int y)
     {
@@ -163,7 +164,7 @@ public class SettingsGUI
         selectChromeDriverExe.setFocusPainted(false);
         selectChromeDriverExe.setSize(chromeDriverExe.getHeight(), chromeDriverExe.getHeight());
         ImageIcon d = new ImageIcon(color(tertiary, "Resources/metro/buttons/selectFolder.png"));
-        ImageIcon ds = new ImageIcon(c.getImage().getScaledInstance(selectChromeDriverExe.getWidth(), selectChromeDriverExe.getHeight(), java.awt.Image.SCALE_DEFAULT));
+        ImageIcon ds = new ImageIcon(d.getImage().getScaledInstance(selectChromeDriverExe.getWidth(), selectChromeDriverExe.getHeight(), java.awt.Image.SCALE_DEFAULT));
         selectChromeDriverExe.setIcon(ds);
         selectChromeDriverExe.setLocation(chromeDriverExeText.getLocation().x + chromeDriverExeText.getWidth() + (selectChromeDriverExe.getWidth() / 2), chromeDriverExeText.getY());
         selectChromeDriverExe.setVisible(true);
@@ -192,6 +193,39 @@ public class SettingsGUI
         notifyEmailText.setLocation(notifyEmail.getLocation().x + notifyEmail.getWidth(), notifyEmail.getLocation().y);
         notifyEmailText.setVisible(true);
 
+            testingExplanationText = new JTextField(20);
+        testingExplanationText.setText("              Check Box to Carry out testing (Retrieved Content Will Not be saved in rules) ");
+        testingExplanationText.setHorizontalAlignment(SwingConstants.LEFT);
+        testingExplanationText.setEditable(false);
+        testingExplanationText.setFont(testingExplanationText.getFont().deriveFont(Font.BOLD));
+        testingExplanationText.setForeground(primary);
+        testingExplanationText.setBackground(secondary);
+        testingExplanationText.setBorder(null);
+        testingExplanationText.setSize((int) (settingsPanel.getWidth() / 3.5), settingsPanel.getHeight() / 15);
+        testingExplanationText.setLocation(notifyEmail.getX(), (int) (notifyEmail.getY() + (notifyEmail.getHeight() * 1.2)));
+        testingExplanationText.setVisible(true);
+        
+          testingButton = new JButton();
+        // save.setFont(save.getFont().deriveFont(Font.BOLD));
+        testingButton.setContentAreaFilled(false);
+        testingButton.setOpaque(false);
+        testingButton.setFocusPainted(false);
+        testingButton.setSize(chromeDriverExe.getHeight(), chromeDriverExe.getHeight());
+         if (GlobalSharedVariables.testing.equals("true"))
+                {
+                    ImageIcon t = new ImageIcon(GUIBase.color(tertiary, "Resources/metro/checkBox/checked.png"));
+                    ImageIcon ts = new ImageIcon(t.getImage().getScaledInstance(testingButton.getWidth(), testingButton.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                    testingButton.setIcon(ts);
+
+                } else
+                {
+                    ImageIcon t = new ImageIcon(GUIBase.color(tertiary, "Resources/metro/checkBox/unchecked.png"));
+                    ImageIcon ts = new ImageIcon(t.getImage().getScaledInstance(testingButton.getWidth(), testingButton.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                    testingButton.setIcon(ts);
+                }
+        testingButton.setLocation(testingExplanationText.getLocation().x + testingExplanationText.getWidth() + (testingButton.getWidth() / 2), testingExplanationText.getY());
+        testingButton.setVisible(true);
+        
         save = new JButton();
         // save.setFont(save.getFont().deriveFont(Font.BOLD));
         save.setContentAreaFilled(false);
@@ -201,9 +235,11 @@ public class SettingsGUI
         ImageIcon z = new ImageIcon(GUIBase.color(tertiary, "Resources/metro/buttons/save.png"));
         ImageIcon zs = new ImageIcon(z.getImage().getScaledInstance(save.getWidth(), save.getHeight(), java.awt.Image.SCALE_DEFAULT));
         save.setIcon(zs);
-        save.setLocation(notifyEmailText.getLocation().x, notifyEmailText.getY() + notifyEmailText.getHeight());
+        save.setLocation(testingExplanationText.getLocation().x, testingExplanationText.getY() + testingExplanationText.getHeight());
         save.setVisible(true);
 
+        settingsPanel.add(testingButton);
+        settingsPanel.add(testingExplanationText);
         settingsPanel.add(save);
         settingsPanel.add(notifyEmailText);
         settingsPanel.add(notifyEmail);

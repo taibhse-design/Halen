@@ -26,6 +26,7 @@ public class GlobalSharedVariables
     public static String magnetHandler = FileManager.returnTag("handler", FileManager.readFile(FileManager.launchPath() + "\\settings.xml").getItem(0));
     public static String email = FileManager.returnTag("email", FileManager.readFile(FileManager.launchPath() + "\\settings.xml").getItem(0));
     public static String emails[] = email.split(", ");
+    public static String testing = FileManager.returnTag("testing", FileManager.readFile(FileManager.launchPath() + "\\settings.xml").getItem(0));
 
     public static ChromeDriver driver;
 
@@ -50,6 +51,9 @@ public class GlobalSharedVariables
         {
             check = false;
         } else if (email.trim().equals(""))
+        {
+            check = false;
+        } else if (testing.trim().equals(""))
         {
             check = false;
         }

@@ -53,7 +53,7 @@ import org.zeroturnaround.zip.ZipUtil;
  */
 public class DownloadNewIssues
 {
-        public static boolean saveResults = false;
+    //    public static boolean saveResults = false;
     static volatile boolean repeat = true;
     static volatile boolean runTimeCheck = true;
 
@@ -142,7 +142,7 @@ public class DownloadNewIssues
         delete(folder);
     }
 
-    private static void timeOutControl(long startTime)
+    private static void timeOutControl(final long startTime)
     {
         Thread t = new Thread(new Runnable()
         {
@@ -233,7 +233,7 @@ public class DownloadNewIssues
                     }
 
                     //print update to file if not saveResults
-                    if (saveResults == false)
+                    if (GlobalSharedVariables.testing.equals("false")) //update rules results only if not testing
                     {
                         //print out update to rules
                         PrintWriter out = new PrintWriter(comicsList[i].getAbsolutePath());
