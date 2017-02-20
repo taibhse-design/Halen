@@ -20,13 +20,13 @@ import static Halen3.GUI.TV.TvGUI.addTvPanel;
 import static Halen3.GUI.TV.TvGUI.tvPanel;
 import Halen3.GUI.ThemeEditor.ThemeEditor;
 import Halen3.IO.FileManager;
+import static Halen3.Main.halenVersion;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Graphics2D;
-import java.awt.GraphicsEnvironment;
 import java.awt.Image;
 import java.awt.List;
-import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -44,8 +44,10 @@ import javax.swing.JFrame;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import sun.applet.Main;
 
 /**
  *
@@ -61,20 +63,23 @@ public class GUIBase
     public static JPanel themePanel;
     public static JButton close, maximise, minimise, tv, comics, anime, settings, theme;
 
-     //          old default theme           0, 0, 0, 230                          51, 51, 51                        255, 255, 255
+    //          old default theme           0, 0, 0, 230                          51, 51, 51                        255, 255, 255
     public static Color primary = new Color(4, 4, 4, 230), secondary = new Color(225, 225, 225), tertiary = new Color(5, 114, 164);
-    
+
     public static void loadTheme()
     {
-        if(new File(FileManager.launchPath() + "/theme.ini").exists())
+        if (new File(FileManager.launchPath() + "/theme.ini").exists())
         {
-         List values = FileManager.readFile(FileManager.launchPath() + "/theme.ini");
+            List values = FileManager.readFile(FileManager.launchPath() + "/theme.ini");
 
             primary = new Color(Integer.parseInt(values.getItem(0)), Integer.parseInt(values.getItem(1)), Integer.parseInt(values.getItem(2)), 230);
             secondary = new Color(Integer.parseInt(values.getItem(3)), Integer.parseInt(values.getItem(4)), Integer.parseInt(values.getItem(5)));
             tertiary = new Color(Integer.parseInt(values.getItem(6)), Integer.parseInt(values.getItem(7)), Integer.parseInt(values.getItem(8)));
-        }else{} 
+        } else
+        {
+        }
     }
+
     public static Image createImage(String path)
     {
         URL imageURL = GUIBase.class.getResource(path);
@@ -185,15 +190,13 @@ public class GUIBase
 //        } while (((float) ((float) frameW / (float) frameH)) < aspectRatio);
 //
 //    }
-
     public static void main(String args[]) throws InterruptedException, InvocationTargetException, IOException
     {
-       
+
         initGUI();
-        
-     
+
     }
-    
+
     public static void initGUI() throws IOException
     {
         //   getSuitableFrameSize();
@@ -214,7 +217,7 @@ public class GUIBase
         }
 
         loadTheme();
-        
+
         //create main frame
         frame = new JFrame("HALEN");
 
@@ -382,6 +385,36 @@ public class GUIBase
                 minimise.setIcon(minScaled);
             }
         });
+
+        JButton versionLabel = new JButton("<html><b>HALEN - " + halenVersion + "</b></html>");
+        versionLabel.setSize(minimise.getWidth()*22, (int) (minimise.getHeight()*2));
+        versionLabel.setLocation(0, 0);
+        versionLabel.setHorizontalAlignment(SwingConstants.LEFT);
+        versionLabel.setBackground(secondary);
+        versionLabel.setForeground(primary);
+        versionLabel.setContentAreaFilled(false);
+        versionLabel.setOpaque(false);
+        versionLabel.setFocusPainted(false);
+        
+        Font labelFont = versionLabel.getFont();
+        String labelText = versionLabel.getText() + halenVersion;
+
+        int stringWidth = versionLabel.getFontMetrics(labelFont).stringWidth(labelText);
+        int componentWidth = versionLabel.getWidth();
+
+// Find out how much the font can grow in width.
+        double widthRatio = (double) componentWidth / (double) stringWidth;
+
+        int newFontSize = (int) (labelFont.getSize() * widthRatio);
+        int componentHeight = versionLabel.getHeight();
+
+// Pick a new font size so it will not be larger than the height of versionLabel.
+        int fontSizeToUse = Math.min(newFontSize, componentHeight);
+
+// Set the versionLabel's font size to the newly determined size.
+        versionLabel.setFont(new Font("tahoma", Font.PLAIN, fontSizeToUse));
+//        
+        versionLabel.setVisible(true);
         //########################################################################
 
 //        save = new JButton();
@@ -431,7 +464,6 @@ public class GUIBase
 //        update.setIcon(us);
 //        update.setLocation((int) ((run.getX() + run.getWidth())), save.getY());
 //        update.setVisible(true);
-
         theme = new JButton();
         //  anime.setFont(anime.getFont().deriveFont(Font.BOLD));
         theme.setContentAreaFilled(false);
@@ -441,7 +473,7 @@ public class GUIBase
         ImageIcon z = new ImageIcon(color(tertiary, "Resources/metro/buttons/theme.png"));
         ImageIcon zs = new ImageIcon(z.getImage().getScaledInstance(theme.getWidth(), theme.getHeight(), java.awt.Image.SCALE_DEFAULT));
         theme.setIcon(zs);
-        theme.setLocation((int) ((frame.getWidth() - (theme.getWidth() + (theme.getHeight() / 4)))), (int) ((theme.getHeight()*2) + (frame.getHeight() - ((theme.getHeight()) * 3.5))));
+        theme.setLocation((int) ((frame.getWidth() - (theme.getWidth() + (theme.getHeight() / 4)))), (int) ((theme.getHeight() * 2) + (frame.getHeight() - ((theme.getHeight()) * 3.5))));
         theme.setVisible(true);
 
         //#######################################################################################
@@ -509,9 +541,9 @@ public class GUIBase
         themePanel.setBackground(secondary);
         ThemeEditor.initEditor(themePanel);
         themePanel.setVisible(false);
-        
+
         SavingPanel.addSavePanel(frame.getWidth() - ((theme.getHeight() / 4) * 2), (int) (frame.getHeight() - ((theme.getHeight()) * 3.5)), theme.getHeight() / 4, tv.getY() + tv.getHeight());
-         LoggingPanel.addLoggingPanel(frame.getWidth() - ((theme.getHeight() / 4) * 2), (int) (frame.getHeight() - ((theme.getHeight()) * 3.5)), theme.getHeight() / 4, tv.getY() + tv.getHeight());
+        LoggingPanel.addLoggingPanel(frame.getWidth() - ((theme.getHeight() / 4) * 2), (int) (frame.getHeight() - ((theme.getHeight()) * 3.5)), theme.getHeight() / 4, tv.getY() + tv.getHeight());
 
         frame.add(loggingPanel);
         frame.add(savePanel);
@@ -526,15 +558,14 @@ public class GUIBase
         frame.add(tv);
         frame.add(theme);
 //        frame.add(update);
-   //     frame.add(delete);
-  //      frame.add(run);
-  //      frame.add(save);
+        //     frame.add(delete);
+        //      frame.add(run);
+        frame.add(versionLabel);
         frame.add(maximise);
         frame.add(minimise);
         frame.add(close);
         frame.add(back);
-        
-        
+
         tv.setBackground(secondary);
         comics.setBackground(primary);
         anime.setBackground(primary);
@@ -549,7 +580,7 @@ public class GUIBase
 
         initBaseControls();
     }
-    
+
     public static void hideButtons()
     {
         tv.setVisible(false);
@@ -558,8 +589,8 @@ public class GUIBase
         settings.setVisible(false);
         theme.setVisible(false);
     }
-    
-     public static void showButtons()
+
+    public static void showButtons()
     {
         tv.setVisible(true);
         comics.setVisible(true);

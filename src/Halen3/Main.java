@@ -31,18 +31,20 @@ import java.io.IOException;
  */
 public class Main
 {
+    public static String halenVersion = "3.0.3";
     public static void main(String args[]) throws IOException, InterruptedException
     {
+        
          //####################################################################
     //     create halen folder and assets if they do not exist
     Halen3.IO.CreateHalenFoldersAndAssets.create();
     //####################################################################
     
     
-        args = new String[1];
+      //  args = new String[1];
         //args[0] = "-update_rules";
        // args[0] = "-help";
-        args[0] = "-search";
+     //  args[0] = "-search";
      //   DownloadNewEpisodes.saveResults = false;
  //    Halen3.Retrievers.TvShows.DownloadNewEpisodes.saveResults = false;
   //   Halen3.Retrievers.Anime.DownloadNewAnimeEpisodes.saveResults = false;

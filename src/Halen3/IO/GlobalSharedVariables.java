@@ -9,7 +9,9 @@ import Halen3.IO.FileManager;
 import java.io.File;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchWindowException;
 import org.openqa.selenium.Point;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -55,7 +57,7 @@ public class GlobalSharedVariables
             check = false;
         } else if (testing.trim().equals(""))
         {
-            check = false;
+            testing = "false";
         }
 
         if (check == false)
@@ -89,6 +91,8 @@ public class GlobalSharedVariables
     public static void endChromeDriver()
     {
 
+        try
+        {
         // driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL + "w");
         //driver.close();
         //  driver.quit();
@@ -99,5 +103,14 @@ public class GlobalSharedVariables
             driver.close();
         }
         driver.quit();
+        }catch(NoSuchWindowException e)
+            {
+                    System.out.println("ERROR CHROME WINDOW LOST   |   WINDOW LIKELY CLOSED OR CRASHED.....FORCING PROGRAM CONTINUATION.....");
+                    
+            }catch(WebDriverException e)
+            {
+                    System.out.println("ERROR CHROME WINDOW LOST   |   WINDOW LIKELY CLOSED OR CRASHED.....FORCING PROGRAM CONTINUATION.....");
+                    
+            }
     }
 }

@@ -10,7 +10,7 @@ echo #####################################################################
 echo.  
 echo This script takes in revision details and applies them to the jar 
 echo file inside the dist folder and then proceeds to upload the dist 
-echo folder to github and dropbox.
+echo folder to github and deploy the files onto the taibhse server.
 echo.
 echo A series of questions will be asked prior to deployment.
 echo Please answer all questions correctly or this script may fail 
@@ -41,5 +41,20 @@ Del "C:\Users\brenn\Documents\NetBeansProjects\Halen\dist\README.TXT"
 git add C:\Users\brenn\Documents\NetBeansProjects\Halen\dist\*
 git commit -m "%changes%"
 git push origin master
+
+echo #####################################################################
+echo DEPLOYING UPDATED FILES TO SERVER.....
+echo #####################################################################
+REM rename current active jar on server to backup
+ren "\\SERVER-TAIBHSE\Users\taibhse\Desktop\portables\MyPrograms\Halen\*.jar" "*.jar.backup"
+
+REM copy everything in the dist folder to the server
+copy "C:\Users\brenn\Documents\NetBeansProjects\Halen\dist\*" "\\SERVER-TAIBHSE\Users\taibhse\Desktop\portables\MyPrograms\Halen"
+REM copy library files over
+copy "C:\Users\brenn\Documents\NetBeansProjects\Halen\dist\lib\*" "\\SERVER-TAIBHSE\Users\taibhse\Desktop\portables\MyPrograms\Halen\lib\"
+
+echo #####################################################################
+echo DEPLOYMENT COMPLETE - pushed to github and deployed on server
+echo #####################################################################
 
 pause

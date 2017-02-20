@@ -11,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.StringReader;
 import java.net.URISyntaxException;
 import java.security.CodeSource;
 import java.text.DateFormat;
@@ -28,6 +29,8 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.imageio.ImageIO;
+import javax.swing.text.html.HTMLDocument;
+import javax.swing.text.html.HTMLEditorKit;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -437,6 +440,24 @@ public class FileManager
         } catch (IOException ex)
         {
             Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    /**
+     * given a string, this method returns it with decoded html escapes if any are present
+     * @param str
+     * @return 
+     */
+      public static String unescapeHtml3(String str)
+    {
+        try
+        {
+            HTMLDocument doc = new HTMLDocument();
+            new HTMLEditorKit().read(new StringReader("<html><body>" + str), doc, 0);
+            return doc.getText(1, doc.getLength());
+        } catch (Exception ex)
+        {
+            return str;
         }
     }
 }

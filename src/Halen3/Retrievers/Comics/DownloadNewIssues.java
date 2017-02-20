@@ -40,7 +40,9 @@ import org.jsoup.select.Elements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchWindowException;
 import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -53,6 +55,7 @@ import org.zeroturnaround.zip.ZipUtil;
  */
 public class DownloadNewIssues
 {
+
     //    public static boolean saveResults = false;
     static volatile boolean repeat = true;
     static volatile boolean runTimeCheck = true;
@@ -202,34 +205,43 @@ public class DownloadNewIssues
                 //loop through comics list of issues
                 for (int j = 1; j < issues.getItemCount(); j++) //start at 1 since 0 line is comic data
                 {
-                    //if issue status is false, download it
-                    if (FileManager.returnTag("downloaded", issues.getItem(j)).equals("false"))
+                    try
                     {
-                        System.out.println("\n#########################################################################################################");
-                        System.out.println("DOWNLOADING: " + FileManager.returnTag("name", issues.getItem(j)) + "\n");
-                        System.out.println("#########################################################################################################");
-
-                        //#############################################################################
-                        //download issue, returns true or false if issue has been downloaded
-                        boolean downloaded = downloadIssue(FileManager.returnTag("link", issues.getItem(j)), FileManager.returnTag("name", issues.getItem(j)), FileManager.returnTag("downloadTo", issues.getItem(0)));
-                        //update this issue with download status,
-                        issues.replaceItem(
-                                FileManager.updateTag(
-                                        "downloaded", //update this tag
-                                        issues.getItem(j), //get line data to update
-                                        String.valueOf(downloaded)), //use value from attempt to download
-                                j); //issue number to update
-
-                        //#############################################################################
-                        //add issue to email list to notify if it has been downloaded
-                        if (downloaded == true)
+                        //if issue status is false, download it
+                        if (FileManager.returnTag("downloaded", issues.getItem(j)).equals("false"))
                         {
-                            SendEmailNotification.retrievedComics.replaceItem(FileManager.updateTag("retIssues",
-                                    SendEmailNotification.retrievedComics.getItem(i),
-                                    FileManager.returnTag("retIssues", SendEmailNotification.retrievedComics.getItem(i)) + FileManager.returnTag("name", issues.getItem(j)) + "-!SPLIT!-"),
-                                    i); //item to replace
-                        }
+                            System.out.println("\n#########################################################################################################");
+                            System.out.println("DOWNLOADING: " + FileManager.returnTag("name", issues.getItem(j)) + "\n");
+                            System.out.println("#########################################################################################################");
 
+                            //#############################################################################
+                            //download issue, returns true or false if issue has been downloaded
+                            boolean downloaded = downloadIssue(FileManager.returnTag("link", issues.getItem(j)), FileManager.returnTag("name", issues.getItem(j)), FileManager.returnTag("downloadTo", issues.getItem(0)));
+                            //update this issue with download status,
+                            issues.replaceItem(
+                                    FileManager.updateTag(
+                                            "downloaded", //update this tag
+                                            issues.getItem(j), //get line data to update
+                                            String.valueOf(downloaded)), //use value from attempt to download
+                                    j); //issue number to update
+
+                            //#############################################################################
+                            //add issue to email list to notify if it has been downloaded
+                            if (downloaded == true)
+                            {
+                                SendEmailNotification.retrievedComics.replaceItem(FileManager.updateTag("retIssues",
+                                        SendEmailNotification.retrievedComics.getItem(i),
+                                        FileManager.returnTag("retIssues", SendEmailNotification.retrievedComics.getItem(i)) + FileManager.returnTag("name", issues.getItem(j)) + "-!SPLIT!-"),
+                                        i); //item to replace
+                            }
+
+                        }
+                    } catch (NoSuchWindowException e)
+                    {
+                        System.out.println("ERROR CHROME WINDOW LOST FOR: " + FileManager.returnTag("name", issues.getItem(j)) + "   |   WINDOW LIKELY CLOSED OR CRASHED.....FORCING PROGRAM CONTINUATION.....");
+                    } catch (WebDriverException e)
+                    {
+                        System.out.println("ERROR CHROME WINDOW LOST FOR: " + FileManager.returnTag("name", issues.getItem(j)) + "   |   WINDOW LIKELY CLOSED OR CRASHED.....FORCING PROGRAM CONTINUATION.....");
                     }
 
                     //print update to file if not saveResults
@@ -248,6 +260,14 @@ public class DownloadNewIssues
             } catch (InterruptedException | IOException e)
             {
                 System.out.println(e);
+            }catch(NoSuchWindowException e)
+            {
+                    System.out.println("ERROR CHROME WINDOW LOST FOR: " + comicsList[i].getName() + "   |   WINDOW LIKELY CLOSED OR CRASHED.....FORCING PROGRAM CONTINUATION.....");
+                    
+            }catch(WebDriverException e)
+            {
+                    System.out.println("ERROR CHROME WINDOW LOST FOR: " + comicsList[i].getName() + "   |   WINDOW LIKELY CLOSED OR CRASHED.....FORCING PROGRAM CONTINUATION.....");
+                    
             }
         }
         //end chrome driver
@@ -673,5 +693,4 @@ public class DownloadNewIssues
 //
 //        return imageURLS;
 //    }
-
 }

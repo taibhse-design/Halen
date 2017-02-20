@@ -69,7 +69,7 @@ public class RunFromCommandLine
                                       Thread.sleep(5000);
                                   }
                                   //download new anime episodes
-                                  DownloadNewAnimeEpisodes.getNewAnimeEpisodeMagnets();
+                                 // DownloadNewAnimeEpisodes.getNewAnimeEpisodeMagnets();
                                   //download new comic issues
                                   DownloadNewIssues.downloadNewIssues();
                                   

@@ -10,6 +10,7 @@ import Halen3.EmailNotifier.SendEmailNotification;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import Halen3.IO.FileManager;
 import Halen3.IO.GlobalSharedVariables;
+import Halen3.Testing.Testing;
 import java.awt.List;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -99,7 +100,10 @@ public class DownloadNewEpisodes
                                 try
                                 {
                                     
-                                    magnet = Halen3.Retrievers.TvShows.ExtraTorrentMagnetLinksScraper.getMagnet(FileManager.returnTag("search", eps.getItem(0)), eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
+                                   // magnet = Halen3.Retrievers.TvShows.ExtraTorrentMagnetLinksScraper.getMagnet(FileManager.returnTag("search", eps.getItem(0)), eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
+                                    
+                                    magnet = Testing.extratorrentRssSearchAngeMagnetRetriever(FileManager.returnTag("search", eps.getItem(0)) + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
+                                    
                                     System.out.println(tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + " : " + magnet + "\n");
 
                                 } catch (FailingHttpStatusCodeException e)

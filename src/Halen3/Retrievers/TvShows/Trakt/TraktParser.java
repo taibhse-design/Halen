@@ -20,7 +20,7 @@ public class TraktParser
 
     public static void main(String args[]) throws IOException
     {
-        String url = "https://trakt.tv/shows/blindspot";
+        String url = "https://trakt.tv/shows/apb";
        
         List data = getData(url);
         
@@ -195,7 +195,16 @@ public class TraktParser
         Elements genres = doc.select("span[itemprop=genre]");
         Element plot = doc.select("div[itemprop=description]").first();
         
+        try
+        {
         tags = tags + FileManager.makeTag("posterURL", image.attr("data-original"));
+        //catch error where no fan poster exists
+        //store blank
+        }catch(NullPointerException e)
+                {
+                     tags = tags + FileManager.makeTag("posterURL", "");
+       
+                }
         
         String showGenres = "";
         for(Element genre : genres)
@@ -233,7 +242,7 @@ public class TraktParser
 
         for (Element value : titles)
         {
-           search = value.select("h1").text().replace(value.select("h1").select("span").text(), "").replace(value.select("h1").select("div").text(), "").trim() + " ettv";
+           search = value.select("h1").text().replace(value.select("h1").select("span").text(), "").replace(value.select("h1").select("div").text(), "").trim();// + " ettv";
             
         }
 
