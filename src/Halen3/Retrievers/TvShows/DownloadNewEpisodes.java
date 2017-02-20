@@ -207,11 +207,12 @@ public class DownloadNewEpisodes
                         System.out.println(ex);
                         Logger.getLogger(DownloadNewEpisodes.class.getName()).log(Level.SEVERE, null, ex);
 
-                    } catch (IOException ex)
-                    {
-                        System.out.println(ex);
-                        Logger.getLogger(DownloadNewEpisodes.class.getName()).log(Level.SEVERE, null, ex);
-                    } catch (ParseException ex)
+//                    } catch (IOException ex)
+//                    {
+//                        System.out.println(ex);
+//                        Logger.getLogger(DownloadNewEpisodes.class.getName()).log(Level.SEVERE, null, ex);
+                    } 
+                      catch (ParseException ex)
                     {
                         Logger.getLogger(DownloadNewEpisodes.class.getName()).log(Level.SEVERE, null, ex);
                     } finally

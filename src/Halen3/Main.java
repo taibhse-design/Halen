@@ -31,7 +31,7 @@ import java.io.IOException;
  */
 public class Main
 {
-    public static String halenVersion = "3.0.3";
+    public static String halenVersion = "3.0.4";
     public static void main(String args[]) throws IOException, InterruptedException
     {
         
