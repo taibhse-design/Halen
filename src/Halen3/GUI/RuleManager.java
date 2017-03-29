@@ -9,6 +9,8 @@ import Halen3.GUI.Anime.AnimeGUI;
 import static Halen3.GUI.Anime.AnimeGUI.refreshAnimePanel;
 import Halen3.GUI.Comics.ComicsGUI;
 import static Halen3.GUI.Comics.ComicsGUI.refreshComicsPanel;
+import Halen3.GUI.Film.FilmGUI;
+import static Halen3.GUI.Film.FilmGUI.refreshFilmPanel;
 import Halen3.GUI.TV.TvGUI;
 import static Halen3.GUI.TV.TvGUI.refreshTvPanel;
 import Halen3.IO.FileManager;
@@ -232,7 +234,7 @@ public class RuleManager
                         tags = tags + FileManager.makeTag("url", TvGUI.traktURLInput.getText());
                         try
                         {
-                            episodesAndFirstLineTraktData = Halen3.Retrievers.TvShows.Trakt.TraktParser.getData(TvGUI.traktURLInput.getText());
+                            episodesAndFirstLineTraktData = Halen3.Retrievers.TvShows.Trakt.TvTraktParser.getData(TvGUI.traktURLInput.getText());
                         } catch (IOException ex)
                         {
                             Logger.getLogger(RuleManager.class.getName()).log(Level.SEVERE, null, ex);
@@ -337,6 +339,321 @@ public class RuleManager
                 }
 
                 refreshTvPanel();
+
+                //end
+            }
+        }
+    }
+    
+        public static void saveFilmRule(String ruleName)
+    {
+        //########################################################################
+        //                   update existing rule
+        //########################################################################
+        if (new File(Halen3.IO.FileManager.launchPath() + "/rules/films/" + ruleName.trim() + ".xml").exists())
+        {
+            //only update first line
+            int reply = JOptionPane.showConfirmDialog(null, "THIS RULE ALREADY EXISTS! \nCLICK YES IF YOU WISH TO COMMIT CHANGES.", "RULE ALREADY EXISTS", JOptionPane.YES_NO_OPTION);
+            if (reply == JOptionPane.YES_OPTION)
+            {
+
+                System.out.println("SAVING OVER EXISTING RULE FILE....."); //if file exists then edit existing file
+
+                //get list of tags
+                List update = FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/films/" + ruleName.trim() + ".xml");
+                //get line one with tags
+                String updateLine = update.getItem(0);
+                //message 
+                String message = "DATA VALID";
+
+                //#############################################################################
+                //                    go through tags and check if valid
+                //#############################################################################
+                if (!ruleName.equals("") | !ruleName.equals("..."))
+                {
+                    //remove any illegal characters
+                    ruleName = ruleName.replaceAll("[^a-zA-Z0-9. -]", " ").replaceAll("\\s+", " ").trim();
+
+                } else
+                {
+                    message = "DATA INVALID - please provide a valid rule name!";
+                }
+
+                if (!FilmGUI.search.getText().equals("") | !FilmGUI.search.getText().equals("..."))
+                {
+
+                    // ruleName = ruleName.replaceAll("[^a-zA-Z0-9. -]", " ").replaceAll("\\s+", " ").trim();
+                    //this is the name used to save the make sure its still valid
+                    //tag - source  - new value
+                    updateLine = FileManager.updateTag("search", updateLine, FilmGUI.search.getText());
+                } else
+                {
+                    message = "DATA INVALID - please provide valid search terms!";
+                }
+
+                if (!FilmGUI.traktURLInput.getText().equals("") | !FilmGUI.traktURLInput.getText().equals("..."))
+                {
+
+                    if (FilmGUI.traktURLInput.getText().contains("trakt.tv/movies"))
+                    {
+                        //tag - source  - new value
+                        updateLine = FileManager.updateTag("url", updateLine, FilmGUI.traktURLInput.getText());
+                    } else
+                    {
+                        message = "DATA INVALID - please provide a valid trakt link!";
+                    }
+
+                } else
+                {
+                    message = "DATA INVALID - please provide a valid trakt link!";
+                }
+
+                if (!FilmGUI.searchInFolderText.getText().equals("") | !FilmGUI.searchInFolderText.getText().equals("..."))
+                {
+
+                    if (new File(FilmGUI.searchInFolderText.getText()).exists())
+                    {
+                        //tag - source  - new value
+                        updateLine = FileManager.updateTag("searchInFolder", updateLine, FilmGUI.searchInFolderText.getText());
+                    } else
+                    {
+                        message = "DATA INVALID - please provide a valid search in directory!";
+                    }
+
+                } else
+                {
+                    message = "DATA INVALID - please provide a valid search in directory!";
+                }
+
+                if (!FilmGUI.moveToFolderText.getText().equals("") | !FilmGUI.moveToFolderText.getText().equals("..."))
+                {
+
+                    if (new File(FilmGUI.moveToFolderText.getText()).exists())
+                    {
+                        //tag - source  - new value
+                        updateLine = FileManager.updateTag("moveToFolder", updateLine, FilmGUI.moveToFolderText.getText());
+                    } else
+                    {
+                        new File(FilmGUI.moveToFolderText.getText()).mkdirs();
+                        if (new File(FilmGUI.moveToFolderText.getText()).exists())
+                        {
+                            //tag - source  - new value
+                            updateLine = FileManager.updateTag("moveToFolder", updateLine, FilmGUI.moveToFolderText.getText());
+
+                        } else
+                        {
+                            message = "DATA INVALID - provided move to directory does not exist nor can it be created!";
+                        }
+
+                    }
+
+                } else
+                {
+                    message = "DATA INVALID - please provide a valid move to directory directory!";
+                }
+
+                if (!FilmGUI.searchForText.getText().equals("") | !FilmGUI.searchForText.getText().equals("..."))
+                {
+                    //tag - source  - new value
+                    updateLine = FileManager.updateTag("searchFor", updateLine, FilmGUI.searchForText.getText());
+
+                } else
+                {
+                    message = "DATA INVALID - please provide valid search text!";
+                }
+
+                //#############################################################################
+                //                              save out rule
+                //#############################################################################
+                if (message.contains("DATA VALID"))
+                {
+
+                    PrintWriter out = null;
+                    try
+                    {
+                        //replace line one with updated tags
+                        update.replaceItem(updateLine, 0);
+                        //where to save rule
+                        out = new PrintWriter(Halen3.IO.FileManager.launchPath() + "/rules/films/" + ruleName.trim() + ".xml");
+                        //loop and print lines
+                        for (int i = 0; i < update.getItemCount(); i++)
+                        {
+                            out.println(update.getItem(i));
+                        }
+                        //close writer on end
+                        out.close();
+
+                    } catch (FileNotFoundException ex)
+                    {
+                        Logger.getLogger(RuleManager.class.getName()).log(Level.SEVERE, null, ex);
+                    } finally
+                    {
+                        out.close();
+                    }
+
+                } else
+                {
+                    System.out.println(message);
+                    JOptionPane.showMessageDialog(null, message, "ERROR", JOptionPane.WARNING_MESSAGE);
+                }
+
+                //end
+            }
+        } else
+        {
+            //########################################################################
+            //                   create new rule
+            //########################################################################
+            //create new rule entirely from scratch
+            //only update first line
+            int reply = JOptionPane.showConfirmDialog(null, "CLICK YES IF YOU WISH \nTO SAVE THIS NEW RULE.", "CREATE NEW RULE", JOptionPane.YES_NO_OPTION);
+            if (reply == JOptionPane.YES_OPTION)
+            {
+
+                System.out.println("SAVING NEW RULE FILE....."); //if file exists then edit existing file
+                String tags = "";
+                List firstLineTraktData = null;
+                String message = "DATA VALID";
+
+                //#############################################################################
+                //                    go through tags and check if valid
+                //#############################################################################
+                if (!ruleName.equals("") | !ruleName.equals("..."))
+                {
+                    //remove any illegal characters
+                    ruleName = ruleName.replaceAll("[^a-zA-Z0-9. -]", " ").replaceAll("\\s+", " ").trim();
+
+                } else
+                {
+                    message = "DATA INVALID - please provide a valid rule name!";
+                }
+
+                if (!FilmGUI.search.getText().equals("") | !FilmGUI.search.getText().equals("..."))
+                {
+
+                    // ruleName = ruleName.replaceAll("[^a-zA-Z0-9. -]", " ").replaceAll("\\s+", " ").trim();
+                    //this is the name used to save the make sure its still valid
+                    //tag - source  - new value
+                    tags = tags + FileManager.makeTag("search", FilmGUI.search.getText());
+                } else
+                {
+                    message = "DATA INVALID - please provide valid search terms!";
+                }
+
+                if (!FilmGUI.traktURLInput.getText().equals("") | !FilmGUI.traktURLInput.getText().equals("..."))
+                {
+
+                    if (FilmGUI.traktURLInput.getText().contains("trakt.tv/movies"))
+                    {
+                        //tag - source  - new value
+                        tags = tags + FileManager.makeTag("url", FilmGUI.traktURLInput.getText());
+                        try
+                        {
+                            firstLineTraktData = Halen3.Retrievers.Films.Trakt.FilmTraktParser.getData(FilmGUI.traktURLInput.getText());
+                        } catch (IOException ex)
+                        {
+                            Logger.getLogger(RuleManager.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+
+                    } else
+                    {
+                        message = "DATA INVALID - please provide a valid trakt link!";
+                    }
+
+                } else
+                {
+                    message = "DATA INVALID - please provide a valid trakt link!";
+                }
+
+                if (!FilmGUI.searchInFolderText.getText().equals("") | !FilmGUI.searchInFolderText.getText().equals("..."))
+                {
+
+                    if (new File(FilmGUI.searchInFolderText.getText()).exists())
+                    {
+                        //tag - source  - new value
+                        tags = FileManager.makeTag("searchInFolder", FilmGUI.searchInFolderText.getText());
+                    } else
+                    {
+                        message = "DATA INVALID - please provide a valid search in directory!";
+                    }
+
+                } else
+                {
+                    message = "DATA INVALID - please provide a valid search in directory!";
+                }
+
+                if (!FilmGUI.moveToFolderText.getText().equals("") | !FilmGUI.moveToFolderText.getText().equals("..."))
+                {
+
+                    if (new File(FilmGUI.moveToFolderText.getText()).exists())
+                    {
+                        //tag - source  - new value
+                        tags = tags + FileManager.makeTag("moveToFolder", FilmGUI.moveToFolderText.getText());
+                    } else
+                    {
+
+                        new File(FilmGUI.moveToFolderText.getText()).mkdirs();
+
+                        if (new File(FilmGUI.moveToFolderText.getText()).exists())
+                        {
+                            //tag - source  - new value
+                            tags = tags + FileManager.makeTag("moveToFolder", FilmGUI.moveToFolderText.getText());
+                        } else
+                        {
+                            message = "DATA INVALID - provided move to directory does not exist nor can it be created!";
+                        }
+
+                    }
+
+                } else
+                {
+                    message = "DATA INVALID - please provide a valid move to directory!";
+                }
+
+                if (!FilmGUI.searchForText.getText().equals("") | !FilmGUI.searchForText.getText().equals("..."))
+                {
+                    tags = tags + FileManager.makeTag("searchFor", FilmGUI.searchForText.getText());
+                } else
+                {
+                    message = "DATA INVALID - please provide valid search text!";
+                }
+
+                //#############################################################################
+                //                              save out rule
+                //#############################################################################
+                if (message.contains("DATA VALID"))
+                {
+
+                    PrintWriter out = null;
+                    try
+                    {
+                        //replace line one with updated tags
+                        firstLineTraktData.replaceItem(firstLineTraktData.getItem(0) + tags, 0);
+                        //where to save rule
+                        out = new PrintWriter(Halen3.IO.FileManager.launchPath() + "/rules/films/" + ruleName.trim() + ".xml");
+                        //loop and print lines
+                        for (int i = 0; i < firstLineTraktData.getItemCount(); i++)
+                        {
+                            out.println(firstLineTraktData.getItem(i));
+                        }
+                        //close writer on end
+                        out.close();
+
+                    } catch (FileNotFoundException ex)
+                    {
+                        Logger.getLogger(RuleManager.class.getName()).log(Level.SEVERE, null, ex);
+                    } finally
+                    {
+                        out.close();
+                    }
+
+                } else
+                {
+                    System.out.println(message);
+                    JOptionPane.showMessageDialog(null, message, "ERROR", JOptionPane.WARNING_MESSAGE);
+                }
+
+                refreshFilmPanel();
 
                 //end
             }

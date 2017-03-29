@@ -5,6 +5,8 @@
  */
 package Halen3.Retrievers.TvShows.Trakt;
 
+import Halen3.CommandLine.ColorCmd;
+import static Halen3.CommandLine.ColorCmd.fgGreenBgWhite;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
@@ -66,7 +68,7 @@ public class TvFanartDownloader
         {
             if (value.attr("href").contains("hdtvlogo"))
             {
-                System.out.println("https://fanart.tv" + value.attr("href"));
+                ColorCmd.println("https://fanart.tv" + value.attr("href"), fgGreenBgWhite);
 
                 URL url = new URL("https://fanart.tv" + value.attr("href"));
                 InputStream in = new BufferedInputStream(url.openStream());
@@ -86,7 +88,140 @@ public class TvFanartDownloader
                 fos.close();
                 imagePath = FileManager.launchPath() + "\\graphics\\tv-show-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
                 break;
+            }else if (value.attr("href").contains("clearlogo"))
+            {
+                ColorCmd.println("https://fanart.tv" + value.attr("href"), fgGreenBgWhite);
+                
+                URL url = new URL("https://fanart.tv" + value.attr("href"));
+                InputStream in = new BufferedInputStream(url.openStream());
+                ByteArrayOutputStream out = new ByteArrayOutputStream();
+                byte[] buf = new byte[1024];
+                int n = 0;
+                while (-1 != (n = in.read(buf)))
+                {
+                    out.write(buf, 0, n);
+                }
+                out.close();
+                in.close();
+                byte[] response = out.toByteArray();
+
+                FileOutputStream fos = new FileOutputStream(FileManager.launchPath() + "\\graphics\\tv-show-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png");
+                fos.write(response);
+                fos.close();
+                imagePath = FileManager.launchPath() + "\\graphics\\tv-show-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
+                break;
+            }else if (value.attr("href").contains("hdclearart"))
+            {
+               ColorCmd.println("https://fanart.tv" + value.attr("href"), fgGreenBgWhite);
+               
+                URL url = new URL("https://fanart.tv" + value.attr("href"));
+                InputStream in = new BufferedInputStream(url.openStream());
+                ByteArrayOutputStream out = new ByteArrayOutputStream();
+                byte[] buf = new byte[1024];
+                int n = 0;
+                while (-1 != (n = in.read(buf)))
+                {
+                    out.write(buf, 0, n);
+                }
+                out.close();
+                in.close();
+                byte[] response = out.toByteArray();
+
+                FileOutputStream fos = new FileOutputStream(FileManager.launchPath() + "\\graphics\\tv-show-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png");
+                fos.write(response);
+                fos.close();
+                imagePath = FileManager.launchPath() + "\\graphics\\tv-show-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
+                break;
+            }else if (value.attr("href").contains("tvthumb"))
+            {
+               ColorCmd.println("https://fanart.tv" + value.attr("href"), fgGreenBgWhite);
+               
+                URL url = new URL("https://fanart.tv" + value.attr("href"));
+                InputStream in = new BufferedInputStream(url.openStream());
+                ByteArrayOutputStream out = new ByteArrayOutputStream();
+                byte[] buf = new byte[1024];
+                int n = 0;
+                while (-1 != (n = in.read(buf)))
+                {
+                    out.write(buf, 0, n);
+                }
+                out.close();
+                in.close();
+                byte[] response = out.toByteArray();
+
+                FileOutputStream fos = new FileOutputStream(FileManager.launchPath() + "\\graphics\\tv-show-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png");
+                fos.write(response);
+                fos.close();
+                imagePath = FileManager.launchPath() + "\\graphics\\tv-show-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
+                break;
+            }else  if (value.attr("href").contains("hdmovielogo"))
+            {
+                ColorCmd.println("https://fanart.tv" + value.attr("href"), fgGreenBgWhite);
+                
+                URL url = new URL("https://fanart.tv" + value.attr("href"));
+                InputStream in = new BufferedInputStream(url.openStream());
+                ByteArrayOutputStream out = new ByteArrayOutputStream();
+                byte[] buf = new byte[1024];
+                int n = 0;
+                while (-1 != (n = in.read(buf)))
+                {
+                    out.write(buf, 0, n);
+                }
+                out.close();
+                in.close();
+                byte[] response = out.toByteArray();
+
+                FileOutputStream fos = new FileOutputStream(FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png");
+                fos.write(response);
+                fos.close();
+                imagePath = FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
+                break;
+            }else  if (value.attr("href").contains("hdmovieclearart"))
+            {
+                ColorCmd.println("https://fanart.tv" + value.attr("href"), fgGreenBgWhite);
+                
+                URL url = new URL("https://fanart.tv" + value.attr("href"));
+                InputStream in = new BufferedInputStream(url.openStream());
+                ByteArrayOutputStream out = new ByteArrayOutputStream();
+                byte[] buf = new byte[1024];
+                int n = 0;
+                while (-1 != (n = in.read(buf)))
+                {
+                    out.write(buf, 0, n);
+                }
+                out.close();
+                in.close();
+                byte[] response = out.toByteArray();
+
+                FileOutputStream fos = new FileOutputStream(FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png");
+                fos.write(response);
+                fos.close();
+                imagePath = FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
+                break;
+            }else if (value.attr("href").contains("hdmovieclearart"))
+            {
+               ColorCmd.println("https://fanart.tv" + value.attr("href"), fgGreenBgWhite);
+               
+                URL url = new URL("https://fanart.tv" + value.attr("href"));
+                InputStream in = new BufferedInputStream(url.openStream());
+                ByteArrayOutputStream out = new ByteArrayOutputStream();
+                byte[] buf = new byte[1024];
+                int n = 0;
+                while (-1 != (n = in.read(buf)))
+                {
+                    out.write(buf, 0, n);
+                }
+                out.close();
+                in.close();
+                byte[] response = out.toByteArray();
+
+                FileOutputStream fos = new FileOutputStream(FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png");
+                fos.write(response);
+                fos.close();
+                imagePath = FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
+                break;
             }
+            
         }
         
         

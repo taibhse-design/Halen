@@ -36,7 +36,6 @@ import static Halen3.GUI.Comics.ComicsGUI.comicPanel;
 import static Halen3.GUI.GUIBase.tertiary;
 import Halen3.GUI.NoticePanels.LoggingPanel;
 import static Halen3.GUI.NoticePanels.SavingPanel.savePanel;
-import static Halen3.GUI.TV.TvGUI.tvPanel;
 import Halen3.GUI.RuleManager;
 import Halen3.IO.FileManager;
 import java.nio.file.Files;

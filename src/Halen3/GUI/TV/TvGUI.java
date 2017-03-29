@@ -5,6 +5,7 @@
  */
 package Halen3.GUI.TV;
 
+import Halen3.GUI.Film.FilmGUI;
 import Halen3.GUI.GUIBase;
 import static Halen3.GUI.GUIBase.primary;
 import static Halen3.GUI.GUIBase.secondary;

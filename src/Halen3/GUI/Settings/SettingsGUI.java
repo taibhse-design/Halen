@@ -201,7 +201,7 @@ public class SettingsGUI
         testingExplanationText.setForeground(primary);
         testingExplanationText.setBackground(secondary);
         testingExplanationText.setBorder(null);
-        testingExplanationText.setSize((int) (settingsPanel.getWidth() / 3.5), settingsPanel.getHeight() / 15);
+        testingExplanationText.setSize((int) (settingsPanel.getWidth() / 2.8), settingsPanel.getHeight() / 15);
         testingExplanationText.setLocation(notifyEmail.getX(), (int) (notifyEmail.getY() + (notifyEmail.getHeight() * 1.2)));
         testingExplanationText.setVisible(true);
         

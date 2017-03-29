@@ -12,6 +12,7 @@ import static Halen3.GUI.GUIBase.anime;
 import static Halen3.GUI.GUIBase.theme;
 import static Halen3.GUI.GUIBase.color;
 import static Halen3.GUI.GUIBase.comics;
+import static Halen3.GUI.GUIBase.film;
 import static Halen3.GUI.GUIBase.primary;
 import static Halen3.GUI.GUIBase.secondary;
 import static Halen3.GUI.GUIBase.settings;
@@ -19,6 +20,8 @@ import static Halen3.GUI.GUIBase.tertiary;
 import static Halen3.GUI.GUIBase.themePanel;
 import static Halen3.GUI.GUIBase.tv;
 import static Halen3.GUI.Settings.SettingsGUI.settingsPanel;
+import Halen3.GUI.Film.FilmGUI;
+import static Halen3.GUI.Film.FilmGUI.filmPanel;
 import Halen3.GUI.TV.TvGUI;
 import static Halen3.GUI.TV.TvGUI.tvPanel;
 import Halen3.IO.FileManager;
@@ -35,9 +38,10 @@ import org.apache.commons.io.FileUtils;
 public class GUIBaseControls
 {
 
-   
     static long tvFolderSize = FileUtils.sizeOfDirectory(new File(FileManager.launchPath() + "/rules/tv show/"));
+    static long filmFolderSize = FileUtils.sizeOfDirectory(new File(FileManager.launchPath() + "/rules/films/"));
     static long comicFolderSize = FileUtils.sizeOfDirectory(new File(FileManager.launchPath() + "/rules/comics/"));
+
     public static void initBaseControls()
     {
         theme.addMouseListener(new MouseListener()
@@ -46,20 +50,21 @@ public class GUIBaseControls
             @Override
             public void mouseClicked(MouseEvent me)
             {
-                
-                 themePanel.setVisible(true);
-                 theme.setOpaque(true);
-                 theme.setBackground(secondary);
-                  tvPanel.setVisible(false);
+
+                themePanel.setVisible(true);
+                theme.setOpaque(true);
+                theme.setBackground(secondary);
+                tvPanel.setVisible(false);
                 comicPanel.setVisible(false);
                 animePanel.setVisible(false);
                 settingsPanel.setVisible(false);
                 GUIBase.tv.setVisible(false);
+                GUIBase.film.setVisible(false);
                 GUIBase.comics.setVisible(false);
                 GUIBase.anime.setVisible(false);
                 GUIBase.settings.setVisible(false);
-               // frame.setVisible(false);
-              //  ThemeEditor.openThemeEditor(false);
+                // frame.setVisible(false);
+                //  ThemeEditor.openThemeEditor(false);
 
             }
 
@@ -105,8 +110,9 @@ public class GUIBaseControls
             @Override
             public void mouseClicked(MouseEvent e)
             {
-              
+
                 tv.setOpaque(true);
+                film.setOpaque(false);
                 comics.setOpaque(false);
                 anime.setOpaque(false);
                 settings.setOpaque(false);
@@ -114,20 +120,19 @@ public class GUIBaseControls
                 comics.setBackground(primary);
                 anime.setBackground(primary);
                 settings.setBackground(primary);
-                
-                
+
+                //if folder size changes then new rule added/removed, refresh list
                 long size = FileUtils.sizeOfDirectory(new File(FileManager.launchPath() + "/rules/tv show/"));
-                if(tvFolderSize != size)
+                if (tvFolderSize != size)
                 {
-                    tvFolderSize = size; 
-                TvGUI.refreshTvPanel();
+                    tvFolderSize = size;
+                    TvGUI.refreshTvPanel();
                 }
                 tvPanel.setVisible(true);
                 comicPanel.setVisible(false);
                 animePanel.setVisible(false);
                 settingsPanel.setVisible(false);
-                
-                
+
             }
 
             @Override
@@ -168,30 +173,32 @@ public class GUIBaseControls
             @Override
             public void mouseClicked(MouseEvent e)
             {
-                
+
                 tv.setOpaque(false);
+                film.setOpaque(false);
                 comics.setOpaque(true);
                 anime.setOpaque(false);
                 settings.setOpaque(false);
-                 tv.setBackground(primary);
+                tv.setBackground(primary);
                 comics.setBackground(secondary);
                 anime.setBackground(primary);
                 settings.setBackground(primary);
-                
-                  long size = FileUtils.sizeOfDirectory(new File(FileManager.launchPath() + "/rules/comics/"));
-                if(comicFolderSize != size)
+
+                //if folder size changes then new rule added/removed, refresh list
+                long size = FileUtils.sizeOfDirectory(new File(FileManager.launchPath() + "/rules/comics/"));
+                if (comicFolderSize != size)
                 {
-                    comicFolderSize = size; 
-                ComicsGUI.refreshComicsPanel();
+                    comicFolderSize = size;
+                    ComicsGUI.refreshComicsPanel();
                 }
-                
+
                 tvPanel.setVisible(false);
                 comicPanel.setVisible(true);
                 animePanel.setVisible(false);
                 settingsPanel.setVisible(false);
             }
 
-           @Override
+            @Override
             public void mousePressed(MouseEvent e)
             {
                 ImageIcon t = new ImageIcon(color(tertiary, "Resources/metro/MenuSelectionButtons/comics-clicked.png"));
@@ -224,29 +231,95 @@ public class GUIBaseControls
             }
         });
 
+        film.addMouseListener(new MouseListener()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+
+                film.setOpaque(true);
+                tv.setOpaque(false);
+                comics.setOpaque(false);
+                anime.setOpaque(false);
+                settings.setOpaque(false);
+                film.setBackground(secondary);
+                tv.setBackground(primary);
+                comics.setBackground(primary);
+                anime.setBackground(primary);
+                settings.setBackground(primary);
+
+                //if folder size changes then new rule added/removed, refresh list
+                long size = FileUtils.sizeOfDirectory(new File(FileManager.launchPath() + "/rules/films/"));
+                if (filmFolderSize != size)
+                {
+                    filmFolderSize = size;
+                       FilmGUI.refreshFilmPanel();
+                }
+                filmPanel.setVisible(true);
+                tvPanel.setVisible(false);
+                comicPanel.setVisible(false);
+                animePanel.setVisible(false);
+                settingsPanel.setVisible(false);
+
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e)
+            {
+                ImageIcon t = new ImageIcon(color(tertiary, "Resources/metro/MenuSelectionButtons/film-clicked.png"));
+                ImageIcon ts = new ImageIcon(t.getImage().getScaledInstance(film.getWidth(), film.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                film.setIcon(ts);
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e)
+            {
+                ImageIcon t = new ImageIcon(color(tertiary, "Resources/metro/MenuSelectionButtons/film-normal.png"));
+                ImageIcon ts = new ImageIcon(t.getImage().getScaledInstance(film.getWidth(), film.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                film.setIcon(ts);
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e)
+            {
+                ImageIcon t = new ImageIcon(color(tertiary, "Resources/metro/MenuSelectionButtons/film-hover.png"));
+                ImageIcon ts = new ImageIcon(t.getImage().getScaledInstance(film.getWidth(), film.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                film.setIcon(ts);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e)
+            {
+                ImageIcon t = new ImageIcon(color(tertiary, "Resources/metro/MenuSelectionButtons/film-normal.png"));
+                ImageIcon ts = new ImageIcon(t.getImage().getScaledInstance(film.getWidth(), film.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                film.setIcon(ts);
+            }
+        });
+
         anime.addMouseListener(new MouseListener()
         {
             @Override
             public void mouseClicked(MouseEvent e)
             {
-              
+
                 tv.setOpaque(false);
+                film.setOpaque(false);
                 comics.setOpaque(false);
                 anime.setOpaque(true);
                 settings.setOpaque(false);
-                
-                 tv.setBackground(primary);
+
+                tv.setBackground(primary);
                 comics.setBackground(primary);
                 anime.setBackground(secondary);
                 settings.setBackground(primary);
-                
+
                 tvPanel.setVisible(false);
                 comicPanel.setVisible(false);
                 animePanel.setVisible(true);
                 settingsPanel.setVisible(false);
             }
 
-           @Override
+            @Override
             public void mousePressed(MouseEvent e)
             {
                 ImageIcon t = new ImageIcon(color(tertiary, "Resources/metro/MenuSelectionButtons/anime-clicked.png"));
@@ -284,17 +357,18 @@ public class GUIBaseControls
             @Override
             public void mouseClicked(MouseEvent e)
             {
-              
+
+                film.setOpaque(false);
                 tv.setOpaque(false);
                 comics.setOpaque(false);
                 anime.setOpaque(false);
                 settings.setOpaque(true);
-                
-                 tv.setBackground(primary);
+
+                tv.setBackground(primary);
                 comics.setBackground(primary);
                 anime.setBackground(primary);
                 settings.setBackground(secondary);
-                
+
                 tvPanel.setVisible(false);
                 comicPanel.setVisible(false);
                 animePanel.setVisible(false);
@@ -333,8 +407,7 @@ public class GUIBaseControls
                 settings.setIcon(ts);
             }
         });
-        
-        
+
 //            save.addMouseListener(new MouseListener()
 //        {
 //
@@ -397,7 +470,7 @@ public class GUIBaseControls
 ////                            name.setVisible(true);
 ////                            search.setVisible(true);
 ////                            searchIn.setVisible(true);
-////                            episodeListPane.setVisible(true);
+////                            RetrievedListPane.setVisible(true);
 ////                            delete.setVisible(true);
 ////                            inputsPane.setVisible(true);
 ////                            settings.setVisible(true);
@@ -535,7 +608,7 @@ public class GUIBaseControls
 ////                    name.setVisible(false);
 ////                    search.setVisible(false);
 ////                    searchIn.setVisible(false);
-////                    episodeListPane.setVisible(false);
+////                  RetrievedListPanene.setVisible(false);
 ////                    delete.setVisible(false);
 ////                    inputsPane.setVisible(false);
 ////                    //                      start.setVisible(false);
@@ -606,7 +679,7 @@ public class GUIBaseControls
 ////                    name.setVisible(false);
 ////                    search.setVisible(false);
 ////                    searchIn.setVisible(false);
-////                    episodeListPane.setVisible(false);
+////                RetrievedListPanePane.setVisible(false);
 ////                    delete.setVisible(false);
 ////                    inputsPane.setVisible(false);
 ////                    settings.setVisible(false);

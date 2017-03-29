@@ -5,30 +5,21 @@
  */
 package Halen3.Retrievers.Comics;
 
+import Halen3.CommandLine.ColorCmd;
+import static Halen3.CommandLine.ColorCmd.fgRedBgWhite;
+import static Halen3.CommandLine.ColorCmd.fgYellowBgWhite;
 import static Halen3.IO.GlobalSharedVariables.driver;
 import static Halen3.IO.GlobalSharedVariables.endChromeDriver;
-import static Halen3.IO.GlobalSharedVariables.pathToChromeDriver;
-import static Halen3.IO.GlobalSharedVariables.pathToChromePortable;
 import static Halen3.IO.GlobalSharedVariables.startChromeDriver;
 import Halen3.IO.FileManager;
-import java.awt.Image;
 import java.awt.List;
-import java.awt.image.BufferedImage;
-import java.awt.image.RenderedImage;
-import java.io.BufferedInputStream;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintWriter;
-import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import org.apache.commons.io.FileUtils;
 import org.jsoup.Jsoup;
@@ -37,14 +28,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
 
 /**
  *
@@ -116,7 +101,7 @@ public class CreateComicRule
             } catch (FileNotFoundException ex)
             {
                 //report error
-                System.out.println("ERROR PRINTING OUT RULES! - FILE NOT FOUND");
+                ColorCmd.println("ERROR PRINTING OUT RULES! - FILE NOT FOUND", fgRedBgWhite);
                 JOptionPane.showMessageDialog(null, "ERROR PRINTING OUT RULES! - FILE NOT FOUND", "ERROR", JOptionPane.WARNING_MESSAGE);
 
                 Logger.getLogger(CreateComicRule.class.getName()).log(Level.SEVERE, null, ex);
@@ -130,7 +115,7 @@ public class CreateComicRule
         } else
         {
             //alert that url is invalid
-            System.out.println("ENTER VALID URL - ONLY READCOMICONLINE AND KISSMANGA ARE SUPPORTED!");
+            ColorCmd.println("ENTER VALID URL - ONLY READCOMICONLINE AND KISSMANGA ARE SUPPORTED!", fgRedBgWhite);
             JOptionPane.showMessageDialog(null, "ENTER VALID URL - ONLY READCOMICONLINE AND KISSMANGA ARE SUPPORTED!", "ERROR", JOptionPane.WARNING_MESSAGE);
 
         }
@@ -177,7 +162,7 @@ public class CreateComicRule
         //get comic title
         Element detailCode = doc.select("div.barContent").first();
         Element title = detailCode.select("a.bigChar").first();
-        System.out.println("\nTitle: " + title.text());
+        ColorCmd.println("Title: " + title.text(), fgYellowBgWhite);
         seriesTitle = title.text();
         //get comic preview image
         Elements images = doc.select("img");
@@ -208,7 +193,7 @@ public class CreateComicRule
                 if (image.attr("width").equals("190px"))// && !(new File(FileManager.launchPath() + "\\graphics\\comic-book-covers\\" + seriesTitle.replaceAll("[^a-zA-Z0-9.-]", " ").replaceAll("\\s+", " ").trim() + ".png").exists()))
                 {
                     //navigate to page with image
-                    System.out.println(image.attr("src").trim());
+                    ColorCmd.println(image.attr("src").trim(), fgYellowBgWhite);
                     driver.navigate().to(image.attr("src").trim());
                     Thread.sleep(10000);
                     //take screenshot
@@ -227,10 +212,18 @@ public class CreateComicRule
 
                     imageURL = FileManager.launchPath() + "\\graphics\\comic-book-covers\\" + seriesTitle.replaceAll("[^a-zA-Z0-9.-]", " ").replaceAll("\\s+", " ").trim() + ".png";
                      FileManager.trimWhiteSpaceFromImage(imageURL);
-                    System.out.println("Image URL:  " + imageURL);
+                    ColorCmd.println("Image URL:  " + imageURL, fgYellowBgWhite);
                     
+                    try
+                    {
                     imgurURL = UploadToImgur.uploadImageToImgurAndGetImageURL(imageURL);
-                    System.out.println("Imgur URL:  " + imgurURL);
+                    ColorCmd.println("Imgur URL:  " + imgurURL, fgYellowBgWhite);
+                    }catch(IOException e)
+                    {
+                        ColorCmd.println("Error uploading image to imgur....." + e, fgRedBgWhite);
+                       imgurURL = ""; 
+                    }
+                    
                }//else
 //                {
 //                      imageURL = FileManager.launchPath() + "\\graphics\\comic-book-covers\\" + seriesTitle.replaceAll("[^a-zA-Z0-9.-]", " ").replaceAll("\\s+", " ").trim() + ".png";
@@ -249,48 +242,50 @@ public class CreateComicRule
 
             if (detail.select("span.info").text().contains("Genres:"))
             {
-                System.out.println("Genres:  " + detail.select("a").text());
+                ColorCmd.println("Genres:  " + detail.select("a").text(), fgYellowBgWhite);
                 genres = detail.select("a").text();
 
             } else if (detail.select("span.info").text().contains("Publisher:"))
             {
-                System.out.println("Publisher:  " + detail.select("a").text());
+                ColorCmd.println("Publisher:  " + detail.select("a").text(), fgYellowBgWhite);
                 publisher = detail.select("a").text();
 
             } else if (detail.select("span.info").text().contains("Writer:"))
             {
-                System.out.println("Writer:  " + detail.select("a").text());
+                ColorCmd.println("Writer:  " + detail.select("a").text(), fgYellowBgWhite);
                 writer = detail.select("a").text();
 
             } else if (detail.select("span.info").text().contains("Author:"))
             {
-                System.out.println("Author:  " + detail.select("a").text());
+                ColorCmd.println("Author:  " + detail.select("a").text(), fgYellowBgWhite);
                 author = detail.select("a").text();
 
             } else if (detail.select("span.info").text().contains("Artist:"))
             {
-                System.out.println("Artist:  " + detail.select("a").text());
+                ColorCmd.println("Artist:  " + detail.select("a").text(), fgYellowBgWhite);
                 artist = detail.select("a").text();
 
             } else if (detail.select("span.info").text().contains("Publication date:"))
             {
-                System.out.println(detail.select("p").text());
+                ColorCmd.println(detail.select("p").text(), fgYellowBgWhite);
                 publicationDate = detail.select("p").text();
 
             } else if (detail.select("span.info").text().contains("Status:"))
             {
-                System.out.println("Status:  " + detail.select("p").text().trim().replace("Bookmark", "").split("           ")[0].replace("Status: ", ""));
+                ColorCmd.println("Status:  " + detail.select("p").text().trim().replace("Bookmark", "").split("           ")[0].replace("Status: ", ""), fgYellowBgWhite);
                 status = detail.select("p").text().trim().replace("Bookmark", "").split("           ")[0].replace("Status: ", "");
 
             } else if (detail.select("span.info").text().contains("Summary:"))
             {
                 detail = details.get(i + 1);
-                System.out.println("Summary:  " + detail.select("p").text() + "\n");
+                ColorCmd.println("Summary:  " + detail.select("p").text(), fgYellowBgWhite);
                 summary = detail.select("p").text();
             }
 
         }
 
+        ColorCmd.println("", fgYellowBgWhite);
+        
         for (Element table : doc.select("table.listing"))
         {
             for (Element row : table.select("tr"))
@@ -304,7 +299,7 @@ public class CreateComicRule
                     completeURL = "http://" + completeURL + tds.attr("href") + "&readType=1";
 
                     issues.add("<name>" + tds.text() + "</name><link>" + completeURL + "</link><downloaded>false</downloaded>");
-                    System.out.println(tds.text() + ":   " + completeURL);
+                    ColorCmd.println(tds.text() + ":   " + completeURL, fgYellowBgWhite);
                 }
             }
         }

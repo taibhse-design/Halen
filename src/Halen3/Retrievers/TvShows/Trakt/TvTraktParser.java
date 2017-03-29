@@ -1,5 +1,7 @@
 package Halen3.Retrievers.TvShows.Trakt;
 
+import Halen3.CommandLine.ColorCmd;
+import static Halen3.CommandLine.ColorCmd.fgGreenBgWhite;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
@@ -15,7 +17,7 @@ import org.jsoup.select.Elements;
 /**
  * @author TAIBHSE
  */
-public class TraktParser
+public class TvTraktParser
 {
 
     public static void main(String args[]) throws IOException
@@ -44,6 +46,9 @@ public class TraktParser
         //disable javascript to speed up site loading
         webClient.getOptions()
                 .setJavaScriptEnabled(false);
+        
+        
+        webClient.getOptions().setRedirectEnabled(false);
 
         java.util.logging.Logger.getLogger(
                 "com.gargoylesoftware").setLevel(java.util.logging.Level.OFF); /* comment out to turn off annoying htmlunit warnings */
@@ -51,8 +56,9 @@ public class TraktParser
         HtmlPage page;
         String html;
         Document doc;
-        
+        ColorCmd.println("Retrieving Show data.....", fgGreenBgWhite);
         int seasonCount = getSeasonCount(url);
+        ColorCmd.println("Number of Seasons in Show: " + seasonCount, fgGreenBgWhite);
         data.add(FileManager.makeTag("search", getSearchParams(url)) + FileManager.makeTag("url", url) + getShowData(url) + FileManager.makeTag("image", Halen3.Retrievers.TvShows.Trakt.TvFanartDownloader.imagePath));
      //   data.add("<search>" + getSearchParams(url) + "</search><url>" + url + "</url><image>" + TvFanartDownloader.TvFanartDownloader.imagePath + "</image>");
         //for (int i = 1; i <= getSeasonCount(url); i++)
@@ -135,7 +141,7 @@ public class TraktParser
             //this grabs the fanart link and attampts to download all fanart
             if(value.attr("href").contains("fanart"))
             {
-                System.out.println(value.attr("href"));
+                ColorCmd.println("Fanart Page: " + value.attr("href"), fgGreenBgWhite);
                 
                 Halen3.Retrievers.TvShows.Trakt.TvFanartDownloader.download(value.attr("href"));
                 break loop;
@@ -189,6 +195,7 @@ public class TraktParser
             if(i.attr("data-original").contains("/posters/thumb/"))
             {
                 image = i;
+              ColorCmd.println("Poster Image URL: " + image.attr("data-original"), fgGreenBgWhite);
                 break;
             }
         }
@@ -211,6 +218,8 @@ public class TraktParser
         {
             showGenres = genre.text() + ", " + showGenres;
         }
+        ColorCmd.println("Genres: " + showGenres, fgGreenBgWhite);
+        ColorCmd.println("Plot: " + plot.text(), fgGreenBgWhite);
         tags = tags + FileManager.makeTag("genres", showGenres) + FileManager.makeTag("plot", plot.text());
        
       

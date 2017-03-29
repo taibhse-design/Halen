@@ -5,10 +5,6 @@
  */
 package Halen3.IO;
 
-import Halen3.IO.FileManager;
-import java.io.File;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchWindowException;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriverException;

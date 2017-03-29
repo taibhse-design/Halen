@@ -5,26 +5,18 @@
  */
 package Halen3.Retrievers.Comics;
 
-import Halen3.GUI.NoticePanels.LoggingPanel;
+import Halen3.CommandLine.ColorCmd;
+import static Halen3.CommandLine.ColorCmd.fgWhiteBgWhite;
+import static Halen3.CommandLine.ColorCmd.fgWhiteBgYellow;
+import static Halen3.CommandLine.ColorCmd.fgYellowBgWhite;
 import static Halen3.Retrievers.Comics.CreateComicRule.getDetails;
 import Halen3.IO.GlobalSharedVariables;
-import static Halen3.IO.GlobalSharedVariables.pathToChromeDriver;
-import static Halen3.IO.GlobalSharedVariables.pathToChromePortable;
 import Halen3.IO.FileManager;
 import java.awt.List;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.concurrent.TimeUnit;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 /**
  *
@@ -62,9 +54,12 @@ public class SearchForUpdates
         
         //load comic rule to search updates for
      //   String rulePath = "C:/Users/brenn/Documents/NetBeansProjects/Halen/build/rules/comics/think tank v2.xml";
-         System.out.println("#########################################################################################################");
-        System.out.println("   SEARCHING FOR COMIC UPDATES - " + new File(rulePath).getName());
-        System.out.println("#########################################################################################################\n");
+         //System.out.println("#########################################################################################################");
+        ColorCmd.println("",fgWhiteBgYellow);
+        ColorCmd.printlnCenter("SEARCHING FOR COMIC UPDATES - " + new File(rulePath).getName(), fgWhiteBgYellow);
+        ColorCmd.println("",fgWhiteBgYellow);
+        ColorCmd.println("",fgWhiteBgWhite);
+//  System.out.println("#########################################################################################################\n");
        
         
         //list to hold data already in file
@@ -121,7 +116,9 @@ public class SearchForUpdates
                 updated.add(comDownloaded[i]);
             }
 
-            System.out.println("\nNew issues found, added to list pending download..........");
+             ColorCmd.println("", fgYellowBgWhite);
+             ColorCmd.println("New issues found, added to list pending download.....", fgYellowBgWhite);
+             ColorCmd.println("", fgYellowBgWhite);
             
             //print updated list to file
             PrintWriter out = new PrintWriter(rulePath);
@@ -145,14 +142,17 @@ public class SearchForUpdates
             }
             
             out.close();
-            
-            System.out.println("\nSkipping rule, no new updated issues, main stats updated instead.........");
+            ColorCmd.println("", fgYellowBgWhite);
+            ColorCmd.println("Skipping rule, no new updated issues, main stats updated instead.....", fgYellowBgWhite);
+            ColorCmd.println("", fgYellowBgWhite);
         }
         }else
         {
-            System.out.println("\nSkipping rule update, comic series is already completed.........");
+            ColorCmd.println("", fgYellowBgWhite);
+            ColorCmd.println("Skipping rule update, comic series is already completed.....", fgYellowBgWhite);
+            ColorCmd.println("", fgYellowBgWhite);
         }
-          System.out.println("\n#########################################################################################################\n");
+      //    System.out.println("\n#########################################################################################################\n");
        
     }
 

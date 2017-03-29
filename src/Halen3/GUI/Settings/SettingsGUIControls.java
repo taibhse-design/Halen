@@ -304,6 +304,7 @@ public class SettingsGUIControls
                     if (areSettingsValid() == true)
                     {
                         GUIBase.frame.removeAll();
+                        GUIBase.frame.dispose();
                         GUIBase.initGUI();
                     }
                     // try

@@ -36,12 +36,30 @@ public class SearchAlgorithms
     {
         //   MoveFiles();
         magnetHandler = FileManager.returnTag("handler", readFile(launchPath() + "\\settings.xml").getItem(0));
-        System.out.println(new File(magnetHandler).getName());
-        if (isProcessRunning(new File(magnetHandler).getName()) == true | isProcessRunning(new File(magnetHandler).getName().toLowerCase()) == true)
+     
+        
+         moveFilmFiles();
+
+    }
+
+    private static boolean wasTorrentRunning = false;
+    
+    public static void moveFilesFromAllRules() throws IOException
+    {
+        MoveTvFiles();
+        moveFilmFiles();
+        MoveAnimeFiles();
+        
+    }
+    
+    public static void moveFilmFiles() throws IOException
+    {
+          //kill torrent client prior to moving files
+         if (isProcessRunning(new File(magnetHandler).getName()) == true | isProcessRunning(new File(magnetHandler).getName().toLowerCase()) == true)
         {
             System.out.println("client running, need to terminate before moving files...");
             Runtime.getRuntime().exec("taskkill /F /IM " + new File(magnetHandler).getName());
-            
+            wasTorrentRunning = true;
             try
             {
                 Thread.sleep(5000);
@@ -50,17 +68,82 @@ public class SearchAlgorithms
                 Logger.getLogger(SearchAlgorithms.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+         
+         rules = getFolderTree(new File(FileManager.launchPath() + "\\rules\\films\\"));
+
+        tree = new List();
         
-         MoveAnimeFiles();
+         //loop through all rules
+        for (int j = 0; j < rules.getItemCount(); j++)
+        {
+            if (rules.getItem(j).endsWith(".xml"))
+            {
+                System.out.println("TRYING RULE: " + rules.getItem(j));
 
-    }
+                List data = FileManager.readFile(rules.getItem(j));
 
-    private static boolean wasTorrentRunning = false;
-    
-    public static void moveFiles() throws IOException
-    {
-        MoveTvFiles();
-        MoveAnimeFiles();
+                String searchString = FileManager.returnTag("searchFor", data.getItem(0));
+                String searchFolder = FileManager.returnTag("searchInFolder", data.getItem(0));
+                String dest = FileManager.returnTag("moveToFolder", data.getItem(0));
+
+                if (!searchString.trim().equals("") && !searchFolder.trim().equals("") && !dest.trim().equals(""))
+                {
+                    System.out.println("SEARCH DIRECTORY: " + searchFolder + "   RELOCATION DIRECTORY: " + dest + "   SEARCH STRING: " + searchString);
+
+                    System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                    //loop through all issues or episodes
+                   
+
+                        System.out.println("\nSEARCHING FOR: " + searchString);
+                        //get file tree in search folder and then search for matches based on rule
+                        //this method adds matches to filesToMove list
+                        tree = new List();
+                        getAllFilesContaining(searchString, getFolderTree(new File(searchFolder)));
+
+                        //loop through results and move files
+                        if (filesToMove.getItemCount() != 0)
+                        {
+                            for (int i = 0; i < filesToMove.getItemCount(); i++)
+                            {
+                             
+                                    System.out.println("\nMOVING FILE: " + filesToMove.getItem(i) + "              TO: " + dest);
+                                    fileRelocate(filesToMove.getItem(i), dest);
+
+                                
+
+                            }
+
+                            System.out.println("\n----------------------------------------------------------");
+
+                            //blank for next try
+                            filesToMove = new List();
+                        }
+
+                    
+                    System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+                    //purge at end to clear for next rule search
+                    tree = new List();
+                    filesToMove = new List();
+                }
+            }
+        }
+        
+        
+        if(wasTorrentRunning == true)
+        {
+           
+             try
+             {
+                 //relaunch torrent client after done moving files
+                 executeCommand("\"\"" + magnetHandler + "\"");
+             } catch (InterruptedException ex)
+             {
+                 Logger.getLogger(SearchAlgorithms.class.getName()).log(Level.SEVERE, null, ex);
+             }
+        }
+         
+        //end of film move method 
         
     }
      public static void MoveAnimeFiles() throws IOException
@@ -260,6 +343,17 @@ public class SearchAlgorithms
 
     public static void fileRelocate(String file, String dest) throws IOException
     {
+        //only move files if they match any of these file types
+             /** match for videos **/
+        if(file.toLowerCase().endsWith(".avi") || 
+           file.toLowerCase().endsWith(".mp4") || 
+           file.toLowerCase().endsWith(".mkv") ||
+                        /** match for comic files **/
+                        file.toLowerCase().endsWith(".cbr") ||
+                        file.toLowerCase().endsWith(".cbt") ||
+                        file.toLowerCase().endsWith(".pdf") ||
+                        file.toLowerCase().endsWith(".cbz"))
+        {
         File in = new File(file); //file to move
         File out = null; //where to move file too
 
@@ -352,6 +446,11 @@ public class SearchAlgorithms
                 System.out.println("MOVE FAILED - OUTPUT DOES NOT EXIST");
             }
         }
+        
+        }else
+        {
+            System.out.println(file + " is not a valid video or comic for relocation.....skipping");
+        }
 
     }
 
@@ -386,9 +485,9 @@ public class SearchAlgorithms
 
         File directory = file.getParentFile();
         int length = 0;
-        System.out.println(fileName);
+       // System.out.println(fileName);
 
-        System.out.println(folderName);
+      //  System.out.println(folderName);
 
         if (fileName.equals(folderName))
         {

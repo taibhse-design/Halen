@@ -7,6 +7,7 @@ package Halen3.GUI.ThemeEditor;
 
 import static Halen3.GUI.Anime.AnimeGUI.animePanel;
 import static Halen3.GUI.Comics.ComicsGUI.comicPanel;
+import static Halen3.GUI.Film.FilmGUI.filmPanel;
 import Halen3.GUI.GUIBase;
 import static Halen3.GUI.GUIBase.anime;
 import static Halen3.GUI.GUIBase.color;
@@ -1001,6 +1002,7 @@ public class ThemeEditor
                  theme.setBackground(null);
                       themePanel.setVisible(false);
                   tvPanel.setVisible(true);
+                  filmPanel.setVisible(true);
                 comicPanel.setVisible(false);
                 animePanel.setVisible(false);
                 settingsPanel.setVisible(false);

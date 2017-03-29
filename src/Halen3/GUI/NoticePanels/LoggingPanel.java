@@ -7,6 +7,7 @@ package Halen3.GUI.NoticePanels;
 
 import static Halen3.GUI.Anime.AnimeGUI.animePanel;
 import static Halen3.GUI.Comics.ComicsGUI.comicPanel;
+import static Halen3.GUI.Film.FilmGUI.filmPanel;
 import Halen3.GUI.GUIBase;
 import static Halen3.GUI.GUIBase.color;
 import static Halen3.GUI.GUIBase.secondary;
@@ -101,6 +102,33 @@ public class LoggingPanel
 
     }
 
+    public static void showFilmLogging()
+    {
+        logs.setText("");
+        GUIBase.hideButtons();
+        ImageIcon a = new ImageIcon(color(tertiary, "Resources/metro/types/film.png"));
+        ImageIcon as = new ImageIcon(a.getImage().getScaledInstance((int) (loggingPanel.getHeight() / 3), (int) (loggingPanel.getHeight() / 3), java.awt.Image.SCALE_DEFAULT));
+        anim.setIcon(as);
+        filmPanel.setVisible(false);
+        loggingPanel.setVisible(true);
+    }
+    
+      public static void hideFilmLogging()
+    {
+        try
+        {
+            Thread.sleep(5000);
+        } catch (InterruptedException ex)
+        {
+            Logger.getLogger(LoggingPanel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        GUIBase.showButtons();
+        filmPanel.setVisible(true);
+        loggingPanel.setVisible(false);
+
+    }
+      
     public static void showTVLogging()
     {
         logs.setText("");

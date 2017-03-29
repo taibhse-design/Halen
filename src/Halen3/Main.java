@@ -17,10 +17,11 @@ import static Halen3.GUI.GUIBase.settings;
 import static Halen3.GUI.GUIBase.theme;
 import static Halen3.GUI.GUIBase.tv;
 import static Halen3.GUI.Settings.SettingsGUI.settingsPanel;
-import static Halen3.GUI.TV.TvGUI.tvPanel;
 import static Halen3.IO.GlobalSharedVariables.areSettingsValid;
 import Halen3.EmailNotifier.SendEmailNotification;
-import Halen3.Retrievers.TvShows.DownloadNewEpisodes;
+import static Halen3.GUI.Film.FilmGUI.filmPanel;
+import static Halen3.GUI.GUIBase.film;
+import static Halen3.GUI.TV.TvGUI.tvPanel;
 import it.sauronsoftware.junique.AlreadyLockedException;
 import it.sauronsoftware.junique.JUnique;
 import java.io.IOException;
@@ -31,7 +32,31 @@ import java.io.IOException;
  */
 public class Main
 {
-    public static String halenVersion = "3.0.4";
+    
+    /**
+     *   Numbering & Naming System
+     * x1.x2.x3 - GoddessName Build
+     * 
+     * x3 increments only when minor bugs are patched, eg, if build is 3.0.0 and 
+     * a minor bug is patched, build is now 3.0.1, bugs fixed within a day count 
+     * as minor bugs.
+     * 
+     * x2 only increments when major bugs and issues are patched, bugs and issues 
+     * requiring more than one day or major method / class rebuilds will increment 
+     * x2.
+     * 
+     * x1 only increments when new features are added or the underlaying code 
+     * has been drastically reworked for better performance rather than bug fixing.
+     * The build name should also be changed if the improved performance or added 
+     * features drastically change the build from the previous version.
+     * 
+     * GoddessName - build names should be given alphabetically using Goddess names 
+     * from any mythology. Name should not be reflected in jar file name. this is 
+     * purely for UI.
+     */
+    public static String halenVersion = "4.0.0 - AURORA Build"; 
+    
+    
     public static void main(String args[]) throws IOException, InterruptedException
     {
         
@@ -42,8 +67,9 @@ public class Main
     
     
       //  args = new String[1];
-        //args[0] = "-update_rules";
+     //   args[0] = "-update_rules";
        // args[0] = "-help";
+      //  args[0] = "-relocate";
      //  args[0] = "-search";
      //   DownloadNewEpisodes.saveResults = false;
  //    Halen3.Retrievers.TvShows.DownloadNewEpisodes.saveResults = false;
@@ -74,17 +100,20 @@ public class Main
          if(areSettingsValid() == false)
          {
                  tv.setVisible(false);
+                  film.setVisible(false);
                 comics.setVisible(false);
                 anime.setVisible(false);
                 theme.setVisible(false);
                 settings.setOpaque(true);
                 
                  tv.setBackground(primary);
+                 film.setBackground(primary);
                 comics.setBackground(primary);
                 anime.setBackground(primary);
                 settings.setBackground(secondary);
                 
                 tvPanel.setVisible(false);
+                filmPanel.setVisible(false);
                 comicPanel.setVisible(false);
                 animePanel.setVisible(false);
                 settingsPanel.setVisible(true);

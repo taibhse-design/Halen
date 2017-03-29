@@ -1,19 +1,11 @@
 package Halen3.Retrievers.TvShows.Trakt;
 
-import Halen3.GUI.NoticePanels.LoggingPanel;
+import Halen3.CommandLine.ColorCmd;
+import static Halen3.CommandLine.ColorCmd.fgGreenBgWhite;
+import static Halen3.CommandLine.ColorCmd.fgRedBgWhite;
+import static Halen3.CommandLine.ColorCmd.fgWhiteBgGreen;
+import static Halen3.CommandLine.ColorCmd.fgWhiteBgWhite;
 import Halen3.IO.FileManager;
-//import halen.GUI;
-//import static halen.GUI.anim;
-//import static halen.GUI.cb;
-//import static halen.GUI.delete;
-//import static halen.GUI.name;
-//import static halen.GUI.ruleName;
-//import static halen.GUI.rulesPane;
-//import static halen.GUI.save;
-//import static halen.GUI.search;
-//import static halen.GUI.searchIn;
-//import static halen.GUI.settings;
-//import static halen.MetroUI.setTheme;
 import java.awt.HeadlessException;
 import java.awt.List;
 import java.io.File;
@@ -38,11 +30,12 @@ public class UpdateTraktData
     }
 
     public static volatile boolean currentlyUpdatingTVRules = true;
+
     public static void updateTvRules() throws IOException
     {
 
         currentlyUpdatingTVRules = true;
-        
+
         Thread thread = new Thread(new Runnable()
         {
 
@@ -52,7 +45,7 @@ public class UpdateTraktData
 
                 try
                 {
-                    
+
                     currentlyUpdatingTVRules = true;
 
                     String[] extensions = new String[]
@@ -73,44 +66,43 @@ public class UpdateTraktData
                         String url = FileManager.returnTag("url", FileManager.readFile(file).getItem(0));
 
                         //url = FileManager.readFile(file).getItem(0);
-                        System.out.println("#################################################################################################################");
-                        System.out.println("\nUPDATING RULE:  " + file.substring(file.lastIndexOf("\\") + 1, file.length()));
-                        System.out.println("\n" + file + "   |   " + url);
+                        ColorCmd.println("", fgWhiteBgGreen);
+                        ColorCmd.printlnCenter("UPDATING RULE:  " + file.substring(file.lastIndexOf("\\") + 1, file.length()), fgWhiteBgGreen);
+                        ColorCmd.println("", fgWhiteBgGreen);
+                        ColorCmd.println("", fgWhiteBgWhite);
+                        ColorCmd.println(file + " | " + url, fgGreenBgWhite);
+                        ColorCmd.println("", fgWhiteBgWhite);
 
                         try
                         {
                             List original = FileManager.readFile(file);
 
-                            List updated = Halen3.Retrievers.TvShows.Trakt.TraktParser.getData(url);
+                            List updated = Halen3.Retrievers.TvShows.Trakt.TvTraktParser.getData(url);
 
                             List output = new List();
                             //add first item that is search term
                             //output.add(original.getItem(0));
-                            
-                            if(!original.getItem(0).contains("<image>"))
+
+                            if (!original.getItem(0).contains("<image>"))
                             {
-                            output.add(original.getItem(0).replace(original.getItem(0).substring(original.getItem(0).indexOf("<search>"), original.getItem(0).indexOf("</url>")+6), updated.getItem(0)));
-                            }else
+                                output.add(original.getItem(0).replace(original.getItem(0).substring(original.getItem(0).indexOf("<search>"), original.getItem(0).indexOf("</url>") + 6), updated.getItem(0)));
+                            } else
                             {
-                                 output.add(original.getItem(0).replace(original.getItem(0).substring(original.getItem(0).indexOf("<search>"), original.getItem(0).indexOf("</image>")+8), updated.getItem(0)));
-                           
+                                output.add(original.getItem(0).replace(original.getItem(0).substring(original.getItem(0).indexOf("<search>"), original.getItem(0).indexOf("</image>") + 8), updated.getItem(0)));
+
                             }
                             // ArrayList list = new ArrayList();
 
-                            System.out.println(original.getItem(0));
-                            System.out.println(updated.getItem(0));
-                            
-                            
-                            
+                           // System.out.println(original.getItem(0));
+                            // System.out.println(updated.getItem(0));
                             //Collections.sort(list);
                             //new episodes or season added
                             if (original.getItemCount() < updated.getItemCount())
                             {
 
                                 //identify if a new seasons been added 
-                               // int origMaxSeason = Integer.parseInt(original.getItem(original.getItemCount() - 1).substring(original.getItem(original.getItemCount() - 1).indexOf("S") + 1, original.getItem(original.getItemCount() - 1).indexOf("E")));
-                              //  int updMaxSeason = Integer.parseInt(updated.getItem(updated.getItemCount() - 1).substring(updated.getItem(updated.getItemCount() - 1).indexOf("S") + 1, updated.getItem(original.getItemCount() - 1).indexOf("E")));
-
+                                // int origMaxSeason = Integer.parseInt(original.getItem(original.getItemCount() - 1).substring(original.getItem(original.getItemCount() - 1).indexOf("S") + 1, original.getItem(original.getItemCount() - 1).indexOf("E")));
+                                //  int updMaxSeason = Integer.parseInt(updated.getItem(updated.getItemCount() - 1).substring(updated.getItem(updated.getItemCount() - 1).indexOf("S") + 1, updated.getItem(original.getItemCount() - 1).indexOf("E")));
                                 for (int i = 1; i < updated.getItemCount(); i++)
                                 {
                                     //add original list to keep track of downloaded state
@@ -155,15 +147,18 @@ public class UpdateTraktData
 
                             out.close();
 
-                            System.out.println("\nFINISHED UPDATING RULE " + file.substring(file.lastIndexOf("\\") + 1, file.length()) + "\n\n#################################################################################################################");
-
+                            ColorCmd.println("", fgWhiteBgWhite);
+                            ColorCmd.println("FINISHED UPDATING RULE " + file.substring(file.lastIndexOf("\\") + 1, file.length()), fgGreenBgWhite);
+                            ColorCmd.println("", fgWhiteBgWhite);
+                            ColorCmd.println("", fgWhiteBgWhite);
+                            
                         } catch (StringIndexOutOfBoundsException e)
                         {
-                            System.out.println("\nERROR WITH RULE:  " + file.substring(file.lastIndexOf("\\") + 1, file.length()) + "  CONSIDER DELETING AND REBUILDING RULE\n");
+                            ColorCmd.println("ERROR WITH RULE:  " + file.substring(file.lastIndexOf("\\") + 1, file.length()) + "  CONSIDER DELETING AND REBUILDING RULE.....", fgRedBgWhite);
+                            ColorCmd.println("",fgWhiteBgWhite);
                         }
                     }
 
-                    
 //                    try
 //                    {
 //                        //restore gui
@@ -187,15 +182,14 @@ public class UpdateTraktData
 //                    {
 //                        System.out.println("No UI to reload, trakt update finished");
 //                    }
-
                     currentlyUpdatingTVRules = false;
                 } catch (IOException | HeadlessException ex)
                 {
-                    
-                    
+
                     currentlyUpdatingTVRules = false;
-                    System.out.println("CRITICAL ERROR: " + ex);
-                    
+                    ColorCmd.println("CRITICAL ERROR: " + ex, fgRedBgWhite);
+                     ColorCmd.println("",fgWhiteBgWhite);
+
 //                          //restore gui
 //                        anim.setVisible(false);
 //                        rulesPane.setVisible(true);

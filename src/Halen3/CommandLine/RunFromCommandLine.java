@@ -5,12 +5,13 @@
  */
 package Halen3.CommandLine;
 
-import static Halen3.FileMover.SearchAlgorithms.moveFiles;
+import Halen3.EmailNotifier.SendEmailNotification;
+import static Halen3.FileMover.SearchAlgorithms.moveFilesFromAllRules;
 import Halen3.IO.FileManager;
 import Halen3.IO.Log;
-import Halen3.EmailNotifier.SendEmailNotification;
 import Halen3.Retrievers.Anime.DownloadNewAnimeEpisodes;
 import Halen3.Retrievers.Comics.DownloadNewIssues;
+import Halen3.Retrievers.Films.DownloadNewFilms;
 import Halen3.Retrievers.TvShows.DownloadNewEpisodes;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -31,10 +32,11 @@ public class RunFromCommandLine
     //            create log file for record keeping
     //################################################################################
         Calendar cal = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("HH-mm-ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("HH.mm.ss");
+        
         File d = new File(FileManager.launchPath() + "\\logs");
         d.mkdirs();
-        File f = new File(FileManager.launchPath() + "\\logs\\log-" + FileManager.getCurrentDate() + "_" + sdf.format(cal.getTime()) + ".txt");
+        File f = new File(FileManager.launchPath() + "\\logs\\Halen_log-date_of_run_" + FileManager.getCurrentDate() + "_____run_time_" + sdf.format(cal.getTime()) + ".txt");
         f.createNewFile();
         FileOutputStream file = new FileOutputStream(f);
         Log tee = new Log(file, System.out);
@@ -59,20 +61,26 @@ public class RunFromCommandLine
                                //***********************************************
                                   
                 case "-search": //***********************************************
-                                 
                                   
                                   //download tv show episodes
                                   DownloadNewEpisodes.downloadNewEpisodes();
                                   //wait for episode downloads to complete before moving to next
                                   while(DownloadNewEpisodes.searchingForTvEpisodes == true)
-                                  {
+                                  { 
                                       Thread.sleep(5000);
                                   }
-                                  //download new anime episodes
-                                 // DownloadNewAnimeEpisodes.getNewAnimeEpisodeMagnets();
+                                    DownloadNewFilms.downloadNewFilms();
+                                  //wait for Film downloads to complete before moving to next
+                                  while(DownloadNewFilms.searchingForFilms == true)
+                                  { 
+                                      Thread.sleep(5000);
+                                  }
+                                  
                                   //download new comic issues
                                   DownloadNewIssues.downloadNewIssues();
                                   
+                                  //download new anime episodes
+                                 // DownloadNewAnimeEpisodes.getNewAnimeEpisodeMagnets();
                                   
                                   SendEmailNotification.sendEmailNotice(SendEmailNotification.createUpdateListMessage());
                                   break;
@@ -80,10 +88,10 @@ public class RunFromCommandLine
                                   
                 case "-relocate": //***********************************************
                                
-                                  moveFiles();
+                                  moveFilesFromAllRules();
                                   
                                   break;
-                                  //***********************************************
+                                  //***********************************************                                  //***********************************************
                                   
                 case "-update_rules": //***********************************************
                                   
@@ -93,8 +101,13 @@ public class RunFromCommandLine
                                    {
                                        Thread.sleep(5000);
                                    }
+                                   Halen3.Retrievers.Films.Trakt.UpdateTraktData.updateFilmRules();
+                                   while(Halen3.Retrievers.Films.Trakt.UpdateTraktData.currentlyUpdatingFilmRules == true)
+                                   {
+                                       Thread.sleep(5000);
+                                   }
                                    Halen3.Retrievers.Comics.SearchForUpdates.updateAllComicRules();
-                                   Halen3.Retrievers.Anime.SearchForUpdates.updateAllAnimeRules();
+                                  // Halen3.Retrievers.Anime.SearchForUpdates.updateAllAnimeRules();
                                    
                                    break;
                                   //***********************************************

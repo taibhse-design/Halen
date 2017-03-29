@@ -173,7 +173,8 @@ public class FileManager
          return list;
        }catch(HeadlessException | IOException e)
        {
-          System.out.println("ERROR WITH READ METHOD UNDER FILE MANAGER......");
+           e.printStackTrace();
+          System.out.println(e + "ERROR WITH READ METHOD UNDER FILE MANAGER......");
            List empty = new List();
            return empty;
        }
@@ -293,6 +294,8 @@ public class FileManager
       // Date in String format.
        // String dateString = "2015-03-01";
 
+        if(!date.trim().equals(""))
+        {
         try{
         // Converting date to Java8 Local date
         LocalDate startDate = LocalDate.parse(date);
@@ -301,7 +304,7 @@ public class FileManager
         return (int) ChronoUnit.DAYS.between(startDate, endtDate);
         }catch(Exception e)
         {
-            System.out.println("ERROR WITH HOWMANYDAYSSINCE METHOD - LINES 293-302; EXCEPTION CAUGHT RETURNING VALUE 0");
+            System.out.println(e + "ERROR WITH HOWMANYDAYSSINCE METHOD - LINES 293-302; EXCEPTION CAUGHT RETURNING VALUE 0");
             return 0;
         }
       //  System.out.println("Number of days between the start date : " + dateString + " and end date : " + endtDate + " is  ==> " + range);
@@ -309,6 +312,10 @@ public class FileManager
 //        range = ChronoUnit.DAYS.between(endtDate, startDate);
 //        System.out.println("Number of days between the start date : " + endtDate + " and end date : " + dateString
 //                + " is  ==> " + range);
+    }else
+        {
+            return 0;
+        }
     }
     /**
      * returns a string containing the current date in the format DD-MM-YYYY

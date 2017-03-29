@@ -5,6 +5,7 @@
  */
 package Halen3.GUI.TV;
 
+import Halen3.GUI.Film.FilmGUI;
 import Halen3.GUI.GUIBase;
 import static Halen3.GUI.GUIBase.tertiary;
 import static Halen3.GUI.TV.TvGUI.moveToFolderText;
@@ -14,7 +15,6 @@ import static Halen3.GUI.TV.TvGUI.save;
 import static Halen3.GUI.TV.TvGUI.search;
 import static Halen3.GUI.TV.TvGUI.delete;
 import static Halen3.GUI.TV.TvGUI.update;
-
 import static Halen3.GUI.TV.TvGUI.run;
 import static Halen3.GUI.TV.TvGUI.searchForText;
 import static Halen3.GUI.TV.TvGUI.searchInFolderText;
@@ -24,8 +24,8 @@ import static Halen3.GUI.TV.TvGUI.episodeListEmptyPanel;
 import static Halen3.GUI.TV.TvGUI.episodeListScroll;
 import static Halen3.GUI.TV.TvGUI.rulesListPanel;
 import static Halen3.GUI.TV.TvGUI.rulesScroll;
-import static Halen3.GUI.TV.TvGUI.tvPanel;
 import Halen3.GUI.RuleManager;
+import static Halen3.GUI.TV.TvGUI.tvPanel;
 import Halen3.IO.FileManager;
 import Halen3.Retrievers.TvShows.DownloadNewEpisodes;
 import static Halen3.Retrievers.TvShows.Trakt.UpdateTraktData.currentlyUpdatingTVRules;

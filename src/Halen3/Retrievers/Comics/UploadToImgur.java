@@ -25,6 +25,11 @@ import org.apache.xerces.impl.dv.util.Base64;
  */
 public class UploadToImgur
 {
+    
+    public static void main(String args[]) throws IOException
+    {
+        System.out.println(uploadImageToImgurAndGetImageURL("C:\\Users\\TAIBHSE\\Documents\\NetBeansProjects\\Halen\\build\\graphics\\comic-book-covers\\Cyberforce Strykeforce Opposing Forces.png"));
+    }
     public static String uploadImageToImgurAndGetImageURL(String pathToImage) throws MalformedURLException, IOException
     {
         URL url;
@@ -49,7 +54,7 @@ public class UploadToImgur
     conn.setDoOutput(true);
     conn.setDoInput(true);
     conn.setRequestMethod("POST");
-    conn.setRequestProperty("Authorization", "Client-ID " + "240124a4ac02c34");
+    conn.setRequestProperty("Authorization", "Client-ID " +  "cf90665bf4a7546");// old id "240124a4ac02c34");
     conn.setRequestMethod("POST");
     conn.setRequestProperty("Content-Type",
             "application/x-www-form-urlencoded");
