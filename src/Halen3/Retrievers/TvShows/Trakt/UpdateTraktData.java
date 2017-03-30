@@ -97,6 +97,10 @@ public class UpdateTraktData
                             // System.out.println(updated.getItem(0));
                             //Collections.sort(list);
                             //new episodes or season added
+                            
+                          //  System.out.println("original: " + original.getItemCount());
+                         //   System.out.println("updated: " + updated.getItemCount());
+                            
                             if (original.getItemCount() < updated.getItemCount())
                             {
 

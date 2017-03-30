@@ -48,7 +48,7 @@ public class TvTraktParser
                 .setJavaScriptEnabled(false);
         
         
-        webClient.getOptions().setRedirectEnabled(false);
+        webClient.getOptions().setRedirectEnabled(true); //was false
 
         java.util.logging.Logger.getLogger(
                 "com.gargoylesoftware").setLevel(java.util.logging.Level.OFF); /* comment out to turn off annoying htmlunit warnings */
@@ -69,6 +69,7 @@ public class TvTraktParser
             
             try
             {
+              //  System.out.println("trying: " + url + "/seasons/" + i);
             page = webClient.getPage(url + "/seasons/" + i);  //was XmlPage
             html = page.asXml();
 
@@ -105,7 +106,7 @@ public class TvTraktParser
             
             }catch(FailingHttpStatusCodeException e)
             {
-                
+                System.out.println(e);
             }
 
         }
