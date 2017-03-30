@@ -495,7 +495,7 @@ public class GUIBase
          film = new JButton();
         // film.setFont(film.getFont().deriveFont(Font.BOLD));
         film.setContentAreaFilled(false);
-        film.setOpaque(true);
+        film.setOpaque(false);
         film.setFocusPainted(false);
         film.setSize(frame.getWidth() / 13, frame.getWidth() / 13);
         ImageIcon m = new ImageIcon(color(tertiary, "Resources/metro/MenuSelectionButtons/film-normal.png"));

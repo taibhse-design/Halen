@@ -19,7 +19,7 @@ echo.
 echo #####################################################################
 pause
 echo.
-for /R "C:\Users\brenn\Documents\NetBeansProjects\Halen\dist\" %%F IN (*.jar) DO Echo %%F
+for /R "C:\Users\TAIBHSE\Documents\NetBeansProjects\Halen\dist\" %%F IN (*.jar) DO Echo %%F
 echo.
 echo Find project jar above (first line), ensure new deployed version 
 echo number is higher. numbering format is x1.x2.x3 where
@@ -31,14 +31,14 @@ echo #####################################################################
 set /p version="Enter build version number (keep format x1.x2.x3): "
 echo.
 echo %version%
-ren "C:\Users\brenn\Documents\NetBeansProjects\Halen\dist\*.jar" "Halen %version%.jar"
+ren "C:\Users\TAIBHSE\Documents\NetBeansProjects\Halen\dist\*.jar" "Halen %version%.jar"
 echo.
 set /p changes="List changes/updates made from previous version: "
 echo.
-REM ROBOCOPY "C:\Users\brenn\Documents\NetBeansProjects\Halen\dist\" "C:\Users\brenn\OneDrive\Halen Releases" *.* /PURGE /S /NP /ZB /R:5 /TS /FP
-Del "C:\Users\brenn\Documents\NetBeansProjects\Halen\dist\README.TXT"
+REM ROBOCOPY "C:\Users\TAIBHSE\Documents\NetBeansProjects\Halen\dist\" "C:\Users\TAIBHSE\OneDrive\Halen Releases" *.* /PURGE /S /NP /ZB /R:5 /TS /FP
+Del "C:\Users\TAIBHSE\Documents\NetBeansProjects\Halen\dist\README.TXT"
 
-git add C:\Users\brenn\Documents\NetBeansProjects\Halen\dist\*
+git add C:\Users\TAIBHSE\Documents\NetBeansProjects\Halen\dist\*
 git commit -m "%changes%"
 git push origin master
 
@@ -49,9 +49,9 @@ REM rename current active jar on server to backup
 ren "\\SERVER-TAIBHSE\Users\taibhse\Desktop\portables\MyPrograms\Halen\*.jar" "*.jar.backup"
 
 REM copy everything in the dist folder to the server
-copy "C:\Users\brenn\Documents\NetBeansProjects\Halen\dist\*" "\\SERVER-TAIBHSE\Users\taibhse\Desktop\portables\MyPrograms\Halen"
+copy "C:\Users\TAIBHSE\Documents\NetBeansProjects\Halen\dist\*" "\\SERVER-TAIBHSE\Users\taibhse\Desktop\portables\MyPrograms\Halen"
 REM copy library files over
-copy "C:\Users\brenn\Documents\NetBeansProjects\Halen\dist\lib\*" "\\SERVER-TAIBHSE\Users\taibhse\Desktop\portables\MyPrograms\Halen\lib\"
+copy "C:\Users\TAIBHSE\Documents\NetBeansProjects\Halen\dist\lib\*" "\\SERVER-TAIBHSE\Users\taibhse\Desktop\portables\MyPrograms\Halen\lib\"
 
 echo #####################################################################
 echo DEPLOYMENT COMPLETE - pushed to github and deployed on server

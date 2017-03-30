@@ -86,7 +86,7 @@ public class FilmFanartDownloader
                 FileOutputStream fos = new FileOutputStream(FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png");
                 fos.write(response);
                 fos.close();
-                imagePath = FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
+                imagePath =  "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
                 break;
             }else if (value.attr("href").contains("clearlogo"))
             {
@@ -108,7 +108,7 @@ public class FilmFanartDownloader
                 FileOutputStream fos = new FileOutputStream(FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png");
                 fos.write(response);
                 fos.close();
-                imagePath = FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
+                imagePath =  "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
                 break;
             }else if (value.attr("href").contains("hdclearart"))
             {
@@ -130,7 +130,7 @@ public class FilmFanartDownloader
                 FileOutputStream fos = new FileOutputStream(FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png");
                 fos.write(response);
                 fos.close();
-                imagePath = FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
+                imagePath =  "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
                 break;
             }else if (value.attr("href").contains("tvthumb"))
             {
@@ -152,7 +152,7 @@ public class FilmFanartDownloader
                 FileOutputStream fos = new FileOutputStream(FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png");
                 fos.write(response);
                 fos.close();
-                imagePath = FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
+                imagePath =  "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
                 break;
             }else  if (value.attr("href").contains("hdmovielogo"))
             {
@@ -174,7 +174,7 @@ public class FilmFanartDownloader
                 FileOutputStream fos = new FileOutputStream(FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png");
                 fos.write(response);
                 fos.close();
-                imagePath = FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
+                imagePath =  "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
                 break;
             }else  if (value.attr("href").contains("hdmovieclearart"))
             {
@@ -196,7 +196,7 @@ public class FilmFanartDownloader
                 FileOutputStream fos = new FileOutputStream(FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png");
                 fos.write(response);
                 fos.close();
-                imagePath = FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
+                imagePath =  "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
                 break;
             }else if (value.attr("href").contains("hdmovieclearart"))
             {
@@ -218,7 +218,7 @@ public class FilmFanartDownloader
                 FileOutputStream fos = new FileOutputStream(FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png");
                 fos.write(response);
                 fos.close();
-                imagePath = FileManager.launchPath() + "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
+                imagePath =  "\\graphics\\film-logos\\"+ value.attr("href").substring(value.attr("href").lastIndexOf("/")+1, value.attr("href").lastIndexOf("-")).replace("-", " ") + ".png";
                 break;
             }
             

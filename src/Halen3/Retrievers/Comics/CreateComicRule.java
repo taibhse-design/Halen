@@ -210,13 +210,13 @@ public class CreateComicRule
 
                   //  ImageIO.write(dst, "png", new File(FileManager.launchPath() + "\\graphics\\comic-book-covers\\" + seriesTitle.replaceAll("[^a-zA-Z0-9. -]", " ").replaceAll("\\s+", " ").trim() + ".png"));
 
-                    imageURL = FileManager.launchPath() + "\\graphics\\comic-book-covers\\" + seriesTitle.replaceAll("[^a-zA-Z0-9.-]", " ").replaceAll("\\s+", " ").trim() + ".png";
-                     FileManager.trimWhiteSpaceFromImage(imageURL);
+                    imageURL = "\\graphics\\comic-book-covers\\" + seriesTitle.replaceAll("[^a-zA-Z0-9.-]", " ").replaceAll("\\s+", " ").trim() + ".png";
+                     FileManager.trimWhiteSpaceFromImage(FileManager.launchPath() + imageURL);
                     ColorCmd.println("Image URL:  " + imageURL, fgYellowBgWhite);
                     
                     try
                     {
-                    imgurURL = UploadToImgur.uploadImageToImgurAndGetImageURL(imageURL);
+                    imgurURL = UploadToImgur.uploadImageToImgurAndGetImageURL(FileManager.launchPath() + imageURL);
                     ColorCmd.println("Imgur URL:  " + imgurURL, fgYellowBgWhite);
                     }catch(IOException e)
                     {

@@ -7,6 +7,7 @@ package Halen3.GUI.Settings;
 
 import Halen3.GUI.GUIBase;
 import static Halen3.GUI.GUIBase.tertiary;
+import static Halen3.GUI.Settings.SettingsGUI.bypassFolderValidationOnRuleSaveButton;
 import static Halen3.GUI.Settings.SettingsGUI.chromeDriverExeText;
 import static Halen3.GUI.Settings.SettingsGUI.magnetHandlerText;
 import static Halen3.GUI.Settings.SettingsGUI.portableChromeExeText;
@@ -292,6 +293,108 @@ public class SettingsGUIControls
             }
         });
 
+         bypassFolderValidationOnRuleSaveButton.addMouseListener(new MouseListener()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+
+                if (GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+                {
+                    GlobalSharedVariables.bypassFolderValidationOnRuleSave = "false";
+
+                    ImageIcon s = new ImageIcon(GUIBase.color(tertiary, "Resources/metro/checkBox/unchecked.png"));
+                    ImageIcon ss = new ImageIcon(s.getImage().getScaledInstance(bypassFolderValidationOnRuleSaveButton.getWidth(), bypassFolderValidationOnRuleSaveButton.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                    bypassFolderValidationOnRuleSaveButton.setIcon(ss);
+                } else
+                {
+                    GlobalSharedVariables.bypassFolderValidationOnRuleSave = "true";
+                      ImageIcon s = new ImageIcon(GUIBase.color(tertiary, "Resources/metro/checkBox/checked.png"));
+                    ImageIcon ss = new ImageIcon(s.getImage().getScaledInstance(bypassFolderValidationOnRuleSaveButton.getWidth(), bypassFolderValidationOnRuleSaveButton.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                    bypassFolderValidationOnRuleSaveButton.setIcon(ss);
+                }
+
+              //  chromeDriverExeText.setText(SaveSettings.selectChromeDriver(chromeDriverExeText.getText()));
+                // try
+                //  {
+                //   Main.setSettings();
+                //    magnetHandlerText.setText(FileManager.returnTag("handler", //FileManager.readFile(FileManager.launchPath()+"\\settings.xml").getItem(0)));
+              //  } catch (FileNotFoundException ex)
+                //   {
+                //      Logger.getLogger(SettingsGUIControls.class.getName()).log(Level.SEVERE, null, ex);
+                //   }
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e)
+            {
+
+//                if(GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+//                {
+//                      ImageIcon s = new ImageIcon(GUIBase.color(tertiary, "Resources/metro/checkBox/unchecked.png"));
+//        ImageIcon ss = new ImageIcon(s.getImage().getScaledInstance(bypassFolderValidationOnRuleSaveButton.getWidth(), bypassFolderValidationOnRuleSaveButton.getHeight(), java.awt.Image.SCALE_DEFAULT));
+//        bypassFolderValidationOnRuleSaveButton.setIcon(ss);
+//        
+//                }else
+//                {
+//                     ImageIcon s = new ImageIcon(GUIBase.color(tertiary, "Resources/metro/checkBox/checked.png"));
+//        ImageIcon ss = new ImageIcon(s.getImage().getScaledInstance(bypassFolderValidationOnRuleSaveButton.getWidth(), bypassFolderValidationOnRuleSaveButton.getHeight(), java.awt.Image.SCALE_DEFAULT));
+//        bypassFolderValidationOnRuleSaveButton.setIcon(ss);
+//                }
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e)
+            {
+//                    if(GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+//                {
+//                      ImageIcon s = new ImageIcon(GUIBase.color(tertiary, "Resources/metro/checkBox/unchecked.png"));
+//        ImageIcon ss = new ImageIcon(s.getImage().getScaledInstance(bypassFolderValidationOnRuleSaveButton.getWidth(), bypassFolderValidationOnRuleSaveButton.getHeight(), java.awt.Image.SCALE_DEFAULT));
+//        bypassFolderValidationOnRuleSaveButton.setIcon(ss);
+//        
+//                }else
+//                {
+//                     ImageIcon s = new ImageIcon(GUIBase.color(tertiary, "Resources/metro/checkBox/checked.png"));
+//        ImageIcon ss = new ImageIcon(s.getImage().getScaledInstance(bypassFolderValidationOnRuleSaveButton.getWidth(), bypassFolderValidationOnRuleSaveButton.getHeight(), java.awt.Image.SCALE_DEFAULT));
+//        bypassFolderValidationOnRuleSaveButton.setIcon(ss);
+//                }
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e)
+            {
+                if (GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+                {
+                    ImageIcon s = new ImageIcon(GUIBase.color(tertiary, "Resources/metro/checkBox/checkedHover.png"));
+                    ImageIcon ss = new ImageIcon(s.getImage().getScaledInstance(bypassFolderValidationOnRuleSaveButton.getWidth(), bypassFolderValidationOnRuleSaveButton.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                    bypassFolderValidationOnRuleSaveButton.setIcon(ss);
+
+                } else
+                {
+                    ImageIcon s = new ImageIcon(GUIBase.color(tertiary, "Resources/metro/checkBox/uncheckedHover.png"));
+                    ImageIcon ss = new ImageIcon(s.getImage().getScaledInstance(bypassFolderValidationOnRuleSaveButton.getWidth(), bypassFolderValidationOnRuleSaveButton.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                    bypassFolderValidationOnRuleSaveButton.setIcon(ss);
+                }
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e)
+            {
+                if (GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+                {
+                    ImageIcon s = new ImageIcon(GUIBase.color(tertiary, "Resources/metro/checkBox/checked.png"));
+                    ImageIcon ss = new ImageIcon(s.getImage().getScaledInstance(bypassFolderValidationOnRuleSaveButton.getWidth(), bypassFolderValidationOnRuleSaveButton.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                    bypassFolderValidationOnRuleSaveButton.setIcon(ss);
+
+                } else
+                {
+                    ImageIcon s = new ImageIcon(GUIBase.color(tertiary, "Resources/metro/checkBox/unchecked.png"));
+                    ImageIcon ss = new ImageIcon(s.getImage().getScaledInstance(bypassFolderValidationOnRuleSaveButton.getWidth(), bypassFolderValidationOnRuleSaveButton.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                    bypassFolderValidationOnRuleSaveButton.setIcon(ss);
+                }
+            }
+        });
+         
         save.addMouseListener(new MouseListener()
         {
             @Override

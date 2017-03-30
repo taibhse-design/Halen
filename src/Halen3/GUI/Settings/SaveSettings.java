@@ -143,9 +143,19 @@ public class SaveSettings
                        GlobalSharedVariables.magnetHandler = magnetHandlerText.getText().trim();
                       GlobalSharedVariables.email = notifyEmailText.getText();
 
+                      if(GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals(""))
+                      {
+                          GlobalSharedVariables.bypassFolderValidationOnRuleSave = "false";
+                      }
+                      
+                      if(GlobalSharedVariables.testing.equals(""))
+                      {
+                          GlobalSharedVariables.testing = "false";
+                      }
+                      
                    // handler = fileChooser.getSelectedFile().toString();
                     PrintWriter out = new PrintWriter(FileManager.launchPath() + "/settings.xml");
-                    out.println( FileManager.makeTag("handler", GlobalSharedVariables.magnetHandler) + FileManager.makeTag("email", GlobalSharedVariables.email) + FileManager.makeTag("chromedriverexe", GlobalSharedVariables.pathToChromeDriver) + FileManager.makeTag("portablechromeexe", GlobalSharedVariables.pathToChromePortable) + FileManager.makeTag("testing", GlobalSharedVariables.testing));
+                    out.println( FileManager.makeTag("handler", GlobalSharedVariables.magnetHandler) + FileManager.makeTag("email", GlobalSharedVariables.email) + FileManager.makeTag("chromedriverexe", GlobalSharedVariables.pathToChromeDriver) + FileManager.makeTag("portablechromeexe", GlobalSharedVariables.pathToChromePortable) + FileManager.makeTag("testing", GlobalSharedVariables.testing)  + FileManager.makeTag("bypassFolderValidationOnRuleSave", GlobalSharedVariables.bypassFolderValidationOnRuleSave));
                     out.close();
                 } catch (NullPointerException ex)
                 {

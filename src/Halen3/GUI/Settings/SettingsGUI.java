@@ -35,8 +35,8 @@ public class SettingsGUI
 {
 
     public static JPanel settingsPanel;
-    public static JButton testingButton, selectMagnetHandler, selectPortableChromeExe, selectChromeDriverExe, save;
-    public static JTextField testingExplanationText, notifyEmailText, notifyEmail, magnetHandler, magnetHandlerText, portableChromeExe, portableChromeExeText, chromeDriverExe, chromeDriverExeText;
+    public static JButton bypassFolderValidationOnRuleSaveButton, testingButton, selectMagnetHandler, selectPortableChromeExe, selectChromeDriverExe, save;
+    public static JTextField bypassFolderValidationOnRuleSaveExplanationText, testingExplanationText, notifyEmailText, notifyEmail, magnetHandler, magnetHandlerText, portableChromeExe, portableChromeExeText, chromeDriverExe, chromeDriverExeText;
 
     public static void addSettingsPanel(int width, int height, int x, int y)
     {
@@ -226,6 +226,39 @@ public class SettingsGUI
         testingButton.setLocation(testingExplanationText.getLocation().x + testingExplanationText.getWidth() + (testingButton.getWidth() / 2), testingExplanationText.getY());
         testingButton.setVisible(true);
         
+                bypassFolderValidationOnRuleSaveExplanationText = new JTextField(20);                                                           
+        bypassFolderValidationOnRuleSaveExplanationText.setText("              Check Box to allow Halen to skip folder validations on rule save.");
+        bypassFolderValidationOnRuleSaveExplanationText.setHorizontalAlignment(SwingConstants.LEFT);
+        bypassFolderValidationOnRuleSaveExplanationText.setEditable(false);
+        bypassFolderValidationOnRuleSaveExplanationText.setFont(bypassFolderValidationOnRuleSaveExplanationText.getFont().deriveFont(Font.BOLD));
+        bypassFolderValidationOnRuleSaveExplanationText.setForeground(primary);
+        bypassFolderValidationOnRuleSaveExplanationText.setBackground(secondary);
+        bypassFolderValidationOnRuleSaveExplanationText.setBorder(null);
+        bypassFolderValidationOnRuleSaveExplanationText.setSize((int) (settingsPanel.getWidth() / 2.8), settingsPanel.getHeight() / 15);
+        bypassFolderValidationOnRuleSaveExplanationText.setLocation(testingExplanationText.getX(), (int) (testingExplanationText.getY() + (testingExplanationText.getHeight() * 1.2)));
+        bypassFolderValidationOnRuleSaveExplanationText.setVisible(true);
+        
+          bypassFolderValidationOnRuleSaveButton = new JButton();
+        // save.setFont(save.getFont().deriveFont(Font.BOLD));
+        bypassFolderValidationOnRuleSaveButton.setContentAreaFilled(false);
+        bypassFolderValidationOnRuleSaveButton.setOpaque(false);
+        bypassFolderValidationOnRuleSaveButton.setFocusPainted(false);
+        bypassFolderValidationOnRuleSaveButton.setSize(chromeDriverExe.getHeight(), chromeDriverExe.getHeight());
+         if (GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+                {
+                    ImageIcon t = new ImageIcon(GUIBase.color(tertiary, "Resources/metro/checkBox/checked.png"));
+                    ImageIcon ts = new ImageIcon(t.getImage().getScaledInstance(bypassFolderValidationOnRuleSaveButton.getWidth(), bypassFolderValidationOnRuleSaveButton.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                    bypassFolderValidationOnRuleSaveButton.setIcon(ts);
+
+                } else
+                {
+                    ImageIcon t = new ImageIcon(GUIBase.color(tertiary, "Resources/metro/checkBox/unchecked.png"));
+                    ImageIcon ts = new ImageIcon(t.getImage().getScaledInstance(bypassFolderValidationOnRuleSaveButton.getWidth(), bypassFolderValidationOnRuleSaveButton.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                    bypassFolderValidationOnRuleSaveButton.setIcon(ts);
+                }
+        bypassFolderValidationOnRuleSaveButton.setLocation(bypassFolderValidationOnRuleSaveExplanationText.getLocation().x + bypassFolderValidationOnRuleSaveExplanationText.getWidth() + (bypassFolderValidationOnRuleSaveButton.getWidth() / 2), bypassFolderValidationOnRuleSaveExplanationText.getY());
+        bypassFolderValidationOnRuleSaveButton.setVisible(true);
+        
         save = new JButton();
         // save.setFont(save.getFont().deriveFont(Font.BOLD));
         save.setContentAreaFilled(false);
@@ -235,9 +268,11 @@ public class SettingsGUI
         ImageIcon z = new ImageIcon(GUIBase.color(tertiary, "Resources/metro/buttons/save.png"));
         ImageIcon zs = new ImageIcon(z.getImage().getScaledInstance(save.getWidth(), save.getHeight(), java.awt.Image.SCALE_DEFAULT));
         save.setIcon(zs);
-        save.setLocation(testingExplanationText.getLocation().x, testingExplanationText.getY() + testingExplanationText.getHeight());
+        save.setLocation(bypassFolderValidationOnRuleSaveExplanationText.getLocation().x, bypassFolderValidationOnRuleSaveExplanationText.getY() + bypassFolderValidationOnRuleSaveExplanationText.getHeight());
         save.setVisible(true);
 
+        settingsPanel.add(bypassFolderValidationOnRuleSaveExplanationText);
+        settingsPanel.add(bypassFolderValidationOnRuleSaveButton);
         settingsPanel.add(testingButton);
         settingsPanel.add(testingExplanationText);
         settingsPanel.add(save);

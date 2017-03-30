@@ -25,7 +25,9 @@ public class GlobalSharedVariables
     public static String email = FileManager.returnTag("email", FileManager.readFile(FileManager.launchPath() + "\\settings.xml").getItem(0));
     public static String emails[] = email.split(", ");
     public static String testing = FileManager.returnTag("testing", FileManager.readFile(FileManager.launchPath() + "\\settings.xml").getItem(0));
+    public static String bypassFolderValidationOnRuleSave = FileManager.returnTag("bypassFolderValidationOnRuleSave", FileManager.readFile(FileManager.launchPath() + "\\settings.xml").getItem(0));
 
+    
     public static ChromeDriver driver;
 
     public static boolean moveDriverOffScreen = false;
@@ -54,6 +56,9 @@ public class GlobalSharedVariables
         } else if (testing.trim().equals(""))
         {
             testing = "false";
+        } else if (bypassFolderValidationOnRuleSave.trim().equals(""))
+        {
+            bypassFolderValidationOnRuleSave = "false";
         }
 
         if (check == false)

@@ -14,6 +14,7 @@ import static Halen3.GUI.Film.FilmGUI.refreshFilmPanel;
 import Halen3.GUI.TV.TvGUI;
 import static Halen3.GUI.TV.TvGUI.refreshTvPanel;
 import Halen3.IO.FileManager;
+import Halen3.IO.GlobalSharedVariables;
 import java.awt.List;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -96,7 +97,7 @@ public class RuleManager
                 if (!TvGUI.searchInFolderText.getText().equals("") | !TvGUI.searchInFolderText.getText().equals("..."))
                 {
 
-                    if (new File(TvGUI.searchInFolderText.getText()).exists())
+                    if (new File(TvGUI.searchInFolderText.getText()).exists() | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
                     {
                         //tag - source  - new value
                         updateLine = FileManager.updateTag("searchInFolder", updateLine, TvGUI.searchInFolderText.getText());
@@ -113,7 +114,7 @@ public class RuleManager
                 if (!TvGUI.moveToFolderText.getText().equals("") | !TvGUI.moveToFolderText.getText().equals("..."))
                 {
 
-                    if (new File(TvGUI.moveToFolderText.getText()).exists())
+                    if (new File(TvGUI.moveToFolderText.getText()).exists() | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
                     {
                         //tag - source  - new value
                         updateLine = FileManager.updateTag("moveToFolder", updateLine, TvGUI.moveToFolderText.getText());
@@ -147,6 +148,23 @@ public class RuleManager
                     message = "DATA INVALID - please provide valid search text!";
                 }
 
+                //offer warning that folder checks on search in and move to folders 
+                //are disabled, proceed with caution as this can cause drive damage
+                if (GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+                {
+
+                    String[] options = new String[]
+                    {
+                        "Yes Proceed", "No Don't"
+                    };
+                    int response = JOptionPane.showOptionDialog(null, "<html><body><p style='width: 500px;'>Warning - Code to check that set search in folder and move to folders both exist has been disabled. Do you wish to proceed with saving this rule? Be aware that saving a rule with invalid set folders can cause damae to files on this drive as halen may move files unintentionally or may mix files into the wrong location.</p></body></html>", "CRITICAL WARNING", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+
+                    if (response == 1)
+                    {
+                        message = "DATA INVALID - please provide valid search text!";
+
+                    }
+                }
                 //#############################################################################
                 //                              save out rule
                 //#############################################################################
@@ -253,7 +271,7 @@ public class RuleManager
                 if (!TvGUI.searchInFolderText.getText().equals("") | !TvGUI.searchInFolderText.getText().equals("..."))
                 {
 
-                    if (new File(TvGUI.searchInFolderText.getText()).exists())
+                    if (new File(TvGUI.searchInFolderText.getText()).exists() | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
                     {
                         //tag - source  - new value
                         tags = FileManager.makeTag("searchInFolder", TvGUI.searchInFolderText.getText());
@@ -270,7 +288,7 @@ public class RuleManager
                 if (!TvGUI.moveToFolderText.getText().equals("") | !TvGUI.moveToFolderText.getText().equals("..."))
                 {
 
-                    if (new File(TvGUI.moveToFolderText.getText()).exists())
+                    if (new File(TvGUI.moveToFolderText.getText()).exists() | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
                     {
                         //tag - source  - new value
                         tags = tags + FileManager.makeTag("moveToFolder", TvGUI.moveToFolderText.getText());
@@ -303,6 +321,23 @@ public class RuleManager
                     message = "DATA INVALID - please provide valid search text!";
                 }
 
+                //offer warning that folder checks on search in and move to folders 
+                //are disabled, proceed with caution as this can cause drive damage
+                if (GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+                {
+
+                    String[] options = new String[]
+                    {
+                        "Yes Proceed", "No Don't"
+                    };
+                    int response = JOptionPane.showOptionDialog(null, "<html><body><p style='width: 500px;'>Warning - Code to check that set search in folder and move to folders both exist has been disabled. Do you wish to proceed with saving this rule? Be aware that saving a rule with invalid set folders can cause damae to files on this drive as halen may move files unintentionally or may mix files into the wrong location.</p></body></html>", "CRITICAL WARNING", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+
+                    if (response == 1)
+                    {
+                        message = "DATA INVALID - please provide valid search text!";
+
+                    }
+                }
                 //#############################################################################
                 //                              save out rule
                 //#############################################################################
@@ -344,8 +379,8 @@ public class RuleManager
             }
         }
     }
-    
-        public static void saveFilmRule(String ruleName)
+
+    public static void saveFilmRule(String ruleName)
     {
         //########################################################################
         //                   update existing rule
@@ -411,7 +446,7 @@ public class RuleManager
                 if (!FilmGUI.searchInFolderText.getText().equals("") | !FilmGUI.searchInFolderText.getText().equals("..."))
                 {
 
-                    if (new File(FilmGUI.searchInFolderText.getText()).exists())
+                    if (new File(FilmGUI.searchInFolderText.getText()).exists() | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
                     {
                         //tag - source  - new value
                         updateLine = FileManager.updateTag("searchInFolder", updateLine, FilmGUI.searchInFolderText.getText());
@@ -428,7 +463,7 @@ public class RuleManager
                 if (!FilmGUI.moveToFolderText.getText().equals("") | !FilmGUI.moveToFolderText.getText().equals("..."))
                 {
 
-                    if (new File(FilmGUI.moveToFolderText.getText()).exists())
+                    if (new File(FilmGUI.moveToFolderText.getText()).exists() | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
                     {
                         //tag - source  - new value
                         updateLine = FileManager.updateTag("moveToFolder", updateLine, FilmGUI.moveToFolderText.getText());
@@ -460,6 +495,24 @@ public class RuleManager
                 } else
                 {
                     message = "DATA INVALID - please provide valid search text!";
+                }
+
+                //offer warning that folder checks on search in and move to folders 
+                //are disabled, proceed with caution as this can cause drive damage
+                if (GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+                {
+
+                    String[] options = new String[]
+                    {
+                        "Yes Proceed", "No Don't"
+                    };
+                    int response = JOptionPane.showOptionDialog(null, "<html><body><p style='width: 500px;'>Warning - Code to check that set search in folder and move to folders both exist has been disabled. Do you wish to proceed with saving this rule? Be aware that saving a rule with invalid set folders can cause damae to files on this drive as halen may move files unintentionally or may mix files into the wrong location.</p></body></html>", "CRITICAL WARNING", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+
+                    if (response == 1)
+                    {
+                        message = "DATA INVALID - please provide valid search text!";
+
+                    }
                 }
 
                 //#############################################################################
@@ -568,7 +621,7 @@ public class RuleManager
                 if (!FilmGUI.searchInFolderText.getText().equals("") | !FilmGUI.searchInFolderText.getText().equals("..."))
                 {
 
-                    if (new File(FilmGUI.searchInFolderText.getText()).exists())
+                    if (new File(FilmGUI.searchInFolderText.getText()).exists() | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
                     {
                         //tag - source  - new value
                         tags = FileManager.makeTag("searchInFolder", FilmGUI.searchInFolderText.getText());
@@ -585,7 +638,7 @@ public class RuleManager
                 if (!FilmGUI.moveToFolderText.getText().equals("") | !FilmGUI.moveToFolderText.getText().equals("..."))
                 {
 
-                    if (new File(FilmGUI.moveToFolderText.getText()).exists())
+                    if (new File(FilmGUI.moveToFolderText.getText()).exists() | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
                     {
                         //tag - source  - new value
                         tags = tags + FileManager.makeTag("moveToFolder", FilmGUI.moveToFolderText.getText());
@@ -616,6 +669,24 @@ public class RuleManager
                 } else
                 {
                     message = "DATA INVALID - please provide valid search text!";
+                }
+
+                //offer warning that folder checks on search in and move to folders 
+                //are disabled, proceed with caution as this can cause drive damage
+                if (GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+                {
+
+                    String[] options = new String[]
+                    {
+                        "Yes Proceed", "No Don't"
+                    };
+                    int response = JOptionPane.showOptionDialog(null, "<html><body><p style='width: 500px;'>Warning - Code to check that set search in folder and move to folders both exist has been disabled. Do you wish to proceed with saving this rule? Be aware that saving a rule with invalid set folders can cause damae to files on this drive as halen may move files unintentionally or may mix files into the wrong location.</p></body></html>", "CRITICAL WARNING", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+
+                    if (response == 1)
+                    {
+                        message = "DATA INVALID - please provide valid search text!";
+
+                    }
                 }
 
                 //#############################################################################
@@ -715,7 +786,7 @@ public class RuleManager
                 if (!ComicsGUI.DownloadToFolderText.getText().equals("") | !ComicsGUI.DownloadToFolderText.getText().equals("..."))
                 {
 
-                    if (new File(ComicsGUI.DownloadToFolderText.getText()).exists())
+                    if (new File(ComicsGUI.DownloadToFolderText.getText()).exists() | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
                     {
                         //tag - source  - new value
                         updateLine = FileManager.updateTag("downloadTo", updateLine, ComicsGUI.DownloadToFolderText.getText());
@@ -734,6 +805,24 @@ public class RuleManager
                 } else
                 {
                     message = "DATA INVALID - please provide a valid folder to download comics too!";
+                }
+
+                //offer warning that folder checks on search in and move to folders 
+                //are disabled, proceed with caution as this can cause drive damage
+                if (GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+                {
+
+                    String[] options = new String[]
+                    {
+                        "Yes Proceed", "No Don't"
+                    };
+                    int response = JOptionPane.showOptionDialog(null, "<html><body><p style='width: 500px;'>Warning - Code to check that set search in folder and move to folders both exist has been disabled. Do you wish to proceed with saving this rule? Be aware that saving a rule with invalid set folders can cause damae to files on this drive as halen may move files unintentionally or may mix files into the wrong location.</p></body></html>", "CRITICAL WARNING", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+
+                    if (response == 1)
+                    {
+                        message = "DATA INVALID - please provide valid search text!";
+
+                    }
                 }
 
                 //#############################################################################
@@ -808,7 +897,7 @@ public class RuleManager
                     if (ComicsGUI.comicURLInput.getText().contains("readcomiconline.to/Comic/") | ComicsGUI.comicURLInput.getText().contains("kissmanga.com/Manga/"))
                     {
                         //tag - source  - new value
-                        tags = tags + FileManager.makeTag("url", ComicsGUI.comicURLInput.getText());
+                     //   tags = tags + FileManager.makeTag("url", ComicsGUI.comicURLInput.getText());
 
                     } else
                     {
@@ -823,17 +912,17 @@ public class RuleManager
                 if (!ComicsGUI.DownloadToFolderText.getText().equals("") | !ComicsGUI.DownloadToFolderText.getText().equals("..."))
                 {
 
-                    if (new File(ComicsGUI.DownloadToFolderText.getText()).exists())
+                    if (new File(ComicsGUI.DownloadToFolderText.getText()).exists() | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
                     {
                         //tag - source  - new value
-                        tags = tags + FileManager.makeTag("moveToFolder", ComicsGUI.DownloadToFolderText.getText());
+                       // tags = tags + FileManager.makeTag("moveToFolder", ComicsGUI.DownloadToFolderText.getText());
                     } else
                     {
                         new File(ComicsGUI.DownloadToFolderText.getText()).mkdirs();
                         if (new File(ComicsGUI.DownloadToFolderText.getText()).exists())
                         {
                             //tag - source  - new value
-                            tags = tags + FileManager.makeTag("downloadTo", ComicsGUI.DownloadToFolderText.getText());
+                          //  tags = tags + FileManager.makeTag("downloadTo", ComicsGUI.DownloadToFolderText.getText());
                         } else
                         {
                             message = "DATA INVALID - provided download directory does not exist nor can it be created!";
@@ -846,6 +935,23 @@ public class RuleManager
                     message = "DATA INVALID - please provide a valid move to directory directory!";
                 }
 
+                //offer warning that folder checks on search in and move to folders 
+                //are disabled, proceed with caution as this can cause drive damage
+                if (GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+                {
+
+                    String[] options = new String[]
+                    {
+                        "Yes Proceed", "No Don't"
+                    };
+                    int response = JOptionPane.showOptionDialog(null, "<html><body><p style='width: 500px;'>Warning - Code to check that set search in folder and move to folders both exist has been disabled. Do you wish to proceed with saving this rule? Be aware that saving a rule with invalid set folders can cause damae to files on this drive as halen may move files unintentionally or may mix files into the wrong location.</p></body></html>", "CRITICAL WARNING", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+
+                    if (response == 1)
+                    {
+                        message = "DATA INVALID - please provide valid search text!";
+
+                    }
+                }
                 //#############################################################################
                 //                              save out rule
                 //#############################################################################
@@ -943,17 +1049,17 @@ public class RuleManager
 
                 if (!AnimeGUI.searchForText.getText().equals("") | !AnimeGUI.searchForText.getText().equals("..."))
                 {
-                          updateLine = FileManager.updateTag("searchFor", updateLine, AnimeGUI.searchForText.getText());
-                      
-                }else
+                    updateLine = FileManager.updateTag("searchFor", updateLine, AnimeGUI.searchForText.getText());
+
+                } else
                 {
-                         message = "DATA INVALID - please enter search for text!";
-                       
+                    message = "DATA INVALID - please enter search for text!";
+
                 }
                 if (!AnimeGUI.moveToFolderText.getText().equals("") | !AnimeGUI.moveToFolderText.getText().equals("..."))
                 {
 
-                    if (new File(AnimeGUI.moveToFolderText.getText()).exists())
+                    if (new File(AnimeGUI.moveToFolderText.getText()).exists() | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
                     {
                         //tag - source  - new value
                         updateLine = FileManager.updateTag("moveToFolder", updateLine, AnimeGUI.moveToFolderText.getText());
@@ -973,19 +1079,19 @@ public class RuleManager
                 {
                     message = "DATA INVALID - 001 - please provide a valid folder to move anime episodes too!";
                 }
-                
-                 if (!AnimeGUI.searchInFolderText.getText().equals("") | !AnimeGUI.searchInFolderText.getText().equals("..."))
+
+                if (!AnimeGUI.searchInFolderText.getText().equals("") | !AnimeGUI.searchInFolderText.getText().equals("..."))
                 {
 
-                    if (new File(AnimeGUI.searchInFolderText.getText()).exists())
+                    if (new File(AnimeGUI.searchInFolderText.getText()).exists() | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
                     {
                         //tag - source  - new value
                         updateLine = FileManager.updateTag("searchInFolder", updateLine, AnimeGUI.searchInFolderText.getText());
                     } else
                     {
-                       
-                            message = "DATA INVALID - 002 - provided search in path does not exist!";
-                        
+
+                        message = "DATA INVALID - 002 - provided search in path does not exist!";
+
                     }
 
                 } else
@@ -993,6 +1099,23 @@ public class RuleManager
                     message = "DATA INVALID - 001 - please provide a valid search in folder!";
                 }
 
+                //offer warning that folder checks on search in and move to folders 
+                //are disabled, proceed with caution as this can cause drive damage
+                if (GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+                {
+
+                    String[] options = new String[]
+                    {
+                        "Yes Proceed", "No Don't"
+                    };
+                    int response = JOptionPane.showOptionDialog(null, "<html><body><p style='width: 500px;'>Warning - Code to check that set search in folder and move to folders both exist has been disabled. Do you wish to proceed with saving this rule? Be aware that saving a rule with invalid set folders can cause damae to files on this drive as halen may move files unintentionally or may mix files into the wrong location.</p></body></html>", "CRITICAL WARNING", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+
+                    if (response == 1)
+                    {
+                        message = "DATA INVALID - please provide valid search text!";
+
+                    }
+                }
                 //#############################################################################
                 //                              save out rule
                 //#############################################################################
@@ -1080,25 +1203,24 @@ public class RuleManager
 
                 if (!AnimeGUI.searchForText.getText().equals("") && !AnimeGUI.searchForText.getText().equals("..."))
                 {
-                    
-                }else
+
+                } else
                 {
-                     message = "DATA INVALID - search for text cannot be blank!";
- 
-                    
+                    message = "DATA INVALID - search for text cannot be blank!";
+
                 }
                 if (!AnimeGUI.searchForText.getText().equals("") && !AnimeGUI.searchForText.getText().equals("..."))
                 {
-                    
-                }else
+
+                } else
                 {
                     message = "DATA INVALID - please enter search for text!";
                 }
-                
+
                 if (!AnimeGUI.searchInFolderText.getText().equals("") && !AnimeGUI.searchInFolderText.getText().equals("..."))
                 {
 
-                    if (new File(AnimeGUI.searchInFolderText.getText()).exists())
+                    if (new File(AnimeGUI.searchInFolderText.getText()).exists()  | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
                     {
                         //tag - source  - new value
                         // tags = tags + FileManager.makeTag("moveToFolder", ComicsGUI.DownloadToFolderText.getText());
@@ -1117,7 +1239,7 @@ public class RuleManager
                 if (!AnimeGUI.moveToFolderText.getText().equals("") && !AnimeGUI.moveToFolderText.getText().equals("..."))
                 {
 
-                    if (new File(AnimeGUI.moveToFolderText.getText()).exists())
+                    if (new File(AnimeGUI.moveToFolderText.getText()).exists()  | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
                     {
                         //tag - source  - new value
                         // tags = tags + FileManager.makeTag("moveToFolder", ComicsGUI.DownloadToFolderText.getText());
@@ -1140,6 +1262,24 @@ public class RuleManager
                     message = "DATA INVALID - please provide a valid move to directory!";
                 }
 
+                     //offer warning that folder checks on search in and move to folders 
+                //are disabled, proceed with caution as this can cause drive damage
+                if (GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+                {
+
+                    String[] options = new String[]
+                    {
+                        "Yes Proceed", "No Don't"
+                    };
+                    int response = JOptionPane.showOptionDialog(null, "<html><body><p style='width: 500px;'>Warning - Code to check that set search in folder and move to folders both exist has been disabled. Do you wish to proceed with saving this rule? Be aware that saving a rule with invalid set folders can cause damae to files on this drive as halen may move files unintentionally or may mix files into the wrong location.</p></body></html>", "CRITICAL WARNING", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+
+                    if (response == 1)
+                    {
+                        message = "DATA INVALID - please provide valid search text!";
+
+                    }
+                }
+                
                 //#############################################################################
                 //                              save out rule
                 //#############################################################################
@@ -1150,7 +1290,7 @@ public class RuleManager
                     try
                     {
                         //replace line one with updated tags
-                        Halen3.Retrievers.Anime.CreateAnimeRule.saveNewRule(ruleName, AnimeGUI.animeURLInput.getText(), AnimeGUI.moveToFolderText.getText(),AnimeGUI.searchInFolderText.getText(),AnimeGUI.searchForText.getText());                  //.saveNewSeries(ComicsGUI.comicURLInput.getText(), ruleName, ComicsGUI.DownloadToFolderText.getText());
+                        Halen3.Retrievers.Anime.CreateAnimeRule.saveNewRule(ruleName, AnimeGUI.animeURLInput.getText(), AnimeGUI.moveToFolderText.getText(), AnimeGUI.searchInFolderText.getText(), AnimeGUI.searchForText.getText());                  //.saveNewSeries(ComicsGUI.comicURLInput.getText(), ruleName, ComicsGUI.DownloadToFolderText.getText());
                         //where to save rule
 //                        out = new PrintWriter(halen.FileManager.launchPath() + "/rules/tv show/" + ruleName.trim() + ".xml");
 //                        //loop and print lines
@@ -1164,10 +1304,7 @@ public class RuleManager
                     } catch (FileNotFoundException ex)
                     {
                         Logger.getLogger(RuleManager.class.getName()).log(Level.SEVERE, null, ex);
-                    } //finally
-//                    {
-//                        out.close();
-//                    }
+                    } 
 
                 } else
                 {

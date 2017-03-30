@@ -641,11 +641,11 @@ public class ComicsGUI
         //  button.setLocation(x, y);
         //  System.out.println(new File(FileManager.returnTag("imageURL", new Scanner(rulesList[i]).nextLine())));
         //if(new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png")).exists())
-        if (new File(FileManager.returnTag("imageURL", new Scanner(rulesList[i]).nextLine())).exists())
+        if (new File(FileManager.launchPath() + FileManager.returnTag("imageURL", new Scanner(rulesList[i]).nextLine())).exists())
         {
             //  File sourceimage = new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png"));
 
-            File sourceimage = new File(FileManager.returnTag("imageURL", new Scanner(rulesList[i]).nextLine()));
+            File sourceimage = new File(FileManager.launchPath() + FileManager.returnTag("imageURL", new Scanner(rulesList[i]).nextLine()));
 
             Image image = ImageIO.read(sourceimage);
 

@@ -541,11 +541,12 @@ public class TvGUI
 
           //  System.out.println(new File(FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine())).exists());
             //if(new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png")).exists())
-            if (new File(FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine())).exists())
+            if (new File(FileManager.launchPath() + FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine())).exists())
             {
                 //  File sourceimage = new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png"));
 
-                File sourceimage = new File(FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine()));
+                System.out.println(FileManager.launchPath());
+                File sourceimage = new File(FileManager.launchPath() + FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine()));
 
                 Image image = ImageIO.read(sourceimage);
 

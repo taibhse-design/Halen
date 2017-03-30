@@ -55,6 +55,7 @@ public class GUIBaseControls
                 theme.setOpaque(true);
                 theme.setBackground(secondary);
                 tvPanel.setVisible(false);
+                filmPanel.setVisible(false);
                 comicPanel.setVisible(false);
                 animePanel.setVisible(false);
                 settingsPanel.setVisible(false);
@@ -129,6 +130,7 @@ public class GUIBaseControls
                     TvGUI.refreshTvPanel();
                 }
                 tvPanel.setVisible(true);
+                filmPanel.setVisible(false);
                 comicPanel.setVisible(false);
                 animePanel.setVisible(false);
                 settingsPanel.setVisible(false);
@@ -193,6 +195,7 @@ public class GUIBaseControls
                 }
 
                 tvPanel.setVisible(false);
+                filmPanel.setVisible(false);
                 comicPanel.setVisible(true);
                 animePanel.setVisible(false);
                 settingsPanel.setVisible(false);
@@ -314,6 +317,7 @@ public class GUIBaseControls
                 settings.setBackground(primary);
 
                 tvPanel.setVisible(false);
+                filmPanel.setVisible(false);
                 comicPanel.setVisible(false);
                 animePanel.setVisible(true);
                 settingsPanel.setVisible(false);
@@ -370,6 +374,7 @@ public class GUIBaseControls
                 settings.setBackground(secondary);
 
                 tvPanel.setVisible(false);
+                filmPanel.setVisible(false);
                 comicPanel.setVisible(false);
                 animePanel.setVisible(false);
                 settingsPanel.setVisible(true);

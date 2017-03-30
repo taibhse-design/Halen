@@ -16,7 +16,6 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.List;
 import java.awt.Rectangle;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -640,11 +639,11 @@ public class FilmGUI
         //if(new File(FileManager.launchPath() + "\\rules\\film show\\" + rulesList[i].getName().replace(".xml", ".png")).exists())
         try
         {
-            if (new File(FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine())).exists())
+            if (new File(FileManager.launchPath() + FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine())).exists())
             {
                 //  File sourceimage = new File(FileManager.launchPath() + "\\rules\\film show\\" + rulesList[i].getName().replace(".xml", ".png"));
 
-                File sourceimage = new File(FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine()));
+                File sourceimage = new File(FileManager.launchPath() + FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine()));
 
                 Image image = ImageIO.read(sourceimage);
 
