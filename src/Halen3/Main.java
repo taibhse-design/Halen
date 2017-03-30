@@ -54,7 +54,7 @@ public class Main
      * from any mythology. Name should not be reflected in jar file name. this is 
      * purely for UI.
      */
-    public static String halenVersion = "4.0.1 - AURORA Build - bug fix testing"; 
+    public static String halenVersion = "4.1.1 - AURORA Build"; 
     
     
     public static void main(String args[]) throws IOException, InterruptedException

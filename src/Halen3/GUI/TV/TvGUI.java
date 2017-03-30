@@ -29,6 +29,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.IIOException;
 import javax.imageio.ImageIO;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
@@ -545,16 +546,17 @@ public class TvGUI
             {
                 //  File sourceimage = new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png"));
 
-                System.out.println(FileManager.launchPath());
+              //  System.out.println(FileManager.launchPath());
+             try
+                {
                 File sourceimage = new File(FileManager.launchPath() + FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine()));
 
                 Image image = ImageIO.read(sourceimage);
 
-                try
-                {
+               
                     button.setIcon(new ImageIcon(image.getScaledInstance(-1, rulesPane.getHeight() / 4,
                             java.awt.Image.SCALE_SMOOTH)));
-                } catch (NullPointerException e)
+                } catch (IIOException | NullPointerException e)
                 {
                     button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); //contactList.get(i).getSurruleNameInput() + ", " + contactList.get(i).getGivenName());
 
