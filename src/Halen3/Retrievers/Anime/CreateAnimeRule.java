@@ -15,13 +15,14 @@ public class CreateAnimeRule
 {
     public static void main(String args[]) throws InterruptedException, IOException
     {
-        saveNewRule("Planetarian: Chiisana Hoshi no Yume", "http://deadfishencod.es/Planetarian_Chiisana_Hoshi_no_Yume/", "test", "test", "search for");
+        saveNewRule("attack on titan 2", "https://anilist.co/anime/20958/ShingekinoKyojin2", "testMoveTo", "testSearchIn", "search for", "nyaa search");
     }
-    public static void saveNewRule(String name, String url, String moveTo, String searchIn, String searchFor) throws InterruptedException, IOException
+    public static void saveNewRule(String name, String url, String moveTo, String searchIn, String searchFor, String nyaaSearch) throws InterruptedException, IOException
     {
-        if(url.contains("deadfishencod")) //save deadfish rule
+        if(url.contains("anilist")) //make sure using anilist
         {
-            DeadfishEncodes.createNewDeadFishRule(name, url, moveTo, searchIn, searchFor);
+            AnilistDataScraper.createNewAnimeRule(name, url, moveTo, searchIn, searchFor, nyaaSearch);
+          //  DeadfishEncodes.createNewDeadFishRule(name, url, moveTo, searchIn, searchFor);
         }else
         {
             

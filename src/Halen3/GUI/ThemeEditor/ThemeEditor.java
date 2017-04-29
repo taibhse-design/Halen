@@ -104,11 +104,11 @@ public class ThemeEditor
         {
             // Set System L&F
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            System.out.println("\n\n------------------------------------------------------------\nsetting ui: " + UIManager.getSystemLookAndFeelClassName() + "\n\n------------------------------------------------------------\n");
+           // System.out.println("\n\n------------------------------------------------------------\nsetting ui: " + UIManager.getSystemLookAndFeelClassName() + "\n\n------------------------------------------------------------\n");
 
         } catch (UnsupportedLookAndFeelException e)
         {
-            System.out.println("\n\n------------------------------------------------------------\n               UNKNOWN UI - DEFAULTING\n\n------------------------------------------------------------\n");
+        //    System.out.println("\n\n------------------------------------------------------------\n               UNKNOWN UI - DEFAULTING\n\n------------------------------------------------------------\n");
 
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException ex)
         {

@@ -54,7 +54,11 @@ public class Main
      * from any mythology. Name should not be reflected in jar file name. this is 
      * purely for UI.
      */
-    public static String halenVersion = "4.2.1 - AURORA Build"; 
+    
+    private static String buildVersion = "4.3.0";
+    private static String buildName = "Athena";
+    private static String buildNameDescription = "goddess of wisdom & war strategy";
+    public static String halenVersion = buildVersion + " - " + buildName; 
     
     
     public static void main(String args[]) throws IOException, InterruptedException
@@ -80,6 +84,12 @@ public class Main
     //####################################################################
         
          String appId = "Taibhse.Halen";
+         
+         System.out.println("APP-ID: Taibhse.Halen");
+         System.out.println("Build Version: " + buildVersion);
+         System.out.println("Build Name: " + buildName);
+         System.out.println("Build Name Description: " + buildNameDescription);
+         
         boolean alreadyRunning;
         try
         {

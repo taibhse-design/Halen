@@ -36,7 +36,7 @@ public class SearchAlgorithms
     {
         //   MoveFiles();
         magnetHandler = FileManager.returnTag("handler", readFile(launchPath() + "\\settings.xml").getItem(0));
-     
+    // MoveTvFiles();
         
          moveFilmFiles();
 
@@ -542,6 +542,8 @@ public class SearchAlgorithms
 
                     if (!(new File(fileList.getItem(i)).getName().toLowerCase().endsWith(".!qb")) & !(new File(fileList.getItem(i)).getName().toLowerCase().endsWith(".!ut")) & !(new File(fileList.getItem(i)).getName().toLowerCase().endsWith(".!bt")) & !(new File(fileList.getItem(i)).getName().toLowerCase().endsWith(".az!"))) //supports utorrent, qbittorrent, vuze and bittorrent
                     {
+                        
+                        System.out.println(fileList.getItem(i));
                         String[] words = text.split("\\s+");
                         boolean match = true;
                         testLoop:

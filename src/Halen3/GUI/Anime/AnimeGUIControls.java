@@ -25,7 +25,7 @@ import Halen3.GUI.NoticePanels.LoggingPanel;
 import static Halen3.GUI.NoticePanels.SavingPanel.savePanel;
 import Halen3.GUI.RuleManager;
 import Halen3.IO.FileManager;
-import Halen3.EmailNotifier.SendEmailNotification;
+import static Halen3.GUI.Anime.AnimeGUI.nyaaSearchInput;
 import Halen3.Retrievers.MagnetHandler;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -76,6 +76,23 @@ public class AnimeGUIControls
                 if (animeURLInput.getText().equals("..."))
                 {
                     animeURLInput.setText("");
+                }
+            }
+        }
+        );
+        
+          nyaaSearchInput.addMouseListener(
+                new MouseAdapter()
+        {
+
+            @Override
+            public void mouseClicked(MouseEvent e
+            )
+            {
+                //only blank if the text is the default instructions
+                if (nyaaSearchInput.getText().equals("..."))
+                {
+                    nyaaSearchInput.setText("");
                 }
             }
         }
@@ -215,9 +232,9 @@ public class AnimeGUIControls
                         //  search.setText("...");
                         animeURLInput.setText("...");
                         moveToFolderText.setText("...");
-                        // moveToFolderText.setText("...");
-                        // searchForText.setText("...");
-                        // replaceThisText.setText("...");
+                         searchInFolderText.setText("...");
+                         searchForText.setText("...");
+                         nyaaSearchInput.setText("...");
                         // withThisText.setText("...");
 
                         epListEmptyPanel.removeAll();

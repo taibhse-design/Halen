@@ -209,11 +209,11 @@ public class GUIBase
 
             // Set System L&F
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            System.out.println("\n\n------------------------------------------------------------\nsetting ui: " + UIManager.getSystemLookAndFeelClassName() + "\n\n------------------------------------------------------------\n");
+            System.out.println("setting ui: " + UIManager.getSystemLookAndFeelClassName() + "\n\n------------------------------------------------------------\n");
 
         } catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException e)
         {
-            System.out.println("\n\n------------------------------------------------------------\nUNKNOWN UI - DEFAULTING\n\n------------------------------------------------------------\n");
+            System.out.println("setting ui: UNKNOWN UI - DEFAULTING\n\n------------------------------------------------------------\n");
 
         }
 

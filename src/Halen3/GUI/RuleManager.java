@@ -995,6 +995,8 @@ public class RuleManager
         }
     }
 
+    
+    
     public static void saveAnimeRule(String ruleName) throws InterruptedException, IOException
     {
         System.out.println(ruleName.trim() + ".xml");
@@ -1033,18 +1035,29 @@ public class RuleManager
                 if (!AnimeGUI.animeURLInput.getText().equals("") | !AnimeGUI.animeURLInput.getText().equals("..."))
                 {
 
-                    if (AnimeGUI.animeURLInput.getText().contains("deadfishencod"))
+                    if (AnimeGUI.animeURLInput.getText().contains("anilist"))
                     {
                         //tag - source  - new value
-                        updateLine = FileManager.updateTag("seriesURL", updateLine, AnimeGUI.animeURLInput.getText());
+                        updateLine = FileManager.updateTag("anilist", updateLine, AnimeGUI.animeURLInput.getText());
                     } else
                     {
-                        message = "DATA INVALID - please provide a valid deadfishencod.es series url!";
+                        message = "DATA INVALID - please provide a valid anilist series url!";
                     }
 
                 } else
                 {
-                    message = "DATA INVALID - please provide a valid deadfishencod.es series url!";
+                    message = "DATA INVALID - please provide a valid anilist series url!";
+                }
+                
+                if (!AnimeGUI.nyaaSearchInput.getText().equals("") | !AnimeGUI.nyaaSearchInput.getText().equals("..."))
+                {
+
+                      updateLine = FileManager.updateTag("nyaaSearch", updateLine, AnimeGUI.nyaaSearchInput.getText());
+                
+
+                } else
+                {
+                    message = "DATA INVALID - please provide a valid nyaa search terms!";
                 }
 
                 if (!AnimeGUI.searchForText.getText().equals("") | !AnimeGUI.searchForText.getText().equals("..."))
@@ -1186,21 +1199,32 @@ public class RuleManager
                 if (!AnimeGUI.animeURLInput.getText().equals("") && !AnimeGUI.animeURLInput.getText().equals("..."))
                 {
 
-                    if (AnimeGUI.animeURLInput.getText().contains("deadfishencod"))
+                    if (AnimeGUI.animeURLInput.getText().contains("anilist"))
                     {
                         //tag - source  - new value
                         //  tags = tags + FileManager.makeTag("seriesURL", ComicsGUI.comicURLInput.getText());
 
                     } else
                     {
-                        message = "DATA INVALID - 002 - please provide a valid deadfishencod.es series url!";
+                        message = "DATA INVALID - 002 - please provide a valid anilist series url!";
                     }
 
                 } else
                 {
-                    message = "DATA INVALID - 001 - please provide a valid deadfishencod.es series url!";
+                    message = "DATA INVALID - 001 - please provide a valid anilist series url!";
                 }
 
+                 if (!AnimeGUI.nyaaSearchInput.getText().equals("") | !AnimeGUI.nyaaSearchInput.getText().equals("..."))
+                {
+
+                  //    updateLine = FileManager.updateTag("nyaaSearch", updateLine, AnimeGUI.nyaaSearchInput.getText());
+                
+
+                } else
+                {
+                    message = "DATA INVALID - please provide a valid nyaa search terms!";
+                }
+                 
                 if (!AnimeGUI.searchForText.getText().equals("") && !AnimeGUI.searchForText.getText().equals("..."))
                 {
 
@@ -1286,25 +1310,7 @@ public class RuleManager
                 if (message.contains("DATA VALID"))
                 {
 
-                    // PrintWriter out = null;
-                    try
-                    {
-                        //replace line one with updated tags
-                        Halen3.Retrievers.Anime.CreateAnimeRule.saveNewRule(ruleName, AnimeGUI.animeURLInput.getText(), AnimeGUI.moveToFolderText.getText(), AnimeGUI.searchInFolderText.getText(), AnimeGUI.searchForText.getText());                  //.saveNewSeries(ComicsGUI.comicURLInput.getText(), ruleName, ComicsGUI.DownloadToFolderText.getText());
-                        //where to save rule
-//                        out = new PrintWriter(halen.FileManager.launchPath() + "/rules/tv show/" + ruleName.trim() + ".xml");
-//                        //loop and print lines
-//                        for (int i = 0; i < issues.getItemCount(); i++)
-//                        {
-//                            out.println(issues.getItem(i));
-//                        }
-//                        //close writer on end
-//                        out.close();
-
-                    } catch (FileNotFoundException ex)
-                    {
-                        Logger.getLogger(RuleManager.class.getName()).log(Level.SEVERE, null, ex);
-                    } 
+                    Halen3.Retrievers.Anime.CreateAnimeRule.saveNewRule(ruleName, AnimeGUI.animeURLInput.getText(), AnimeGUI.moveToFolderText.getText(), AnimeGUI.searchInFolderText.getText(), AnimeGUI.searchForText.getText(), AnimeGUI.nyaaSearchInput.getText()); 
 
                 } else
                 {

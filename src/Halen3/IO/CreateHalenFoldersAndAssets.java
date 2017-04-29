@@ -23,6 +23,8 @@ public class CreateHalenFoldersAndAssets
         File graphicsTVFolder = new File(Halen3.IO.FileManager.launchPath() + "/graphics/tv-show-logos/");
         File graphicsFilmFolder = new File(Halen3.IO.FileManager.launchPath() + "/graphics/film-logos/");
         File graphicsComicsFolder = new File(Halen3.IO.FileManager.launchPath() + "/graphics/comic-book-covers/");
+         File graphicsAnimeFolder = new File(Halen3.IO.FileManager.launchPath() + "/graphics/anime-covers/");
+       
         File logsFolder = new File(Halen3.IO.FileManager.launchPath() + "/logs/");
 
         if (tvFolder.exists() == false)
@@ -48,6 +50,10 @@ public class CreateHalenFoldersAndAssets
         if (graphicsComicsFolder.exists() == false)
         {
             graphicsComicsFolder.mkdirs();
+        }
+         if (graphicsAnimeFolder.exists() == false)
+        {
+            graphicsAnimeFolder.mkdirs();
         }
         if(graphicsFilmFolder.exists() == false)
         {

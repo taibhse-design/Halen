@@ -54,7 +54,7 @@ public class Testing
 //        ColorCmd.println(" ", fgWhiteBgGreen);
         String[] groups =
         {
-            "fum[ettv]", "lol[ettv]", "batv[ettv]", "[prime]", "[srigga]", "utr", "rick", "etc", "killers[ettv]", "dimension[ettv]"
+            "fum[ettv]", "lol[ettv]", "killers[ettv]", "dimension[ettv]", "deflate{ettv]", "batv[ettv]", "[prime]", "[srigga]", "utr", "rick", "etc", "rmteam", "x264-rbb", "x264-w4f", "x264-nogrp"
         };
         //
         //String results[] = {"empty", "empty", "empty", "empty", "empty", "empty", };

@@ -56,7 +56,7 @@ public class AnimeGUI
     public static JPanel animePanel, rulesPane, rulesListPanel, epListPane, epListEmptyPanel;
       public static JButton save, delete, run, update;
     public static JScrollPane epListScroll, rulesScroll;
-     public static JTextField ruleName, ruleNameInput, animeURL, animeURLInput, dividerOne,dividerTwo, moveToFolderText ,moveToFolder, searchFor, searchForText, searchInFolder, searchInFolderText /**replaceThis, replaceThisText, withThis, withThisText**/;
+     public static JTextField ruleName, ruleNameInput, animeURL, animeURLInput,nyaaSearch, nyaaSearchInput, dividerOne,dividerTwo, moveToFolderText ,moveToFolder, searchFor, searchForText, searchInFolder, searchInFolderText /**replaceThis, replaceThisText, withThis, withThisText**/;
 
     public static void addAnimePanel(int width, int height, int x, int y)
     {
@@ -272,7 +272,7 @@ public class AnimeGUI
 
         animeURL = new JTextField(20);
         animeURL.setHorizontalAlignment(SwingConstants.CENTER);
-        animeURL.setText(" ANIME URL ");
+        animeURL.setText(" ANILIST URL ");
         animeURL.setEditable(false);
         animeURL.setFont(animeURL.getFont().deriveFont(Font.BOLD));
         animeURL.setForeground(primary);
@@ -293,6 +293,30 @@ public class AnimeGUI
         animeURLInput.setSize(ruleNameInput.getWidth(), ruleName.getHeight());
         animeURLInput.setLocation(animeURL.getLocation().x + animeURL.getWidth(), animeURL.getLocation().y);
         animeURLInput.setVisible(true);
+        
+         nyaaSearch = new JTextField(20);
+        nyaaSearch.setHorizontalAlignment(SwingConstants.CENTER);
+        nyaaSearch.setText(" NYAA Search ");
+        nyaaSearch.setEditable(false);
+        nyaaSearch.setFont(nyaaSearch.getFont().deriveFont(Font.BOLD));
+        nyaaSearch.setForeground(primary);
+        nyaaSearch.setBackground(secondary);
+        nyaaSearch.setBorder(null);
+        nyaaSearch.setSize(ruleName.getWidth(), ruleName.getHeight());
+        nyaaSearch.setLocation(ruleName.getLocation().x, animeURL.getLocation().y + animeURL.getHeight());
+        nyaaSearch.setVisible(true);
+
+        nyaaSearchInput = new JTextField(20);
+        nyaaSearchInput.setText("...");
+        nyaaSearchInput.setEditable(true);
+        nyaaSearchInput.setFont(nyaaSearchInput.getFont().deriveFont(Font.BOLD));
+        nyaaSearchInput.setBorder(border);
+        nyaaSearchInput.setForeground(primary);
+        nyaaSearchInput.setBackground(secondary.brighter());
+        nyaaSearchInput.setCaretColor(primary);
+        nyaaSearchInput.setSize(ruleNameInput.getWidth(), ruleName.getHeight());
+        nyaaSearchInput.setLocation(nyaaSearch.getLocation().x + nyaaSearch.getWidth(), nyaaSearch.getLocation().y);
+        nyaaSearchInput.setVisible(true);
 
         
 //        DownloadToFolder = new JTextField(20);
@@ -332,7 +356,7 @@ public class AnimeGUI
         dividerTwo.setBackground(secondary);
         dividerTwo.setBorder(null);
         dividerTwo.setSize(ruleName.getWidth() + ruleNameInput.getWidth(), ruleName.getHeight());
-        dividerTwo.setLocation(animeURL.getX(), animeURL.getY() + animeURL.getHeight());
+        dividerTwo.setLocation(nyaaSearch.getX(), nyaaSearch.getY() + nyaaSearch.getHeight());
         dividerTwo.setVisible(true);
 
         searchInFolder = new JTextField(20);
@@ -463,8 +487,8 @@ public class AnimeGUI
         animePanel.add(delete);
         animePanel.add(update);
         
-     //        animePanel.add(withThisText);
-    //    animePanel.add(withThis);
+        animePanel.add(nyaaSearch);
+       animePanel.add(nyaaSearchInput);
         animePanel.add(searchInFolderText);
         animePanel.add(searchInFolder);
         animePanel.add(dividerTwo);
@@ -626,11 +650,11 @@ public class AnimeGUI
         //  button.setLocation(x, y);
         //  System.out.println(new File(FileManager.returnTag("imageURL", new Scanner(rulesList[i]).nextLine())));
         //if(new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png")).exists())
-        if (new File(FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine())).exists())
+        if (new File(FileManager.launchPath() + FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine())).exists())
         {
             //  File sourceimage = new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png"));
 
-            File sourceimage = new File(FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine()));
+            File sourceimage = new File(FileManager.launchPath() + FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine()));
 
             Image image = ImageIO.read(sourceimage);
 
@@ -1056,10 +1080,10 @@ public class AnimeGUI
 
                 if (data.getItem(i).contains("true"))
                 {
-                    button.setText(FileManager.returnTag("name", data.getItem(i)) + " - DOWNLOADED"); //contactList.get(i).getSurname() + ", " + contactList.get(i).getGivenName());
+                    button.setText(FileManager.returnTag("ep", data.getItem(i)) + " - DOWNLOADED"); //contactList.get(i).getSurname() + ", " + contactList.get(i).getGivenName());
                 } else
                 {
-                    button.setText(FileManager.returnTag("name", data.getItem(i)) + " - PENDING"); //contactList.get(i).getSurname() + ", " + contactList.get(i).getGivenName());
+                    button.setText(FileManager.returnTag("ep", data.getItem(i)) + " - PENDING"); //contactList.get(i).getSurname() + ", " + contactList.get(i).getGivenName());
 
                 }
 
@@ -1105,7 +1129,7 @@ public class AnimeGUI
                             out = new PrintWriter(FileManager.launchPath() + "/rules/anime/" + file + ".xml");
                             for (int i = 0; i < data.getItemCount(); i++)
                             {
-                                if (button.getText().contains(FileManager.returnTag("name", data.getItem(i))))
+                                if (button.getText().contains(FileManager.returnTag("ep", data.getItem(i))))
                                 {
                                     if (button.getText().contains("DOWNLOADED"))
                                     {
@@ -1222,15 +1246,16 @@ public class AnimeGUI
     {
         ruleNameInput.setText(rule);
       
-       // search.setText(FileManager.returnTag("search", FileManager.readFile(halen.FileManager.launchPath() + "/rules/tv show/" + rule.trim() + ".xml").getItem(0)));
-        
+       // search.setText(FileManager.returnTag("search", FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/tv show/" + rule.trim() + ".xml").getItem(0)));
+        nyaaSearchInput.setText(FileManager.returnTag("nyaaSearch", FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/anime/" + rule.trim() + ".xml").getItem(0)));
+    
         animeURLInput.setText(FileManager.returnTag("seriesURL", FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/anime/" + rule.trim() + ".xml").getItem(0)));
     
         moveToFolderText.setText(FileManager.returnTag("moveToFolder", FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/anime/" + rule.trim() + ".xml").getItem(0)));
     
-       //  moveToFolderText.setText(FileManager.returnTag("moveToFolder", FileManager.readFile(halen.FileManager.launchPath() + "/rules/anime/" + rule.trim() + ".xml").getItem(0)));
+         searchInFolderText.setText(FileManager.returnTag("searchInFolder", FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/anime/" + rule.trim() + ".xml").getItem(0)));
     
-       //   searchForText.setText(FileManager.returnTag("searchFor", FileManager.readFile(halen.FileManager.launchPath() + "/rules/anime/" + rule.trim() + ".xml").getItem(0)));
+          searchForText.setText(FileManager.returnTag("searchFor", FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/anime/" + rule.trim() + ".xml").getItem(0)));
     
     
     }

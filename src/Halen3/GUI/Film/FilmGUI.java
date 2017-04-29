@@ -757,9 +757,9 @@ public class FilmGUI
 //                }
 //            } else
 //            {
-        System.out.println(rulesList[i]);
-        System.out.println(new Scanner(rulesList[i]).nextLine());
-        System.out.println(FileManager.returnTag("retrieved", new Scanner(rulesList[i]).nextLine()));
+     //   System.out.println(rulesList[i]);
+     //   System.out.println(new Scanner(rulesList[i]).nextLine());
+     //   System.out.println(FileManager.returnTag("retrieved", new Scanner(rulesList[i]).nextLine()));
 
         if (FileManager.returnTag("retrieved", new Scanner(rulesList[i]).nextLine()).equals("false"))
         {
