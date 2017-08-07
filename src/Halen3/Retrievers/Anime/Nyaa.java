@@ -23,8 +23,8 @@ public class Nyaa
     // private static String html = "";
     //  private static Document doc;
     //  private static Elements parse, links;
-    private static final String urlStart = "https://www.nyaa.se/?page=search&cats=1_37&filter=0&term=";
-    private static final String urlEnd = "&order=1";
+    private static final String urlStart = "http://nyaa.si/?f=0&c=1_2&q=";
+    private static final String urlEnd = "";
 
     //   private static 
     public static void main(String args[]) throws IOException
@@ -112,12 +112,14 @@ public class Nyaa
         String html = page.asXml();
 
         Document doc = Jsoup.parse(html);
-        Elements parse = doc.select("td.tlistname");
+        Elements parse = doc.select("td");
         Elements links = parse.select("a");
 
         linkSearch:
         for (Element link : links)
         {
+            
+            System.out.println(link.attr("href"));
             //add space before and after text to allow exact word checks for start and end of text
             String title = " " + link.ownText() + " ";
             
@@ -181,10 +183,12 @@ public class Nyaa
 
                    // System.out.println(fixEp);
                     //test if text contains word and episode
+                   // if (title.toLowerCase().contains(split[i].toLowerCase().trim()) && title.contains(fixEp))
                     if (title.toLowerCase().contains(split[i].toLowerCase().trim()) && title.contains(fixEp))
+                    
                     {
                         //if contains then set magnet link to this link
-                        magnet = "http:" + link.attr("href").replace("view", "download");
+                        magnet = "http://nyaa.si" + link.attr("href").replace("view", "download") + ".torrent";
                         //  System.out.println("MAGNET: " + magnet);
                         //if test is true on last loop then break link loop as most recent magnet is found
                         if ((i + 1) == split.length)

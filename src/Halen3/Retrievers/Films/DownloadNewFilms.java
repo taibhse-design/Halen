@@ -161,8 +161,7 @@ public class DownloadNewFilms
 
         //  System.out.println(count + "   " + Handler.getMagnetCount());
 //send all links to torrent client
-        if (GlobalSharedVariables.testing.equals(
-                "false")) //only send to client if not in testing mode
+        if (GlobalSharedVariables.testing.equals("false")) //only send to client if not in testing mode
         {
             MagnetHandler.sendToClient();
         }

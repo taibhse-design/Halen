@@ -19,6 +19,8 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -36,13 +38,13 @@ public class DeadfishEncodes
 
     public static void main(String args[]) throws FileNotFoundException
     {
-         GlobalSharedVariables.startChromeDriver();
+      //  GlobalSharedVariables.startChromeDriver();
        // createNewDeadFishRule("91 days", "http://deadfishencod.es/91_Days/", "c://test");
+        createNewDeadFishRule("91 days", "http://deadfishencod.es/91_Days/", "c://test//91 days", "c://test", "91 days");
         checkForDeadfishUpdates(FileManager.launchPath() + "\\rules\\anime\\91 days.xml");
-         GlobalSharedVariables.endChromeDriver();
+        GlobalSharedVariables.endChromeDriver();
     }
 
-    
     public static void checkForDeadfishUpdates(String pathTORule) throws FileNotFoundException
     {
         List oldData = FileManager.readFile(pathTORule);
@@ -50,72 +52,85 @@ public class DeadfishEncodes
         String moveToFolder = FileManager.returnTag("moveToFolder", oldData.getItem(0));
         String searchInFolder = FileManager.returnTag("searchInFolder", oldData.getItem(0));
         String searchFor = FileManager.returnTag("searchFor", oldData.getItem(0));
-        
+
         List newData = new List();
-        newData.add(getSeriesData( seriesURL, moveToFolder, searchInFolder, searchFor));
+        newData.add(getSeriesData(seriesURL, moveToFolder, searchInFolder, searchFor));
         List eps = getListOfEpisodes(seriesURL);
         System.out.println("\n\n\n");
-        if((eps.getItemCount()+1) > oldData.getItemCount())
+        if ((eps.getItemCount() + 1) > oldData.getItemCount())
         {
-            for(int i = 0; i < eps.getItemCount(); i++)
+            for (int i = 0; i < eps.getItemCount(); i++)
             {
-                if(i >= (oldData.getItemCount() - 1))
+                if (i >= (oldData.getItemCount() - 1))
                 {
                     System.out.println(i + "   " + eps.getItem(i));
-                }else
+                } else
                 {
-                    eps.replaceItem(FileManager.updateTag("downloaded", eps.getItem(i), FileManager.returnTag("downloaded", oldData.getItem(i+1))), i);
-                System.out.println(i + "   " + eps.getItem(i));
-                System.out.println(i + "   " + oldData.getItem(i+1));
+                    eps.replaceItem(FileManager.updateTag("downloaded", eps.getItem(i), FileManager.returnTag("downloaded", oldData.getItem(i + 1))), i);
+                    System.out.println(i + "   " + eps.getItem(i));
+                    System.out.println(i + "   " + oldData.getItem(i + 1));
                 }
-                
+
                 newData.add(eps.getItem(i));
             }
-            
-              PrintWriter out = new PrintWriter(pathTORule);
+
+            PrintWriter out = new PrintWriter(pathTORule);
       //  out.println(newData.getItem(0));
-       
-        for(int i = 0; i < newData.getItemCount(); i++)
-        {
-            out.println(newData.getItem(i));
-        }
-        
-        out.close();
+
+            for (int i = 0; i < newData.getItemCount(); i++)
+            {
+                out.println(newData.getItem(i));
+            }
+
+            out.close();
             System.out.println("NEW EPS EXIST");
         }
-                
+
     }
+
     public static void createNewDeadFishRule(String ruleName, String seriesURL, String moveToFolder, String searchInFolder, String searchFor) throws FileNotFoundException
     {
         GlobalSharedVariables.startChromeDriver();
-        
-        String seriesData = getSeriesData( seriesURL, moveToFolder, searchInFolder, searchFor);
-        List episodes = getListOfEpisodes( FileManager.returnTag("episodesLink", seriesData));//seriesURL);
-        
+
+        String seriesData = getSeriesData(seriesURL, moveToFolder, searchInFolder, searchFor);
+        List episodes = getListOfEpisodes(FileManager.returnTag("episodesLink", seriesData));//seriesURL);
+
         GlobalSharedVariables.endChromeDriver();
-        
+
         PrintWriter out = new PrintWriter(FileManager.launchPath() + "\\rules\\anime\\" + ruleName.replaceAll("[^a-zA-Z0-9. -]", " ").replaceAll("\\s+", " ").trim() + ".xml");
         out.println(seriesData);
-       
-        for(int i = 0; i < episodes.getItemCount(); i++)
+
+        for (int i = 0; i < episodes.getItemCount(); i++)
         {
             out.println(episodes.getItem(i));
         }
-        
+
         out.close();
     }
+
     private static String getSeriesData(String seriesURL, String moveToFolder, String searchInFolder, String searchFor)
     {
 
         System.out.println("\n");
         String title, genre, plot, imageURL, director = null, publisher = null, rated = null, duration = null, status = null, episodesLink = null;
         String url = seriesURL;//"http://deadfishencod.es/91_Days/";
-     //   GlobalSharedVariables.moveDriverOffScreen = false;
-      //  GlobalSharedVariables.startChromeDriver();
+        //   GlobalSharedVariables.moveDriverOffScreen = false;
+        //  GlobalSharedVariables.startChromeDriver();
         GlobalSharedVariables.driver.get(url);
 
         WebDriverWait wait = new WebDriverWait(GlobalSharedVariables.driver, 20);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("ttl")));
+
+     //   wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("ttl")));
+        while (ExpectedConditions.visibilityOfElementLocated(By.className("ttl")).equals(false))
+        {
+            try
+            {
+                Thread.sleep(1000);
+            } catch (InterruptedException ex)
+            {
+                Logger.getLogger(DeadfishEncodes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
 
         String html = GlobalSharedVariables.driver.getPageSource();
         //System.out.println(html);
@@ -137,9 +152,9 @@ public class DeadfishEncodes
         System.out.println("IMAGE URL: " + i.attr("src"));
         imageURL = i.attr("src");
 
-        for(Element a :as)
+        for (Element a : as)
         {
-            if(a.attr("title").contains("Go to Downloads"))
+            if (a.attr("title").contains("Go to Downloads"))
             {
                 episodesLink = a.attr("href");
                 System.out.println("EPISODE LIST LINK: " + a.attr("href"));
@@ -217,21 +232,33 @@ public class DeadfishEncodes
         List episodes = new List();
         if (seriesURL.endsWith("/"))
         {
-           // System.out.println(seriesURL);
+            // System.out.println(seriesURL);
             seriesURL = seriesURL.substring(0, seriesURL.length() - 1);
-          //  System.out.println(seriesURL);
+            //  System.out.println(seriesURL);
         }
         seriesURL = seriesURL.replace("http://", "");
         seriesURL = seriesURL.replace("/", "/anime-downloads/");
         seriesURL = "http://" + seriesURL;
         seriesURL = seriesURL.replace("_", "-");
-       
+
         System.out.println("URL TO FIND EPISODE LIST: " + seriesURL);
 
         GlobalSharedVariables.driver.get(seriesURL);
 
         WebDriverWait wait = new WebDriverWait(GlobalSharedVariables.driver, 20);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("val-ep")));
+      //  wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("val-ep")));
+
+        while (ExpectedConditions.visibilityOfElementLocated(By.className("val-ep")).equals(true))
+        {
+            try
+            {
+                Thread.sleep(1000);
+                System.out.println("NOT FOUND");
+            } catch (InterruptedException ex)
+            {
+                Logger.getLogger(DeadfishEncodes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
 
         String html = GlobalSharedVariables.driver.getPageSource();
 
@@ -240,38 +267,48 @@ public class DeadfishEncodes
 
         for (Element link : links)
         {
-           // System.out.println(link.attr("href"));
+            // System.out.println(link.attr("href"));
             GlobalSharedVariables.driver.get(link.attr("href"));
             wait = new WebDriverWait(GlobalSharedVariables.driver, 20);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("slide-name")));
-            
+         //   wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("slide-name")));
+
+            while (ExpectedConditions.visibilityOfElementLocated(By.className("slide-name")).equals(false))
+            {
+                try
+                {
+                    Thread.sleep(1000);
+                } catch (InterruptedException ex)
+                {
+                    Logger.getLogger(DeadfishEncodes.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+
             html = GlobalSharedVariables.driver.getPageSource();
             doc = Jsoup.parse(html);
             Element data = doc.select("div.slide-name").first();
             Elements downloads = doc.select("a");
             String magnet = "";
-            for(Element download : downloads)
+            for (Element download : downloads)
             {
-              //  System.out.println(download.attr("href"));
-               if(download.attr("href").contains("nyaa") && download.attr("href").contains("page=download"))
-               {
-                   magnet = download.attr("href");
-                   break;
-               }
+                //  System.out.println(download.attr("href"));
+                if (download.attr("href").contains("nyaa") && download.attr("href").contains("page=download"))
+                {
+                    magnet = download.attr("href");
+                    break;
+                }
             }
-            
+
             String name = data.text();
-            
+
             String epData = FileManager.makeTag("name", name.replace("sub ", ""))
                     + FileManager.makeTag("magnet", magnet)
-                     + FileManager.makeTag("downloaded", "false");
+                    + FileManager.makeTag("downloaded", "false");
             System.out.println(epData + "\n");
-            
+
             episodes.add(epData);
         }
 
     //    GlobalSharedVariables.endChromeDriver();
-        
         return episodes;
     }
 }

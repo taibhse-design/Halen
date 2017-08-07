@@ -55,26 +55,26 @@ public class Main
      * purely for UI.
      */
     
-    private static String buildVersion = "4.3.0";
-    private static String buildName = "Athena";
-    private static String buildNameDescription = "goddess of wisdom & war strategy";
+    private static String buildVersion = "4.4.4";
+    private static String buildName = "Kore";
+    private static String buildNameDescription = "goddess of the harvest";
     public static String halenVersion = buildVersion + " - " + buildName; 
     
     
     public static void main(String args[]) throws IOException, InterruptedException
     {
         
-         //####################################################################
-    //     create halen folder and assets if they do not exist
+    //#########################################################################
+    // Create halen folder and assets if they do not exist
     Halen3.IO.CreateHalenFoldersAndAssets.create();
-    //####################################################################
+    //#########################################################################
     
     
       //  args = new String[1];
-     //   args[0] = "-update_rules";
+       // args[0] = "-update_rules";
        // args[0] = "-help";
       //  args[0] = "-relocate";
-     //  args[0] = "-search";
+    // args[0] = "-search";
      //   DownloadNewEpisodes.saveResults = false;
  //    Halen3.Retrievers.TvShows.DownloadNewEpisodes.saveResults = false;
   //   Halen3.Retrievers.Anime.DownloadNewAnimeEpisodes.saveResults = false;

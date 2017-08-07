@@ -6,6 +6,7 @@
 package Halen3.Retrievers.TvShows;
 
 import Halen3.CommandLine.ColorCmd;
+import static Halen3.CommandLine.ColorCmd.fgGreenBgWhite;
 import static Halen3.CommandLine.ColorCmd.fgRedBgRed;
 import static Halen3.CommandLine.ColorCmd.fgRedBgWhite;
 import static Halen3.CommandLine.ColorCmd.fgWhiteBgGreen;
@@ -51,14 +52,20 @@ public class DownloadNewEpisodes
     //  static volatile int i = 0;
     public static void main(String args[]) throws InterruptedException, IOException, MessagingException
     {
-        // saveResults = false;
-        downloadNewEpisodes();
+        // GlobalSharedVariables.testing = "true";
+      //  downloadNewEpisodes();
         // downloadNewIssues();
         //  SendEmailNotification.test();
     }
 
     public static void downloadNewEpisodes()
     {
+        ColorCmd.println(" ", fgWhiteBgGreen);
+            ColorCmd.printlnCenter("Compiling New Releases From ShowRSS", fgWhiteBgGreen);
+            ColorCmd.println(" ", fgWhiteBgGreen);
+            ColorCmd.println(" ", fgWhiteBgWhite);
+        //scrape show rss first for all content
+        ShowRSS.showRSSScraper();
 
         searchingForTvEpisodes = true;
         //set to 1 to run as single thread, set higher for more threads
@@ -115,9 +122,12 @@ public class DownloadNewEpisodes
                         {
 
                                    // magnet = Halen3.Retrievers.TvShows.ExtraTorrentMagnetLinksScraper.getMagnet(FileManager.returnTag("search", eps.getItem(0)), eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
-                            magnet = Testing.extrntTvRssSearchMagnetRetriever(FileManager.returnTag("search", eps.getItem(0)) + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
-
-                                 //   System.out.println("poop"+tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + " : " + magnet + "\n");
+                            //magnet = Testing.extrntTvRssSearchMagnetRetriever(FileManager.returnTag("search", eps.getItem(0)) + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
+                          // System.out.println(FileManager.returnTag("search", eps.getItem(0)) + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
+                            magnet = ShowRSS.showRSSSearch(FileManager.returnTag("search", eps.getItem(0)).trim() , eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")).trim());
+                           
+                            
+//   System.out.println("poop"+tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + " : " + magnet + "\n");
                         } catch (FailingHttpStatusCodeException e)
                         {
 
@@ -138,13 +148,29 @@ public class DownloadNewEpisodes
 
                         if (magnet.contains("magnet:?xt=")) //handle magnet if found
                         {
+                            ColorCmd.println(eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + " : " + magnet, fgGreenBgWhite);
+                            
                             SendEmailNotification.retrievedTVShows.replaceItem(FileManager.updateTag("retEps",
                                     SendEmailNotification.retrievedTVShows.getItem(i),
                                     FileManager.returnTag("retEps", SendEmailNotification.retrievedTVShows.getItem(i)) + "  " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">"))),
                                     i); //item to replace
                             if (GlobalSharedVariables.testing.equals("false")) //save output if not in testing mode
                             {
+                                
+                                
+                                //create a .magnet file in the search in folder (client should auto load .torrents and .magnets from here)
+                                PrintWriter save = new PrintWriter(FileManager.returnTag("searchInFolder", eps.getItem(0)).trim() + "\\" + tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + ".magnet");
+                                save.println(magnet);
+                                save.close();
+                                
+                                //save backup of .magnet into magnets folder in halen
+                                new File(FileManager.launchPath() + "\\magnets\\").mkdirs(); //make magnet directory if not exist
+                                PrintWriter save2 = new PrintWriter(FileManager.launchPath() + "\\magnets\\" + tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + ".magnet");
+                                save2.println(magnet);
+                                save2.close();
+                                
                                 // SendEmailNotification.retrievedTVShows.add(tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
+                                //start magnet client and directly send to client incase direct save file fails
                                 MagnetHandler.addLinkTOMAgnetList(magnet);
                                 //   count++;
                                 eps.replaceItem(eps.getItem(j).replace("false", "true"), j);
@@ -152,10 +178,11 @@ public class DownloadNewEpisodes
                         } else  //check if episode should be passed by now and handle possible issues
                         {
 
-                            if (FileManager.hasDatePassed(FileManager.returnTag("release", eps.getItem(j)))) //if episode is past release date but no magnet, there may be an issue the user should know about
+                         //   System.out.println(eps.getItem(j).contains("false"));
+                            if (eps.getItem(j).contains("false") && FileManager.hasDatePassed(FileManager.returnTag("release", eps.getItem(j)))) //if episode is past release date but no magnet, there may be an issue the user should know about
                             {
 
-                                            //check how many days since episodes release, if more than 3 days and not retrieved,
+                                //check how many days since episodes release, if more than 3 days and not retrieved,
                                 // there are issues with the rule setup, eg, group may no longer provide show
                                 //send user email of errors
                                 if (FileManager.howManyDaysSince(FileManager.returnTag("release", eps.getItem(j))) > 3)
@@ -248,6 +275,7 @@ public class DownloadNewEpisodes
         if (GlobalSharedVariables.testing.equals("false")) //only send to client if not in testing mode
         {
             MagnetHandler.sendToClient();
+            
         }
 
 //        try

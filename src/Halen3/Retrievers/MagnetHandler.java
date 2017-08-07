@@ -1,6 +1,7 @@
 package Halen3.Retrievers;
 
 
+import Halen3.CommandLine.ColorCmd;
 import Halen3.GUI.GUIBase;
 import static Halen3.IO.GlobalSharedVariables.magnetHandler;
 import Halen3.IO.FileManager;
@@ -79,20 +80,23 @@ public class MagnetHandler
     }
     public static void sendToClient()
     {
-      // launchHandler();
+        launchHandler();
 
         //loop and send magnet links to torrent client
         for (int i = 0; i < magnets.getItemCount(); i++)
         {
+            ColorCmd.println("Sending Magnet to Client: " + magnets.getItem(i), ColorCmd.fgWhiteBgGreen);
             try
             {
-                Thread.sleep(5);
+                Thread.sleep(100);
                 executeCommand("\"\"" + magnetHandler + "\" \"" + magnets.getItem(i).replace("amp;", "") + "\"\"");
-                Thread.sleep(5);
+                Thread.sleep(8000); //allow 8 seconds between each magnet being sent to client
+                                    //used to be 5
             } catch (InterruptedException ex)
             {
                 Logger.getLogger(MagnetHandler.class.getName()).log(Level.SEVERE, null, ex);
-                System.out.println("FAILED TO SEND TO MAGNET CLIENT");
+                ColorCmd.println("FAILED TO SEND TO MAGNET CLIENT", ColorCmd.fgWhiteBgRed);
+               // System.out.println("FAILED TO SEND TO MAGNET CLIENT");
                 // JOptionPane.showMessageDialog(null, "ERROR SENDING MAGNET LINK!", "ERROR", JOptionPane.WARNING_MESSAGE);
 
             }

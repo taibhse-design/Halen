@@ -29,6 +29,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchWindowException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriverException;
@@ -153,6 +154,11 @@ public class DownloadNewIssues
                         runTimeCheck = false;
                         ColorCmd.println("TIMEOUT REACHED AT 10 MINUTES!!!!!", fgRedBgWhite);
 
+                    } else
+                    {
+                        System.out.println("SCROLL");
+                        JavascriptExecutor jse = (JavascriptExecutor) driver;
+                        jse.executeScript("window.scrollBy(0,250)", "");
                     }
 
                 }
@@ -163,7 +169,8 @@ public class DownloadNewIssues
 
     public static void main(String args[]) throws InterruptedException, AWTException, IOException
     {
-            downloadNewIssues();
+        GlobalSharedVariables.testing = "true";
+        downloadNewIssues();
     }
 
     public static void downloadNewIssues()
@@ -183,7 +190,7 @@ public class DownloadNewIssues
                 //search for updates to rule prior to downloading new issues
                 SearchForUpdates.updateComicRule(comicsList[i].getPath());
 
-             //   System.out.println("#########################################################################################################");
+                //   System.out.println("#########################################################################################################");
                 ColorCmd.println("", fgWhiteBgYellow);
                 ColorCmd.printlnCenter("SEARCHING FOR NEW ISSUES OF " + comicsList[i].getName() + " TO DOWNLOAD", fgWhiteBgYellow);
                 ColorCmd.println("", fgWhiteBgYellow);
@@ -202,7 +209,7 @@ public class DownloadNewIssues
                         //if issue status is false, download it
                         if (FileManager.returnTag("downloaded", issues.getItem(j)).equals("false"))
                         {
-                           // System.out.println("\n#########################################################################################################");
+                            // System.out.println("\n#########################################################################################################");
                             ColorCmd.println("DOWNLOADING: " + FileManager.returnTag("name", issues.getItem(j)), fgYellowBgWhite);
                            // System.out.println("#########################################################################################################");
 
@@ -254,14 +261,14 @@ public class DownloadNewIssues
             } catch (InterruptedException | IOException e)
             {
                 ColorCmd.println("" + e, fgRedBgWhite);
-            }catch(NoSuchWindowException e)
+            } catch (NoSuchWindowException e)
             {
-                    ColorCmd.println("ERROR CHROME WINDOW LOST FOR: " + comicsList[i].getName() + "   |   WINDOW LIKELY CLOSED OR CRASHED.....FORCING PROGRAM CONTINUATION.....", fgRedBgWhite);
-                    ColorCmd.println("", fgWhiteBgWhite);
-            }catch(WebDriverException e)
+                ColorCmd.println("ERROR CHROME WINDOW LOST FOR: " + comicsList[i].getName() + "   |   WINDOW LIKELY CLOSED OR CRASHED.....FORCING PROGRAM CONTINUATION.....", fgRedBgWhite);
+                ColorCmd.println("", fgWhiteBgWhite);
+            } catch (WebDriverException e)
             {
-                    ColorCmd.println("ERROR CHROME WINDOW LOST FOR: " + comicsList[i].getName() + "   |   WINDOW LIKELY CLOSED OR CRASHED.....FORCING PROGRAM CONTINUATION.....", fgRedBgWhite);
-                    ColorCmd.println("", fgWhiteBgWhite);
+                ColorCmd.println("ERROR CHROME WINDOW LOST FOR: " + comicsList[i].getName() + "   |   WINDOW LIKELY CLOSED OR CRASHED.....FORCING PROGRAM CONTINUATION.....", fgRedBgWhite);
+                ColorCmd.println("", fgWhiteBgWhite);
             }
         }
         //end chrome driver
@@ -330,12 +337,12 @@ public class DownloadNewIssues
                 //catch exceptions until page is fully loaded
                 try
                 {
-                    if(url.toLowerCase().contains("kissmanga"))
+                    if (url.toLowerCase().contains("kissmanga"))
                     {
-                    Select dropdown = new Select(driver.findElement(By.id("selectReadType")));
-                    dropdown.selectByVisibleText("All pages");
+                        Select dropdown = new Select(driver.findElement(By.id("selectReadType")));
+                        dropdown.selectByVisibleText("All pages");
                     }
-                    
+
                     //get page html
                     String html = driver.getPageSource();
 

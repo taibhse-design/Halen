@@ -6,9 +6,12 @@ import java.awt.HeadlessException;
 import java.awt.List;
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StringReader;
@@ -47,32 +50,35 @@ public class FileManager
     public static void main(String args[]) throws InterruptedException, ParseException, IOException
     {
 
-       System.out.println(howManyDaysSince(""));
+        removeWordMethod("ettv");
+        
+     //   System.out.println(howManyDaysSince(""));
         // String processName = "qbittorrent";
         // System.out.println("is " + processName + " Running: " + isProcessRunning(processName));
-   //     System.out.println(hasDatePassed("hgjhgjh"));
-        
-      //  trimWhiteSpaceFromImage("C:\\Users\\brenn\\Documents\\NetBeansProjects\\Halen\\build\\graphics\\comic-book-covers\\Ghost in the Shell ARISE.png");
+        //     System.out.println(hasDatePassed("hgjhgjh"));
+
+        //  trimWhiteSpaceFromImage("C:\\Users\\brenn\\Documents\\NetBeansProjects\\Halen\\build\\graphics\\comic-book-covers\\Ghost in the Shell ARISE.png");
     }
 
-    public static boolean isValidEmailId(String email) {
+    public static boolean isValidEmailId(String email)
+    {
         String emailPattern = "^[\\p{L}\\p{N}\\._%+-]+@[\\p{L}\\p{N}\\.\\-]+\\.[\\p{L}]{2,}$";
         Pattern p = Pattern.compile(emailPattern);
         Matcher m = null;
         String emails[] = email.split(", ");
         boolean valid = true;
-        for(int i = 0; i < emails.length; i++)
+        for (int i = 0; i < emails.length; i++)
         {
-         m = p.matcher(emails[i]);
-         valid = m.matches();
-         if(valid == false)
-         {
-             break;
-         }
+            m = p.matcher(emails[i]);
+            valid = m.matches();
+            if (valid == false)
+            {
+                break;
+            }
         }
         return valid;
     }
-    
+
     /**
      * given a process name detects if it is currently running
      *
@@ -128,7 +134,7 @@ public class FileManager
         String tag = "<" + tagName + ">" + value + "</" + tagName + ">";
         return tag;
     }
-    
+
     public static String returnTag(String tag, String source)
     {
         String link = source;
@@ -153,31 +159,32 @@ public class FileManager
      */
     public static List readFile(String file)
     {
-       try{
-        // Open the file
-        FileInputStream fstream = new FileInputStream(file);
-        BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-
-        String strLine;
-         List list = new List();
-//Read File Line By Line
-        while ((strLine = br.readLine()) != null)
+        try
         {
-            // Print the content on the console
-            //System.out.println (strLine);
-            list.add(strLine);
-        }
+            // Open the file
+            FileInputStream fstream = new FileInputStream(file);
+            BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
+
+            String strLine;
+            List list = new List();
+//Read File Line By Line
+            while ((strLine = br.readLine()) != null)
+            {
+                // Print the content on the console
+                //System.out.println (strLine);
+                list.add(strLine);
+            }
 
 //Close the input stream
-        br.close();
-         return list;
-       }catch(HeadlessException | IOException e)
-       {
-           e.printStackTrace();
-          System.out.println(e + "ERROR WITH READ METHOD UNDER FILE MANAGER......");
-           List empty = new List();
-           return empty;
-       }
+            br.close();
+            return list;
+        } catch (HeadlessException | IOException e)
+        {
+            e.printStackTrace();
+            System.out.println(e + "ERROR WITH READ METHOD UNDER FILE MANAGER......");
+            List empty = new List();
+            return empty;
+        }
 //        try
 //        {
 //            Scanner s = new Scanner(new File(file));
@@ -240,7 +247,7 @@ public class FileManager
 
         } catch (IOException e)
         {
-            System.out.println("ERROR RUNNING COMMAND -execute command failed");
+            System.out.println("ERROR RUNNING COMMAND -execute command failed" + "command was: " + command);
         }
 
     }
@@ -290,33 +297,34 @@ public class FileManager
 
     public static int howManyDaysSince(String date)
     {
-        
-      // Date in String format.
-       // String dateString = "2015-03-01";
 
-        if(!date.trim().equals(""))
+        // Date in String format.
+        // String dateString = "2015-03-01";
+        if (!date.trim().equals(""))
         {
-        try{
-        // Converting date to Java8 Local date
-        LocalDate startDate = LocalDate.parse(date);
-        LocalDate endtDate = LocalDate.now();
-        // Range = End date - Start date
-        return (int) ChronoUnit.DAYS.between(startDate, endtDate);
-        }catch(Exception e)
-        {
-            System.out.println(e + "ERROR WITH HOWMANYDAYSSINCE METHOD - LINES 293-302; EXCEPTION CAUGHT RETURNING VALUE 0");
-            return 0;
-        }
-      //  System.out.println("Number of days between the start date : " + dateString + " and end date : " + endtDate + " is  ==> " + range);
+            try
+            {
+                // Converting date to Java8 Local date
+                LocalDate startDate = LocalDate.parse(date);
+                LocalDate endtDate = LocalDate.now();
+                // Range = End date - Start date
+                return (int) ChronoUnit.DAYS.between(startDate, endtDate);
+            } catch (Exception e)
+            {
+                System.out.println(e + "ERROR WITH HOWMANYDAYSSINCE METHOD - LINES 293-302; EXCEPTION CAUGHT RETURNING VALUE 0");
+                return 0;
+            }
+            //  System.out.println("Number of days between the start date : " + dateString + " and end date : " + endtDate + " is  ==> " + range);
 
 //        range = ChronoUnit.DAYS.between(endtDate, startDate);
 //        System.out.println("Number of days between the start date : " + endtDate + " and end date : " + dateString
 //                + " is  ==> " + range);
-    }else
+        } else
         {
             return 0;
         }
     }
+
     /**
      * returns a string containing the current date in the format DD-MM-YYYY
      *
@@ -370,7 +378,7 @@ public class FileManager
             {
 
                 file.delete();
-            //    System.out.println("Directory is deleted : " + file.getAbsolutePath());
+                //    System.out.println("Directory is deleted : " + file.getAbsolutePath());
 
             } else
             {
@@ -391,7 +399,7 @@ public class FileManager
                 if (file.list().length == 0)
                 {
                     file.delete();
-                   // System.out.println("Directory is deleted : " + file.getAbsolutePath());
+                    // System.out.println("Directory is deleted : " + file.getAbsolutePath());
                 }
             }
 
@@ -399,63 +407,69 @@ public class FileManager
         {
             //if file, then delete it
             file.delete();
-          //  System.out.println("File is deleted : " + file.getAbsolutePath());
+            //  System.out.println("File is deleted : " + file.getAbsolutePath());
         }
     }
-    
+
     public static void trimWhiteSpaceFromImage(String image)
     {
         try
         {
             BufferedImage img = ImageIO.read(new File(image));
-            
-          int width         = img.getWidth();
-        int height        = img.getHeight();
-        int trimmedWidth = 0;
-        int trimmedHeight = 0;
-        
-        for(int i = 0; i < height; i++) {
-            for(int j = width - 1; j >= 0; j--) {
-                if(img.getRGB(j, i) != Color.WHITE.getRGB() &&
-                        j > trimmedWidth) {
-                    trimmedWidth = j;
-                    break;
+
+            int width = img.getWidth();
+            int height = img.getHeight();
+            int trimmedWidth = 0;
+            int trimmedHeight = 0;
+
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = width - 1; j >= 0; j--)
+                {
+                    if (img.getRGB(j, i) != Color.WHITE.getRGB()
+                            && j > trimmedWidth)
+                    {
+                        trimmedWidth = j;
+                        break;
+                    }
                 }
             }
-        }
 
-          
-
-        for(int i = 0; i < width; i++) {
-            for(int j = height - 1; j >= 0; j--) {
-                if(img.getRGB(i, j) != Color.WHITE.getRGB() &&
-                        j > trimmedHeight) {
-                    trimmedHeight = j;
-                    break;
+            for (int i = 0; i < width; i++)
+            {
+                for (int j = height - 1; j >= 0; j--)
+                {
+                    if (img.getRGB(i, j) != Color.WHITE.getRGB()
+                            && j > trimmedHeight)
+                    {
+                        trimmedHeight = j;
+                        break;
+                    }
                 }
             }
-        }
-        
-        BufferedImage newImg = new BufferedImage(trimmedWidth, trimmedHeight,
-                BufferedImage.TYPE_INT_RGB);
-        Graphics g = newImg.createGraphics();
-        g.drawImage( img, 0, 0, null );
-        img = newImg;
-        
-        ImageIO.write(img, image.substring(image.lastIndexOf(".")+1, image.length()), new File(image));
-        
+
+            BufferedImage newImg = new BufferedImage(trimmedWidth, trimmedHeight,
+                    BufferedImage.TYPE_INT_RGB);
+            Graphics g = newImg.createGraphics();
+            g.drawImage(img, 0, 0, null);
+            img = newImg;
+
+            ImageIO.write(img, image.substring(image.lastIndexOf(".") + 1, image.length()), new File(image));
+
         } catch (IOException ex)
         {
             Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
     /**
-     * given a string, this method returns it with decoded html escapes if any are present
+     * given a string, this method returns it with decoded html escapes if any
+     * are present
+     *
      * @param str
-     * @return 
+     * @return
      */
-      public static String unescapeHtml3(String str)
+    public static String unescapeHtml3(String str)
     {
         try
         {
@@ -467,4 +481,84 @@ public class FileManager
             return str;
         }
     }
+
+    public static void removeWordMethod(String wordstoremove) throws IOException
+    {
+
+        File folder = new File(launchPath() + "//rules//tv show");
+        File[] listOfFiles = folder.listFiles();
+
+        for(int i = 0; i < listOfFiles.length; i++)
+        {
+        File inputFile = listOfFiles[i];
+        File tempFile = new File(launchPath() + "//rules//TempWordlist.xml");
+
+        BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+        String currentLine;
+
+        while ((currentLine = reader.readLine()) != null)
+        {
+            String trimmedLine = currentLine.trim();
+            if (trimmedLine.contains(wordstoremove))
+            {
+                
+               trimmedLine = trimmedLine.replace(wordstoremove, "");
+            }
+            writer.write(trimmedLine + "\n");
+        }
+        reader.close();
+        writer.close();
+        inputFile.delete();
+        tempFile.renameTo(inputFile);
+        
+        }
+    }
+    
+    
+     /**
+   * Calculates the similarity (a number within 0 and 1) between two strings.
+   */
+  public static double similarity(String s1, String s2) {
+    String longer = s1, shorter = s2;
+    if (s1.length() < s2.length()) { // longer should always have greater length
+      longer = s2; shorter = s1;
+    }
+    int longerLength = longer.length();
+    if (longerLength == 0) { return 1.0; /* both strings are zero length */ }
+    /* // If you have StringUtils, you can use it to calculate the edit distance:
+    return (longerLength - StringUtils.getLevenshteinDistance(longer, shorter)) /
+                               (double) longerLength; */
+    return (longerLength - editDistance(longer, shorter)) / (double) longerLength;
+
+  }
+
+  // Example implementation of the Levenshtein Edit Distance
+  // See http://rosettacode.org/wiki/Levenshtein_distance#Java
+  public static int editDistance(String s1, String s2) {
+    s1 = s1.toLowerCase();
+    s2 = s2.toLowerCase();
+
+    int[] costs = new int[s2.length() + 1];
+    for (int i = 0; i <= s1.length(); i++) {
+      int lastValue = i;
+      for (int j = 0; j <= s2.length(); j++) {
+        if (i == 0)
+          costs[j] = j;
+        else {
+          if (j > 0) {
+            int newValue = costs[j - 1];
+            if (s1.charAt(i - 1) != s2.charAt(j - 1))
+              newValue = Math.min(Math.min(newValue, lastValue),
+                  costs[j]) + 1;
+            costs[j - 1] = lastValue;
+            lastValue = newValue;
+          }
+        }
+      }
+      if (i > 0)
+        costs[s2.length()] = lastValue;
+    }
+    return costs[s2.length()];
+  }
 }

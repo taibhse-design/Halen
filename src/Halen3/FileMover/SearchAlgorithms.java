@@ -290,13 +290,26 @@ public class SearchAlgorithms
                         //get file tree in search folder and then search for matches based on rule
                         //this method adds matches to filesToMove list
                         tree = new List();
-                        getAllFilesContaining(searchString + " " + data.getItem(k).substring(1, data.getItem(k).indexOf(">")), getFolderTree(new File(searchFolder)));
-
+                        
+                        String episodeSxxExx = data.getItem(k).substring(1, data.getItem(k).indexOf(">")).trim();
+                        String episodeXXX = episodeSxxExx.toLowerCase().replace("e", "").replace("s", "");
+                        if(episodeXXX.charAt(0) == '0')
+                        {
+                           episodeXXX = episodeXXX.replaceFirst("0", "");
+                        }
+                        //get all regular episodes
+                        getAllFilesContaining(searchString + " " + episodeSxxExx, getFolderTree(new File(searchFolder)));
+                        //get all episodes that dont use SxxExx format
+                        getAllFilesContaining(searchString + " " + episodeXXX, getFolderTree(new File(searchFolder)));
+                        
+                        
                         //loop through results and move files
                         if (filesToMove.getItemCount() != 0)
                         {
                             for (int i = 0; i < filesToMove.getItemCount(); i++)
                             {
+                                try
+                                {
                                 if (rules.getItem(j).contains("tv show"))
                                 {
                                     System.out.println("\nMOVING FILE: " + filesToMove.getItem(i) + "              TO: " + dest + "\\Season " + data.getItem(k).substring(2, data.getItem(k).indexOf("E")));
@@ -306,6 +319,10 @@ public class SearchAlgorithms
                                     System.out.println("\nMOVING FILE: " + filesToMove.getItem(i) + "              TO: " + dest);
                                     fileRelocate(filesToMove.getItem(i), dest);
 
+                                }
+                                }catch(FileNotFoundException e)
+                                {
+                                    System.out.println("Caught file not found exception....skipping - " + filesToMove.getItem(i) + "as may already be moved");
                                 }
 
                             }
@@ -388,8 +405,11 @@ public class SearchAlgorithms
             long position = 0;
             while (position < size)
             {
-                //progress of file while copying
+                //progress of file while copying //only print every 3 steps
+                if(position % 3 == 0)
+                {
                 System.out.println((position / 1024) + " kb / " + (size / 1024) + " kb");
+                }
                 // progress.setText("MOVING:    " + in.getName() + "   ( " + (position / 1024) + " kb / " + (size / 1024) + " kb )");
                 position += inChannel.transferTo(position, maxCount, outChannel);
             }
@@ -408,11 +428,12 @@ public class SearchAlgorithms
                 outChannel.close();
             }
 
+            System.out.println("File move complete.....");
             //check if output file exists
             if (out.exists())
             {
 
-                // progress.setText("Checking   " + out.getName() + "    for corruption after moving.....");
+                 System.out.println("Checking   " + out.getName() + "    for corruption after moving.....");
                 //get md5 checksum of input file
                 FileInputStream fisA = new FileInputStream(in);
                 String md5A = md5Hex(fisA);
@@ -428,11 +449,11 @@ public class SearchAlgorithms
                 if (md5A.equals(md5B))
                 {
                     //   progress.setText(out.getName() + " passed corruption test....");
-
+                    System.out.println("MOVE SUCCESSFUL.....no corruption found.....");
                     //delete input since copy successful 
                     deleteFileAndIdenticalNamedParentFolder(in);
 
-                    System.out.println("MOVE SUCCESSFUL");
+                   
 
                 } else
                 {
@@ -489,27 +510,42 @@ public class SearchAlgorithms
 
       //  System.out.println(folderName);
 
-        if (fileName.equals(folderName))
+        if(FileManager.similarity(fileName, folderName) > 0.5)//only delete folder if it atleast matches moved file name by 50% //if (fileName.equals(folderName))
         {
             System.out.println("Parent folder Matches file........performing waste file cleanup.....");
             System.out.println((folderSize(directory) / 1024 / 1024));
             file.delete();
-            if ((folderSize(directory) / 1024 / 1024) <= 600)  //600kb
+            if ((folderSize(directory) / 1024 / 1024) <= 10240) //approx 10mb //was 600kb
             {
-                System.out.println("Parent folder under 600kb.....deleting parent folder");
+                System.out.println("Parent folder under 10mb.....deleting parent folder");
                 try
                 {
                     FileUtils.deleteDirectory(directory);
+                    
+                    if(directory.exists())
+                    {
+                        System.out.println("FAILED TO DELETE PARENT FOLDER: " + directory);
+                        System.out.println("Halen will attempt to delete the folder on exit.....");
+                        directory.deleteOnExit();
+                    }
                 } catch (IOException ex)
                 {
                     System.out.println("FAILED TO DELETE PARENT FOLDER: " + directory);
+                    System.out.println("Halen will attempt to delete the folder on exit.....");
+                    directory.deleteOnExit();
                 }
             }
 
         } else
         {
-            //System.out.println("No Match");
+            System.out.println("Attempting to delete original file.....");
             file.delete();
+            
+            if(file.exists())
+            {
+                System.out.println("Error deleting file.....delete will retry on exit.....");
+                file.deleteOnExit();
+            }
         }
 
         //  file.delete();

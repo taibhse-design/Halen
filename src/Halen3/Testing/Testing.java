@@ -14,26 +14,144 @@ import static Halen3.CommandLine.ColorCmd.fgWhiteBgBlue;
 import static Halen3.CommandLine.ColorCmd.fgWhiteBgGreen;
 import static Halen3.CommandLine.ColorCmd.fgWhiteBgWhite;
 import static Halen3.IO.FileManager.unescapeHtml3;
+import com.sun.syndication.feed.synd.SyndFeed;
+import com.sun.syndication.io.FeedException;
+import com.sun.syndication.io.SyndFeedInput;
+import com.sun.syndication.io.XmlReader;
 import java.awt.List;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.Charset;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author brenn
  */
-
 public class Testing
 {
 //public static String film = "";
-    public static void main(String args[]) throws UnsupportedEncodingException
+
+    public static void main(String args[]) throws MalformedURLException, IllegalArgumentException, FeedException, IOException
     {
-      
-        System.out.println("RETRUNED MAGNET: " + extrntFilmRssSearchMagnetRetriever(film));
+        showRSSScraper();
+        
+        System.out.println(showRSSSearch("dark matter"));
+
+//  System.out.println(extrntTvRssSearchMagnetRetriever("silicon valley s04e07"));
+    }
+
+    static List rawData = new List();
+
+    public static String showRSSSearch(String search)
+    {
+        String magnet = "";
+
+        for (int i = 0; i < rawData.getItemCount(); i++)
+        {
+            String data[] = search.split("\\S+");
+            boolean found = true;
+            compare:
+            for (int j = 0; j < data.length; j++)
+            {
+                if (rawData.getItem(i).toLowerCase().contains(data[j].toLowerCase()))
+                {
+                    found = true;
+                } else
+                {
+                    found = false;
+                    break compare;
+                }
+            }
+            
+            if(found == true)
+            {
+                magnet = rawData.getItem(i).substring(rawData.getItem(i).indexOf("magnet:?xt="), rawData.getItem(i).length());
+                return magnet;
+            }
+
+        }
+
+        return magnet;
+    }
+
+    public static void showRSSScraper() throws UnsupportedEncodingException, IllegalArgumentException, FeedException, IOException
+    {
+
+        for (int j = 0; j <= 1000; j++)
+        {
+            try
+            {
+                Thread.sleep(5);
+            } catch (InterruptedException ex)
+            {
+                Logger.getLogger(Testing.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            String num = j + "";
+            if (num.length() == 1)
+            {
+                num = "00" + num;
+            } else if (num.length() == 2)
+            {
+                num = "0" + num;
+            }
+
+            try
+            {
+                URL feedUrl = new URL("https://showrss.info/show/" + num + ".rss");
+
+                SyndFeedInput input = new SyndFeedInput();
+                SyndFeed feed = input.build(new XmlReader(feedUrl));
+
+                for (int i = 0; i < feed.getEntries().size(); i++)
+                {
+                    String data = feed.getEntries().get(i).toString();
+                    if (data.contains("magnet:?xt="))
+                    {
+
+                        String magnet = data.substring(data.indexOf("<a href=\"") + 9, data.indexOf("</a>"));
+                        String magnetName = magnet.substring(magnet.indexOf("&dn=") + 4, magnet.indexOf("&tr="));
+                        magnetName = magnetName.replace("+", " ");
+
+                        rawData.add(num + " " + magnetName + " " + magnet);
+              //  System.out.println(magnetName);
+                        //  System.out.println(magnet);
+                        //  System.out.println();
+
+                        // System.out.println(data);
+                    }
+                }
+
+                System.out.println(num + "  content found...");
+
+            } catch (IOException e)
+            {
+                //System.err.println(e);
+                System.out.println(num + "  no content...");
+            }
+
+        }
+
+        System.out.println(rawData.getItemCount());
+
+        //String eztvRSS = "https://eztv.ag/ezrss.xml";
+        PrintWriter out = new PrintWriter(Halen3.IO.FileManager.launchPath() + "\\scrapedShows.ini");
+        for (int i = 0; i < rawData.getItemCount(); i++)
+        {
+            out.println(rawData.getItem(i));
+        }
+        out.close();
+      //  System.out.println(feed);
+
+        // System.out.println("RETRUNED MAGNET: " + extrntFilmRssSearchMagnetRetriever(film));
         //   String title = "this is a full \n\t\r\b\fsentence here";
         //  System.out.print(title);
     }
@@ -63,7 +181,10 @@ public class Testing
 
         // String search = "apb s01e02";
         //extratorrent
-        String site = "http://www.extratorrent.cc/rss.xml?type=search&search=" + search.replaceAll(" ", "+");
+        //  String site = "http://www.extratorrent.cc/rss.xml?type=search&search=" + search.replaceAll(" ", "+");
+        String site = "http://torrentproject.se/rss/" + search.replaceAll(" ", "+") + "/";
+
+        System.out.println(site);
         //nyaa
         // site = "https://www.nyaa.se/?page=rss&term=" + search.replaceAll(" ", "+") + "&offset=1";
 
@@ -99,7 +220,10 @@ public class Testing
                     ColorCmd.println(" Testing Title: " + elements[i].substring(elements[i].indexOf("<title><![CDATA[") + 16, elements[i].lastIndexOf("]]></title>")).trim(), fgGreenBgWhite);
 
                     String title = "";
-                    String size = elements[i].substring(elements[i].indexOf("length=\"") + 8, elements[i].lastIndexOf("\" type")).trim();
+                    String size = elements[i].substring(elements[i].indexOf("Size:") + 5, elements[i].lastIndexOf("bytes,")).trim();
+                    String sizes[] = size.split(" ");
+                    size = sizes[sizes.length - 1];
+
                     size = size.replaceAll("[^0-9]", "");
                     long mb = Long.parseLong(size) / 1024 / 1024;
                     ColorCmd.println(" File Size: " + mb + "mb", fgGreenBgWhite);
@@ -130,7 +254,7 @@ public class Testing
                         //  System.out.println(elements[i].substring(elements[i].indexOf("<magnetURI><![CDATA[") + 20, elements[i].lastIndexOf("]]></magnetURI>")));
                     } else
                     {
-                        magnet = unescapeHtml3(elements[i].substring(elements[i].indexOf("<link>") + 6, elements[i].lastIndexOf("</link>")));
+                        magnet = unescapeHtml3(elements[i].substring(elements[i].indexOf("<enclosure url=\"") + 16, elements[i].lastIndexOf("\"  length=")));
                         //  System.out.println(unescapeHtml3(elements[i].substring(elements[i].indexOf("<link>") + 6, elements[i].lastIndexOf("</link>"))));
 
                     }
@@ -193,8 +317,9 @@ public class Testing
         }
         return "";
     }
-                                                                                                                                                                               
-    public static   String film = "the hunger games 2012";
+
+    public static String film = "the hunger games 2012";
+
     public static String extrntFilmRssSearchMagnetRetriever(String search)
     {
 
@@ -210,21 +335,23 @@ public class Testing
         {
             "hdtc", "hdts", "hd.ts", "hd-ts", "hd.tc", "hd-tc", "hdcam", "hc.tc",
             "hd.tc", "hd.cam", "hd-cam", "hd cam", "(cam)", "cam", "camrip", "hindi",
-            "Hindi", "480p", "3d", "3D", "DTS-HD", "Spanish", "SPANISH", "spanish", 
-            "Latino", "Italian", "Sub Ita", "Ita Eng","ENG-ITA","ITA-ENG", "PORTUGUESE",
+            "Hindi", "480p", "3d", "3D", "DTS-HD", "Spanish", "SPANISH", "spanish",
+            "Latino", "Italian", "Sub Ita", "Ita Eng", "ENG-ITA", "ITA-ENG", "PORTUGUESE",
             "[Greek]", "NL Subs", "iTA.ENG", "Multi-Subs", "4K", "4k", "UltraHD"
         };
 
         //
         //String results[] = {"empty", "empty", "empty", "empty", "empty", "empty", };
-       // String results[] = new String[allowedFormats.length];
+        // String results[] = new String[allowedFormats.length];
         List results = new List();
         // String search = "apb s01e02";
         //extratorrent
         String site = "http://www.extratorrent.cc/rss.xml?type=search&cid=4&search=" + search.replaceAll(" ", "+");
+
+        // site = "https://torrentproject.se/rss/"  + search.replaceAll(" ", "+") + "/";
         //nyaa
         // site = "https://www.nyaa.se/?page=rss&term=" + search.replaceAll(" ", "+") + "&offset=1";
-
+        System.out.println(site);
         try
         {
             URLConnection connection = new URL(site).openConnection();
@@ -325,7 +452,7 @@ public class Testing
                                 ColorCmd.println("Possible match candidate found, proceeding to test.....", fgBlueBgWhite);
                                 //ColorCmd.println("", fgBlueBgBlue);
                                 boolean add = true;
-                            //loop and check banned list to prevent cam rips and fake torrents getting added
+                                //loop and check banned list to prevent cam rips and fake torrents getting added
                                 //to results
                                 bannedLoop:
                                 for (int k = 0; k < bannedFormats.length; k++)
@@ -344,14 +471,14 @@ public class Testing
 
                                 if (add == true)
                                 {
-                                   // results[j] = magnet;
+                                    // results[j] = magnet;
                                     results.add(magnet);
                                     // System.out.println("VALID\n\n");
                                     ColorCmd.println("VALID", fgWhiteBgBlue);
                                     break allowedLoop;
                                 } else
                                 {
-                                //  results[j] = null;
+                                    //  results[j] = null;
                                     //System.out.println("Skipping.....\n\n");
                                     ColorCmd.println("Skipping.....", fgRedBgWhite);
                                     ColorCmd.println("", fgWhiteBgWhite);
@@ -386,12 +513,11 @@ public class Testing
                     if (results.getItem(j) != null)
                     {
 
-                      //  String magnet = "magnet:?xt=urn:btih:ba8da43b6aa1f51f896cf203dcb3705978d0b77a&amp;dn=The+Avengers+%282012%29+1080p+ENG-ITA+Multisub+x264+bluray&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fzer0day.to%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce";
-
+                        //  String magnet = "magnet:?xt=urn:btih:ba8da43b6aa1f51f896cf203dcb3705978d0b77a&amp;dn=The+Avengers+%282012%29+1080p+ENG-ITA+Multisub+x264+bluray&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fzer0day.to%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce";
                         String magnetName = results.getItem(j).substring(results.getItem(j).indexOf(";dn=") + 4, results.getItem(j).indexOf("&amp;tr="));
                         magnetName = java.net.URLDecoder.decode(magnetName, "UTF-8");
 
-                        ColorCmd.println(j + 1 + "  " + magnetName + ": "+ results.getItem(j), fgWhiteBgBlue);
+                        ColorCmd.println(j + 1 + "  " + magnetName + ": " + results.getItem(j), fgWhiteBgBlue);
                         // return results[j];
                     }
                 }

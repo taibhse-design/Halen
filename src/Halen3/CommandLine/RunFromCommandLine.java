@@ -67,13 +67,13 @@ public class RunFromCommandLine
                                   //wait for episode downloads to complete before moving to next
                                   while(DownloadNewEpisodes.searchingForTvEpisodes == true)
                                   { 
-                                      Thread.sleep(5000);
+                                      Thread.sleep(15000);
                                   }
                                     DownloadNewFilms.downloadNewFilms();
                                   //wait for Film downloads to complete before moving to next
                                   while(DownloadNewFilms.searchingForFilms == true)
                                   { 
-                                      Thread.sleep(5000);
+                                      Thread.sleep(15000);
                                   }
                                   
                                   //download new comic issues

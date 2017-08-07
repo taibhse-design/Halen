@@ -146,9 +146,11 @@ public class CreateComicRule
 //        ChromeDriver driver = new ChromeDriver();
 //        driver.manage().window().setPosition(new Point(-2000, 0));
         //tell to wait 10 seconds for page load
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //get url
         driver.get(URL);
+         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+       
+        System.out.println("poop");
         //wait for pages 5 second load, 
         WebElement myDynamicElement = driver.findElement(By.className("listing"));
         //get page html
