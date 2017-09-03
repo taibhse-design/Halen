@@ -43,7 +43,7 @@ public class ShowRSS
         search: for (int i = 0; i < rawData.getItemCount(); i++)
         {
           //  String data[] = search.split("\\s+");
-            boolean found = true;
+            boolean found = false;
            
                 if (rawData.getItem(i).toLowerCase().contains(seriesName.toLowerCase().trim()))
                 {
@@ -59,15 +59,23 @@ public class ShowRSS
                        epxXxx = epxXxx.replaceFirst("0", "");
                     }
                     
-                    if(rawData.getItem(i).toLowerCase().contains(epxxexx)) //test for ep format SxxExx
+                    String textToSearch = rawData.getItem(i).replace(rawData.getItem(i).substring(rawData.getItem(i).indexOf("magnet:?xt="), rawData.getItem(i).length()), "");
+                    if(textToSearch.toLowerCase().contains(epxxexx)) //test for ep format SxxExx
                     {
+                        
+                        System.out.println(epxxexx + "   " + textToSearch.toLowerCase());
                        found = true;
-                    }else if(rawData.getItem(i).toLowerCase().contains(epxxx)) //test for ep format xxx
+                    }else if(textToSearch.toLowerCase().contains(epxxx)) //test for ep format xxx
                     {
+                        System.out.println(epxxx + "   " + textToSearch.toLowerCase());
                        found = true;
-                    }else if(rawData.getItem(i).toLowerCase().contains(epxXxx)) //test for ep format xXxx
+                    }else if(textToSearch.toLowerCase().contains(epxXxx)) //test for ep format xXxx
                     {
+                        System.out.println(epxXxx + "   " + textToSearch.toLowerCase());
                        found = true;
+                    }else
+                    {
+                        found = false;
                     }
                  
                     

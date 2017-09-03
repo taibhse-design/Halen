@@ -5,23 +5,27 @@
  */
 package Halen3.GUI;
 
+import Halen3.GUI.Anime.AnimeGUI;
 import static Halen3.GUI.Anime.AnimeGUI.animePanel;
 import Halen3.GUI.Comics.ComicsGUI;
 import static Halen3.GUI.Comics.ComicsGUI.comicPanel;
+import Halen3.GUI.Film.FilmGUI;
+import static Halen3.GUI.Film.FilmGUI.filmPanel;
 import static Halen3.GUI.GUIBase.anime;
-import static Halen3.GUI.GUIBase.theme;
 import static Halen3.GUI.GUIBase.color;
 import static Halen3.GUI.GUIBase.comics;
 import static Halen3.GUI.GUIBase.film;
+import static Halen3.GUI.GUIBase.manga;
 import static Halen3.GUI.GUIBase.primary;
 import static Halen3.GUI.GUIBase.secondary;
 import static Halen3.GUI.GUIBase.settings;
 import static Halen3.GUI.GUIBase.tertiary;
+import static Halen3.GUI.GUIBase.theme;
 import static Halen3.GUI.GUIBase.themePanel;
 import static Halen3.GUI.GUIBase.tv;
+import Halen3.GUI.Manga.MangaGUI;
+import static Halen3.GUI.Manga.MangaGUI.mangaPanel;
 import static Halen3.GUI.Settings.SettingsGUI.settingsPanel;
-import Halen3.GUI.Film.FilmGUI;
-import static Halen3.GUI.Film.FilmGUI.filmPanel;
 import Halen3.GUI.TV.TvGUI;
 import static Halen3.GUI.TV.TvGUI.tvPanel;
 import Halen3.IO.FileManager;
@@ -39,8 +43,10 @@ public class GUIBaseControls
 {
 
     static long tvFolderSize = FileUtils.sizeOfDirectory(new File(FileManager.launchPath() + "/rules/tv show/"));
+    static long animeFolderSize = FileUtils.sizeOfDirectory(new File(FileManager.launchPath() + "/rules/anime/"));
     static long filmFolderSize = FileUtils.sizeOfDirectory(new File(FileManager.launchPath() + "/rules/films/"));
     static long comicFolderSize = FileUtils.sizeOfDirectory(new File(FileManager.launchPath() + "/rules/comics/"));
+    static long mangaFolderSize = FileUtils.sizeOfDirectory(new File(FileManager.launchPath() + "/rules/manga/"));
 
     public static void initBaseControls()
     {
@@ -57,10 +63,12 @@ public class GUIBaseControls
                 tvPanel.setVisible(false);
                 filmPanel.setVisible(false);
                 comicPanel.setVisible(false);
+                mangaPanel.setVisible(false);
                 animePanel.setVisible(false);
                 settingsPanel.setVisible(false);
                 GUIBase.tv.setVisible(false);
                 GUIBase.film.setVisible(false);
+                GUIBase.manga.setVisible(false);
                 GUIBase.comics.setVisible(false);
                 GUIBase.anime.setVisible(false);
                 GUIBase.settings.setVisible(false);
@@ -117,6 +125,8 @@ public class GUIBaseControls
                 comics.setOpaque(false);
                 anime.setOpaque(false);
                 settings.setOpaque(false);
+                manga.setOpaque(false);
+                manga.setBackground(primary);
                 tv.setBackground(secondary);
                 comics.setBackground(primary);
                 anime.setBackground(primary);
@@ -134,6 +144,7 @@ public class GUIBaseControls
                 comicPanel.setVisible(false);
                 animePanel.setVisible(false);
                 settingsPanel.setVisible(false);
+                mangaPanel.setVisible(false);
 
             }
 
@@ -181,6 +192,8 @@ public class GUIBaseControls
                 comics.setOpaque(true);
                 anime.setOpaque(false);
                 settings.setOpaque(false);
+                manga.setOpaque(false);
+                manga.setBackground(primary);
                 tv.setBackground(primary);
                 comics.setBackground(secondary);
                 anime.setBackground(primary);
@@ -197,6 +210,7 @@ public class GUIBaseControls
                 tvPanel.setVisible(false);
                 filmPanel.setVisible(false);
                 comicPanel.setVisible(true);
+                mangaPanel.setVisible(false);
                 animePanel.setVisible(false);
                 settingsPanel.setVisible(false);
             }
@@ -234,6 +248,72 @@ public class GUIBaseControls
             }
         });
 
+        manga.addMouseListener(new MouseListener()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+
+                tv.setOpaque(false);
+                film.setOpaque(false);
+                comics.setOpaque(false);
+                manga.setOpaque(true);
+                anime.setOpaque(false);
+                settings.setOpaque(false);
+                tv.setBackground(primary);
+                comics.setBackground(primary);
+                manga.setBackground(secondary);
+                anime.setBackground(primary);
+                settings.setBackground(primary);
+
+                //if folder size changes then new rule added/removed, refresh list
+                    long size = FileUtils.sizeOfDirectory(new File(FileManager.launchPath() + "/rules/manga/"));
+                    if (mangaFolderSize != size)
+                   {
+                      mangaFolderSize = size;
+                    MangaGUI.refreshMangaPanel();
+                   }
+                  tvPanel.setVisible(false);
+                   filmPanel.setVisible(false);
+                   comicPanel.setVisible(false);
+                   mangaPanel.setVisible(true);
+                   animePanel.setVisible(false);
+                   settingsPanel.setVisible(false);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e)
+            {
+                ImageIcon t = new ImageIcon(color(tertiary, "Resources/metro/MenuSelectionButtons/manga-clicked.png"));
+                ImageIcon ts = new ImageIcon(t.getImage().getScaledInstance(manga.getWidth(), manga.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                manga.setIcon(ts);
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e)
+            {
+                ImageIcon t = new ImageIcon(color(tertiary, "Resources/metro/MenuSelectionButtons/manga-normal.png"));
+                ImageIcon ts = new ImageIcon(t.getImage().getScaledInstance(manga.getWidth(), manga.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                manga.setIcon(ts);
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e)
+            {
+                ImageIcon t = new ImageIcon(color(tertiary, "Resources/metro/MenuSelectionButtons/manga-hover.png"));
+                ImageIcon ts = new ImageIcon(t.getImage().getScaledInstance(manga.getWidth(), manga.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                manga.setIcon(ts);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e)
+            {
+                ImageIcon t = new ImageIcon(color(tertiary, "Resources/metro/MenuSelectionButtons/manga-normal.png"));
+                ImageIcon ts = new ImageIcon(t.getImage().getScaledInstance(manga.getWidth(), manga.getHeight(), java.awt.Image.SCALE_DEFAULT));
+                manga.setIcon(ts);
+            }
+        });
+
         film.addMouseListener(new MouseListener()
         {
             @Override
@@ -245,6 +325,8 @@ public class GUIBaseControls
                 comics.setOpaque(false);
                 anime.setOpaque(false);
                 settings.setOpaque(false);
+                manga.setOpaque(false);
+                manga.setBackground(primary);
                 film.setBackground(secondary);
                 tv.setBackground(primary);
                 comics.setBackground(primary);
@@ -256,11 +338,12 @@ public class GUIBaseControls
                 if (filmFolderSize != size)
                 {
                     filmFolderSize = size;
-                       FilmGUI.refreshFilmPanel();
+                    FilmGUI.refreshFilmPanel();
                 }
                 filmPanel.setVisible(true);
                 tvPanel.setVisible(false);
                 comicPanel.setVisible(false);
+                mangaPanel.setVisible(false);
                 animePanel.setVisible(false);
                 settingsPanel.setVisible(false);
 
@@ -310,15 +393,25 @@ public class GUIBaseControls
                 comics.setOpaque(false);
                 anime.setOpaque(true);
                 settings.setOpaque(false);
-
+                manga.setOpaque(false);
+                manga.setBackground(primary);
                 tv.setBackground(primary);
                 comics.setBackground(primary);
                 anime.setBackground(secondary);
                 settings.setBackground(primary);
 
+                //if folder size changes then new rule added/removed, refresh list
+                long size = FileUtils.sizeOfDirectory(new File(FileManager.launchPath() + "/rules/anime/"));
+                if (animeFolderSize != size)
+                {
+                    animeFolderSize = size;
+                    AnimeGUI.refreshAnimePanel();
+                }
+                
                 tvPanel.setVisible(false);
                 filmPanel.setVisible(false);
                 comicPanel.setVisible(false);
+                mangaPanel.setVisible(false);
                 animePanel.setVisible(true);
                 settingsPanel.setVisible(false);
             }
@@ -367,7 +460,8 @@ public class GUIBaseControls
                 comics.setOpaque(false);
                 anime.setOpaque(false);
                 settings.setOpaque(true);
-
+                manga.setOpaque(false);
+                manga.setBackground(primary);
                 tv.setBackground(primary);
                 comics.setBackground(primary);
                 anime.setBackground(primary);
@@ -376,6 +470,7 @@ public class GUIBaseControls
                 tvPanel.setVisible(false);
                 filmPanel.setVisible(false);
                 comicPanel.setVisible(false);
+                mangaPanel.setVisible(false);
                 animePanel.setVisible(false);
                 settingsPanel.setVisible(true);
             }

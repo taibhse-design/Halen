@@ -11,10 +11,14 @@ import Halen3.GUI.Comics.ComicsGUI;
 import static Halen3.GUI.Comics.ComicsGUI.refreshComicsPanel;
 import Halen3.GUI.Film.FilmGUI;
 import static Halen3.GUI.Film.FilmGUI.refreshFilmPanel;
+import Halen3.GUI.Manga.MangaGUI;
+import static Halen3.GUI.Manga.MangaGUI.refreshMangaPanel;
 import Halen3.GUI.TV.TvGUI;
 import static Halen3.GUI.TV.TvGUI.refreshTvPanel;
 import Halen3.IO.FileManager;
 import Halen3.IO.GlobalSharedVariables;
+import Halen3.Retrievers.ComicsV2.CreateComicRule;
+import Halen3.Retrievers.Manga.CreateMangaRule;
 import java.awt.List;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -769,18 +773,18 @@ public class RuleManager
                 if (!ComicsGUI.comicURLInput.getText().equals("") | !ComicsGUI.comicURLInput.getText().equals("..."))
                 {
 
-                    if (ComicsGUI.comicURLInput.getText().contains("readcomiconline.to/Comic/") | ComicsGUI.comicURLInput.getText().contains("kissmanga.com/Manga/"))
+                    if (ComicsGUI.comicURLInput.getText().contains("readcomics.website"))
                     {
                         //tag - source  - new value
                         updateLine = FileManager.updateTag("url", updateLine, ComicsGUI.comicURLInput.getText());
                     } else
                     {
-                        message = "DATA INVALID - please provide a valid readcomiconline or kissmanga url!";
+                        message = "DATA INVALID - please provide a valid readcomics.website url!";
                     }
 
                 } else
                 {
-                    message = "DATA INVALID - please provide a valid readcomiconline or kissmanga url!";
+                    message = "DATA INVALID - please provide a valid readcomics.website url!";
                 }
 
                 if (!ComicsGUI.DownloadToFolderText.getText().equals("") | !ComicsGUI.DownloadToFolderText.getText().equals("..."))
@@ -894,19 +898,19 @@ public class RuleManager
                 if (!ComicsGUI.comicURLInput.getText().equals("") | !ComicsGUI.comicURLInput.getText().equals("..."))
                 {
 
-                    if (ComicsGUI.comicURLInput.getText().contains("readcomiconline.to/Comic/") | ComicsGUI.comicURLInput.getText().contains("kissmanga.com/Manga/"))
+                    if (ComicsGUI.comicURLInput.getText().contains("readcomics.website"))
                     {
                         //tag - source  - new value
                      //   tags = tags + FileManager.makeTag("url", ComicsGUI.comicURLInput.getText());
 
                     } else
                     {
-                        message = "DATA INVALID - please provide a valid readcomiconline or kissmanga url!";
+                        message = "DATA INVALID - please provide a valid readcomics.website url!";
                     }
 
                 } else
                 {
-                    message = "DATA INVALID - please provide a valid readcomiconline or kissmanga url!";
+                    message = "DATA INVALID - please provide a valid readcomics.website url!";
                 }
 
                 if (!ComicsGUI.DownloadToFolderText.getText().equals("") | !ComicsGUI.DownloadToFolderText.getText().equals("..."))
@@ -962,7 +966,7 @@ public class RuleManager
                     try
                     {
                         //replace line one with updated tags
-                        Halen3.Retrievers.Comics.CreateComicRule.saveNewSeries(ComicsGUI.comicURLInput.getText(), ruleName, ComicsGUI.DownloadToFolderText.getText());
+                        CreateComicRule.saveNewSeries(ComicsGUI.comicURLInput.getText(), ruleName, ComicsGUI.DownloadToFolderText.getText());
                         //where to save rule
 //                        out = new PrintWriter(halen.FileManager.launchPath() + "/rules/tv show/" + ruleName.trim() + ".xml");
 //                        //loop and print lines
@@ -996,6 +1000,269 @@ public class RuleManager
     }
 
     
+    public static void saveMangaRule(String ruleName) throws InterruptedException, IOException
+    {
+        System.out.println(ruleName.trim() + ".xml");
+        //########################################################################
+        //                   update existing rule
+        //########################################################################
+        if (new File(Halen3.IO.FileManager.launchPath() + "/rules/manga/" + ruleName.trim() + ".xml").exists())
+        {
+            //only update first line
+            int reply = JOptionPane.showConfirmDialog(null, "THIS RULE ALREADY EXISTS! \nCLICK YES IF YOU WISH TO COMMIT CHANGES.", "RULE ALREADY EXISTS", JOptionPane.YES_NO_OPTION);
+            if (reply == JOptionPane.YES_OPTION)
+            {
+
+                System.out.println("SAVING OVER EXISTING RULE FILE....."); //if file exists then edit existing file
+
+                //get list of tags
+                List update = FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/manga/" + ruleName.trim() + ".xml");
+                //get line one with tags
+                String updateLine = update.getItem(0);
+                //message 
+                String message = "DATA VALID";
+
+                //#############################################################################
+                //                    go through tags and check if valid
+                //#############################################################################
+                if (!ruleName.equals("") | !ruleName.equals("..."))
+                {
+                    //remove any illegal characters
+                    ruleName = ruleName.replaceAll("[^a-zA-Z0-9. -]", " ").replaceAll("\\s+", " ").trim();
+
+                } else
+                {
+                    message = "DATA INVALID - please provide a valid rule name!";
+                }
+
+                if (!MangaGUI.mangaURLInput.getText().equals("") | !MangaGUI.mangaURLInput.getText().equals("..."))
+                {
+
+                    if (MangaGUI.mangaURLInput.getText().contains("readmanga.today"))
+                    {
+                        //tag - source  - new value
+                        updateLine = FileManager.updateTag("url", updateLine, MangaGUI.mangaURLInput.getText());
+                    } else
+                    {
+                        message = "DATA INVALID - please provide a valid readmanga.today url!";
+                    }
+
+                } else
+                {
+                    message = "DATA INVALID - please provide a valid readmanga.today url!";
+                }
+
+                if (!MangaGUI.DownloadToFolderText.getText().equals("") | !MangaGUI.DownloadToFolderText.getText().equals("..."))
+                {
+
+                    if (new File(MangaGUI.DownloadToFolderText.getText()).exists() | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+                    {
+                        //tag - source  - new value
+                        updateLine = FileManager.updateTag("downloadTo", updateLine, MangaGUI.DownloadToFolderText.getText());
+                    } else
+                    {
+                        new File(MangaGUI.DownloadToFolderText.getText()).mkdirs();
+                        if (new File(MangaGUI.DownloadToFolderText.getText()).exists())
+                        {
+                            updateLine = FileManager.updateTag("downloadTo", updateLine, MangaGUI.DownloadToFolderText.getText());
+                        } else
+                        {
+                            message = "DATA INVALID - provided path does not exist nor can it be created!";
+                        }
+                    }
+
+                } else
+                {
+                    message = "DATA INVALID - please provide a valid folder to download Manga too!";
+                }
+
+                //offer warning that folder checks on search in and move to folders 
+                //are disabled, proceed with caution as this can cause drive damage
+                if (GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+                {
+
+                    String[] options = new String[]
+                    {
+                        "Yes Proceed", "No Don't"
+                    };
+                    int response = JOptionPane.showOptionDialog(null, "<html><body><p style='width: 500px;'>Warning - Code to check that set search in folder and move to folders both exist has been disabled. Do you wish to proceed with saving this rule? Be aware that saving a rule with invalid set folders can cause damae to files on this drive as halen may move files unintentionally or may mix files into the wrong location.</p></body></html>", "CRITICAL WARNING", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+
+                    if (response == 1)
+                    {
+                        message = "DATA INVALID - please provide valid search text!";
+
+                    }
+                }
+
+                //#############################################################################
+                //                              save out rule
+                //#############################################################################
+                if (message.contains("DATA VALID"))
+                {
+
+                    PrintWriter out = null;
+                    try
+                    {
+                        //replace line one with updated tags
+                        update.replaceItem(updateLine, 0);
+                        //where to save rule
+                        out = new PrintWriter(Halen3.IO.FileManager.launchPath() + "/rules/manga/" + ruleName.trim() + ".xml");
+                        //loop and print lines
+                        for (int i = 0; i < update.getItemCount(); i++)
+                        {
+                            out.println(update.getItem(i));
+                        }
+                        //close writer on end
+                        out.close();
+
+                    } catch (FileNotFoundException ex)
+                    {
+                        Logger.getLogger(RuleManager.class.getName()).log(Level.SEVERE, null, ex);
+                    } finally
+                    {
+                        out.close();
+                    }
+
+                } else
+                {
+                    System.out.println(message);
+                    JOptionPane.showMessageDialog(null, message, "ERROR", JOptionPane.WARNING_MESSAGE);
+                }
+
+                //end
+            }
+        } else
+        {
+            //########################################################################
+            //                   create new rule
+            //########################################################################
+            //create new rule entirely from scratch
+            //only update first line
+            int reply = JOptionPane.showConfirmDialog(null, "CLICK YES IF YOU WISH \nTO SAVE THIS NEW RULE.", "CREATE NEW RULE", JOptionPane.YES_NO_OPTION);
+            if (reply == JOptionPane.YES_OPTION)
+            {
+
+                System.out.println("SAVING NEW RULE FILE....."); //if file exists then edit existing file
+                String tags = "";
+                List issues = null;
+                String message = "DATA VALID";
+
+                //#############################################################################
+                //                    go through tags and check if valid
+                //#############################################################################
+                if (!ruleName.equals("") | !ruleName.equals("..."))
+                {
+                    //remove any illegal characters
+                    ruleName = ruleName.replaceAll("[^a-zA-Z0-9. -]", " ").replaceAll("\\s+", " ").trim();
+
+                } else
+                {
+                    message = "DATA INVALID - please provide a valid rule name!";
+                }
+
+                if (!MangaGUI.mangaURLInput.getText().equals("") | !MangaGUI.mangaURLInput.getText().equals("..."))
+                {
+
+                    if (MangaGUI.mangaURLInput.getText().contains("readmanga.today"))
+                    {
+                        //tag - source  - new value
+                     //   tags = tags + FileManager.makeTag("url", MangaGUI.mangaURLInput.getText());
+
+                    } else
+                    {
+                        message = "DATA INVALID - please provide a valid readmanga.today url!";
+                    }
+
+                } else
+                {
+                    message = "DATA INVALID - please provide a valid readmanga.today url!";
+                }
+
+                if (!MangaGUI.DownloadToFolderText.getText().equals("") | !MangaGUI.DownloadToFolderText.getText().equals("..."))
+                {
+
+                    if (new File(MangaGUI.DownloadToFolderText.getText()).exists() | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+                    {
+                        //tag - source  - new value
+                       // tags = tags + FileManager.makeTag("moveToFolder", MangaGUI.DownloadToFolderText.getText());
+                    } else
+                    {
+                        new File(MangaGUI.DownloadToFolderText.getText()).mkdirs();
+                        if (new File(MangaGUI.DownloadToFolderText.getText()).exists())
+                        {
+                            //tag - source  - new value
+                          //  tags = tags + FileManager.makeTag("downloadTo", MangaGUI.DownloadToFolderText.getText());
+                        } else
+                        {
+                            message = "DATA INVALID - provided download directory does not exist nor can it be created!";
+                        }
+
+                    }
+
+                } else
+                {
+                    message = "DATA INVALID - please provide a valid move to directory directory!";
+                }
+
+                //offer warning that folder checks on search in and move to folders 
+                //are disabled, proceed with caution as this can cause drive damage
+                if (GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
+                {
+
+                    String[] options = new String[]
+                    {
+                        "Yes Proceed", "No Don't"
+                    };
+                    int response = JOptionPane.showOptionDialog(null, "<html><body><p style='width: 500px;'>Warning - Code to check that set search in folder and move to folders both exist has been disabled. Do you wish to proceed with saving this rule? Be aware that saving a rule with invalid set folders can cause damae to files on this drive as halen may move files unintentionally or may mix files into the wrong location.</p></body></html>", "CRITICAL WARNING", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+
+                    if (response == 1)
+                    {
+                        message = "DATA INVALID - please provide valid search text!";
+
+                    }
+                }
+                //#############################################################################
+                //                              save out rule
+                //#############################################################################
+                if (message.contains("DATA VALID"))
+                {
+
+                    // PrintWriter out = null;
+                    try
+                    {
+                        //replace line one with updated tags
+                        CreateMangaRule.saveNewSeries(MangaGUI.mangaURLInput.getText(), ruleName, MangaGUI.DownloadToFolderText.getText());
+                        //where to save rule
+//                        out = new PrintWriter(halen.FileManager.launchPath() + "/rules/tv show/" + ruleName.trim() + ".xml");
+//                        //loop and print lines
+//                        for (int i = 0; i < issues.getItemCount(); i++)
+//                        {
+//                            out.println(issues.getItem(i));
+//                        }
+//                        //close writer on end
+//                        out.close();
+
+                    } catch (FileNotFoundException ex)
+                    {
+                        System.out.println(ex);
+                        Logger.getLogger(RuleManager.class.getName()).log(Level.SEVERE, null, ex);
+                    } //finally
+//                    {
+//                        out.close();
+//                    }
+
+                } else
+                {
+                    System.out.println(message);
+                    JOptionPane.showMessageDialog(null, message, "ERROR", JOptionPane.WARNING_MESSAGE);
+                }
+
+                refreshMangaPanel();
+                //end
+
+            }
+        }
+    }
     
     public static void saveAnimeRule(String ruleName) throws InterruptedException, IOException
     {

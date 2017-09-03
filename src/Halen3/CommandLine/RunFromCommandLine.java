@@ -9,9 +9,10 @@ import Halen3.EmailNotifier.SendEmailNotification;
 import static Halen3.FileMover.SearchAlgorithms.moveFilesFromAllRules;
 import Halen3.IO.FileManager;
 import Halen3.IO.Log;
-import Halen3.Retrievers.Anime.DownloadNewAnimeEpisodes;
-import Halen3.Retrievers.Comics.DownloadNewIssues;
+import Halen3.Retrievers.ComicsV2.DownloadNewIssues;
+import Halen3.Retrievers.ComicsV2.SearchForUpdates;
 import Halen3.Retrievers.Films.DownloadNewFilms;
+import Halen3.Retrievers.Manga.DownloadNewMangaVolumes;
 import Halen3.Retrievers.TvShows.DownloadNewEpisodes;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -78,6 +79,8 @@ public class RunFromCommandLine
                                   
                                   //download new comic issues
                                   DownloadNewIssues.downloadNewIssues();
+                                  //download any new manga issues
+                                  DownloadNewMangaVolumes.downloadNewVolumes();
                                   
                                   //download new anime episodes
                                  // DownloadNewAnimeEpisodes.getNewAnimeEpisodeMagnets();
@@ -106,7 +109,10 @@ public class RunFromCommandLine
                                    {
                                        Thread.sleep(5000);
                                    }
-                                   Halen3.Retrievers.Comics.SearchForUpdates.updateAllComicRules();
+                                   //update comic rules
+                                   SearchForUpdates.updateAllComicRules();
+                                   //update manga rules
+                                   Halen3.Retrievers.Manga.SearchForUpdates.updateAllMangaRules();
                                   // Halen3.Retrievers.Anime.SearchForUpdates.updateAllAnimeRules();
                                    
                                    break;

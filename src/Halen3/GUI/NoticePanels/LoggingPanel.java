@@ -12,6 +12,7 @@ import Halen3.GUI.GUIBase;
 import static Halen3.GUI.GUIBase.color;
 import static Halen3.GUI.GUIBase.secondary;
 import static Halen3.GUI.GUIBase.tertiary;
+import static Halen3.GUI.Manga.MangaGUI.mangaPanel;
 import static Halen3.GUI.TV.TvGUI.tvPanel;
 import Halen3.IO.FileManager;
 import java.awt.Font;
@@ -129,6 +130,33 @@ public class LoggingPanel
 
     }
       
+         public static void showMangaLogging()
+    {
+        logs.setText("");
+        GUIBase.hideButtons();
+        ImageIcon a = new ImageIcon(color(tertiary, "Resources/metro/types/manga.png"));
+        ImageIcon as = new ImageIcon(a.getImage().getScaledInstance((int) (loggingPanel.getHeight() / 3), (int) (loggingPanel.getHeight() / 3), java.awt.Image.SCALE_DEFAULT));
+        anim.setIcon(as);
+        mangaPanel.setVisible(false);
+        loggingPanel.setVisible(true);
+    }
+    
+      public static void hideMangaLogging()
+    {
+        try
+        {
+            Thread.sleep(5000);
+        } catch (InterruptedException ex)
+        {
+            Logger.getLogger(LoggingPanel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        GUIBase.showButtons();
+        mangaPanel.setVisible(true);
+        loggingPanel.setVisible(false);
+
+    }
+     //''''''' 
     public static void showTVLogging()
     {
         logs.setText("");

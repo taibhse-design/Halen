@@ -5,40 +5,36 @@
  */
 package Halen3.GUI.Comics;
 
-import static Halen3.GUI.Comics.ComicsGUI.comicURLInput;
-import static Halen3.GUI.Comics.ComicsGUI.ruleNameInput;
-
-import static Halen3.GUI.Comics.ComicsGUI.save;
-
-import static Halen3.GUI.Comics.ComicsGUI.rulesScroll;
-import static Halen3.GUI.Comics.ComicsGUI.rulesListPanel;
-
-import static Halen3.GUI.Comics.ComicsGUI.issueListEmptyPanel;
-import static Halen3.GUI.Comics.ComicsGUI.issueListScroll;
-
-import static Halen3.GUI.Comics.ComicsGUI.run;
-
-import static Halen3.GUI.Comics.ComicsGUI.delete;
-
-import static Halen3.GUI.Comics.ComicsGUI.update;
-import Halen3.GUI.GUIBase;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.io.File;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
 import static Halen3.GUI.Comics.ComicsGUI.DownloadToFolderText;
 import static Halen3.GUI.Comics.ComicsGUI.comicPanel;
+import static Halen3.GUI.Comics.ComicsGUI.comicURLInput;
+import static Halen3.GUI.Comics.ComicsGUI.delete;
+import static Halen3.GUI.Comics.ComicsGUI.issueListEmptyPanel;
+import static Halen3.GUI.Comics.ComicsGUI.issueListScroll;
+import static Halen3.GUI.Comics.ComicsGUI.ruleNameInput;
+import static Halen3.GUI.Comics.ComicsGUI.rulesListPanel;
+import static Halen3.GUI.Comics.ComicsGUI.rulesScroll;
+import static Halen3.GUI.Comics.ComicsGUI.run;
+import static Halen3.GUI.Comics.ComicsGUI.save;
+import static Halen3.GUI.Comics.ComicsGUI.update;
+import Halen3.GUI.GUIBase;
 import static Halen3.GUI.GUIBase.tertiary;
 import Halen3.GUI.NoticePanels.LoggingPanel;
 import static Halen3.GUI.NoticePanels.SavingPanel.savePanel;
 import Halen3.GUI.RuleManager;
 import Halen3.IO.FileManager;
+import Halen3.Retrievers.ComicsV2.DownloadNewIssues;
+import Halen3.Retrievers.ComicsV2.SearchForUpdates;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.SwingWorker;
 
 /**
@@ -350,7 +346,7 @@ public class comicsGUIControls
                     @Override
                     protected String doInBackground() throws Exception
                     {
-                        Halen3.Retrievers.Comics.DownloadNewIssues.downloadNewIssues();
+                        DownloadNewIssues.downloadNewIssues();
 
                         LoggingPanel.hideComicLogging();
                         GUIBase.frame.revalidate();
@@ -407,7 +403,7 @@ public class comicsGUIControls
                     @Override
                     protected String doInBackground() throws Exception
                     {
-                        Halen3.Retrievers.Comics.SearchForUpdates.updateAllComicRules();
+                        SearchForUpdates.updateAllComicRules();
 
                         LoggingPanel.hideComicLogging();
                         return null;

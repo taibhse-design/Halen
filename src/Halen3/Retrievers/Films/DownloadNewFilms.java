@@ -13,6 +13,7 @@ import static Halen3.CommandLine.ColorCmd.fgWhiteBgWhite;
 import Halen3.EmailNotifier.SendEmailNotification;
 import Halen3.IO.FileManager;
 import Halen3.IO.GlobalSharedVariables;
+import static Halen3.Retrievers.Films.SkyTorrentsFilmScraper.skyTrntFilmRssSearchMagnetRetriever;
 import Halen3.Retrievers.MagnetHandler;
 import Halen3.Testing.Testing;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
@@ -21,6 +22,8 @@ import java.io.FileNotFoundException;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.mail.MessagingException;
 
 /**
@@ -83,7 +86,7 @@ public class DownloadNewFilms
             {
 
                 // magnet = Halen3.Retrievers.TvShows.ExtraTorrentMagnetLinksScraper.getMagnet(FileManager.returnTag("search", eps.getItem(0)), eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
-                magnet = Testing.extrntFilmRssSearchMagnetRetriever(FileManager.returnTag("search", FileManager.readFile(filmList[i].getPath()).getItem(0)));
+                magnet = skyTrntFilmRssSearchMagnetRetriever(FileManager.returnTag("search", FileManager.readFile(filmList[i].getPath()).getItem(0)));
 
                 //   System.out.println("poop"+tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + " : " + magnet + "\n");
             } catch (FailingHttpStatusCodeException e)
@@ -102,7 +105,13 @@ public class DownloadNewFilms
                 }
 
                 //  System.out.println(magnet);
-            }
+            }   catch (IOException ex)
+                {
+                    Logger.getLogger(DownloadNewFilms.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (InterruptedException ex)
+                {
+                    Logger.getLogger(DownloadNewFilms.class.getName()).log(Level.SEVERE, null, ex);
+                }
 
             if (magnet.contains("magnet:?xt=")) //handle magnet if found
             {

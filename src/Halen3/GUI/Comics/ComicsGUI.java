@@ -13,7 +13,6 @@ import static Halen3.GUI.GUIBase.secondary;
 import static Halen3.GUI.GUIBase.tertiary;
 import Halen3.IO.FileManager;
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -23,7 +22,6 @@ import java.awt.List;
 import java.awt.Rectangle;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileNotFoundException;
@@ -641,11 +639,11 @@ public class ComicsGUI
         //  button.setLocation(x, y);
         //  System.out.println(new File(FileManager.returnTag("imageURL", new Scanner(rulesList[i]).nextLine())));
         //if(new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png")).exists())
-        if (new File(FileManager.launchPath() + FileManager.returnTag("imageURL", new Scanner(rulesList[i]).nextLine())).exists())
+        if (new File(FileManager.launchPath() + FileManager.returnTag("localImagePath", new Scanner(rulesList[i]).nextLine())).exists())
         {
             //  File sourceimage = new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png"));
 
-            File sourceimage = new File(FileManager.launchPath() + FileManager.returnTag("imageURL", new Scanner(rulesList[i]).nextLine()));
+            File sourceimage = new File(FileManager.launchPath() + FileManager.returnTag("localImagePath", new Scanner(rulesList[i]).nextLine()));
 
             Image image = ImageIO.read(sourceimage);
 

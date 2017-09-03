@@ -1,26 +1,12 @@
 package Halen3.Retrievers.Anime;
 
-import Halen3.CommandLine.ColorCmd;
-import static Halen3.CommandLine.ColorCmd.fgRedBgWhite;
-import static Halen3.CommandLine.ColorCmd.fgYellowBgWhite;
 import Halen3.IO.FileManager;
 import Halen3.IO.GlobalSharedVariables;
 import static Halen3.IO.GlobalSharedVariables.driver;
-import Halen3.Retrievers.Comics.UploadToImgur;
-import com.gargoylesoftware.htmlunit.BrowserVersion;
-import com.gargoylesoftware.htmlunit.NicelyResynchronizingAjaxController;
-import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import java.io.BufferedInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintWriter;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.commons.io.FileUtils;

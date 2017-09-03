@@ -15,6 +15,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StringReader;
+import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 import java.security.CodeSource;
 import java.text.DateFormat;
@@ -51,12 +52,11 @@ public class FileManager
     {
 
         removeWordMethod("ettv");
-        
+
      //   System.out.println(howManyDaysSince(""));
         // String processName = "qbittorrent";
         // System.out.println("is " + processName + " Running: " + isProcessRunning(processName));
         //     System.out.println(hasDatePassed("hgjhgjh"));
-
         //  trimWhiteSpaceFromImage("C:\\Users\\brenn\\Documents\\NetBeansProjects\\Halen\\build\\graphics\\comic-book-covers\\Ghost in the Shell ARISE.png");
     }
 
@@ -364,10 +364,8 @@ public class FileManager
      * given a path to a file or directory, this deletes that file or path
      *
      * @param file
-     * @throws IOException
      */
     public static void delete(File file)
-            throws IOException
     {
 
         if (file.isDirectory())
@@ -488,77 +486,107 @@ public class FileManager
         File folder = new File(launchPath() + "//rules//tv show");
         File[] listOfFiles = folder.listFiles();
 
-        for(int i = 0; i < listOfFiles.length; i++)
+        for (int i = 0; i < listOfFiles.length; i++)
         {
-        File inputFile = listOfFiles[i];
-        File tempFile = new File(launchPath() + "//rules//TempWordlist.xml");
+            File inputFile = listOfFiles[i];
+            File tempFile = new File(launchPath() + "//rules//TempWordlist.xml");
 
-        BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-        BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
-        String currentLine;
+            BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+            String currentLine;
 
-        while ((currentLine = reader.readLine()) != null)
-        {
-            String trimmedLine = currentLine.trim();
-            if (trimmedLine.contains(wordstoremove))
+            while ((currentLine = reader.readLine()) != null)
             {
-                
-               trimmedLine = trimmedLine.replace(wordstoremove, "");
-            }
-            writer.write(trimmedLine + "\n");
-        }
-        reader.close();
-        writer.close();
-        inputFile.delete();
-        tempFile.renameTo(inputFile);
-        
-        }
-    }
-    
-    
-     /**
-   * Calculates the similarity (a number within 0 and 1) between two strings.
-   */
-  public static double similarity(String s1, String s2) {
-    String longer = s1, shorter = s2;
-    if (s1.length() < s2.length()) { // longer should always have greater length
-      longer = s2; shorter = s1;
-    }
-    int longerLength = longer.length();
-    if (longerLength == 0) { return 1.0; /* both strings are zero length */ }
-    /* // If you have StringUtils, you can use it to calculate the edit distance:
-    return (longerLength - StringUtils.getLevenshteinDistance(longer, shorter)) /
-                               (double) longerLength; */
-    return (longerLength - editDistance(longer, shorter)) / (double) longerLength;
+                String trimmedLine = currentLine.trim();
+                if (trimmedLine.contains(wordstoremove))
+                {
 
-  }
+                    trimmedLine = trimmedLine.replace(wordstoremove, "");
+                }
+                writer.write(trimmedLine + "\n");
+            }
+            reader.close();
+            writer.close();
+            inputFile.delete();
+            tempFile.renameTo(inputFile);
+
+        }
+    }
+
+    /**
+     * Calculates the similarity (a number within 0 and 1) between two strings.
+     */
+    public static double similarity(String s1, String s2)
+    {
+        String longer = s1, shorter = s2;
+        if (s1.length() < s2.length())
+        { // longer should always have greater length
+            longer = s2;
+            shorter = s1;
+        }
+        int longerLength = longer.length();
+        if (longerLength == 0)
+        {
+            return 1.0; /* both strings are zero length */ }
+        /* // If you have StringUtils, you can use it to calculate the edit distance:
+         return (longerLength - StringUtils.getLevenshteinDistance(longer, shorter)) /
+         (double) longerLength; */
+        return (longerLength - editDistance(longer, shorter)) / (double) longerLength;
+
+    }
 
   // Example implementation of the Levenshtein Edit Distance
-  // See http://rosettacode.org/wiki/Levenshtein_distance#Java
-  public static int editDistance(String s1, String s2) {
-    s1 = s1.toLowerCase();
-    s2 = s2.toLowerCase();
+    // See http://rosettacode.org/wiki/Levenshtein_distance#Java
+    public static int editDistance(String s1, String s2)
+    {
+        s1 = s1.toLowerCase();
+        s2 = s2.toLowerCase();
 
-    int[] costs = new int[s2.length() + 1];
-    for (int i = 0; i <= s1.length(); i++) {
-      int lastValue = i;
-      for (int j = 0; j <= s2.length(); j++) {
-        if (i == 0)
-          costs[j] = j;
-        else {
-          if (j > 0) {
-            int newValue = costs[j - 1];
-            if (s1.charAt(i - 1) != s2.charAt(j - 1))
-              newValue = Math.min(Math.min(newValue, lastValue),
-                  costs[j]) + 1;
-            costs[j - 1] = lastValue;
-            lastValue = newValue;
-          }
+        int[] costs = new int[s2.length() + 1];
+        for (int i = 0; i <= s1.length(); i++)
+        {
+            int lastValue = i;
+            for (int j = 0; j <= s2.length(); j++)
+            {
+                if (i == 0)
+                {
+                    costs[j] = j;
+                } else
+                {
+                    if (j > 0)
+                    {
+                        int newValue = costs[j - 1];
+                        if (s1.charAt(i - 1) != s2.charAt(j - 1))
+                        {
+                            newValue = Math.min(Math.min(newValue, lastValue),
+                                    costs[j]) + 1;
+                        }
+                        costs[j - 1] = lastValue;
+                        lastValue = newValue;
+                    }
+                }
+            }
+            if (i > 0)
+            {
+                costs[s2.length()] = lastValue;
+            }
         }
-      }
-      if (i > 0)
-        costs[s2.length()] = lastValue;
+        return costs[s2.length()];
     }
-    return costs[s2.length()];
-  }
+
+    public static String getNameFromMagnet(String magnet)
+    {
+        String magnetName = magnet.substring(magnet.indexOf("&dn=") + 4, magnet.indexOf("&tr="));
+        magnetName = magnetName.replace("+", " ");
+        magnetName = magnetName.replace("%20", " ");
+        try
+        {
+            magnetName = java.net.URLDecoder.decode(magnetName, "UTF-8");
+        } catch (UnsupportedEncodingException ex)
+        {
+            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return magnetName;
+    }
 }

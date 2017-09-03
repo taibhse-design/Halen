@@ -12,6 +12,8 @@ import static Halen3.GUI.Comics.ComicsGUI.comicPanel;
 import static Halen3.GUI.Film.FilmGUI.addFilmPanel;
 import static Halen3.GUI.Film.FilmGUI.filmPanel;
 import static Halen3.GUI.GUIBaseControls.initBaseControls;
+import static Halen3.GUI.Manga.MangaGUI.addMangaPanel;
+import static Halen3.GUI.Manga.MangaGUI.mangaPanel;
 import Halen3.GUI.NoticePanels.LoggingPanel;
 import static Halen3.GUI.NoticePanels.LoggingPanel.loggingPanel;
 import Halen3.GUI.NoticePanels.SavingPanel;
@@ -62,7 +64,7 @@ public class GUIBase
     public static int screenH = (int) screenSize.getHeight();  //variable holds max screen height
     public static JFrame frame;
     public static JPanel themePanel;
-    public static JButton close, maximise, minimise, tv, film, comics, anime, settings, theme;
+    public static JButton close, maximise, minimise, tv, film, comics, manga, anime, settings, theme, trakt, showrss, skytorrents, readcomics, readmanga;
 
     //          old default theme           0, 0, 0, 230                          51, 51, 51                        255, 255, 255
     public static Color primary = new Color(4, 4, 4, 230), secondary = new Color(225, 225, 225), tertiary = new Color(5, 114, 164);
@@ -217,7 +219,6 @@ public class GUIBase
 
         }
 
-        
         loadTheme();
 
         //create main frame
@@ -389,7 +390,7 @@ public class GUIBase
         });
 
         JButton versionLabel = new JButton("<html><b>HALEN - " + halenVersion + "</b></html>");
-        versionLabel.setSize((int) (frame.getWidth() - (minimise.getWidth()*4.5)), (int) (minimise.getHeight()*2));
+        versionLabel.setSize((int) (frame.getWidth() - (minimise.getWidth() * 4.5)), (int) (minimise.getHeight() * 2));
         versionLabel.setLocation(0, 0);
         versionLabel.setHorizontalAlignment(SwingConstants.LEFT);
         versionLabel.setBackground(Color.BLUE);
@@ -397,7 +398,7 @@ public class GUIBase
         versionLabel.setContentAreaFilled(false);
         versionLabel.setOpaque(false);
         versionLabel.setFocusPainted(false);
-        
+
         Font labelFont = versionLabel.getFont();
         String labelText = versionLabel.getText() + halenVersion;
 
@@ -478,6 +479,61 @@ public class GUIBase
         theme.setLocation((int) ((frame.getWidth() - (theme.getWidth() + (theme.getHeight() / 4)))), (int) ((theme.getHeight() * 2) + (frame.getHeight() - ((theme.getHeight()) * 3.5))));
         theme.setVisible(true);
 
+        trakt = new JButton();
+        trakt.setContentAreaFilled(false);
+        trakt.setOpaque(false);
+        trakt.setFocusPainted(false);
+        trakt.setSize(frame.getWidth() / 13, frame.getWidth() / 13);
+        ImageIcon tr = new ImageIcon(color(tertiary, "Resources/metro/buttons/trakt.png"));
+        ImageIcon trs = new ImageIcon(tr.getImage().getScaledInstance(trakt.getWidth() / 2, trakt.getHeight() / 2, java.awt.Image.SCALE_DEFAULT));
+        trakt.setIcon(trs);
+        trakt.setLocation(theme.getLocation().x - theme.getWidth() * 2, theme.getY());
+        trakt.setVisible(true);
+
+        showrss = new JButton();
+        showrss.setContentAreaFilled(false);
+        showrss.setOpaque(false);
+        showrss.setFocusPainted(false);
+        showrss.setSize(frame.getWidth() / 13, frame.getWidth() / 13);
+        ImageIcon shr = new ImageIcon(color(tertiary, "Resources/metro/buttons/showrss.png"));
+        ImageIcon shrs = new ImageIcon(shr.getImage().getScaledInstance(showrss.getWidth() / 2, showrss.getHeight() / 2, java.awt.Image.SCALE_DEFAULT));
+        showrss.setIcon(shrs);
+        showrss.setLocation(trakt.getLocation().x - trakt.getWidth(), theme.getY());
+        showrss.setVisible(true);
+
+        skytorrents = new JButton();
+        skytorrents.setContentAreaFilled(false);
+        skytorrents.setOpaque(false);
+        skytorrents.setFocusPainted(false);
+        skytorrents.setSize(frame.getWidth() / 13, frame.getWidth() / 13);
+        ImageIcon skr = new ImageIcon(color(tertiary, "Resources/metro/buttons/skytorrents.png"));
+        ImageIcon skrs = new ImageIcon(skr.getImage().getScaledInstance(skytorrents.getWidth() / 2, skytorrents.getHeight() / 2, java.awt.Image.SCALE_DEFAULT));
+        skytorrents.setIcon(skrs);
+        skytorrents.setLocation(showrss.getLocation().x - showrss.getWidth(), theme.getY());
+        skytorrents.setVisible(true);
+
+        readcomics = new JButton();
+        readcomics.setContentAreaFilled(false);
+        readcomics.setOpaque(false);
+        readcomics.setFocusPainted(false);
+        readcomics.setSize(frame.getWidth() / 13, frame.getWidth() / 13);
+        ImageIcon rcr = new ImageIcon(color(tertiary, "Resources/metro/buttons/readcomics.png"));
+        ImageIcon rcs = new ImageIcon(rcr.getImage().getScaledInstance(readcomics.getWidth() / 2, readcomics.getHeight() / 2, java.awt.Image.SCALE_DEFAULT));
+        readcomics.setIcon(rcs);
+        readcomics.setLocation(skytorrents.getLocation().x - skytorrents.getWidth(), theme.getY());
+        readcomics.setVisible(true);
+
+        readmanga = new JButton();
+        readmanga.setContentAreaFilled(false);
+        readmanga.setOpaque(false);
+        readmanga.setFocusPainted(false);
+        readmanga.setSize(frame.getWidth() / 13, frame.getWidth() / 13);
+        ImageIcon rmr = new ImageIcon(color(tertiary, "Resources/metro/buttons/readmanga.png"));
+        ImageIcon rmrs = new ImageIcon(rmr.getImage().getScaledInstance(readmanga.getWidth() / 2, readmanga.getHeight() / 2, java.awt.Image.SCALE_DEFAULT));
+        readmanga.setIcon(rmrs);
+        readmanga.setLocation(readcomics.getLocation().x - readcomics.getWidth(), theme.getY());
+        readmanga.setVisible(true);
+
         //#######################################################################################
         tv = new JButton();
         // tv.setFont(tv.getFont().deriveFont(Font.BOLD));
@@ -491,8 +547,8 @@ public class GUIBase
         tv.setBackground(primary);
         tv.setLocation(tv.getHeight() / 4, (tv.getHeight()));
         tv.setVisible(true);
-        
-         film = new JButton();
+
+        film = new JButton();
         // film.setFont(film.getFont().deriveFont(Font.BOLD));
         film.setContentAreaFilled(false);
         film.setOpaque(false);
@@ -518,6 +574,19 @@ public class GUIBase
         comics.setLocation((int) (((film.getX() + film.getWidth()))), tv.getY());
         comics.setVisible(true);
 
+        manga = new JButton();
+        //  comics.setFont(comics.getFont().deriveFont(Font.BOLD));
+        manga.setContentAreaFilled(false);
+        manga.setOpaque(false);
+        manga.setFocusPainted(false);
+        manga.setSize(tv.getWidth(), tv.getWidth());
+        ImageIcon ma = new ImageIcon(color(tertiary, "Resources/metro/MenuSelectionButtons/manga-normal.png"));
+        ImageIcon mas = new ImageIcon(ma.getImage().getScaledInstance(comics.getWidth(), comics.getHeight(), java.awt.Image.SCALE_DEFAULT));
+        manga.setIcon(mas);
+        manga.setBackground(primary);
+        manga.setLocation((int) (((comics.getX() + comics.getWidth()))), tv.getY());
+        manga.setVisible(true);
+
         anime = new JButton();
         //  anime.setFont(anime.getFont().deriveFont(Font.BOLD));
         anime.setContentAreaFilled(false);
@@ -528,7 +597,7 @@ public class GUIBase
         ImageIcon as = new ImageIcon(a.getImage().getScaledInstance(anime.getWidth(), anime.getHeight(), java.awt.Image.SCALE_DEFAULT));
         anime.setIcon(as);
         anime.setBackground(primary);
-        anime.setLocation((int) ((comics.getX() + comics.getWidth())), tv.getY());
+        anime.setLocation((int) ((manga.getX() + manga.getWidth())), tv.getY());
         anime.setVisible(true);
 
         settings = new JButton();
@@ -544,11 +613,12 @@ public class GUIBase
         settings.setLocation((int) ((anime.getX() + anime.getWidth())), tv.getY());
         settings.setVisible(true);
 
-        
         addTvPanel(frame.getWidth() - ((theme.getHeight() / 4) * 2), (int) (frame.getHeight() - ((theme.getHeight()) * 3.5)), theme.getHeight() / 4, tv.getY() + tv.getHeight());
         addFilmPanel(frame.getWidth() - ((theme.getHeight() / 4) * 2), (int) (frame.getHeight() - ((theme.getHeight()) * 3.5)), theme.getHeight() / 4, tv.getY() + tv.getHeight());
-       
+
         addComicsPanel(frame.getWidth() - ((theme.getHeight() / 4) * 2), (int) (frame.getHeight() - ((theme.getHeight()) * 3.5)), theme.getHeight() / 4, tv.getY() + tv.getHeight());
+        addMangaPanel(frame.getWidth() - ((theme.getHeight() / 4) * 2), (int) (frame.getHeight() - ((theme.getHeight()) * 3.5)), theme.getHeight() / 4, tv.getY() + tv.getHeight());
+
         addAnimePanel(frame.getWidth() - ((theme.getHeight() / 4) * 2), (int) (frame.getHeight() - ((theme.getHeight()) * 3.5)), theme.getHeight() / 4, tv.getY() + tv.getHeight());
         addSettingsPanel(frame.getWidth() - ((theme.getHeight() / 4) * 2), (int) (frame.getHeight() - ((theme.getHeight()) * 3.5)), theme.getHeight() / 4, tv.getY() + tv.getHeight());
 
@@ -564,46 +634,59 @@ public class GUIBase
         LoggingPanel.addLoggingPanel(frame.getWidth() - ((theme.getHeight() / 4) * 2), (int) (frame.getHeight() - ((theme.getHeight()) * 3.5)), theme.getHeight() / 4, tv.getY() + tv.getHeight());
 
         frame.add(loggingPanel);
-        
+
         frame.add(savePanel);
-        
+
         frame.add(themePanel);
-        
+
         frame.add(settingsPanel);
-        
+
         frame.add(animePanel);
-        
+
+        frame.add(mangaPanel);
+
         frame.add(comicPanel);
-        
+
         frame.add(tvPanel);
-        
+
         frame.add(filmPanel);
-        
+
         frame.add(settings);
-        
+
+        frame.add(manga);
+
         frame.add(comics);
-        
+
         frame.add(anime);
-        
+
         frame.add(film);
-        
+
         frame.add(tv);
-        
+
+        frame.add(readmanga);
+
+        frame.add(readcomics);
+
+        frame.add(skytorrents);
+
+        frame.add(showrss);
+
+        frame.add(trakt);
+
         frame.add(theme);
-        
+
 //        frame.add(update);
         //     frame.add(delete);
         //      frame.add(run);
         frame.add(versionLabel);
-        
+
         frame.add(maximise);
-        
+
         frame.add(minimise);
-        
+
         frame.add(close);
-        
+
         frame.add(back);
-        
 
         tv.setBackground(secondary);
         comics.setBackground(primary);
@@ -613,6 +696,7 @@ public class GUIBase
         tvPanel.setVisible(true);
         filmPanel.setVisible(false);
         comicPanel.setVisible(false);
+        mangaPanel.setVisible(false);
         animePanel.setVisible(false);
         settingsPanel.setVisible(false);
 
@@ -625,6 +709,7 @@ public class GUIBase
     {
         tv.setVisible(false);
         film.setVisible(false);
+        manga.setVisible(false);
         comics.setVisible(false);
         anime.setVisible(false);
         settings.setVisible(false);
@@ -635,6 +720,7 @@ public class GUIBase
     {
         tv.setVisible(true);
         film.setVisible(true);
+        manga.setVisible(true);
         comics.setVisible(true);
         anime.setVisible(true);
         settings.setVisible(true);

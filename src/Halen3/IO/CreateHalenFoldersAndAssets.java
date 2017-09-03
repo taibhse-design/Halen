@@ -18,11 +18,13 @@ public class CreateHalenFoldersAndAssets
         File tvFolder = new File(Halen3.IO.FileManager.launchPath() + "/rules/tv show/");
         File animeFolder = new File(Halen3.IO.FileManager.launchPath() + "/rules/anime/");
         File comicsFolder = new File(Halen3.IO.FileManager.launchPath() + "/rules/comics/");
+        File mangaFolder = new File(Halen3.IO.FileManager.launchPath() + "/rules/manga/");
         File moviesFolder = new File(Halen3.IO.FileManager.launchPath() + "/rules/films/");
 
         File graphicsTVFolder = new File(Halen3.IO.FileManager.launchPath() + "/graphics/tv-show-logos/");
         File graphicsFilmFolder = new File(Halen3.IO.FileManager.launchPath() + "/graphics/film-logos/");
         File graphicsComicsFolder = new File(Halen3.IO.FileManager.launchPath() + "/graphics/comic-book-covers/");
+        File graphicsMangaFolder = new File(Halen3.IO.FileManager.launchPath() + "/graphics/manga-covers/");
          File graphicsAnimeFolder = new File(Halen3.IO.FileManager.launchPath() + "/graphics/anime-covers/");
        
         File logsFolder = new File(Halen3.IO.FileManager.launchPath() + "/logs/");
@@ -39,6 +41,10 @@ public class CreateHalenFoldersAndAssets
         {
             comicsFolder.mkdirs();
         }
+         if (mangaFolder.exists() == false)
+        {
+            mangaFolder.mkdirs();
+        }
         if (moviesFolder.exists() == false)
         {
             moviesFolder.mkdirs();
@@ -50,6 +56,10 @@ public class CreateHalenFoldersAndAssets
         if (graphicsComicsFolder.exists() == false)
         {
             graphicsComicsFolder.mkdirs();
+        }
+          if (graphicsMangaFolder.exists() == false)
+        {
+            graphicsMangaFolder.mkdirs();
         }
          if (graphicsAnimeFolder.exists() == false)
         {

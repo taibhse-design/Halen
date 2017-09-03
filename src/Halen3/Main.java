@@ -55,9 +55,9 @@ public class Main
      * purely for UI.
      */
     
-    private static String buildVersion = "4.4.4";
-    private static String buildName = "Kore";
-    private static String buildNameDescription = "goddess of the harvest";
+    private static String buildVersion = "4.5.0";
+    private static String buildName = "Luna";
+    private static String buildNameDescription = "goddess of the moon";
     public static String halenVersion = buildVersion + " - " + buildName; 
     
     
@@ -74,7 +74,7 @@ public class Main
        // args[0] = "-update_rules";
        // args[0] = "-help";
       //  args[0] = "-relocate";
-    // args[0] = "-search";
+     //    args[0] = "-search";
      //   DownloadNewEpisodes.saveResults = false;
  //    Halen3.Retrievers.TvShows.DownloadNewEpisodes.saveResults = false;
   //   Halen3.Retrievers.Anime.DownloadNewAnimeEpisodes.saveResults = false;
