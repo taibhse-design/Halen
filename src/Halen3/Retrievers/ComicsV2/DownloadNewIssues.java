@@ -82,7 +82,7 @@ public class DownloadNewIssues
         //make folder to hold pages
         new File(path).mkdirs();
         //download pages to created folder
-        ExecutorService executor = Executors.newFixedThreadPool(10);
+        ExecutorService executor = Executors.newFixedThreadPool(4);
         for (int i = 0; i < pages.length; i++)
         {
             Runnable worker = new MultiThreadedPageDownloader(pages[i], issueName, path, i);
@@ -132,7 +132,9 @@ public class DownloadNewIssues
     public static void main(String args[]) throws InterruptedException, AWTException, IOException
     {
         testing = "false";
+    //   downloadIssue("http://readcomics.website/comic/evil-dead-2-dark-ones-rising-2017/1", "poop", "G:\\Projects\\NetBeansProjects\\Halen\\build\\rules\\comics");
         downloadNewIssues();
+    
     }
 
     public static void downloadNewIssues()
@@ -228,12 +230,30 @@ public class DownloadNewIssues
     private static boolean downloadIssue(String url, String name, String downloadTo)
     {
       
+        int runCode = 0;
+        
+        for(int x = 0; x < 3; x++)
+        {
         try
         {
 
             ColorCmd.println("TRYING " + url, fgYellowBgWhite);
 
             WebClient webClient = new WebClient(BrowserVersion.CHROME);
+            
+            if(runCode == 2)
+            {
+                System.out.println("USING BROWSER CHROME");
+                webClient = new WebClient(BrowserVersion.CHROME);
+            }else  if(runCode == 1)
+            {
+                System.out.println("USING BROWSER FIREFOX");
+                webClient = new WebClient(BrowserVersion.FIREFOX_24);
+            }else  if(runCode == 0)
+            {
+                System.out.println("USING BROWSER IE");
+                webClient = new WebClient(BrowserVersion.INTERNET_EXPLORER_11);
+            }
 
             webClient.getOptions().setThrowExceptionOnScriptError(false);
             //disable javascript to speed up site loading
@@ -242,7 +262,8 @@ public class DownloadNewIssues
             webClient.getOptions().setUseInsecureSSL(true);
             java.util.logging.Logger.getLogger("com.gargoylesoftware").setLevel(java.util.logging.Level.OFF); /* comment out to turn off annoying htmlunit warnings */
 
-            webClient.waitForBackgroundJavaScript(10000);
+            webClient.waitForBackgroundJavaScript(30000);
+           
             HtmlPage page;
             String html;
 
@@ -250,13 +271,14 @@ public class DownloadNewIssues
             html = page.asXml();
 
             Document doc = Jsoup.parse(html);
+           // System.out.println(html);
 
             String pageLinks[] = new String[(doc.select("ul.dropdown-menu.inner.selectpicker").select("li").size()/2)];
 
-            System.out.println(doc.select("img.scan-page").attr("src"));
+          //  System.out.println(doc.select("img.scan-page").attr("src"));
             String pageUrl = doc.select("img.scan-page").attr("src").substring(0, doc.select("img.scan-page").attr("src").lastIndexOf("/")) + "/";
 
-          //  System.out.println(pageUrl + "  " + pageLinks.length);
+          //  System.out.println("page count:  " + pageLinks.length);
            // System.exit(0);
             for (int i = 0; i < pageLinks.length; i++)
             {
@@ -336,11 +358,17 @@ public class DownloadNewIssues
                 {
                 
                      ColorCmd.println("FAILED " + url, fgRedBgWhite);
-                      ColorCmd.println("error preventing downloading this issue, aborting for future attempt... ", fgRedBgWhite);
-                       ColorCmd.println(e.getMessage(), fgRedBgWhite);
-                       System.out.println(e);
-                    return false;
+                     // ColorCmd.println("error preventing downloading this issue, aborting for future attempt... ", fgRedBgWhite);
+                      ColorCmd.println("error preventing downloading this issue, attempting another browser... ", fgRedBgWhite);
+                     runCode+=1;
+                      ColorCmd.println(e.getMessage(), fgRedBgWhite);
+                       System.out.println(e.getCause());
+                    //return false;
                 }
+        
+        }
+        
+        return false;
 
     }
 

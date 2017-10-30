@@ -68,7 +68,7 @@ public class MultiThreadedVolumePageDownloader implements Runnable
             ImageIO.write(image, "jpg", outputfile);
             }catch(Exception ex)
             {
-                System.out.println("FAILED TO GET PAGE.....");
+                System.out.println("FAILED TO GET PAGE....." + pageURL);
             }
         }
 

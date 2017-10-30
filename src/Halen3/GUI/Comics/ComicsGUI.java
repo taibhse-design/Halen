@@ -30,6 +30,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.IIOException;
 import javax.imageio.ImageIO;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
@@ -644,11 +645,11 @@ public class ComicsGUI
             //  File sourceimage = new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png"));
 
             File sourceimage = new File(FileManager.launchPath() + FileManager.returnTag("localImagePath", new Scanner(rulesList[i]).nextLine()));
-
+ try
+            {
             Image image = ImageIO.read(sourceimage);
 
-            try
-            {
+           
                 button.setIcon(new ImageIcon(image.getScaledInstance(-1, (rulesPane.getHeight() / 3) - 30,
                         java.awt.Image.SCALE_SMOOTH)));
 
@@ -657,6 +658,10 @@ public class ComicsGUI
                 button.setPreferredSize(new Dimension(button.getIcon().getIconWidth(), (rulesPane.getHeight() / 3)));
 
             } catch (NullPointerException e)
+            {
+                button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); //contactList.get(i).getSurname() + ", " + contactList.get(i).getGivenName());
+
+            } catch (IIOException e)
             {
                 button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); //contactList.get(i).getSurname() + ", " + contactList.get(i).getGivenName());
 

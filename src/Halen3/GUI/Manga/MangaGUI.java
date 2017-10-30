@@ -27,6 +27,7 @@ import java.io.FileFilter;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -578,7 +579,7 @@ public class MangaGUI
             
                 //   System.out.print(rulesList[(i+2)] + " ");
                 //  System.out.println("");
-            } catch (ArrayIndexOutOfBoundsException e)
+            } catch (NoSuchElementException | ArrayIndexOutOfBoundsException e)
             {
                 int loop = 1;
                 if(rulesList.length%3 == 1)

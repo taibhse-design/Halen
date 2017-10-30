@@ -16,6 +16,8 @@ import Halen3.EmailNotifier.SendEmailNotification;
 import Halen3.IO.FileManager;
 import Halen3.IO.GlobalSharedVariables;
 import Halen3.Retrievers.MagnetHandler;
+import static Halen3.Retrievers.TvShows.BackupTorrentSiteMagnetSearchers.kickassTvSearch;
+import static Halen3.Retrievers.TvShows.BackupTorrentSiteMagnetSearchers.zooqleTvSearch;
 import Halen3.Testing.Testing;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import java.awt.List;
@@ -52,8 +54,8 @@ public class DownloadNewEpisodes
     //  static volatile int i = 0;
     public static void main(String args[]) throws InterruptedException, IOException, MessagingException
     {
-        // GlobalSharedVariables.testing = "true";
-      //  downloadNewEpisodes();
+        GlobalSharedVariables.testing = "true";
+        downloadNewEpisodes();
         // downloadNewIssues();
         //  SendEmailNotification.test();
     }
@@ -123,9 +125,24 @@ public class DownloadNewEpisodes
 
                                    // magnet = Halen3.Retrievers.TvShows.ExtraTorrentMagnetLinksScraper.getMagnet(FileManager.returnTag("search", eps.getItem(0)), eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
                             //magnet = Testing.extrntTvRssSearchMagnetRetriever(FileManager.returnTag("search", eps.getItem(0)) + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
-                          // System.out.println(FileManager.returnTag("search", eps.getItem(0)) + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
+                           String search = FileManager.returnTag("search", eps.getItem(0)) + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")).trim();
+                          
+                         
+                            //try to find ep from showRSS
                             magnet = ShowRSS.showRSSSearch(FileManager.returnTag("search", eps.getItem(0)).trim() , eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")).trim());
                            
+                            //backup magnet searches if magnet still blank
+                            if(!magnet.contains("magnet:?xt="))
+                            {
+                              //kickass search backup
+                              magnet = kickassTvSearch(search); 
+                            }
+                            
+                             if(!magnet.contains("magnet:?xt="))
+                            {
+                              //zooqle search backup
+                              magnet = zooqleTvSearch(search); 
+                            }
                             
 //   System.out.println("poop"+tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + " : " + magnet + "\n");
                         } catch (FailingHttpStatusCodeException e)

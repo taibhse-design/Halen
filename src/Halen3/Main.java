@@ -6,22 +6,24 @@
 package Halen3;
 
 import static Halen3.CommandLine.RunFromCommandLine.runFromCommandLine;
+import Halen3.EmailNotifier.SendEmailNotification;
 import static Halen3.GUI.Anime.AnimeGUI.animePanel;
 import static Halen3.GUI.Comics.ComicsGUI.comicPanel;
+import static Halen3.GUI.Film.FilmGUI.filmPanel;
 import static Halen3.GUI.GUIBase.anime;
 import static Halen3.GUI.GUIBase.comics;
+import static Halen3.GUI.GUIBase.film;
 import static Halen3.GUI.GUIBase.initGUI;
+import static Halen3.GUI.GUIBase.manga;
 import static Halen3.GUI.GUIBase.primary;
 import static Halen3.GUI.GUIBase.secondary;
 import static Halen3.GUI.GUIBase.settings;
 import static Halen3.GUI.GUIBase.theme;
 import static Halen3.GUI.GUIBase.tv;
+import static Halen3.GUI.Manga.MangaGUI.mangaPanel;
 import static Halen3.GUI.Settings.SettingsGUI.settingsPanel;
-import static Halen3.IO.GlobalSharedVariables.areSettingsValid;
-import Halen3.EmailNotifier.SendEmailNotification;
-import static Halen3.GUI.Film.FilmGUI.filmPanel;
-import static Halen3.GUI.GUIBase.film;
 import static Halen3.GUI.TV.TvGUI.tvPanel;
+import static Halen3.IO.GlobalSharedVariables.areSettingsValid;
 import it.sauronsoftware.junique.AlreadyLockedException;
 import it.sauronsoftware.junique.JUnique;
 import java.io.IOException;
@@ -55,9 +57,9 @@ public class Main
      * purely for UI.
      */
     
-    private static String buildVersion = "4.5.0";
-    private static String buildName = "Luna";
-    private static String buildNameDescription = "goddess of the moon";
+    private static String buildVersion = "4.6.0";
+    private static String buildName = "Hemera";
+    private static String buildNameDescription = "goddess of the new day";
     public static String halenVersion = buildVersion + " - " + buildName; 
     
     
@@ -112,6 +114,7 @@ public class Main
                  tv.setVisible(false);
                   film.setVisible(false);
                 comics.setVisible(false);
+                manga.setVisible(false);
                 anime.setVisible(false);
                 theme.setVisible(false);
                 settings.setOpaque(true);
@@ -119,12 +122,14 @@ public class Main
                  tv.setBackground(primary);
                  film.setBackground(primary);
                 comics.setBackground(primary);
+                manga.setBackground(primary);
                 anime.setBackground(primary);
                 settings.setBackground(secondary);
                 
                 tvPanel.setVisible(false);
                 filmPanel.setVisible(false);
                 comicPanel.setVisible(false);
+                 mangaPanel.setVisible(false);
                 animePanel.setVisible(false);
                 settingsPanel.setVisible(true);
          }

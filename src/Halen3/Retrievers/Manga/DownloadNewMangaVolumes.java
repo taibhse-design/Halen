@@ -28,6 +28,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.zeroturnaround.zip.ZipUtil;
 
 /**
@@ -82,10 +84,10 @@ public class DownloadNewMangaVolumes
         //make folder to hold pages
         new File(path).mkdirs();
         //download pages to created folder
-        ExecutorService executor = Executors.newFixedThreadPool(10);
+        ExecutorService executor = Executors.newFixedThreadPool(4);
         for (int i = 0; i < pages.length; i++)
         {
-            Runnable worker = new MultiThreadedVolumePageDownloader(pages[i], issueName, path, i+1);
+            Runnable worker = new MultiThreadedVolumePageDownloader(pages[i], issueName, path, i + 1);
 
             executor.execute(worker);
         }
@@ -125,7 +127,7 @@ public class DownloadNewMangaVolumes
         ColorCmd.println("CONVERTING ZIP FILE TO CBZ MANGA FILE..........", fgYellowBgWhite);
         ColorCmd.println("", fgYellowBgWhite);
         zip.renameTo(new File(zip.getPath().replace(".zip", ".cbz")));
-        
+
         new File(zip.getPath()).delete();
         //delete the folder that has the images after the cbz file is made
         delete(folder);
@@ -134,7 +136,7 @@ public class DownloadNewMangaVolumes
     public static void main(String args[]) throws InterruptedException, AWTException, IOException
     {
         testing = "false";
-        downloadVolume("http://www.readmanga.today/shaman-king/121/1", "poop", "G:\\Projects\\NetBeansProjects\\Halen\\build\\rules\\manga");
+        downloadNewVolumes();
     }
 
     public static void downloadNewVolumes()
@@ -246,24 +248,53 @@ public class DownloadNewMangaVolumes
             HtmlPage page;
             String html;
 
-            page = webClient.getPage(url);  //was XmlPage
+            page = webClient.getPage(url + "/all-pages");  //was XmlPage
             html = page.asXml();
 
             Document doc = Jsoup.parse(html);
+            Elements images = doc.select("img.img-responsive-2");
+            String pageLinks[] = new String[(images.size())];
 
-            String pageLinks[] = new String[(doc.select("ul.list-switcher-2").first().select("li").get(1).select("option").size())];
-
-            String pageUrl = doc.select("img.img-responsive-2").attr("src").substring(0, doc.select("img.img-responsive-2").attr("src").lastIndexOf("/")) + "/";
-
-            for (int i = 0; i < pageLinks.length; i++)
+            int j = 0;
+            for(Element im : images)
             {
-                String formattedPageNum = String.format("%05d", (i + 1));
-                pageLinks[i] = pageUrl + "p_" + formattedPageNum + ".png";
-
-                ColorCmd.println("Page " + (i + 1) + ": " + pageLinks[i], fgYellowBgWhite);
-
+             //   System.out.println(im.attr("src"));
+                pageLinks[j] = im.attr("src");
+                j+=1;
             }
-          
+            
+            
+//            System.exit(0);
+//
+//           // String pageLinks[] = new String[(doc.select("ul.list-switcher-2").first().select("li").get(1).select("option").size())];
+//
+//            String pageUrl = doc.select("img.img-responsive-2").attr("src");
+//            String pageUrlNumFormat = pageUrl;
+//            pageUrl = pageUrl.substring(0, doc.select("img.img-responsive-2").attr("src").lastIndexOf("/")) + "/";
+//            pageUrlNumFormat = pageUrlNumFormat.replace(pageUrl, "");
+//            System.out.println(pageUrlNumFormat);
+//
+//            //loop to create links for manga pages
+//            for (int i = 0; i < pageLinks.length; i++)
+//            {
+//                //test to find out page numbering format used
+//                if (pageUrlNumFormat.startsWith("p_")) //some issues start with p_ with 5 numerals for pages
+//                {
+//                    String formattedPageNum = String.format("%05d", (i + 1));
+//                    pageLinks[i] = pageUrl + "p_" + formattedPageNum + ".png";
+//
+//                    ColorCmd.println("Page " + (i + 1) + ": " + pageLinks[i], fgYellowBgWhite);
+//                } else //default to using 3 digit numbering for pages
+//                {
+//                    String formattedPageNum = String.format("%03d", (i + 1));
+//                    pageLinks[i] = pageUrl + formattedPageNum + ".png";
+//
+//                    ColorCmd.println("Page " + (i + 1) + ": " + pageLinks[i], fgYellowBgWhite);
+//                }
+//
+//            }
+
+            
             boolean download = true;
             for (int i = 0; i < pageLinks.length; i++)
             {

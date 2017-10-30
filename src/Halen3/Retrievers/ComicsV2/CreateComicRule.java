@@ -38,7 +38,7 @@ public class CreateComicRule
         //  System.out.println(System.getProperty("user.home") +"\\Downloads");
         String text = "new! name";
 
-        saveNewSeries("http://readcomics.website/comic/think-tank-animal-2017", "think tank test", "download");
+        saveNewSeries("http://readcomics.website/comic/think-tank-animal-2017", "think tank test", "C:\\Users\\TAIBHSE\\Projects\\NetBeansProjects\\Halen\\build\\rules\\comics\\think tank animal");
     }
 
     public static void saveNewSeries(String url, String name, String downloadTo) throws InterruptedException, IOException
