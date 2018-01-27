@@ -127,7 +127,7 @@ public class DownloadNewEpisodes
                             //magnet = Testing.extrntTvRssSearchMagnetRetriever(FileManager.returnTag("search", eps.getItem(0)) + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")));
                            String search = FileManager.returnTag("search", eps.getItem(0)) + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")).trim();
                           
-                         
+                         System.out.println("search terms: " + search);
                             //try to find ep from showRSS
                             magnet = ShowRSS.showRSSSearch(FileManager.returnTag("search", eps.getItem(0)).trim() , eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")).trim());
                            

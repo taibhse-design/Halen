@@ -19,7 +19,7 @@ public class BackupTorrentSiteMagnetSearchers
 
     public static void main(String args[])
     {
-        System.out.println(zooqleTvSearch("rick and morty s03e02"));
+        System.out.println(kickassTvSearch("the walking dead s08e02"));
     }
     
       static String bannedWords[] =
@@ -69,11 +69,12 @@ public class BackupTorrentSiteMagnetSearchers
                 //only work with links that have magnet url
                 if (link.attr("href").startsWith("magnet:?xt=") && link.attr("title").equals("Torrent magnet link"))
                 {
-                   // System.out.println("TRYING: " + FileManager.getNameFromMagnet(link.attr("href")).toLowerCase());
+                    System.out.println("kickass TRYING: " + FileManager.getNameFromMagnet(link.attr("href")).toLowerCase());
                     //ensure magnet contains search string (magnet can uses spaces or periods in names)
                     if (FileManager.getNameFromMagnet(link.attr("href")).toLowerCase().contains(search.toLowerCase()) || 
                             FileManager.getNameFromMagnet(link.attr("href")).toLowerCase().contains(search.replaceAll(" ", ".").toLowerCase()))
                     {
+                        System.out.println("valid name");
                         //test if magnet name contains banned elements
                         if (!Arrays.stream(bannedWords).parallel().anyMatch(FileManager.getNameFromMagnet(link.attr("href").toLowerCase())::contains))
                         {
@@ -92,6 +93,7 @@ public class BackupTorrentSiteMagnetSearchers
 
         } catch (IOException e)
         {
+            
             return null;
         }
     }
@@ -134,7 +136,7 @@ public class BackupTorrentSiteMagnetSearchers
                 //only work with links that have magnet url
                 if (link.attr("href").startsWith("magnet:?xt=") && link.attr("title").equals("Magnet link"))
                 {
-                  //  System.out.println("TRYING: " + FileManager.getNameFromMagnet(link.attr("href")).toLowerCase());
+                    System.out.println("zooqle TRYING: " + FileManager.getNameFromMagnet(link.attr("href")).toLowerCase());
                     //ensure magnet contains search string (magnet can uses spaces or periods in names)
                     if (FileManager.getNameFromMagnet(link.attr("href")).toLowerCase().contains(search.toLowerCase()) || 
                             FileManager.getNameFromMagnet(link.attr("href")).toLowerCase().contains(search.replaceAll(" ", ".").toLowerCase()))

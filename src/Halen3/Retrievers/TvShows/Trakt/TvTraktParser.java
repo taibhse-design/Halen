@@ -22,7 +22,7 @@ public class TvTraktParser
 
     public static void main(String args[]) throws IOException
     {
-        String url = "https://trakt.tv/shows/apb";
+        String url = "https://trakt.tv/shows/counterpart-2018";
        
         List data = getData(url);
         

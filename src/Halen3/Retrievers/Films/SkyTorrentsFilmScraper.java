@@ -23,12 +23,14 @@ public class SkyTorrentsFilmScraper
 
     public static void main(String args[]) throws IOException, InterruptedException
     {
-             skyTrntFilmRssSearchMagnetRetriever("wonder woman 2017");
+             skyTrntFilmRssSearchMagnetRetriever("Thor: Ragnarok 2017");
     }
     
     public static String skyTrntFilmRssSearchMagnetRetriever(String search) throws IOException, InterruptedException
     {
 
+        search = search.replaceAll("[:]", ""); //remove characters from name which may fuck up searching
+        
         ColorCmd.println(" ", fgWhiteBgBlue);
         ColorCmd.printlnCenter("Searching for Film: " + search, fgWhiteBgBlue);
         ColorCmd.println(" ", fgWhiteBgBlue);

@@ -90,7 +90,7 @@ public class MagnetHandler
             {
                 Thread.sleep(100);
                 executeCommand("\"\"" + magnetHandler + "\" \"" + magnets.getItem(i).replace("amp;", "") + "\"\"");
-                Thread.sleep(8000); //allow 8 seconds between each magnet being sent to client
+                Thread.sleep(3000); //allow 3 seconds between each magnet being sent to client
                                     //used to be 5
             } catch (InterruptedException ex)
             {

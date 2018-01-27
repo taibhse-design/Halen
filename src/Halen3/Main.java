@@ -57,7 +57,7 @@ public class Main
      * purely for UI.
      */
     
-    private static String buildVersion = "4.6.0";
+    private static String buildVersion = "4.6.1";
     private static String buildName = "Hemera";
     private static String buildNameDescription = "goddess of the new day";
     public static String halenVersion = buildVersion + " - " + buildName; 

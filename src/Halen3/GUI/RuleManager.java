@@ -901,7 +901,7 @@ public class RuleManager
                     if (ComicsGUI.comicURLInput.getText().contains("readcomics.website"))
                     {
                         //tag - source  - new value
-                     //   tags = tags + FileManager.makeTag("url", ComicsGUI.comicURLInput.getText());
+                      //  tags = tags + FileManager.makeTag("url", ComicsGUI.comicURLInput.getText());
 
                     } else
                     {
@@ -919,14 +919,14 @@ public class RuleManager
                     if (new File(ComicsGUI.DownloadToFolderText.getText()).exists() | GlobalSharedVariables.bypassFolderValidationOnRuleSave.equals("true"))
                     {
                         //tag - source  - new value
-                       // tags = tags + FileManager.makeTag("moveToFolder", ComicsGUI.DownloadToFolderText.getText());
+                     //   tags = tags + FileManager.makeTag("moveToFolder", ComicsGUI.DownloadToFolderText.getText());
                     } else
                     {
                         new File(ComicsGUI.DownloadToFolderText.getText()).mkdirs();
                         if (new File(ComicsGUI.DownloadToFolderText.getText()).exists())
                         {
                             //tag - source  - new value
-                          //  tags = tags + FileManager.makeTag("downloadTo", ComicsGUI.DownloadToFolderText.getText());
+                           // tags = tags + FileManager.makeTag("downloadTo", ComicsGUI.DownloadToFolderText.getText());
                         } else
                         {
                             message = "DATA INVALID - provided download directory does not exist nor can it be created!";

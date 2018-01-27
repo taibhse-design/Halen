@@ -132,7 +132,7 @@ public class GUIBase
     }
 
     /**
-     * tests the screens resolution before running noa to see if noas default
+     * tests the screens resolution before running halen to see if halens default
      * resolution will fit inside the screen, if not then this program scales
      * noa to fit
      */
@@ -203,7 +203,10 @@ public class GUIBase
     public static void initGUI() throws IOException
     {
         //   getSuitableFrameSize();
-
+float aspectRatio =  ((float)screenW / (float)screenH);
+        
+       
+        
         //make ui look like other programs on native system
         //****************************************************************
         try
@@ -211,6 +214,7 @@ public class GUIBase
 
             // Set System L&F
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+             System.out.println("Screen Aspect Ratio: " + aspectRatio);
             System.out.println("setting ui: " + UIManager.getSystemLookAndFeelClassName() + "\n\n------------------------------------------------------------\n");
 
         } catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException e)
@@ -224,10 +228,18 @@ public class GUIBase
         //create main frame
         frame = new JFrame("HALEN");
 
+        if(aspectRatio > 1.7778f)
+        {
+            frame.setSize((int)(screenW/1.5f), screenH);
+            frame.setLocation(screenW / 2 - frame.getWidth() / 2, screenH / 2 - frame.getHeight() / 2); //default frame to be located at centre of screen
+        
+            
+        }else{
         frame.setSize(screenW, screenH); //ensure frame fits within screen
-        //frame.setLocation(screenW / 2 - frame.getWidth() / 2, screenH / 2 - frame.getHeight() / 2); //default frame to be located at centre of screen
         frame.setLocation(0, 0); //default frame to be located at centre of screen
 
+        }
+        //
         //    frame.getContentPane().setBackground(Color.BLACK);
         frame.setLayout(null);
         frame.setResizable(false); //prevent frame resizing as this messes up orientation of buttons and other elements

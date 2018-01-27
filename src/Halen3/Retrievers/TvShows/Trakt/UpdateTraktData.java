@@ -1,3 +1,4 @@
+
 package Halen3.Retrievers.TvShows.Trakt;
 
 import Halen3.CommandLine.ColorCmd;
@@ -6,6 +7,7 @@ import static Halen3.CommandLine.ColorCmd.fgRedBgWhite;
 import static Halen3.CommandLine.ColorCmd.fgWhiteBgGreen;
 import static Halen3.CommandLine.ColorCmd.fgWhiteBgWhite;
 import Halen3.IO.FileManager;
+import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import java.awt.HeadlessException;
 import java.awt.List;
 import java.io.File;
@@ -93,14 +95,12 @@ public class UpdateTraktData
                             }
                             // ArrayList list = new ArrayList();
 
-                           // System.out.println(original.getItem(0));
+                            // System.out.println(original.getItem(0));
                             // System.out.println(updated.getItem(0));
                             //Collections.sort(list);
                             //new episodes or season added
-                            
-                          //  System.out.println("original: " + original.getItemCount());
-                         //   System.out.println("updated: " + updated.getItemCount());
-                            
+                            //  System.out.println("original: " + original.getItemCount());
+                            //   System.out.println("updated: " + updated.getItemCount());
                             if (original.getItemCount() < updated.getItemCount())
                             {
 
@@ -155,11 +155,15 @@ public class UpdateTraktData
                             ColorCmd.println("FINISHED UPDATING RULE " + file.substring(file.lastIndexOf("\\") + 1, file.length()), fgGreenBgWhite);
                             ColorCmd.println("", fgWhiteBgWhite);
                             ColorCmd.println("", fgWhiteBgWhite);
-                            
+
                         } catch (StringIndexOutOfBoundsException e)
                         {
                             ColorCmd.println("ERROR WITH RULE:  " + file.substring(file.lastIndexOf("\\") + 1, file.length()) + "  CONSIDER DELETING AND REBUILDING RULE.....", fgRedBgWhite);
-                            ColorCmd.println("",fgWhiteBgWhite);
+                            ColorCmd.println("", fgWhiteBgWhite);
+                        } catch (FailingHttpStatusCodeException e)
+                        {
+                            ColorCmd.println("ERROR WITH RULE: TRAKT URL REPORTS 404 NOT FOUND  CONSIDER DELETING AND REBUILDING RULE.....", fgRedBgWhite);
+                            ColorCmd.println("", fgWhiteBgWhite);
                         }
                     }
 
@@ -192,7 +196,7 @@ public class UpdateTraktData
 
                     currentlyUpdatingTVRules = false;
                     ColorCmd.println("CRITICAL ERROR: " + ex, fgRedBgWhite);
-                     ColorCmd.println("",fgWhiteBgWhite);
+                    ColorCmd.println("", fgWhiteBgWhite);
 
 //                          //restore gui
 //                        anim.setVisible(false);
