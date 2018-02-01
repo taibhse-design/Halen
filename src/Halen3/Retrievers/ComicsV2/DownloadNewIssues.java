@@ -153,6 +153,10 @@ public class DownloadNewIssues
             }catch(InterruptedException | IOException e)
             {
                   ColorCmd.println("Error getting updates for rule " + comicsList[i].getName() + ".....", fgRedBgWhite);
+            }catch(RuntimeException e)
+            {
+                    ColorCmd.println("Error getting updates for rule " + comicsList[i].getName() + " Runtime Exception.....", fgRedBgWhite);
+          
             }
 
                 ColorCmd.println("", fgWhiteBgYellow);

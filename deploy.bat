@@ -46,12 +46,12 @@ echo #####################################################################
 echo DEPLOYING UPDATED FILES TO SERVER.....
 echo #####################################################################
 REM rename current active jar on server to backup
-ren "\\SERVER-TAIBHSE\Users\taibhse\Desktop\portables\MyPrograms\Halen\*.jar" "*.jar.backup"
+ren "\\Friday\Friday-Files\portables\MyPrograms\Halen\*.jar" "*.jar.backup"
 
 REM copy everything in the dist folder to the server
-copy "%~dp0\dist\*" "\\SERVER-TAIBHSE\Users\taibhse\Desktop\portables\MyPrograms\Halen"
+copy "%~dp0\dist\*" "\\Friday\Friday-Files\portables\MyPrograms\Halen"
 REM copy library files over
-copy "%~dp0\dist\lib\*" "\\SERVER-TAIBHSE\Users\taibhse\Desktop\portables\MyPrograms\Halen\lib\"
+copy "%~dp0\dist\lib\*" "\\Friday\Friday-Files\portables\MyPrograms\Halen\lib\"
 
 echo #####################################################################
 echo DEPLOYMENT COMPLETE - pushed to github and deployed on server
