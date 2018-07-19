@@ -32,6 +32,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.IIOException;
 import javax.imageio.ImageIO;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
@@ -650,6 +651,8 @@ public class AnimeGUI
         //  button.setLocation(x, y);
         //  System.out.println(new File(FileManager.returnTag("imageURL", new Scanner(rulesList[i]).nextLine())));
         //if(new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png")).exists())
+        try
+        {
         if (new File(FileManager.launchPath() + FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine())).exists())
         {
             //  File sourceimage = new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png"));
@@ -677,7 +680,10 @@ public class AnimeGUI
             button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); //contactList.get(i).getSurname() + ", " + contactList.get(i).getGivenName());
 
         }
-
+        }catch(IIOException e)
+        {
+            button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); 
+        }
         // button.setFont(button.getFont().deriveFont(Font.BOLD).deriveFont((float) button.getMaximumSize().height / 10));
         // Border border = new LineBorder(secondary, 3);
         //  button.setBorder(border);

@@ -105,11 +105,11 @@ public class GlobalSharedVariables
         options.addArguments("--ignore-certificate-errors");
         options.addArguments("--ignore-ssl-errors");
         // options.addExtensions(new File(pathToChromePortable.replace("GoogleChromePortable.exe", "adblockpluschrome-1.8.3.crx")));
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+   //     DesiredCapabilities capabilities = new DesiredCapabilities();
+    //   capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
         //start driver
-        driver = new ChromeDriver(capabilities);
+        driver = new ChromeDriver();
         if (moveDriverOffScreen == true)
         {
             driver.manage().window().setPosition(new Point(-2000, 0));

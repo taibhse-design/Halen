@@ -26,6 +26,7 @@ import java.io.FileFilter;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -54,9 +55,9 @@ public class TvGUI
     public static JPanel tvPanel, rulesPane, rulesListPanel, episodeListPane, episodeListEmptyPanel;
     public static JScrollPane episodeListScroll, rulesScroll;
 
-      public static JTextField  ruleName, ruleNameInput, searchIn, search, traktURL, traktURLInput, dividerOne, dividerTwo, searchInFolder, searchInFolderText, moveToFolder, moveToFolderText, searchFor, searchForText;//, dividerTwo, searchInFolder;
-      public static JButton save, delete, run, update;
-      
+    public static JTextField ruleName, ruleNameInput, searchIn, search, traktURL, traktURLInput, dividerOne, dividerTwo, searchInFolder, searchInFolderText, moveToFolder, moveToFolderText, searchFor, searchForText;//, dividerTwo, searchInFolder;
+    public static JButton save, delete, run, update;
+
     public static void addTvPanel(int width, int height, int x, int y)
     {
         Border border = new LineBorder(secondary, 3);
@@ -160,7 +161,6 @@ public class TvGUI
         rulesListPanel.setLayout(layout);
         rulesListPanel.setBackground(secondary.darker().darker());
 
-
         rulesScroll = new JScrollPane(rulesListPanel);
         rulesScroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         rulesScroll.getVerticalScrollBar().setUnitIncrement(16);
@@ -223,7 +223,6 @@ public class TvGUI
         tvPanel.add(rulesPane);
         tvPanel.add(episodeListPane);
 
-        
         try
         {
             createRuleButtons();
@@ -231,9 +230,8 @@ public class TvGUI
         {
             Logger.getLogger(TvGUI.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-          dividerOne = new JTextField(20);
+
+        dividerOne = new JTextField(20);
         dividerOne.setHorizontalAlignment(SwingConstants.CENTER);
         dividerOne.setText(" File Download Settings ");
         dividerOne.setEditable(false);
@@ -241,7 +239,7 @@ public class TvGUI
         dividerOne.setForeground(primary);
         dividerOne.setBackground(secondary);
         dividerOne.setBorder(null);
-        dividerOne.setSize(tvPanel.getWidth() - (rulesPane.getWidth()+ episodeListPane.getWidth()), tvPanel.getHeight() / 14);
+        dividerOne.setSize(tvPanel.getWidth() - (rulesPane.getWidth() + episodeListPane.getWidth()), tvPanel.getHeight() / 14);
         dividerOne.setLocation(0, 0);
         dividerOne.setVisible(true);
 
@@ -253,11 +251,10 @@ public class TvGUI
         ruleName.setForeground(primary);
         ruleName.setBackground(secondary);
         ruleName.setBorder(null);
-        ruleName.setSize(dividerOne.getWidth()/4, dividerOne.getHeight());
-        ruleName.setLocation(dividerOne.getX(), dividerOne.getY() + dividerOne.getHeight() );
+        ruleName.setSize(dividerOne.getWidth() / 4, dividerOne.getHeight());
+        ruleName.setLocation(dividerOne.getX(), dividerOne.getY() + dividerOne.getHeight());
         ruleName.setVisible(true);
 
-       
         ruleNameInput = new JTextField(20);
         ruleNameInput.setText("...");
         ruleNameInput.setEditable(true);
@@ -266,7 +263,7 @@ public class TvGUI
         ruleNameInput.setBackground(secondary.brighter());
         ruleNameInput.setBorder(border);
         ruleNameInput.setCaretColor(primary);
-        ruleNameInput.setSize(dividerOne.getWidth()- ruleName.getWidth(), ruleName.getHeight());
+        ruleNameInput.setSize(dividerOne.getWidth() - ruleName.getWidth(), ruleName.getHeight());
         ruleNameInput.setLocation(ruleName.getLocation().x + ruleName.getWidth(), ruleName.getLocation().y);
         ruleNameInput.setVisible(true);
 
@@ -293,8 +290,6 @@ public class TvGUI
         search.setSize(ruleNameInput.getWidth(), ruleName.getHeight());
         search.setLocation(searchIn.getLocation().x + searchIn.getWidth(), searchIn.getLocation().y);
         search.setVisible(true);
-
-     
 
         traktURL = new JTextField(20);
         traktURL.setHorizontalAlignment(SwingConstants.CENTER);
@@ -355,8 +350,8 @@ public class TvGUI
         searchInFolderText.setSize(ruleNameInput.getWidth(), ruleName.getHeight());
         searchInFolderText.setLocation(searchInFolder.getLocation().x + searchInFolder.getWidth(), searchInFolder.getLocation().y);
         searchInFolderText.setVisible(true);
-        
-           moveToFolder = new JTextField(20);
+
+        moveToFolder = new JTextField(20);
         moveToFolder.setHorizontalAlignment(SwingConstants.CENTER);
         moveToFolder.setText(" Move To ");
         moveToFolder.setEditable(false);
@@ -365,7 +360,7 @@ public class TvGUI
         moveToFolder.setBackground(secondary);
         moveToFolder.setBorder(null);
         moveToFolder.setSize(ruleName.getWidth(), ruleName.getHeight());
-       moveToFolder.setLocation(searchIn.getLocation().x, searchInFolder.getLocation().y + searchInFolder.getHeight());
+        moveToFolder.setLocation(searchIn.getLocation().x, searchInFolder.getLocation().y + searchInFolder.getHeight());
         moveToFolder.setVisible(true);
 
         moveToFolderText = new JTextField(20);
@@ -379,8 +374,8 @@ public class TvGUI
         moveToFolderText.setSize(ruleNameInput.getWidth(), ruleName.getHeight());
         moveToFolderText.setLocation(moveToFolder.getLocation().x + moveToFolder.getWidth(), moveToFolder.getLocation().y);
         moveToFolderText.setVisible(true);
-        
-           searchFor = new JTextField(20);
+
+        searchFor = new JTextField(20);
         searchFor.setHorizontalAlignment(SwingConstants.CENTER);
         searchFor.setText(" Search For ");
         searchFor.setEditable(false);
@@ -389,7 +384,7 @@ public class TvGUI
         searchFor.setBackground(secondary);
         searchFor.setBorder(null);
         searchFor.setSize(ruleName.getWidth(), ruleName.getHeight());
-       searchFor.setLocation(moveToFolder.getLocation().x, moveToFolder.getLocation().y + moveToFolder.getHeight());
+        searchFor.setLocation(moveToFolder.getLocation().x, moveToFolder.getLocation().y + moveToFolder.getHeight());
         searchFor.setVisible(true);
 
         searchForText = new JTextField(20);
@@ -403,8 +398,8 @@ public class TvGUI
         searchForText.setSize(ruleNameInput.getWidth(), ruleName.getHeight());
         searchForText.setLocation(searchFor.getLocation().x + searchFor.getWidth(), searchFor.getLocation().y);
         searchForText.setVisible(true);
-      
-         save = new JButton();
+
+        save = new JButton();
         // save.setFont(save.getFont().deriveFont(Font.BOLD));
         save.setContentAreaFilled(false);
         save.setOpaque(false);
@@ -451,8 +446,7 @@ public class TvGUI
         update.setIcon(us);
         update.setLocation((int) ((run.getX() + run.getWidth())), save.getY());
         update.setVisible(true);
-        
-        
+
         tvPanel.add(save);
         tvPanel.add(run);
         tvPanel.add(delete);
@@ -473,7 +467,7 @@ public class TvGUI
         tvPanel.add(ruleName);
 
         tvPanel.setVisible(true);
-        
+
         initTvControls();
 
     }
@@ -540,31 +534,37 @@ public class TvGUI
             button.setMinimumSize(new Dimension(rulesPane.getWidth() - 10, rulesPane.getHeight() / 4));
             button.setPreferredSize(new Dimension(rulesPane.getWidth() - 10, rulesPane.getHeight() / 4));
 
-          //  System.out.println(new File(FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine())).exists());
+            //  System.out.println(new File(FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine())).exists());
             //if(new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png")).exists())
-            if (new File(FileManager.launchPath() + FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine())).exists())
+            try
             {
-                //  File sourceimage = new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png"));
-
-              //  System.out.println(FileManager.launchPath());
-             try
+                if (new File(FileManager.launchPath() + FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine())).exists())
                 {
-                File sourceimage = new File(FileManager.launchPath() + FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine()));
+                    //  File sourceimage = new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png"));
 
-                Image image = ImageIO.read(sourceimage);
+                    //  System.out.println(FileManager.launchPath());
+                    try
+                    {
+                        File sourceimage = new File(FileManager.launchPath() + FileManager.returnTag("image", new Scanner(rulesList[i]).nextLine()));
 
-               
-                    button.setIcon(new ImageIcon(image.getScaledInstance(-1, rulesPane.getHeight() / 4,
-                            java.awt.Image.SCALE_SMOOTH)));
-                } catch (IIOException | NullPointerException e)
+                        Image image = ImageIO.read(sourceimage);
+
+                        button.setIcon(new ImageIcon(image.getScaledInstance(-1, rulesPane.getHeight() / 4,
+                                java.awt.Image.SCALE_SMOOTH)));
+                    } catch (IIOException | NullPointerException e)
+                    {
+                        button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); //contactList.get(i).getSurruleNameInput() + ", " + contactList.get(i).getGivenName());
+
+                    }
+                } else
                 {
                     button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); //contactList.get(i).getSurruleNameInput() + ", " + contactList.get(i).getGivenName());
 
                 }
-            } else
-            {
-                button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); //contactList.get(i).getSurruleNameInput() + ", " + contactList.get(i).getGivenName());
 
+            } catch (NoSuchElementException e)
+            {
+                button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", ""));
             }
 
             button.setFont(button.getFont().deriveFont(Font.BOLD).deriveFont((float) button.getMaximumSize().height / 10));
@@ -805,21 +805,20 @@ public class TvGUI
 
         }
     }
-    
-        public static void showRule(String rule)
+
+    public static void showRule(String rule)
     {
         ruleNameInput.setText(rule);
-      
+
         search.setText(FileManager.returnTag("search", FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/tv show/" + rule.trim() + ".xml").getItem(0)));
-        
+
         traktURLInput.setText(FileManager.returnTag("url", FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/tv show/" + rule.trim() + ".xml").getItem(0)));
-    
+
         searchInFolderText.setText(FileManager.returnTag("searchInFolder", FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/tv show/" + rule.trim() + ".xml").getItem(0)));
-    
-         moveToFolderText.setText(FileManager.returnTag("moveToFolder", FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/tv show/" + rule.trim() + ".xml").getItem(0)));
-    
-          searchForText.setText(FileManager.returnTag("searchFor", FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/tv show/" + rule.trim() + ".xml").getItem(0)));
-    
-    
+
+        moveToFolderText.setText(FileManager.returnTag("moveToFolder", FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/tv show/" + rule.trim() + ".xml").getItem(0)));
+
+        searchForText.setText(FileManager.returnTag("searchFor", FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/tv show/" + rule.trim() + ".xml").getItem(0)));
+
     }
 }

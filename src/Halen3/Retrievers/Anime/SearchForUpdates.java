@@ -26,7 +26,7 @@ public class SearchForUpdates
         for (int i = 0; i < animeList.length; i++)
         {
             System.out.println("#########################################################################################################\n"
-                    + "   SEARCHING FOR COMIC UPDATES - " + animeList[i].getName() + "\n"
+                    + "   SEARCHING FOR ANIME UPDATES - " + animeList[i].getName() + "\n"
                     + "#########################################################################################################");
             updateAnimeRule(animeList[i].getPath());
           //  System.out.println("#######################################################################################");

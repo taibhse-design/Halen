@@ -3,6 +3,7 @@ package Halen3.Retrievers.Anime;
 import Halen3.IO.FileManager;
 import Halen3.IO.GlobalSharedVariables;
 import static Halen3.IO.GlobalSharedVariables.driver;
+import java.awt.Color;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -38,7 +39,7 @@ public class AnilistDataScraper
         int epCount = Integer.parseInt(FileManager.returnTag("episodes", firstLine));
         for(int i = 1; i <= epCount; i++)
         {
-            out.println("<ep>" + i + "</ep><retrieved>false<retrieved>");
+            out.println("<ep>" + i + "</ep><retrieved>false</retrieved>");
         }
         
         out.close();
@@ -102,18 +103,18 @@ public class AnilistDataScraper
                  {
                      Logger.getLogger(AnilistDataScraper.class.getName()).log(Level.SEVERE, null, ex);
                  }
-                    //take screenshot
-                    File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-                 try
-                 {
-                     // save screenshot to file
-                     FileUtils.copyFile(scrFile, new File(FileManager.launchPath() + "\\graphics\\anime-covers\\" + title.text().replaceAll("[^a-zA-Z0-9. -]", " ").replaceAll("\\s+", " ").trim() + ".jpg"));
-                 } catch (IOException ex)
-                 {
-                     System.out.println("Failed to download anime image.....");
-                     
-                     Logger.getLogger(AnilistDataScraper.class.getName()).log(Level.SEVERE, null, ex);
-                 }
+//                    //take screenshot
+//                    File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//                 try
+//                 {
+//                     // save screenshot to file
+//                     FileUtils.copyFile(scrFile, new File(FileManager.launchPath() + "\\graphics\\anime-covers\\" + title.text().replaceAll("[^a-zA-Z0-9. -]", " ").replaceAll("\\s+", " ").trim() + ".jpg"));
+//                 } catch (IOException ex)
+//                 {
+//                     System.out.println("Failed to download anime image.....");
+//                     
+//                     Logger.getLogger(AnilistDataScraper.class.getName()).log(Level.SEVERE, null, ex);
+//                 }
 
                    // Image src = ImageIO.read(new File(FileManager.launchPath() + "\\graphics\\comic-book-covers\\" + seriesTitle.replaceAll("[^a-zA-Z0-9. -]", " ").replaceAll("\\s+", " ").trim() + ".png"));
 
@@ -124,8 +125,9 @@ public class AnilistDataScraper
 
                   //  ImageIO.write(dst, "png", new File(FileManager.launchPath() + "\\graphics\\comic-book-covers\\" + seriesTitle.replaceAll("[^a-zA-Z0-9. -]", " ").replaceAll("\\s+", " ").trim() + ".png"));
 
-                     FileManager.trimWhiteSpaceFromImage(FileManager.launchPath() + "\\graphics\\anime-covers\\" + title.text().replaceAll("[^a-zA-Z0-9. -]", " ").replaceAll("\\s+", " ").trim() + ".jpg");
-                     dataTag = dataTag + FileManager.makeTag("image", "\\graphics\\anime-covers\\" + title.text().replaceAll("[^a-zA-Z0-9. -]", " ").replaceAll("\\s+", " ").trim() + ".jpg");
+                  FileManager.saveURLImageToFile(image.attr("src").trim(), FileManager.launchPath() + "\\graphics\\anime-covers\\");
+                    // FileManager.trimColorSpaceFromImage(FileManager.launchPath() + "\\graphics\\anime-covers\\" + title.text().replaceAll("[^a-zA-Z0-9. -]", " ").replaceAll("\\s+", " ").trim() + ".jpg", new Color(14,14,14));
+                     dataTag = dataTag + FileManager.makeTag("image", "\\graphics\\anime-covers\\" + image.attr("src").trim().substring(image.attr("src").trim().lastIndexOf("/")+1));
                      
              }
          }

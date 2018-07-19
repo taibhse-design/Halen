@@ -53,9 +53,16 @@ public class MangaGUI
 {
 
     public static JPanel mangaPanel, rulesPane, rulesListPanel, issueListPane, issueListEmptyPanel;
-      public static JButton save, delete, run, update;
+    public static JButton save, delete, run, update;
     public static JScrollPane issueListScroll, rulesScroll;
-     public static JTextField ruleName, ruleNameInput, mangaURL, mangaURLInput, dividerOne, /**dividerThree,**/ DownloadToFolder, DownloadToFolderText/**,moveToFolder, moveToFolderText, searchFor, searchForText, replaceThis, replaceThisText, withThis, withThisText**/;
+    public static JTextField ruleName, ruleNameInput, mangaURL, mangaURLInput, dividerOne, /**
+             * dividerThree,*
+             */
+            DownloadToFolder, DownloadToFolderText/**
+             * ,moveToFolder, moveToFolderText, searchFor, searchForText,
+             * replaceThis, replaceThisText, withThis, withThisText*
+             */
+            ;
 
     public static void addMangaPanel(int width, int height, int x, int y)
     {
@@ -231,8 +238,8 @@ public class MangaGUI
 
         mangaPanel.add(rulesPane);
         mangaPanel.add(issueListPane);
-        
-                  dividerOne = new JTextField(20);
+
+        dividerOne = new JTextField(20);
         dividerOne.setHorizontalAlignment(SwingConstants.CENTER);
         dividerOne.setText(" File Download Settings ");
         dividerOne.setEditable(false);
@@ -240,7 +247,7 @@ public class MangaGUI
         dividerOne.setForeground(primary);
         dividerOne.setBackground(secondary);
         dividerOne.setBorder(null);
-        dividerOne.setSize(mangaPanel.getWidth() - (rulesPane.getWidth()+ issueListPane.getWidth()), mangaPanel.getHeight() / 14);
+        dividerOne.setSize(mangaPanel.getWidth() - (rulesPane.getWidth() + issueListPane.getWidth()), mangaPanel.getHeight() / 14);
         dividerOne.setLocation(0, 0);
         dividerOne.setVisible(true);
 
@@ -252,11 +259,10 @@ public class MangaGUI
         ruleName.setForeground(primary);
         ruleName.setBackground(secondary);
         ruleName.setBorder(null);
-        ruleName.setSize(dividerOne.getWidth()/4, dividerOne.getHeight());
-        ruleName.setLocation(dividerOne.getX(), dividerOne.getY() + dividerOne.getHeight() );
+        ruleName.setSize(dividerOne.getWidth() / 4, dividerOne.getHeight());
+        ruleName.setLocation(dividerOne.getX(), dividerOne.getY() + dividerOne.getHeight());
         ruleName.setVisible(true);
 
-       
         ruleNameInput = new JTextField(20);
         ruleNameInput.setText("...");
         ruleNameInput.setEditable(true);
@@ -265,9 +271,9 @@ public class MangaGUI
         ruleNameInput.setBackground(secondary.brighter());
         ruleNameInput.setBorder(border);
         ruleNameInput.setCaretColor(primary);
-        ruleNameInput.setSize(dividerOne.getWidth()- ruleName.getWidth(), ruleName.getHeight());
+        ruleNameInput.setSize(dividerOne.getWidth() - ruleName.getWidth(), ruleName.getHeight());
         ruleNameInput.setLocation(ruleName.getLocation().x + ruleName.getWidth(), ruleName.getLocation().y);
-        ruleNameInput.setVisible(true);     
+        ruleNameInput.setVisible(true);
 
         mangaURL = new JTextField(20);
         mangaURL.setHorizontalAlignment(SwingConstants.CENTER);
@@ -316,7 +322,7 @@ public class MangaGUI
         DownloadToFolderText.setSize(ruleNameInput.getWidth(), ruleName.getHeight());
         DownloadToFolderText.setLocation(DownloadToFolder.getLocation().x + DownloadToFolder.getWidth(), DownloadToFolder.getLocation().y);
         DownloadToFolderText.setVisible(true);
-        
+
 //           moveToFolder = new JTextField(20);
 //        moveToFolder.setHorizontalAlignment(SwingConstants.CENTER);
 //        moveToFolder.setText(" Move To ");
@@ -424,8 +430,7 @@ public class MangaGUI
 //        withThisText.setSize(ruleNameInput.getWidth(), ruleName.getHeight());
 //        withThisText.setLocation(withThis.getLocation().x + withThis.getWidth(), withThis.getLocation().y);
 //        withThisText.setVisible(true);
-        
-              save = new JButton();
+        save = new JButton();
         // save.setFont(save.getFont().deriveFont(Font.BOLD));
         save.setContentAreaFilled(false);
         save.setOpaque(false);
@@ -472,22 +477,21 @@ public class MangaGUI
         update.setIcon(us);
         update.setLocation((int) ((run.getX() + run.getWidth())), save.getY());
         update.setVisible(true);
-        
-        
+
         mangaPanel.add(save);
         mangaPanel.add(run);
         mangaPanel.add(delete);
         mangaPanel.add(update);
-        
-     //        mangaPanel.add(withThisText);
-    //    mangaPanel.add(withThis);
-     //   mangaPanel.add(replaceThis);
-    //    mangaPanel.add(replaceThisText);
-      //  mangaPanel.add(dividerThree);
-     //   mangaPanel.add(searchForText);
-    //    mangaPanel.add(searchFor);
-    //    mangaPanel.add(moveToFolderText);
-    //    mangaPanel.add(moveToFolder);
+
+        //        mangaPanel.add(withThisText);
+        //    mangaPanel.add(withThis);
+        //   mangaPanel.add(replaceThis);
+        //    mangaPanel.add(replaceThisText);
+        //  mangaPanel.add(dividerThree);
+        //   mangaPanel.add(searchForText);
+        //    mangaPanel.add(searchFor);
+        //    mangaPanel.add(moveToFolderText);
+        //    mangaPanel.add(moveToFolder);
         mangaPanel.add(DownloadToFolderText);
         mangaPanel.add(DownloadToFolder);
         mangaPanel.add(dividerOne);
@@ -495,8 +499,8 @@ public class MangaGUI
         mangaPanel.add(mangaURL);
         mangaPanel.add(ruleNameInput);
         mangaPanel.add(ruleName);
-        
-       initmangaControls();
+
+        initmangaControls();
 
     }
 
@@ -534,8 +538,9 @@ public class MangaGUI
 
     public static void main(String args[])
     {
-        System.out.println(13%3);
+        System.out.println(13 % 3);
     }
+
     private static void createRuleButtons() throws IOException
     {
         //Create rules list
@@ -576,19 +581,19 @@ public class MangaGUI
                 //  System.out.print(rulesList[(i+1)] + " ");
                 addmangaButton(rulesList, background, i + 1, 0, 0);
                 addmangaButton(rulesList, background, i + 2, 0, 0);
-            
+
                 //   System.out.print(rulesList[(i+2)] + " ");
                 //  System.out.println("");
             } catch (NoSuchElementException | ArrayIndexOutOfBoundsException e)
             {
                 int loop = 1;
-                if(rulesList.length%3 == 1)
+                if (rulesList.length % 3 == 1)
                 {
-                   loop = 2; 
+                    loop = 2;
                 }
-                for(int j = 0; j < loop; j++)
+                for (int j = 0; j < loop; j++)
                 {
-                    
+
                     final JButton button = new JButton();
                     button.setIcon(new ImageIcon(color(secondary.brighter(), "Resources/metro/BlankAssets/blankManga.png").getScaledInstance(-1, (rulesPane.getHeight() / 3) - 30,
                             java.awt.Image.SCALE_SMOOTH)));
@@ -618,10 +623,9 @@ public class MangaGUI
             }
 
         }
-        
-          rulesList = null;
+
+        rulesList = null;
         folder = null;
-       
 
     }
 
@@ -640,29 +644,36 @@ public class MangaGUI
         //  button.setLocation(x, y);
         //  System.out.println(new File(FileManager.returnTag("imageURL", new Scanner(rulesList[i]).nextLine())));
         //if(new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png")).exists())
-        if (new File(FileManager.launchPath() + FileManager.returnTag("localImagePath", new Scanner(rulesList[i]).nextLine())).exists())
+        try
         {
-            //  File sourceimage = new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png"));
-
-            File sourceimage = new File(FileManager.launchPath() + FileManager.returnTag("localImagePath", new Scanner(rulesList[i]).nextLine()));
-
-            Image image = ImageIO.read(sourceimage);
-
-            try
+            if (new File(FileManager.launchPath() + FileManager.returnTag("localImagePath", new Scanner(rulesList[i]).nextLine())).exists())
             {
-                button.setIcon(new ImageIcon(image.getScaledInstance(-1, (rulesPane.getHeight() / 3) - 30,
-                        java.awt.Image.SCALE_SMOOTH)));
+                //  File sourceimage = new File(FileManager.launchPath() + "\\rules\\tv show\\" + rulesList[i].getName().replace(".xml", ".png"));
 
-                button.setMaximumSize(new Dimension(button.getIcon().getIconWidth(), (rulesPane.getHeight() / 3)));
-                button.setMinimumSize(new Dimension(button.getIcon().getIconWidth(), (rulesPane.getHeight() / 3)));
-                button.setPreferredSize(new Dimension(button.getIcon().getIconWidth(), (rulesPane.getHeight() / 3)));
+                File sourceimage = new File(FileManager.launchPath() + FileManager.returnTag("localImagePath", new Scanner(rulesList[i]).nextLine()));
 
-            } catch (NullPointerException e)
+                Image image = ImageIO.read(sourceimage);
+
+                try
+                {
+                    button.setIcon(new ImageIcon(image.getScaledInstance(-1, (rulesPane.getHeight() / 3) - 30,
+                            java.awt.Image.SCALE_SMOOTH)));
+
+                    button.setMaximumSize(new Dimension(button.getIcon().getIconWidth(), (rulesPane.getHeight() / 3)));
+                    button.setMinimumSize(new Dimension(button.getIcon().getIconWidth(), (rulesPane.getHeight() / 3)));
+                    button.setPreferredSize(new Dimension(button.getIcon().getIconWidth(), (rulesPane.getHeight() / 3)));
+
+                } catch (NullPointerException e)
+                {
+                    button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); //contactList.get(i).getSurname() + ", " + contactList.get(i).getGivenName());
+
+                }
+            } else
             {
                 button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); //contactList.get(i).getSurname() + ", " + contactList.get(i).getGivenName());
 
             }
-        } else
+        } catch (NoSuchElementException e)
         {
             button.setText("  RULE   " + (i + 1) + ": " + rulesList[i].getName().replace(".xml", "")); //contactList.get(i).getSurname() + ", " + contactList.get(i).getGivenName());
 
@@ -682,8 +693,8 @@ public class MangaGUI
             public void mouseClicked(MouseEvent me)
             {
 
-               showRule(button.getName().replace(button.getName().subSequence(button.getName().indexOf("R"), button.getName().indexOf(":") + 1), "").trim());
-                     loadSequenceContent(button.getName().replace(button.getName().subSequence(button.getName().indexOf("R"), button.getName().indexOf(":") + 1), "").trim());
+                showRule(button.getName().replace(button.getName().subSequence(button.getName().indexOf("R"), button.getName().indexOf(":") + 1), "").trim());
+                loadSequenceContent(button.getName().replace(button.getName().subSequence(button.getName().indexOf("R"), button.getName().indexOf(":") + 1), "").trim());
             }
 
             @Override
@@ -1050,7 +1061,6 @@ public class MangaGUI
 //
 //        }
 //    }
-
     private static void loadSequenceContent(final String file)
     {
 
@@ -1231,21 +1241,17 @@ public class MangaGUI
 
         }
     }
-    
-            public static void showRule(String rule)
+
+    public static void showRule(String rule)
     {
         ruleNameInput.setText(rule);
-      
-       // search.setText(FileManager.returnTag("search", FileManager.readFile(halen.FileManager.launchPath() + "/rules/tv show/" + rule.trim() + ".xml").getItem(0)));
-        
+
+        // search.setText(FileManager.returnTag("search", FileManager.readFile(halen.FileManager.launchPath() + "/rules/tv show/" + rule.trim() + ".xml").getItem(0)));
         mangaURLInput.setText(FileManager.returnTag("url", FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/Manga/" + rule.trim() + ".xml").getItem(0)));
-    
+
         DownloadToFolderText.setText(FileManager.returnTag("downloadTo", FileManager.readFile(Halen3.IO.FileManager.launchPath() + "/rules/Manga/" + rule.trim() + ".xml").getItem(0)));
-    
-       //  moveToFolderText.setText(FileManager.returnTag("moveToFolder", FileManager.readFile(halen.FileManager.launchPath() + "/rules/Manga/" + rule.trim() + ".xml").getItem(0)));
-    
-       //   searchForText.setText(FileManager.returnTag("searchFor", FileManager.readFile(halen.FileManager.launchPath() + "/rules/Manga/" + rule.trim() + ".xml").getItem(0)));
-    
-    
+
+        //  moveToFolderText.setText(FileManager.returnTag("moveToFolder", FileManager.readFile(halen.FileManager.launchPath() + "/rules/Manga/" + rule.trim() + ".xml").getItem(0)));
+        //   searchForText.setText(FileManager.returnTag("searchFor", FileManager.readFile(halen.FileManager.launchPath() + "/rules/Manga/" + rule.trim() + ".xml").getItem(0)));
     }
 }

@@ -773,18 +773,18 @@ public class RuleManager
                 if (!ComicsGUI.comicURLInput.getText().equals("") | !ComicsGUI.comicURLInput.getText().equals("..."))
                 {
 
-                    if (ComicsGUI.comicURLInput.getText().contains("readcomics.website"))
+                    if (ComicsGUI.comicURLInput.getText().contains("readcomicsonline.ru"))
                     {
                         //tag - source  - new value
                         updateLine = FileManager.updateTag("url", updateLine, ComicsGUI.comicURLInput.getText());
                     } else
                     {
-                        message = "DATA INVALID - please provide a valid readcomics.website url!";
+                        message = "DATA INVALID - please provide a valid readcomicsonline.ru url!";
                     }
 
                 } else
                 {
-                    message = "DATA INVALID - please provide a valid readcomics.website url!";
+                    message = "DATA INVALID - please provide a valid readcomicsonline.ru url!";
                 }
 
                 if (!ComicsGUI.DownloadToFolderText.getText().equals("") | !ComicsGUI.DownloadToFolderText.getText().equals("..."))
@@ -898,19 +898,19 @@ public class RuleManager
                 if (!ComicsGUI.comicURLInput.getText().equals("") | !ComicsGUI.comicURLInput.getText().equals("..."))
                 {
 
-                    if (ComicsGUI.comicURLInput.getText().contains("readcomics.website"))
+                    if (ComicsGUI.comicURLInput.getText().contains("readcomicsonline.ru"))
                     {
                         //tag - source  - new value
                       //  tags = tags + FileManager.makeTag("url", ComicsGUI.comicURLInput.getText());
 
                     } else
                     {
-                        message = "DATA INVALID - please provide a valid readcomics.website url!";
+                        message = "DATA INVALID - please provide a valid readcomicsonline.ru url!";
                     }
 
                 } else
                 {
-                    message = "DATA INVALID - please provide a valid readcomics.website url!";
+                    message = "DATA INVALID - please provide a valid readcomicsonline.ru url!";
                 }
 
                 if (!ComicsGUI.DownloadToFolderText.getText().equals("") | !ComicsGUI.DownloadToFolderText.getText().equals("..."))

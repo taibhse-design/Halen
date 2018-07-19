@@ -48,7 +48,7 @@ public class CreateComicRule
         System.out.println("   CREATING NEW COMIC RULE - " + url);
         System.out.println("#########################################################################################################\n");
         //only run if provided url is readcomiconline or kissmanga
-        if (url.toLowerCase().contains("http://readcomics.website"))
+        if (url.toLowerCase().contains("http://readcomicsonline.ru"))
         {
 
             PrintWriter print = null;

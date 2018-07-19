@@ -131,6 +131,8 @@ public class DownloadNewEpisodes
                             //try to find ep from showRSS
                             magnet = ShowRSS.showRSSSearch(FileManager.returnTag("search", eps.getItem(0)).trim() , eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")).trim());
                            
+                            System.out.println(magnet);
+                            
                             //backup magnet searches if magnet still blank
                             if(!magnet.contains("magnet:?xt="))
                             {
@@ -161,6 +163,10 @@ public class DownloadNewEpisodes
                             }
 
                                   //  System.out.println(magnet);
+                        }catch(NullPointerException e)
+                        {
+                            ColorCmd.print(" " + tvList[i].getName().replace(".xml", "") + " " + eps.getItem(j).substring(eps.getItem(j).indexOf("<") + 1, eps.getItem(j).indexOf(">")) + ": ERROR " + e.getMessage() + "...error caught and ignored", fgRedBgWhite);
+
                         }
 
                         if (magnet.contains("magnet:?xt=")) //handle magnet if found

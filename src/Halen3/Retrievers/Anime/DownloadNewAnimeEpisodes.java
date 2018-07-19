@@ -35,7 +35,7 @@ public class DownloadNewAnimeEpisodes
     
     public static void getNewAnimeEpisodeMagnets()
     {
-        updateAllAnimeRules();
+      
 
         File[] animeList = new File(FileManager.launchPath() + "\\rules\\anime\\").listFiles();
 
@@ -50,22 +50,40 @@ public class DownloadNewAnimeEpisodes
                 System.out.println("Searching for new episodes of " + FileManager.returnTag("title", eps.getItem(0)));
                 System.out.println("#######################################################################################\n");
                 
+                
+                
                 SendEmailNotification.retrievedAnime.add(eps.getItem(0) + "<retEps></retEps>");
                 
                 //loop send eps to magnet handler
                 for (int j = 1; j < eps.getItemCount(); j++)
                 {
-                    if (FileManager.returnTag("downloaded", eps.getItem(j)).equals("false"))
+                    System.out.println("Loop J pos " + j);
+                    if (FileManager.returnTag("retrieved", eps.getItem(j)).equals("false"))
                     {
+                        System.out.println("TRUE");
+                        String magnet = "";
+                        try
+                        {
+                         magnet = Nyaa.getAnimeEpisodeMagnet(FileManager.returnTag("nyaaSearch", eps.getItem(i)), j);
+                        
+                        } catch (IOException ex)
+                        {
+                            Logger.getLogger(DownloadNewAnimeEpisodes.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        
+                        if(!magnet.equals(""))
+                        {
                         System.out.println(FileManager.returnTag("name", eps.getItem(j)) + " added to download queue.....");
-                        MagnetHandler.addLinkTOMAgnetList(FileManager.returnTag("magnet", eps.getItem(j)));
+                        MagnetHandler.addLinkTOMAgnetList(magnet);
 
-                        eps.replaceItem(FileManager.updateTag("downloaded", eps.getItem(j), "true"), j);
+                        eps.replaceItem(FileManager.updateTag("retrieved", eps.getItem(j), "true"), j);
 
                          SendEmailNotification.retrievedAnime.replaceItem(FileManager.updateTag("retEps",
                                     SendEmailNotification.retrievedAnime.getItem(i),
                                     FileManager.returnTag("retEps", SendEmailNotification.retrievedAnime.getItem(i)) + FileManager.returnTag("name", eps.getItem(j)).replace(" [720p][AAC].mp4", "") + "-!SPLIT!-"),
                                     i); //item to replace
+                         
+                        }
                     }
                 }
                 if(saveResults == true)

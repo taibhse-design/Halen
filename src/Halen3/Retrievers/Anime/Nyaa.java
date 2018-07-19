@@ -33,8 +33,8 @@ public class Nyaa
         for (float i = 1; i < 13; i += 0.5f)
         {
 
-                System.out.println(i + "   " + getAnimeEpisodeMagnet("-720 -480 horriblesubs Youjo Senki", i));
-          }
+                Nyaa.getAnimeEpisodeMagnet("-720 -480 1080 horriblesubs full metal panic victory", i);
+        }
 
     }
 //   static String s = "";
@@ -119,7 +119,7 @@ public class Nyaa
         for (Element link : links)
         {
             
-            System.out.println(link.attr("href"));
+           // System.out.println(link.attr("href"));
             //add space before and after text to allow exact word checks for start and end of text
             String title = " " + link.ownText() + " ";
             
